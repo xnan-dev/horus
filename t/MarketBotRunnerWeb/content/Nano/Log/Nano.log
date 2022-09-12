@@ -1,0 +1,1384 @@
+2022-08-30 11:11:24 - 
+2022-08-30 11:11:24 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-08-30 11:11:24 - restServiceId:
+2022-08-30 11:11:24 - dateCreated:
+2022-08-30 11:11:24 - 
+2022-08-30 11:11:24 - <b>General</b>
+2022-08-30 11:11:24 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-08-30 11:11:24 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-08-30 11:11:24 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-08-30 11:11:24 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-08-30 11:11:24 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-08-30 11:11:24 - 
+2022-08-30 11:11:24 - <b>Tests</b>
+2022-08-30 11:11:24 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-08-30 11:11:24 - 
+2022-08-30 11:11:24 - <b>Settings</b>
+2022-08-30 11:11:24 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-08-30 11:11:24 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-08-30 11:11:24 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-08-30 11:13:54 - 
+2022-08-30 11:13:54 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-08-30 11:13:54 - restServiceId:
+2022-08-30 11:13:54 - dateCreated:
+2022-08-30 11:13:54 - 
+2022-08-30 11:13:54 - <b>General</b>
+2022-08-30 11:13:54 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-08-30 11:13:54 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-08-30 11:13:54 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-08-30 11:13:54 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-08-30 11:13:54 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-08-30 11:13:59 - 
+2022-08-30 11:13:59 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-08-30 11:13:59 - restServiceId:
+2022-08-30 11:13:59 - dateCreated:
+2022-08-30 11:13:59 - 
+2022-08-30 11:13:59 - <b>General</b>
+2022-08-30 11:13:59 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-08-30 11:13:59 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-08-30 11:13:59 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-08-30 11:13:59 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-08-30 11:13:59 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-08-30 11:13:59 - 
+2022-08-30 11:13:59 - <b>Tests</b>
+2022-08-30 11:13:59 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-08-30 11:13:59 - 
+2022-08-30 11:13:59 - <b>Settings</b>
+2022-08-30 11:13:59 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-08-30 11:13:59 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-08-30 11:13:59 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-08-30 11:15:09 - 
+2022-08-30 11:15:09 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-08-30 11:15:09 - restServiceId:
+2022-08-30 11:15:09 - dateCreated:
+2022-08-30 11:15:09 - 
+2022-08-30 11:15:09 - <b>General</b>
+2022-08-30 11:15:09 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-08-30 11:15:09 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-08-30 11:15:09 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-08-30 11:15:09 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-08-30 11:15:09 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-08-30 11:15:09 - 
+2022-08-30 11:15:09 - <b>Tests</b>
+2022-08-30 11:15:09 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-08-30 11:15:09 - 
+2022-08-30 11:15:09 - <b>Settings</b>
+2022-08-30 11:15:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-08-30 11:15:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-08-30 11:15:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-08-30 11:15:54 - 
+2022-08-30 11:15:54 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-08-30 11:15:54 - restServiceId:
+2022-08-30 11:15:54 - dateCreated:
+2022-08-30 11:15:54 - 
+2022-08-30 11:15:54 - <b>General</b>
+2022-08-30 11:15:54 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-08-30 11:15:54 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-08-30 11:15:54 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-08-30 11:15:54 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-08-30 11:15:54 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-08-30 11:15:54 - 
+2022-08-30 11:15:54 - <b>Tests</b>
+2022-08-30 11:15:54 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-08-30 11:15:54 - 
+2022-08-30 11:15:54 - <b>Settings</b>
+2022-08-30 11:15:54 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-08-30 11:15:54 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-08-30 11:15:54 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-08-30 11:16:07 - 
+2022-08-30 11:16:07 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-08-30 11:16:07 - restServiceId:
+2022-08-30 11:16:07 - dateCreated:
+2022-08-30 11:16:07 - 
+2022-08-30 11:16:07 - <b>General</b>
+2022-08-30 11:16:07 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-08-30 11:16:07 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-08-30 11:16:07 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-08-30 11:16:07 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-08-30 11:16:07 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-08-30 11:16:07 - 
+2022-08-30 11:16:07 - <b>Tests</b>
+2022-08-30 11:16:07 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-08-30 11:16:07 - 
+2022-08-30 11:16:07 - <b>Settings</b>
+2022-08-30 11:16:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-08-30 11:16:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-08-30 11:16:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-08-30 11:16:50 - 
+2022-08-30 11:16:50 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-08-30 11:16:50 - restServiceId:
+2022-08-30 11:16:50 - dateCreated:
+2022-08-30 11:16:50 - 
+2022-08-30 11:16:50 - <b>General</b>
+2022-08-30 11:16:50 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-08-30 11:16:50 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-08-30 11:16:50 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-08-30 11:16:50 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-08-30 11:16:50 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-08-30 11:16:50 - 
+2022-08-30 11:16:50 - <b>Tests</b>
+2022-08-30 11:16:50 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-08-30 11:16:50 - 
+2022-08-30 11:16:50 - <b>Settings</b>
+2022-08-30 11:16:50 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-08-30 11:16:50 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-08-30 11:16:50 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-08-30 11:17:21 - 
+2022-08-30 11:17:21 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-08-30 11:17:21 - restServiceId:
+2022-08-30 11:17:21 - dateCreated:
+2022-08-30 11:17:21 - 
+2022-08-30 11:17:21 - <b>General</b>
+2022-08-30 11:17:21 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-08-30 11:17:21 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-08-30 11:17:21 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-08-30 11:17:21 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-08-30 11:17:21 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-08-30 11:17:21 - 
+2022-08-30 11:17:21 - <b>Tests</b>
+2022-08-30 11:17:21 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-08-30 11:17:21 - 
+2022-08-30 11:17:21 - <b>Settings</b>
+2022-08-30 11:17:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-08-30 11:17:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-08-30 11:17:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-08-30 11:17:46 - 
+2022-08-30 11:17:46 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-08-30 11:17:46 - restServiceId:592758
+2022-08-30 11:17:46 - dateCreated:2022-08-30 11:17:46
+2022-08-30 11:17:46 - 
+2022-08-30 11:17:46 - <b>General</b>
+2022-08-30 11:17:46 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-08-30 11:17:46 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-08-30 11:17:46 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-08-30 11:17:46 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-08-30 11:17:46 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-08-30 11:17:46 - 
+2022-08-30 11:17:46 - <b>Markets</b>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-08-30 11:17:46 - 
+2022-08-30 11:17:46 - <b>Bots</b>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-08-30 11:17:46 - 
+2022-08-30 11:17:46 - <b>Bot Queues</b>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-08-30 11:17:46 - 
+2022-08-30 11:17:46 - <b>Bot Runs</b>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-08-30 11:17:46 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-08-30 11:17:46 - 
+2022-08-30 11:17:46 - <b>Tests</b>
+2022-08-30 11:17:46 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-08-30 11:17:46 - 
+2022-08-30 11:17:46 - <b>Settings</b>
+2022-08-30 11:17:46 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-08-30 11:17:46 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-08-30 11:17:46 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-08-31 16:38:13 - 
+2022-08-31 16:38:13 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-08-31 16:38:13 - restServiceId:805164
+2022-08-31 16:38:13 - dateCreated:2022-08-31 16:38:11
+2022-08-31 16:38:13 - 
+2022-08-31 16:38:13 - <b>General</b>
+2022-08-31 16:38:13 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-08-31 16:38:13 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-08-31 16:38:13 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-08-31 16:38:13 - 
+2022-08-31 16:38:13 - <b>Markets</b>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-08-31 16:38:13 - 
+2022-08-31 16:38:13 - <b>Bots</b>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-08-31 16:38:13 - 
+2022-08-31 16:38:13 - <b>Bot Queues</b>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-08-31 16:38:13 - 
+2022-08-31 16:38:13 - <b>Bot Runs</b>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-08-31 16:38:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-08-31 16:38:13 - 
+2022-08-31 16:38:13 - <b>Tests</b>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-08-31 16:38:13 - 
+2022-08-31 16:38:13 - <b>Settings</b>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-08-31 16:38:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-01 11:41:43 - 
+2022-09-01 11:41:43 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-09-01 11:41:43 - restServiceId:90500
+2022-09-01 11:41:43 - dateCreated:2022-09-01 11:41:42
+2022-09-01 11:41:43 - 
+2022-09-01 11:41:43 - <b>General</b>
+2022-09-01 11:41:43 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-01 11:41:43 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-01 11:41:43 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-01 11:41:43 - 
+2022-09-01 11:41:43 - <b>Markets</b>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-01 11:41:43 - 
+2022-09-01 11:41:43 - <b>Bots</b>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-01 11:41:43 - 
+2022-09-01 11:41:43 - <b>Bot Queues</b>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-01 11:41:43 - 
+2022-09-01 11:41:43 - <b>Bot Runs</b>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-01 11:41:43 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-01 11:41:43 - 
+2022-09-01 11:41:43 - <b>Tests</b>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-01 11:41:43 - 
+2022-09-01 11:41:43 - <b>Settings</b>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-01 11:41:43 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-01 11:51:40 - 
+2022-09-01 11:51:40 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-09-01 11:51:40 - restServiceId:794286
+2022-09-01 11:51:40 - dateCreated:2022-09-01 11:51:40
+2022-09-01 11:51:40 - 
+2022-09-01 11:51:40 - <b>General</b>
+2022-09-01 11:51:40 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-01 11:51:40 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-01 11:51:40 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-01 11:51:40 - 
+2022-09-01 11:51:40 - <b>Markets</b>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-01 11:51:40 - 
+2022-09-01 11:51:40 - <b>Bots</b>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-01 11:51:40 - 
+2022-09-01 11:51:40 - <b>Bot Queues</b>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-01 11:51:40 - 
+2022-09-01 11:51:40 - <b>Bot Runs</b>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-01 11:51:40 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-01 11:51:40 - 
+2022-09-01 11:51:40 - <b>Tests</b>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-01 11:51:40 - 
+2022-09-01 11:51:40 - <b>Settings</b>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-01 11:51:40 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-02 10:27:41 - 
+2022-09-02 10:27:41 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-09-02 10:27:41 - restServiceId:542541
+2022-09-02 10:27:41 - dateCreated:2022-09-02 10:27:40
+2022-09-02 10:27:41 - 
+2022-09-02 10:27:41 - <b>General</b>
+2022-09-02 10:27:42 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-02 10:27:42 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-02 10:27:42 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-02 10:27:42 - 
+2022-09-02 10:27:42 - <b>Markets</b>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-02 10:27:42 - 
+2022-09-02 10:27:42 - <b>Bots</b>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-02 10:27:42 - 
+2022-09-02 10:27:42 - <b>Bot Queues</b>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-02 10:27:42 - 
+2022-09-02 10:27:42 - <b>Bot Runs</b>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-02 10:27:42 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-02 10:27:42 - 
+2022-09-02 10:27:42 - <b>Tests</b>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-02 10:27:42 - 
+2022-09-02 10:27:42 - <b>Settings</b>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-02 10:27:42 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-02 12:20:17 - 
+2022-09-02 12:20:17 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-09-02 12:20:17 - restServiceId:295482
+2022-09-02 12:20:17 - dateCreated:2022-09-02 12:20:17
+2022-09-02 12:20:17 - 
+2022-09-02 12:20:17 - <b>General</b>
+2022-09-02 12:20:17 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-02 12:20:17 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-02 12:20:17 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-02 12:20:17 - 
+2022-09-02 12:20:17 - <b>Markets</b>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-02 12:20:17 - 
+2022-09-02 12:20:17 - <b>Bots</b>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-02 12:20:17 - 
+2022-09-02 12:20:17 - <b>Bot Queues</b>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-02 12:20:17 - 
+2022-09-02 12:20:17 - <b>Bot Runs</b>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-02 12:20:17 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-02 12:20:17 - 
+2022-09-02 12:20:17 - <b>Tests</b>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-02 12:20:17 - 
+2022-09-02 12:20:17 - <b>Settings</b>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-02 12:20:17 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-02 13:32:05 - 
+2022-09-02 13:32:05 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-09-02 13:32:05 - restServiceId:512815
+2022-09-02 13:32:05 - dateCreated:2022-09-02 13:32:05
+2022-09-02 13:32:05 - 
+2022-09-02 13:32:05 - <b>General</b>
+2022-09-02 13:32:05 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-02 13:32:05 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-02 13:32:05 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-02 13:32:05 - 
+2022-09-02 13:32:05 - <b>Markets</b>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-02 13:32:05 - 
+2022-09-02 13:32:05 - <b>Bots</b>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-02 13:32:05 - 
+2022-09-02 13:32:05 - <b>Bot Queues</b>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-02 13:32:05 - 
+2022-09-02 13:32:05 - <b>Bot Runs</b>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-02 13:32:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-02 13:32:05 - 
+2022-09-02 13:32:05 - <b>Tests</b>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-02 13:32:05 - 
+2022-09-02 13:32:05 - <b>Settings</b>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-02 13:32:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-02 13:33:06 - 
+2022-09-02 13:33:06 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-09-02 13:33:06 - restServiceId:337176
+2022-09-02 13:33:06 - dateCreated:2022-09-02 13:33:06
+2022-09-02 13:33:06 - 
+2022-09-02 13:33:06 - <b>General</b>
+2022-09-02 13:33:06 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-02 13:33:06 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-02 13:33:06 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-02 13:33:06 - 
+2022-09-02 13:33:06 - <b>Markets</b>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-02 13:33:06 - 
+2022-09-02 13:33:06 - <b>Bots</b>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-02 13:33:06 - 
+2022-09-02 13:33:06 - <b>Bot Queues</b>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-02 13:33:06 - 
+2022-09-02 13:33:06 - <b>Bot Runs</b>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-02 13:33:06 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-02 13:33:06 - 
+2022-09-02 13:33:06 - <b>Tests</b>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-02 13:33:06 - 
+2022-09-02 13:33:06 - <b>Settings</b>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-02 13:33:06 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-04 14:17:13 - 
+2022-09-04 14:17:13 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-09-04 14:17:13 - restServiceId:737862
+2022-09-04 14:17:13 - dateCreated:2022-09-04 14:17:11
+2022-09-04 14:17:13 - 
+2022-09-04 14:17:13 - <b>General</b>
+2022-09-04 14:17:13 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-04 14:17:13 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-04 14:17:13 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-04 14:17:13 - 
+2022-09-04 14:17:13 - <b>Markets</b>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-04 14:17:13 - 
+2022-09-04 14:17:13 - <b>Bots</b>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-04 14:17:13 - 
+2022-09-04 14:17:13 - <b>Bot Queues</b>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-04 14:17:13 - 
+2022-09-04 14:17:13 - <b>Bot Runs</b>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-04 14:17:13 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-04 14:17:13 - 
+2022-09-04 14:17:13 - <b>Tests</b>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-04 14:17:13 - 
+2022-09-04 14:17:13 - <b>Settings</b>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-04 14:17:13 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-05 13:58:02 - 
+2022-09-05 13:58:02 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-09-05 13:58:02 - restServiceId:159142
+2022-09-05 13:58:02 - dateCreated:2022-09-05 13:58:01
+2022-09-05 13:58:02 - 
+2022-09-05 13:58:02 - <b>General</b>
+2022-09-05 13:58:02 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-05 13:58:02 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-05 13:58:02 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-05 13:58:02 - 
+2022-09-05 13:58:02 - <b>Markets</b>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-05 13:58:02 - 
+2022-09-05 13:58:02 - <b>Bots</b>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-05 13:58:02 - 
+2022-09-05 13:58:02 - <b>Bot Queues</b>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-05 13:58:02 - 
+2022-09-05 13:58:02 - <b>Bot Runs</b>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-05 13:58:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-05 13:58:02 - 
+2022-09-05 13:58:02 - <b>Tests</b>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-05 13:58:02 - 
+2022-09-05 13:58:02 - <b>Settings</b>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-05 13:58:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-05 15:41:19 - 
+2022-09-05 15:41:19 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-09-05 15:41:19 - restServiceId:120548
+2022-09-05 15:41:19 - dateCreated:2022-09-05 15:41:19
+2022-09-05 15:41:19 - 
+2022-09-05 15:41:19 - <b>General</b>
+2022-09-05 15:41:19 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-05 15:41:19 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-05 15:41:19 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-05 15:41:19 - 
+2022-09-05 15:41:19 - <b>Markets</b>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-05 15:41:19 - 
+2022-09-05 15:41:19 - <b>Bots</b>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-05 15:41:19 - 
+2022-09-05 15:41:19 - <b>Bot Queues</b>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-05 15:41:19 - 
+2022-09-05 15:41:19 - <b>Bot Runs</b>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-05 15:41:19 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-05 15:41:19 - 
+2022-09-05 15:41:19 - <b>Tests</b>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-05 15:41:19 - 
+2022-09-05 15:41:19 - <b>Settings</b>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-05 15:41:19 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-05 17:18:34 - 
+2022-09-05 17:18:34 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-09-05 17:18:34 - restServiceId:555904
+2022-09-05 17:18:34 - dateCreated:2022-09-05 17:18:33
+2022-09-05 17:18:34 - 
+2022-09-05 17:18:34 - <b>General</b>
+2022-09-05 17:18:34 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-05 17:18:34 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-05 17:18:34 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-05 17:18:34 - 
+2022-09-05 17:18:34 - <b>Markets</b>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-05 17:18:34 - 
+2022-09-05 17:18:34 - <b>Bots</b>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-05 17:18:34 - 
+2022-09-05 17:18:34 - <b>Bot Queues</b>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-05 17:18:34 - 
+2022-09-05 17:18:34 - <b>Bot Runs</b>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-05 17:18:34 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-05 17:18:34 - 
+2022-09-05 17:18:34 - <b>Tests</b>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-05 17:18:34 - 
+2022-09-05 17:18:34 - <b>Settings</b>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-05 17:18:34 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-05 17:55:20 - 
+2022-09-05 17:55:20 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-09-05 17:55:20 - restServiceId:120561
+2022-09-05 17:55:20 - dateCreated:2022-09-05 17:55:20
+2022-09-05 17:55:20 - 
+2022-09-05 17:55:20 - <b>General</b>
+2022-09-05 17:55:20 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-05 17:55:20 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-05 17:55:20 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-05 17:55:20 - 
+2022-09-05 17:55:20 - <b>Markets</b>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-05 17:55:20 - 
+2022-09-05 17:55:20 - <b>Bots</b>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-05 17:55:20 - 
+2022-09-05 17:55:20 - <b>Bot Queues</b>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-05 17:55:20 - 
+2022-09-05 17:55:20 - <b>Bot Runs</b>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-05 17:55:20 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-05 17:55:20 - 
+2022-09-05 17:55:20 - <b>Tests</b>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-05 17:55:20 - 
+2022-09-05 17:55:20 - <b>Settings</b>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-05 17:55:20 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-06 13:35:02 - 
+2022-09-06 13:35:02 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-09-06 13:35:02 - restServiceId:720636
+2022-09-06 13:35:02 - dateCreated:2022-09-06 13:35:01
+2022-09-06 13:35:02 - 
+2022-09-06 13:35:02 - <b>General</b>
+2022-09-06 13:35:02 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-06 13:35:02 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-06 13:35:02 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-06 13:35:02 - 
+2022-09-06 13:35:02 - <b>Markets</b>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-06 13:35:02 - 
+2022-09-06 13:35:02 - <b>Bots</b>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-06 13:35:02 - 
+2022-09-06 13:35:02 - <b>Bot Queues</b>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-06 13:35:02 - 
+2022-09-06 13:35:02 - <b>Bot Runs</b>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-06 13:35:02 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-06 13:35:02 - 
+2022-09-06 13:35:02 - <b>Tests</b>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-06 13:35:02 - 
+2022-09-06 13:35:02 - <b>Settings</b>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.marketTitle&settingsValue=VALUE">market.marketTitle</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.assetCount&settingsValue=VALUE">market.assetCount</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.quoteDecimals&settingsValue=VALUE">market.quoteDecimals</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.pollContentMaxAgeSeconds&settingsValue=VALUE">market.pollContentMaxAgeSeconds</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.reset&settingsValue=VALUE">market.reset</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.asset.quantity&settingsValue=VALUE">portfolio.asset.quantity</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.recover&settingsValue=VALUE">portfolio.recover</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-06 13:35:02 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-08 14:26:36 - 
+2022-09-08 14:26:36 - <b>MarketBotRunner 1.3.2 RC2/local</b>
+2022-09-08 14:26:36 - restServiceId:441971
+2022-09-08 14:26:36 - dateCreated:2022-09-08 14:26:34
+2022-09-08 14:26:36 - 
+2022-09-08 14:26:36 - <b>General</b>
+2022-09-08 14:26:36 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-08 14:26:36 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-08 14:26:36 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-08 14:26:36 - 
+2022-09-08 14:26:36 - <b>Markets</b>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-08 14:26:36 - 
+2022-09-08 14:26:36 - <b>Bots</b>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-08 14:26:36 - 
+2022-09-08 14:26:36 - <b>Bot Queues</b>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-08 14:26:36 - 
+2022-09-08 14:26:36 - <b>Bot Runs</b>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-08 14:26:36 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-08 14:26:36 - 
+2022-09-08 14:26:36 - <b>Tests</b>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-08 14:26:36 - 
+2022-09-08 14:26:36 - <b>Settings</b>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.marketTitle&settingsValue=VALUE">market.marketTitle</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.assetCount&settingsValue=VALUE">market.assetCount</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.quoteDecimals&settingsValue=VALUE">market.quoteDecimals</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.pollContentMaxAgeSeconds&settingsValue=VALUE">market.pollContentMaxAgeSeconds</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.reset&settingsValue=VALUE">market.reset</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.asset.quantity&settingsValue=VALUE">portfolio.asset.quantity</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.recover&settingsValue=VALUE">portfolio.recover</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-08 14:26:36 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-08 17:13:55 - 
+2022-09-08 17:13:55 - <b>MarketBotRunner 2.0.0/local</b>
+2022-09-08 17:13:55 - restServiceId:227120
+2022-09-08 17:13:55 - dateCreated:2022-09-08 17:13:54
+2022-09-08 17:13:55 - 
+2022-09-08 17:13:55 - <b>General</b>
+2022-09-08 17:13:55 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-08 17:13:55 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-08 17:13:55 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-08 17:13:55 - 
+2022-09-08 17:13:55 - <b>Markets</b>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-08 17:13:55 - 
+2022-09-08 17:13:55 - <b>Bots</b>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-08 17:13:55 - 
+2022-09-08 17:13:55 - <b>Bot Queues</b>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-08 17:13:55 - 
+2022-09-08 17:13:55 - <b>Bot Runs</b>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-08 17:13:55 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-08 17:13:55 - 
+2022-09-08 17:13:55 - <b>Tests</b>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-08 17:13:55 - 
+2022-09-08 17:13:55 - <b>Settings</b>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.marketTitle&settingsValue=VALUE">market.marketTitle</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.assetCount&settingsValue=VALUE">market.assetCount</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.quoteDecimals&settingsValue=VALUE">market.quoteDecimals</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.pollContentMaxAgeSeconds&settingsValue=VALUE">market.pollContentMaxAgeSeconds</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.reset&settingsValue=VALUE">market.reset</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.asset.quantity&settingsValue=VALUE">portfolio.asset.quantity</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.recover&settingsValue=VALUE">portfolio.recover</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-08 17:13:55 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-08 17:14:05 - 
+2022-09-08 17:14:05 - <b>MarketBotRunner 2.0.0/local</b>
+2022-09-08 17:14:05 - restServiceId:250990
+2022-09-08 17:14:05 - dateCreated:2022-09-08 17:14:04
+2022-09-08 17:14:05 - 
+2022-09-08 17:14:05 - <b>General</b>
+2022-09-08 17:14:05 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-08 17:14:05 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-08 17:14:05 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-08 17:14:05 - 
+2022-09-08 17:14:05 - <b>Markets</b>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-08 17:14:05 - 
+2022-09-08 17:14:05 - <b>Bots</b>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-08 17:14:05 - 
+2022-09-08 17:14:05 - <b>Bot Queues</b>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-08 17:14:05 - 
+2022-09-08 17:14:05 - <b>Bot Runs</b>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-08 17:14:05 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-08 17:14:05 - 
+2022-09-08 17:14:05 - <b>Tests</b>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-08 17:14:05 - 
+2022-09-08 17:14:05 - <b>Settings</b>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.marketTitle&settingsValue=VALUE">market.marketTitle</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.assetCount&settingsValue=VALUE">market.assetCount</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.quoteDecimals&settingsValue=VALUE">market.quoteDecimals</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.pollContentMaxAgeSeconds&settingsValue=VALUE">market.pollContentMaxAgeSeconds</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.reset&settingsValue=VALUE">market.reset</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.asset.quantity&settingsValue=VALUE">portfolio.asset.quantity</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.recover&settingsValue=VALUE">portfolio.recover</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-08 17:14:05 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-08 17:14:07 - 
+2022-09-08 17:14:07 - <b>MarketBotRunner 2.0.0/local</b>
+2022-09-08 17:14:07 - restServiceId:180269
+2022-09-08 17:14:07 - dateCreated:2022-09-08 17:14:06
+2022-09-08 17:14:07 - 
+2022-09-08 17:14:07 - <b>General</b>
+2022-09-08 17:14:07 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-08 17:14:07 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-08 17:14:07 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-08 17:14:07 - 
+2022-09-08 17:14:07 - <b>Markets</b>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-08 17:14:07 - 
+2022-09-08 17:14:07 - <b>Bots</b>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-08 17:14:07 - 
+2022-09-08 17:14:07 - <b>Bot Queues</b>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-08 17:14:07 - 
+2022-09-08 17:14:07 - <b>Bot Runs</b>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-08 17:14:07 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-08 17:14:07 - 
+2022-09-08 17:14:07 - <b>Tests</b>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-08 17:14:07 - 
+2022-09-08 17:14:07 - <b>Settings</b>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.portfoliosRecover&settingsValue=VALUE">botWorld.portfoliosRecover</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.recover&settingsValue=VALUE">botWorld.recover</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.marketTitle&settingsValue=VALUE">market.marketTitle</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.assetCount&settingsValue=VALUE">market.assetCount</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.quoteDecimals&settingsValue=VALUE">market.quoteDecimals</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.pollContentMaxAgeSeconds&settingsValue=VALUE">market.pollContentMaxAgeSeconds</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.reset&settingsValue=VALUE">market.reset</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.asset.quantity&settingsValue=VALUE">portfolio.asset.quantity</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.recover&settingsValue=VALUE">portfolio.recover</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-08 17:14:07 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>

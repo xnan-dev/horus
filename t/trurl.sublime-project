@@ -1,0 +1,41 @@
+{
+	/*"folders":
+	[
+		{
+			"path": "BotCore"
+		}
+	],*/
+	/*"folders":
+	[
+		{
+			"path": "MobileOfflineTest",
+		},
+	],*/
+	"folders":
+	[
+		{
+			"path": "D:\\mios\\livianos\\produccion\\productivos\\router",
+		},
+		{
+			"path": "BotCore\\xnan\\Trurl",
+		},
+		{
+			"path": "MarketBotRunnerWeb",
+		},
+		{
+			"path": "BotArenaWeb",
+		},
+		{
+			"path": "MarketPollWeb",
+		},
+		{
+			"path": "D:\\mios\\livianos\\produccion\\productivos\\GlassLab",
+		},
+		{
+			"path": "D:\\mios\\livianos\\trabajo\\ministerio\\fuentes\\Ele",
+		},
+		{
+			"path": "D:\\mios\\livianos\\trabajo\\ministerio\\fuentes\\prestamos\\prestamos",
+		},
+	],
+}

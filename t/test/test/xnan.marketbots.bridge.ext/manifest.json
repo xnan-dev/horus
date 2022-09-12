@@ -1,0 +1,35 @@
+{
+  "name": "xnan marketbots bridge",
+  "version": "1.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+    "action": {
+    "default_title": "xnan marketbots bridge",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+    "permissions": [
+      "tabs",
+      "bookmarks"
+    ],
+  "content_scripts": [
+    {
+ 	  "matches": ["http://clasico.rava.com/*"],
+      "run_at": "document_end",
+      "js": ["jquery-3.6.0.min.js","inject.js"]
+    }
+  ],
+  "permissions": ["https://www.rava.com/*","https://clasico.rava.com/*","https://www.xnan.click/*","http://localhost/*","https://localhost/*"],
+  "web_accessible_resources": [
+    {
+      "resources": [ "myscript.js" ],
+      "matches": [ "https://*/*" ]
+    }
+  ],
+"content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'",
+    "sandbox": "sandbox allow-scripts; script-src 'self' 'https://localhost' ; object-src 'self'"
+  }
+}

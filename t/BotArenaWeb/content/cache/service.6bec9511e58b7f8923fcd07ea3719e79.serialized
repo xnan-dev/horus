@@ -1,0 +1,1 @@
+a:1:{i:0;a:15:{i:0;s:8:"traderId";i:1;s:7:"queueId";i:2;s:7:"assetId";i:3;s:7:"tradeOp";i:4;s:8:"quantity";i:5;s:10:"limitQuote";i:6;s:9:"doneQuote";i:7;s:11:"doneBalance";i:8;s:9:"valuation";i:9;s:6:"status";i:10;s:6:"doable";i:11;s:16:"statusChangeTick";i:12;s:16:"statusChangeTime";i:13;s:8:"doneTick";i:14;s:8:"doneTime";}}

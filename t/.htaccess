@@ -1,0 +1,5 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^t1\.1\.marketbots\.xnan\.click$
+RewriteRule ^/?$ "https\:\/\/t1\.1\.marketbots\.xnan\.click\/BotArenaWeb\/index\.php" [R=301,L]
+
