@@ -30,10 +30,13 @@ class YahooFinanceTestMarket extends AbstractMarket {
 	var $pollerName="";
 
 	function __construct($marketId,$assetCount,$pollerName="Cryptos") {
-		parent::__construct($marketId,true);		
 		$this->pollerName=$pollerName;		
-
 		if ($pollerName=="") Nano\nanoCheck()->checkFailed("pollerName cannot be empty");
+		parent::__construct($marketId,true);		
+	}
+
+
+	protected function setupMarket() {				
 		$this->tradeFixedFees=array(1.5);
 		$this->setupAssets();
 	}
@@ -173,7 +176,9 @@ class YahooFinanceTestMarket extends AbstractMarket {
 		return $ret;
 	}
 
-	function beat() {		
+	function beat($beat=null) {		
+		if ($beat!=null) throw \Exception("unsupported for yfTestMarket");
+
 		if ($this->cacheBeat==-1) $this->setupNextCacheIndex();
 		return $this->cacheBeat;
 	}

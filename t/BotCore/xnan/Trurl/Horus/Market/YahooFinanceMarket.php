@@ -30,13 +30,16 @@ set_time_limit(120*10);
 class YahooFinanceMarket extends AbstractMarket {
 	var $lastQuotesCache=null;
 	var $lastBeatRead=-1;
-	var $assets=[];
-	var $assetIds=[];
-	var $assetIdsByType=[];
+	var $assets=[]; // cached
+	var $assetIds=[]; // cached
+	var $assetIdsByType=[]; // cached
 
 	function __construct($marketId,$assetCount,$useHistory=true,$pollerName="Cryptos") {		
-		parent::__construct($marketId,$useHistory);
 		$this->pollerName=$pollerName;		
+		parent::__construct($marketId,$useHistory);
+	}
+
+	protected function setupMarket() {
 		$this->setupAssets();
 	}
 
@@ -44,7 +47,6 @@ class YahooFinanceMarket extends AbstractMarket {
 		$assetsCsv = Nano\nanoCsv()->csvContentToArray($this->assetsAsCsv(),';');
 				
 		$index=0;
-		$assets=array();
 		foreach($assetsCsv as $assetCsv) {
 			//if ($index>=$assetCount) break;
 			$asset=new Asset\Asset($assetCsv["assetId"]);
@@ -52,11 +54,10 @@ class YahooFinanceMarket extends AbstractMarket {
 			$this->assetIds[]=$asset->assetId();
 			$this->assetIdsByType[AssetType\CryptoCurrency]=$asset->assetId;
 			++$index;
-		} 		
-		return $assets;
+		} 				
 	}
 
-	function assets() {
+	function assets() {		
 		return $this->assets;
 	}
 
@@ -156,7 +157,8 @@ class YahooFinanceMarket extends AbstractMarket {
 		return $ret;
 	}
 
-	function beat() {		
+	function beat($beat=null) {		
+		if ($beat!=null) throw \Exception("unsupported for yfMarket");
 		$lastQuotes=$this->marketLastQuotes();		
 		if ($lastQuotes==null) return 0;		
 		return $lastQuotes[0]["marketBeat"];

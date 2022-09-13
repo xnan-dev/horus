@@ -23,20 +23,25 @@ class MathMarket extends AbstractMarket {
 	var $assetIds=[];
 	var $assetIdsByType=[];
 	var $tradeFixedFees=[];
+	var $assetCount;
 
 	function __construct($marketId,$assetCount=1) {
+		$this->assetCount=$assetCount;
 		parent::__construct($marketId,false);
-
-		$this->setupAssets($assetCount);
-		$this->tradeFixedFees=array(1.5);
-
 		$this->setupQuoteOffsets();
 	}
 
-	function setupAssets($assetCount) {		
+	protected function setupMarket() {
+		$this->setupAssets();
+		$this->tradeFixedFees=array(1.5);		
+		parent::setupMarket();		
+	}
+
+	function setupAssets() {		
 		$this->assetIdsByType[AssetType\CryptoCurrency]=[];
 		$this->assetIdsByType[AssetType\Currency]=[];		
-		for($i=1;$i<=$assetCount;$i++) {
+
+		for($i=1;$i<=$this->assetCount;$i++) {
 			$assetId="CC".$i;
 			$asset=new Asset\Asset($assetId,AssetType\CryptoCurrency);
 			$this->assetIds[]=$assetId;

@@ -47,6 +47,7 @@ class MarketStats {
 		$this->marketStatsId=$marketStatsId;
 		$this->marketBeatObserver=new MarketBeatObserver($this);
 		$this->textFormatter=Nano\newTextFormatter();
+		$this->setupStatsIfReq();
 		$market->onBeat()->addObserver($this->marketBeatObserver);		
 	}
 
@@ -67,24 +68,26 @@ class MarketStats {
 		$query=sprintf(
 				"SELECT COUNT(*) as count FROM marketStats WHERE marketId='%s' AND marketStatsId='%s'",
 					$this->market()->marketId(),
-					$this->marketStatsId);				
+					$this->marketStatsId());				
 
 		$r=$this->pdo()->query($query);
 		
+
 		$row=$r->fetch();
-		return $row["count"]>0;
+
+		return $row["count"]==0;
 	}
 
 	function marketStatsReset() {
 		$delQuery1=sprintf(
 				"DELETE FROM marketStatsLog WHERE marketId='%s' AND marketStatsId='%s'",
 					$this->market()->marketId(),
-					$this->marketStatsId);		
+					$this->marketStatsId());		
 
 		$delQuery2=sprintf(
 				"DELETE FROM marketStats WHERE marketId='%s' AND marketStatsId='%s'",
 					$this->market()->marketId(),
-					$this->marketStatsId);		
+					$this->marketStatsId());		
 		
 		$r=$this->pdo()->query($delQuery1);
 		$r=$this->pdo()->query($delQuery2);
@@ -94,7 +97,7 @@ class MarketStats {
 		$query=sprintf(
 		"SELECT * FROM marketStats WHERE marketId='%s' AND marketStatsId='%s'",
 			$this->market()->marketId(),
-			$this->marketStatsId);		
+			$this->marketStatsId());		
 
 		$r=$this->pdo()->query($query);
 		
@@ -113,7 +116,7 @@ class MarketStats {
 		$query=sprintf(
 			"UPDATE marketStats SET $field=$value WHERE marketId='%s' AND marketStatsId='%s'",
 				$this->market()->marketId(),
-				$this->marketStatsId);		
+				$this->marketStatsId());		
 
 		$this->pdo()->query($query);
 	}
@@ -128,7 +131,7 @@ class MarketStats {
 					 AND historyIndex IS NULL
 					 ",
 					$this->market()->marketId(),
-					$this->marketStatsId,
+					$this->marketStatsId(),
 					$assetId,
 					$statsDim);		
 		
@@ -137,7 +140,7 @@ class MarketStats {
 				"INSERT INTO marketStatsLog(marketId,marketStatsId,assetId,statsDim,statsValue) 
 				VALUES('%s','%s','%s',%s,%s)",
 					$this->market()->marketId(),
-					$this->marketStatsId,
+					$this->marketStatsId(),
 					$assetId,
 					$statsDim,					
 					$statsValue);		
@@ -156,7 +159,7 @@ class MarketStats {
 					 AND historyIndex=%s
 					 ",
 					$this->market()->marketId(),
-					$this->marketStatsId,
+					$this->marketStatsId(),
 					$assetId,
 					$statsDim,
 					$historyIndex);		
@@ -165,7 +168,7 @@ class MarketStats {
 				"INSERT INTO marketStatsLog(marketId,marketStatsId,assetId,statsDim,historyIndex,statsValue) 
 				VALUES('%s','%s','%s',%s,%s,%s)",
 					$this->market()->marketId(),
-					$this->marketStatsId,
+					$this->marketStatsId(),
 					$assetId,
 					$statsDim,					
 					$historyIndex,
@@ -175,19 +178,18 @@ class MarketStats {
 		$r=$this->pdo()->query($query);
 	}
 
-	private function setupMarketStatsHead() {
-
+	private function setupMarketStatsHead() {		
 		$delQuery=sprintf(
 				"DELETE FROM marketStats WHERE marketId='%s' AND marketStatsId='%s'",
 					$this->market()->marketId(),
-					$this->marketStatsId);		
+					$this->marketStatsId());		
 
 		$query=sprintf(
 				"INSERT INTO marketStats(marketId,marketStatsId,endBeat,
 						maxHistoryBeats,synchedBeat,beatMultiplier) 
 					VALUES ('%s','%s',%s,%s,%s,%s)",
 					$this->market()->marketId(),
-					$this->marketStatsId,
+					$this->marketStatsId(),
 					0,100,-1,1);		
 
 
@@ -196,7 +198,6 @@ class MarketStats {
 
 
 	private function setupMarketStatsLog() {
-		
 		foreach ($this->market()->assetIds() as $assetId) {
 			$this->statsScalarSet(self::SValue,$assetId,0);
 			$this->statsScalarSet(self::SMin,$assetId,$this->infinitePositive());
@@ -220,7 +221,8 @@ class MarketStats {
 
 	}
 
-	private function setupMarketStats() {				
+	private function setupMarketStats() {		
+
 		$this->setupMarketStatsHead();
 		$this->setupMarketStatsLog();
 	}
@@ -234,9 +236,10 @@ class MarketStats {
 					marketId='%s' AND
 					marketStatsId='%s' AND
 					statsDim=%s AND
-					assetId='%s'",
+					assetId='%s' AND
+					historyIndex IS NULL",
 			$this->market()->marketId(),
-			$this->marketStatsId,
+			$this->marketStatsId(),
 			$statsDim,
 			$assetId);		
 
@@ -250,7 +253,84 @@ class MarketStats {
 	}
 
 
-	function synchedBeat() {
+	function statsHistoryLastValue($statsDim,$assetId) {
+
+		$query=sprintf(
+			"SELECT TOP 1 * 
+				FROM marketStatsLog
+				WHERE
+					marketId='%s' AND
+					marketStatsId='%s' AND
+					statsDim=%s AND
+					assetId='%s' AND
+					historyIndex IS NOT NULL
+				ORDER BY
+					historyIndex DESC",
+			$this->market()->marketId(),
+			$this->marketStatsId(),
+			$statsDim,
+			$assetId);
+
+		$r=$this->pdo()->query($query);		
+
+		if ($row=$r->fetch()) {
+			return $row["statsValue"];
+		}
+
+		Nano\nanoCheck()->checkFailed("stats not found");
+	}
+
+	function statsHistoryAll($statsDim,$assetId) {
+
+		$query=sprintf(
+			"SELECT statsValue 
+				FROM marketStatsLog
+				WHERE
+					marketId='%s' AND
+					marketStatsId='%s' AND
+					statsDim=%s AND
+					assetId='%s' AND
+				 	historyIndex IS NOT NULL
+				ORDER BY
+					historyIndex ASC
+				 	 "
+,
+			$this->market()->marketId(),
+			$this->marketStatsId(),
+			$statsDim,
+			$assetId);		
+
+		$r=$this->pdo()->query($query);		
+
+		$rows=[];
+		while ($row=$r->fetch()) {
+			$rows[]=$row;
+		}
+
+		return $rows;
+	}
+
+	function statsHistoryShift($statsDim,$assetId) {
+		$i=0;
+		$rows=$this->statsHistoryAll($statsDim,$assetId);		
+		$value=$this->infiniteNegative();
+		$n=count($rows);
+
+		foreach($rows as $row) {
+			$value=$row["statsValue"];			
+			if ($i>0 && $i<$n-1) {
+				$this->statsHistorySet($statsDim,$assetId,$i-1,$value);	
+			}		
+			++$i;
+		}		
+
+		$this->statsHistorySet($statsDim,$assetId,$n-1,$this->infiniteNegative());	
+	}
+
+	function synchedBeat($synchedBeat=null) {
+		if ($synchedBeat!=null) {
+			$this->fieldMarketStatsSetInt("synchedBeat",$synchedBeat);
+		}
 		return $this->fieldMarketStats("synchedBeat");
 	}
 	
@@ -276,7 +356,10 @@ class MarketStats {
 		return max(0,$this->endBeat()-$this->maxHistoryBeats()+1);
 	}
 
-	function endBeat() {
+	function endBeat($endBeat=null) {
+		if ($endBeat!=null) {
+			$this->fieldMarketStatsSetInt("endBeat",$endBeat);
+		}
 		return $this->fieldMarketStats("endBeat");
 	}
 
@@ -294,10 +377,10 @@ class MarketStats {
 
 	function sumHistory($assetId) {		
 		$sum=0;
-		$assetIdx=$this->statsAssetIndex->get($assetId);
 
-		for($i=0;$i<$this->statsHistory->lastDimension();$i++) {
-			$sum+=$this->statsHistory->get([$this->SHValue,$assetIdx,$i]);
+		$rows=$this->statsHistoryAll(self::SHValue,$assetId);		
+		foreach($rows as $row) {
+			$sum+=$row["statsValue"];
 		}		
 		return $sum;
 	}
@@ -309,11 +392,13 @@ class MarketStats {
 		$x2sum=0;
 
 		$x=1;
-		$assetIdx=$this->statsAssetIndex->get($assetId);		
-		$n=$this->statsHistory->lastDimension();
+
+		$rows=$this->statsHistoryAll(self::SHValue,$assetId);
+
+		$n=count($rows);
 		
 		for($i=0;$i<$n;$i++) {
-			$y=$this->statsHistory->get([$this->SHValue,$assetIdx,$i]);
+			$y=$rows[$i]["stastValue"];
 			$ysum+=$y;
 			$xsum+=$x;
 			$x2sum+=($x*$x);
@@ -328,11 +413,14 @@ class MarketStats {
 	function minHistory($assetId) {
 		$min=$this->infinitePositive();
 		$beat=$this->startBeat();
-		$minBeat=$beat;
-		$assetIdx=$this->statsAssetIndex->get($assetId);
+		$minBeat=$beat;		
 
-		for($i=0;$i<$this->statsHistory->lastDimension();$i++) {
-			$value=$this->statsHistory->get([self::SHValue,$assetIdx,$i]);
+		$rows=$this->statsHistoryAll(self::SHValue,$assetId);
+		$n=count($rows);
+
+
+		for($i=0;$i<$n;$i++) {
+			$value=$row[$i]["statsValue"];
 			if ($value==$this->infiniteNegative()) break;
 			if ($value<$min) $minBeat=$beat;
 			$min=min($min,$value);
@@ -347,11 +435,12 @@ class MarketStats {
 		$beat=$this->startBeat();
 		$maxBeat=$beat;
 
-		$assetIdx=$this->statsAssetIndex->get($assetId);
+		$rows=$this->statsHistoryAll(self::SHValue,$assetId);
+		$n=count($rows);
 
-		for($i=0;$i<$this->statsHistory->lastDimension();$i++) {			
+		for($i=0;$i<$n;$i++) {			
+			$value=$row[$i]["statsValue"];
 			if ($value==$this->infiniteNegative()) break;
-			$value=$this->statsHistory->get([self::SHValue,$assetIdx,$i]);
 			if ($value>$max) $maxBeat=$beat;
 			$max=max($max,$value);
 			++$beat;
@@ -380,13 +469,17 @@ class MarketStats {
 
 	function setupStatsIfReq() {
 		//print "SETUP IFREQ maxHistoryBeats:$this->settingMaxHistoryBeats<br>\n";
-		if ($this->isMarketStatsNew()) $this->setupMarketStats();
+		if ($this->isMarketStatsNew()) {
+			$this->setupMarketStats();
+		} else {
+
+		}
 	}
 
 	function marketBuyQuoteAvg(&$market) {
 		$sum=0;
 		$count=0;
-		foreach ($market->assetIds()->values()	as $assetId) {
+		foreach ($market->assetIds() as $assetId) {
 			$sum+=$market->assetQuote($assetId)->buyQuote();	
 			++$count;
 		}
@@ -402,15 +495,14 @@ class MarketStats {
 		}
 
 		//printf("beat %s synchedBeat %s stats:%s<br>",$market->beat(),$this->synchedBeat,$this->marketStatsId);
-		if ($market->beat()==$this->synchedBeat) return;		
+		if ($market->beat()==$this->synchedBeat()) return;		
 
 		Nano\nanoPerformance()->track("marketStats.onBeat.".$market->marketId());
-		$this->endBeat=$market->beat();				
-		
-		$assetIds=$this->statsAssetIndex->keys(); // includes derivaed assets.  instead of $market->assetIds()->values()		
+		$this->endBeat($market->beat());
+	
+		$assetIds=$this->assetIds();	
 
 		foreach($assetIds as $assetId) {
-			$assetIdx=$this->statsAssetIndex->get($assetId);
 			
 			if ($assetId==self::MarketIndexAsset) {
 				$buyQuote=$this->marketBuyQuoteAvg($market); // indice de mercado: promedio del valor de las acciones que cotizan.
@@ -420,66 +512,65 @@ class MarketStats {
 			
 			$i=($this->beatCount()-1) / $this->beatMultiplier();
 
-			$lastValue=$this->statsHistory->get([self::SHValue,$assetIdx,$this->settingMaxHistoryBeats-1]);
+			$lastValue=$this->statsHistoryLastValue(self::SHValue,$assetId);
 
 	
 			if ($this->beatCount()==$this->settingMaxHistoryBeats && 
 					$lastValue!=
 					$this->infiniteNegative()) {				
-				$this->statsHistory->shift([self::SHValue,$assetIdx]);
+				$this->statsHistoryShift(self::SHValue,$assetId);
 				//$this->statsHistory->shift([self::SHCicle,$assetIdx]);
 			}
 
-	
-			$this->statsHistory->set([self::SHValue,$assetIdx,$i],$buyQuote /*33+$this->market->get()->beat()*/);
-
+			$this->statsHistorySet(self::SHValue,$assetId,$i,$buyQuote);
 			//$this->statsHistory->set([self::SHCicle,$assetIdx,$i],$this->statsCicle($assetId));
 			
-			$this->statsScalar->set([self::SValue,$assetIdx],$buyQuote);						
-			$this->statsScalar->set([self::SSum,$assetIdx],$this->sumHistory($assetId));
-			$this->statsScalar->set([self::SLinearSlope,$assetIdx],$this->calcLinearSlope($assetId));
+			$this->statsScalarSet(self::SValue,$assetId,$buyQuote);						
+			$this->statsScalarSet(self::SSum,$assetId,$this->sumHistory($assetId));
+			$this->statsScalarSet(self::SLinearSlope,$assetId,$this->calcLinearSlope($assetId));
 		
 
-			$avg=$this->statsScalar->get([self::SSum,$assetIdx])/$this->beatCount();			
-			$this->statsScalar->set([self::SAvg,$assetIdx],$avg);
+			$avg=$this->statsScalar(self::SSum,$assetId)/$this->beatCount();			
+			$this->statsScalarSet(self::SAvg,$assetId,$avg);
 			
 			$minHistory=$this->minHistory($assetId);
 			$maxHistory=$this->maxHistory($assetId);
 									
-			$this->statsScalar->set([self::SMin,$assetIdx],$minHistory[0]);
-			$this->statsScalar->set([self::SMax,$assetIdx],$maxHistory[0]);
+			$this->statsScalarSet(self::SMin,$assetId,$minHistory[0]);
+			$this->statsScalarSet(self::SMax,$assetId,$maxHistory[0]);
 			$cicle=$this->statsCicle($assetId);
-			$this->statsScalar->set([self::SCicle,$assetIdx],$cicle);			
+			$this->statsScalarSet(self::SCicle,$assetId,$cicle);			
 
-			$v=(($this->statsScalar->get([self::SMax,$assetIdx])
-					+$this->statsScalar->get([self::SMin,$assetIdx]))/2);
+			$v=(($this->statsScalar(self::SMax,$assetId)
+					+$this->statsScalar(self::SMin,$assetId))/2);
 			
-			$this->statsScalar->set([self::SMean,$assetIdx],$v);
+			$this->statsScalarSet(self::SMean,$assetId,$v);
 
 			$isMin=$this->statsScalar(self::SMin,$assetId)==$buyQuote;
 			$isMax=$this->statsScalar(self::SMax,$assetId)==$buyQuote;
 			if ($isMin || $isMax) {
-				if ($isMin) $this->statsScalar->set([self::SMinBeat,$assetIdx],$market->beat());
-				if ($isMax) $this->statsScalar->set([self::SMaxBeat,$assetIdx],$market->beat());			
+				if ($isMin) $this->statsScalarSet(self::SMinBeat,$assetId,$market->beat());
+				if ($isMax) $this->statsScalarSet(self::SMaxBeat,$assetId,$market->beat());			
 			}
 
-			$minBeat=$this->statsScalar->get([self::SMinBeat,$assetIdx]);
-			$maxBeat=$this->statsScalar->get([self::SMinBeat,$assetIdx]);
-			$min=$this->statsScalar->get([self::SMin,$assetIdx]);
-			$max=$this->statsScalar->get([self::SMax,$assetIdx]);
+			$minBeat=$this->statsScalar(self::SMinBeat,$assetId);
+			$maxBeat=$this->statsScalar(self::SMinBeat,$assetId);
+			$min=$this->statsScalar(self::SMin,$assetId);
+			$max=$this->statsScalar(self::SMax,$assetId);
+	
 	//		print "assetId:$assetId minBeat:$minBeat maxBeat:$maxBeat buyQuote:$buyQuote min:$min|$minHistory[0] max:$max|$maxHistory[0] cicle:".number_format($cicle,2)." i:$i\n";
 
-			if ($isMin || $isMax) $this->statsScalar->set([self::SCicleBeats,$assetIdx],
+			if ($isMin || $isMax) $this->statsScalarSet(self::SCicleBeats,$assetId,
 					abs(
-						$this->statsScalar->get([self::SMaxBeat,$assetIdx])-
-						$this->statsScalar->get([self::SMinBeat,$assetIdx])
+						$this->statsScalar(self::SMaxBeat,$assetId)-
+						$this->statsScalar(self::SMinBeat,$assetId)
 					)
 				);
 		}
 
 
-		$this->synchedBeat=$market->beat();
-		echo "ONBEAT-ACA $this->marketStatsId : $this->beatMultiplier $this->synchedBeat\n";
+		$this->synchedBeat($market->beat());
+		printf("ONBEAT-ACA %s : %s %s\n",$this->marketStatsId(),$this->beatMultiplier(),$this->synchedBeat());
 
 		Nano\nanoPerformance()->track("marketStats.onBeat.".$market->marketId());
 	}
