@@ -26,7 +26,6 @@ Asset\Functions::Load;
 AssetTradeOperation\Functions::Load;
 
 abstract class AbstractMarket implements Market {
-	var $beat=0;
 	var $onBeat;
 	var $marketId;
 	var $marketTitle;
@@ -170,6 +169,7 @@ abstract class AbstractMarket implements Market {
 	}
 
 	function marketReset() {
+		exit("marketReset: unsupported / deferred");
 		$this->beat=0;
 		$this->marketStats->get()->marketStatsReset();
 	}
@@ -287,48 +287,14 @@ abstract class AbstractMarket implements Market {
 		return $v;
 	}
 
-	private function rowMarket() {
-		$query=sprintf(
-		"SELECT * FROM market WHERE marketId='%s'",
-			$this->marketId());		
-
-		$r=$this->pdo()->query($query);
-		
-		if ($row=$r->fetch()) {
-			return $row;
-		} else {
-			Nano\nanoCheck()->checkFailed("marketStats row not found");
-		}		
-	}
-
-	private function fieldMarket($field) {
-		return $this->rowMarket()[$field];
-	}
-
-	private function fieldMarketSetInt($field,$value) {
-		$query=sprintf(
-			"UPDATE market SET $field=$value WHERE marketId='%s'",
-				$this->marketId());		
-
-		$this->pdo()->query($query);
-	}
-
 	function beat($beat=null) {		
-		if ($beat!=null) {
-			$this->fieldMarketSetInt("beat",$beat);
-		}
-		return $this->fieldMarket("beat");
+		return Horus\persistence()->marketBeat($this->marketId(),$beat);	
 	}
 
 	function nextBeat() {
 		Nano\nanoPerformance()->track("market.observeAll");
 		$this->beat($this->beat()+1);	
-		$this->marketStats()->markChanged(); // TODO no debería estar acá, debería marcarse
-		$this->marketStatsMedium()->markChanged();
-		$this->marketStatsLong()->markChanged();
-
-		$this->onBeat()->observeAll($this);
-	
+		$this->onBeat()->observeAll($this);	
 		Nano\nanoPerformance()->track("market.observeAll");
 	}
 

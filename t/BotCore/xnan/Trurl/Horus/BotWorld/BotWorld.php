@@ -23,6 +23,7 @@ Nano\Functions::Load;
 Asset\Functions::Load;
 BotArena\Functions::Load;
 Builders\Functions::Load;
+use xnan\Trurl\Horus\Persistence;
 
 class Functions { const Load=1; }
 
@@ -50,6 +51,11 @@ class BotWorld {
 		return $this->pdo;
 	}	
 
+
+	function persistence() {
+		return Persistence\Persistence::instance();
+	}
+
 	function afterPdoSetup() {
 		$this->setupBotArenas();
 	}
@@ -68,6 +74,10 @@ class BotWorld {
 			BotWorld::$instance=new BotWorld();				
 		}
 		return BotWorld::$instance;
+	}
+
+	function botArenas() {
+		return $this->botArenas;
 	}
 
 	function setupSettings() {
@@ -123,13 +133,13 @@ class BotWorld {
 	}
 
 	function run($beats=1,$botArenaId="",$traderId="",$beatSleep=0,$live=true) {		
-		Nano\msg("BotWorld: run beats:$beats botArenaId:$botArenaId botArenaCount:".count($this->botArenas->values() ));
+		Nano\msg("BotWorld: run beats:$beats botArenaId:$botArenaId botArenaCount:".count($this->botArenas() ));
 		Nano\nanoCheck()->checkDiskAvailable();
 		
-		foreach($this->botArenas->values() as $botArena) {
+		foreach($this->botArenas() as $botArena) {
 				if ($botArenaId!="" && $botArena->botArenaId()!=$botArenaId) continue;
-				if ($live && $botArena->market()->get()->useHistory()) continue;
-				if (!$live && !$botArena->market()->get()->useHistory()) continue;
+				if ($live && $botArena->market()->useHistory()) continue;
+				if (!$live && !$botArena->market()->useHistory()) continue;
 				Nano\msg(sprintf("BotWorld: botArenaId: %s run",$botArena->botArenaId() ));
 				$botArena->run($beats,$traderId,$beatSleep);
 				Nano\msg("BotWorld: -------------------------");

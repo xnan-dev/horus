@@ -19,6 +19,8 @@ Builders\Functions::Load;
 
 use xnan\Trurl\Horus\PdoSettings;
 use xnan\Trurl\Horus\BotWorld;
+use xnan\Trurl\Horus\Persistence;
+
 //Uses: End
 
 class MarketBotRunner extends RestService\RestService {
@@ -42,6 +44,7 @@ class MarketBotRunner extends RestService\RestService {
 			    $this->pdoSettings->password());		
 
 		$this->botWorld()->pdo($this->pdo);		
+		$this->botWorld()->persistence()->pdo($this->pdo);		
 		$this->botWorld()->afterPdoSetup();		
 	}
 

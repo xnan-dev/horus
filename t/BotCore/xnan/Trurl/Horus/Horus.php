@@ -6,6 +6,8 @@ namespace xnan\Trurl\Horus;
 use xnan\Trurl\Nano;
 Nano\Functions::Load;
 
+use xnan\Trurl\Horus\Persistence;
+
 include_once("settings.php");	
 require("autoloader.php");	
 
@@ -42,6 +44,10 @@ function callServiceMarketPollerArray($query,$pollerName,$timeoutFn=null) {
 
 function marketBotRunnerVersion() {
   return "2.0.0/local";
+}
+
+function persistence() {
+		return Persistence\Persistence::instance();
 }
 
 ?>

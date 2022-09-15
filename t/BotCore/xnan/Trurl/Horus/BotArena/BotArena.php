@@ -118,8 +118,7 @@ class BotArena {
 	}
 
 	function trade($traderId="") {
-		foreach($this->traders()->keys() as $traderIndex) {
-			$trader=$this->traders()->get($traderIndex);
+		foreach($this->traders() as $trader) {
 
 			try {
 				if ($traderId!="" && $traderId!=$trader->traderId()) continue;
@@ -132,8 +131,7 @@ class BotArena {
 				Nano\msg(sprintf("trade: failure: msg exception at trader %s",$trader->traderId()));
 				throw $t;
 			}
-		}
-		$this->traders()->markChanged(true);
+		}		
 	}
 
 
@@ -202,7 +200,7 @@ class BotArena {
 	}
 
 	function tradersStatus() {
-			foreach($this->traders()->values() as $trader) {
+			foreach($this->traders() as $trader) {
 				$trader->status($this->market);
 			}
 	}
@@ -321,7 +319,7 @@ class BotArena {
 		Nano\nanoPerformance()->track("botArena.run.A");
 
 
-		Nano\msg(sprintf("BotArena: botArenaId:%s initial status marketBeat:%s marketClazz:%s beats:%s",$this->botArenaId,$this->market()->get()->beat(), get_class($this->market()->get()),$beats ));		
+		Nano\msg(sprintf("BotArena: botArenaId:%s initial status marketBeat:%s marketClazz:%s beats:%s",$this->botArenaId,$this->market()->beat(), get_class($this->market()),$beats ));		
 
 		$beatsRun=0;
 
@@ -331,13 +329,11 @@ class BotArena {
 
 		for($beat=0;$beat<$beats;$beat++) {
 
-			if ($this->market()->get()->ready()) {
-		
-				$this->market->markChanged();
+			if ($this->market()->ready()) {
 
 				$this->trade($traderId);
 
-				$this->market->get()->nextBeat();				
+				$this->market()->nextBeat();				
 
 				if ($beats>1 && $beatSleep>0) { 
 					Nano\msg(sprintf("BotArena: run: sleep $beatSleep"));

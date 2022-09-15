@@ -143,7 +143,7 @@ abstract class MarketTrader {
 
 	function traderReset() {
 		exit("traderReset: deferred");
-		$this->orderQueue->reset();
+		$this->orderQueue()->reset();
 		$this->nextQueueId=1;
 	}
 
@@ -211,10 +211,10 @@ abstract class MarketTrader {
 	}	
 
 	function autoCancelApproved() {
-		$this->orderQueue->markChanged();
+		$this->orderQueue()->markChanged();
 		
 		if ($this->autoCancelBuyApprovedBeats>0) {
-			foreach($this->orderQueue->values() as &$order) {
+			foreach($this->orderQueue()->values() as &$order) {
 				if (!$order->done() && $order->status()==AssetTradeStatus\Approved) {
 					$order->status(AssetTradeStatus\Approved);	
 					$order->statusChangeBeat($this->market()->beat());
@@ -293,21 +293,17 @@ abstract class MarketTrader {
 		$this->pdo()->query($query);
 	}
 
-	function notifyOrders(&$market) {
-		$this->orderQueue->markChanged();
-		
-		foreach($this->orderQueue->values() as &$order) {
+	function notifyOrders(&$market) {		
+		foreach($this->orderQueue() as &$order) {
 			$this->notifyTelegram($order);
 		}
 	}
 
 	function flushOrders(&$market) {
-		$this->orderQueue->markChanged();
-
 		//print_r($this->orderQueue);
 		//print $this->queueCancelledAsCsv();
 
-		foreach($this->orderQueue->values() as &$order) {
+		foreach($this->orderQueue() as &$order) {
 
 
 			$flushAllowed=$this->minFlushBeats < ($market->get()->beat() - $order->queueBeat()) ? true:false;
@@ -469,7 +465,7 @@ abstract class MarketTrader {
 	}
 
 	function queueOrder($assetId,&$tradeOp,$quantity,$quote,$status=null,$parentQueueId=null) {
-		$this->orderQueue->markChanged();
+		$this->orderQueue()->markChanged();
 		
 		if ($status==null) $status=$this->defaultStatus();
 		$order=new AssetTradeOrder\AssetTradeOrder();
@@ -484,7 +480,7 @@ abstract class MarketTrader {
 		$order->parentQueueId($parentQueueId);
 		$order->statusChangeBeat($this->market()->beat());
 		$order->queueBeat($this->market()->beat());
-		$this->orderQueue->insert($order);
+		$this->orderQueue()->insert($order);
 		
 		$queueId=$order->queueId();
 
@@ -500,7 +496,7 @@ abstract class MarketTrader {
 	}
 
 	function notifyTelegram(&$order) {		
-		$this->orderQueue->markChanged();
+		$this->orderQueue()->markChanged();
 		
 		if ($this->notificationsEnabled()) {			
 			$quantity=0;
@@ -532,7 +528,7 @@ MARKDOWN;
 
 	function pendingBuySuggestionsCount() {
 		$count=0;
-		foreach($this->orderQueue->values() as &$order) {
+		foreach($this->orderQueue()->values() as &$order) {
 			if  (!$order->done() && $order->tradeOp()==AssetTradeOperation\Buy) {
 				if ($order->status()==AssetTradeStatus\Suggested) {
 					++$count;
@@ -544,7 +540,7 @@ MARKDOWN;
 
 	function findPendingOrder($parentQueueId,$assetId,$tradeOp) {
 		$retOrder=null;
-		foreach($this->orderQueue->values() as &$order) {
+		foreach($this->orderQueue()->values() as &$order) {
 			if  (!$order->done() && $order->parentQueueId()==$parentQueueId  && $order->assetId()==$assetId && $order->tradeOp()==$tradeOp) {
 				if ($order->status()!=AssetTradeStatus\Rejected && $order->status()!=AssetTradeStatus\Cancelled && $order->status()!=AssetTradeStatus\Approved) {
 					$retOrder=$order;	
@@ -557,7 +553,7 @@ MARKDOWN;
 
 	function findOrderById($queueId) {
 		$retOrder=null;
-		foreach($this->orderQueue->values() as &$order) {
+		foreach($this->orderQueue()->values() as &$order) {
 			if  ($order->queueId()==$queueId) {
 				$retOrder=$order;	
 				break;
@@ -567,7 +563,7 @@ MARKDOWN;
 	}
 
 	function updateOrder($parentQueueId,&$order,$assetId,&$tradeOp,$quantity,$quote,$status=null,$newParentQueueId=null) {
-		$this->orderQueue->markChanged();
+		$this->orderQueue()->markChanged();
 		
 		$order->quantity($quantity);
 		$order->targetQuote($quote);
@@ -578,7 +574,7 @@ MARKDOWN;
 	}
 
 	function queueOrUpdateOrder($parentQueueId,$assetId,$tradeOp,$quantity,$quote,$status=null,$newParentQueueId=null) {		
-		$this->orderQueue->markChanged();
+		$this->orderQueue()->markChanged();
 		
 		$order=$this->findPendingOrder($parentQueueId,$assetId,$tradeOp);
 		//echo sprintf("find %s,$assetId,$tradeOp,parent:$parentQueueId:%s<br>",$this->traderId() ,($order!=null ? "yes": "no"));
@@ -608,7 +604,7 @@ MARKDOWN;
 	function orderQueueToCanonical() {
 		$ret="";
 		$doneCount=0;
-		foreach ($this->orderQueue->values() as $order) {
+		foreach ($this->orderQueue()->values() as $order) {
 			if (!$order->done()) {
 				if (strlen($ret)>0) $ret.=" ";
 				$ret.=sprintf("#%s.t%s.%s %s:%s at %s(%s) parent:%s",$order->queueId(),$order->queueBeat(),AssetTradeOperation\toCanonical($order->tradeOp()),$order->assetId(),$order->quantity(),$order->targetQuote(),AssetTradeStatus\toCanonical($order->status()),$order->parentQueueId() );				
@@ -620,7 +616,7 @@ MARKDOWN;
 	}
 
 	function hasOrderQueueByStatusAndAssetId($status,$assetId) {
-		foreach ($this->orderQueue->values() as $order) {
+		foreach ($this->orderQueue()->values() as $order) {
 			if ($order->status()==$status && $order->assetId()==$assetId) return true;
 		}
 		return false;
@@ -829,7 +825,7 @@ MARKDOWN;
 	}
 
 	function status(&$market) {
-		Nano\msg(sprintf("Trader:%s %s portfolioValuation:%s",$this->traderId(),$this->portfolio(),Nano\nanoTextFormatter()->moneyLegend($market->get()->portfolioValuation($this->portfolio()) ) ));
+		Nano\msg(sprintf("Trader:%s %s portfolioValuation:%s",$this->traderId(),$this->portfolio(),Nano\nanoTextFormatter()->moneyLegend($market->portfolioValuation($this->portfolio()) ) ));
 		// Nano\msg(sprintf("Trader:%s queue:%s",$this->traderId(),$this->orderQueueToCanonical() ));
 	
 	}
@@ -923,7 +919,7 @@ MARKDOWN;
 		if (file_exists($fileName)) {
 			$csv=file_get_contents($fileName );
 			$rows=Nano\nanoCsv()->csvContentToArray($csv,';');
-			$this->orderQueue->reset();
+			$this->orderQueue()->reset();
 
 			foreach($rows as $row) {
 				$q=new AssetTradeOrder\AssetTradeOrder();
@@ -931,7 +927,7 @@ MARKDOWN;
 				foreach($row as $key=>$value) {
 					$q->$key=$value;
 				}
-				$this->orderQueue->insert($q);
+				$this->orderQueue()->insert($q);
 			}		
 
 			Nano\msg(sprintf("MarketTrader: traderId:%s.%s queueRecover: done",$this->market()->marketId(),$this->traderId() ));			
@@ -943,7 +939,7 @@ MARKDOWN;
 	function queueCanonicalAsCsv() {
 		$ds=new DataSet\DataSet(explode(",","traderId,queueId,assetId,tradeOp,quantity,targetQuote,status,done,statusChangeBeat,statusChangeTime,queueBeat,parentQueueId,notified,doneBeat,doneTime,doneQuote"));
 					
-		$orders=$this->orderQueue->values();
+		$orders=$this->orderQueue()->values();
 		foreach($orders as $q) {
 			$ds->addRow([
 				$q->traderId(),

@@ -176,11 +176,11 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 	}
 
 	function tradePhase1(&$market) {
-		if ($this->startBeat==-1) $this->startBeat=$market->get()->beat();		 
+		if ($this->startBeat==-1) $this->startBeat=$market->beat();		 
 		//printf("(%s-%s)>=%s) ? %s \n",$market->get()->beat(),$this->startBeat,$this->waitBeats,
 		//(($market->get()->beat()-$this->startBeat)>=$this->waitBeats) ? "true" : "false");
 	
-		if (($market->get()->beat()-$this->startBeat)>=$this->waitBeats) {			
+		if (($market->beat()-$this->startBeat)>=$this->waitBeats) {			
 			$this->nextPhase();
 		}
 	}

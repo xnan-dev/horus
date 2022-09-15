@@ -112,7 +112,8 @@ class MarketStats {
 		return $this->rowMarketStats()[$field];
 	}
 
-	private function fieldMarketStatsSetInt($field,$value) {
+	private function fieldMarketStatsSetInt($field,$value) {		
+
 		$query=sprintf(
 			"UPDATE marketStats SET $field=$value WHERE marketId='%s' AND marketStatsId='%s'",
 				$this->market()->marketId(),
@@ -122,7 +123,10 @@ class MarketStats {
 	}
 
 	function statsScalarSet($statsDim,$assetId,$statsValue) {
+		$marketId=$this->market()->marketId();
+		$marketStatsId=$this->marketStatsId();
 
+		print "statsScalarSet $statsDim,$assetId,$statsValue $marketId $marketStatsId \n";
 		$delQuery=sprintf(
 				"DELETE FROM marketStatsLog WHERE marketId='%s'
 					 AND marketStatsId='%s'
@@ -145,12 +149,13 @@ class MarketStats {
 					$statsDim,					
 					$statsValue);		
 		
-		$r=$this->pdo()->query($delQuery);
-		$r=$this->pdo()->query($query);
+		//print "$query\n";
+
+		$r=$this->pdo()->query($delQuery);		
+		$r=$this->pdo()->query($query);		
 	}
 
-	function statsHistorySet($statsDim,$assetId,$historyIndex,$statsValue) {
-
+	function statsHistorySet($statsDim,$assetId,$historyIndex,$statsValue) {	
 		$delQuery=sprintf(
 				"DELETE FROM marketStatsLog WHERE marketId='%s'
 					 AND marketStatsId='%s'
@@ -213,7 +218,7 @@ class MarketStats {
 		}
 
 		foreach ($this->market()->assetIds() as $assetId) {
-			for ($i=0;$i<$this->settingMaxHistoryBeats;$i++) {				
+			for ($i=0;$i<$this->maxHistoryBeats();$i++) {						
 				$this->statsHistorySet(self::SHValue,$assetId,$i,$this->infiniteNegative());
 				$this->statsHistorySet(self::SHCicle,$assetId,$i,$this->infiniteNegative());	
 			}
@@ -256,7 +261,7 @@ class MarketStats {
 	function statsHistoryLastValue($statsDim,$assetId) {
 
 		$query=sprintf(
-			"SELECT TOP 1 * 
+			"SELECT * 
 				FROM marketStatsLog
 				WHERE
 					marketId='%s' AND
@@ -265,17 +270,20 @@ class MarketStats {
 					assetId='%s' AND
 					historyIndex IS NOT NULL
 				ORDER BY
-					historyIndex DESC",
+					historyIndex DESC 
+				LIMIT 1",
 			$this->market()->marketId(),
 			$this->marketStatsId(),
 			$statsDim,
 			$assetId);
 
+
+
 		$r=$this->pdo()->query($query);		
 
 		if ($row=$r->fetch()) {
 			return $row["statsValue"];
-		}
+		}		
 
 		Nano\nanoCheck()->checkFailed("stats not found");
 	}
@@ -290,7 +298,8 @@ class MarketStats {
 					marketStatsId='%s' AND
 					statsDim=%s AND
 					assetId='%s' AND
-				 	historyIndex IS NOT NULL
+				 	historyIndex IS NOT NULL AND
+				 	statsValue<%s
 				ORDER BY
 					historyIndex ASC
 				 	 "
@@ -298,7 +307,8 @@ class MarketStats {
 			$this->market()->marketId(),
 			$this->marketStatsId(),
 			$statsDim,
-			$assetId);		
+			$assetId,
+			$this->infiniteNegative());		
 
 		$r=$this->pdo()->query($query);		
 
@@ -406,8 +416,13 @@ class MarketStats {
 			++$x;
 		}		
 
-		return (($n*$xysum)-($xsum*$ysum))  / 
-			(($n*$x2sum)-($xsum*$xsum));
+		$r1=(($n*$xysum)-($xsum*$ysum));
+		$r2=(($n*$x2sum)-($xsum*$xsum));
+		if ($r2!=0) {
+			return $r1  / $r2;
+		} else {
+			return 0;
+		}		
 	}
 
 	function minHistory($assetId) {
@@ -484,6 +499,11 @@ class MarketStats {
 			++$count;
 		}
 		return $sum/$count;		
+	}
+
+
+	function assetIds() {
+		return $this->market()->assetIds(); // TODO agregar Mercado Promedio.
 	}
 
 	function onBeat($market) {
