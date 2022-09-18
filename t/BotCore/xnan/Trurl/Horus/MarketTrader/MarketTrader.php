@@ -27,35 +27,87 @@ AssetTradeStatus\Functions::Load;
 class Functions { const Load=1; }
 
 abstract class MarketTrader {
-	var $portfolioId=-1;
-	var $botArenaId;
-	var $traderId;
-	var $market;
-	var $nextQueueId=1;
-	var $autoApprove=false;
-	var $minFlushBeats=1;
-	var $settingBuyUnits=1;
-	var $settingBuyMinimum=0.1;
-	var $minEarn=5;
-	var $notificationsEnabled=false;	
-	var $autoCancelBuyBeats=8;
-	var $textFormater;
-	var $traderTitle;
-	
-	var $dailyWaitFromMarketOpen=0;
-	var $dailyWaitFromMarketClose=0;
-	var $marketBroker=null;
-	var $openTabToBroker=false;
-	var $telegramChatId="1639383990";
+	private $portfolioId=-1;
+	private $botArenaId;
+	private $traderId;
+	private $market;
+	private $textFormater;	
+	private $marketBroker=null;
 
 	function __construct($botArenaId,$traderId,&$portfolioId) {		
 		$this->textFormatter=Nano\newTextFormatter();
 		$this->botArenaId=$botArenaId;
 		$this->traderId=$traderId;
 		$this->portfolioId=$portfolioId;
-		$this->traderTitle=$traderId;		
 		$this->setupPortfolio();
 		$this->setupSettings();
+	}
+
+	function portfolioId() {
+		if ($this->portfolioId==null) Nano\nanoCheck()->checkFailed("botArenaId should be assigned");
+		return $this->portfolioId;	
+	}
+
+	function botArenaId() {
+		if ($this->botArenaId==null) Nano\nanoCheck()->checkFailed("botArenaId should be assigned");
+		return $this->botArenaId;	
+	}
+
+	function traderId() {
+		if ($this->traderId==null) Nano\nanoCheck()->checkFailed("traderId should be assigned");
+		return $this->traderId;
+	}
+
+	function nextQueueId($nextQueueId=null) {
+		return Horus\persistence()->traderNextQueueId($this->botArenaId(),$this->traderId(),$nextQueueId);	
+	}
+
+	function autoApprove($autoApprove=null) {
+		return Horus\persistence()->traderAutoApprove($this->botArenaId(),$this->traderId(),$autoApprove);	
+	}
+
+	function minFlushBeats($minFlushBeats=null) {
+		return Horus\persistence()->traderMinFlushBeats($this->botArenaId(),$this->traderId(),$minFlushBeats);	
+	}
+
+	function settingBuyUnits($settingBuyUnits=null) {
+		return Horus\persistence()->traderSettingBuyUnits($this->botArenaId(),$this->traderId(),$settingBuyUnits);	
+	}
+
+	function settingBuyMinimum($settingBuyMinimum=null) {
+		return Horus\persistence()->traderSettingBuyMinimum($this->botArenaId(),$this->traderId(),$settingBuyMinimum);	
+	}
+
+	function minEarn($minEarn=null) {
+		return Horus\persistence()->traderMinEarn($this->botArenaId(),$this->traderId(),$minEarn);	
+	}
+
+	function notificationsEnabled($notificationsEnabled=null) {
+		return Horus\persistence()->traderNotificationsEnabled($this->botArenaId(),$this->traderId(),$notificationsEnabled);	
+	}
+
+	function autoCancelBuyBeats($autoCancelBuyBeats=null) {
+		return Horus\persistence()->traderAutoCancelBuyBeats($this->botArenaId(),$this->traderId(),$autoCancelBuyBeats);	
+	}
+
+	function traderTitle($traderTitle=null) {
+		return Horus\persistence()->traderTraderTitle($this->botArenaId(),$this->traderId(),$traderTitle);	
+	}
+	
+	function dailyWaitFromMarketOpen($dailyWaitFromMarketOpen=null) {
+		return Horus\persistence()->traderDailyWaitFromMarketOpen($this->botArenaId(),$this->traderId(),$dailyWaitFromMarketOpen);	
+	}
+
+	function dailyWaitFromMarketClose($dailyWaitFromMarketClose=null) {
+		return Horus\persistence()->traderDailyWaitFromMarketClose($this->botArenaId(),$this->traderId(),$dailyWaitFromMarketClose);	
+	}
+
+	function openTabToBroker($openTabToBroker=null) {
+		return Horus\persistence()->traderOpenTabToBroker($this->botArenaId(),$this->traderId(),$openTabToBroker);	
+	}
+
+	function telegramChatId($telegramChatId=null) {
+		return Horus\persistence()->traderTelegramChatId($this->botArenaId(),$this->traderId(),$telegramChatId);	
 	}
 
 	private function pdo() {
@@ -147,21 +199,6 @@ abstract class MarketTrader {
 		$this->nextQueueId=1;
 	}
 
-	function telegramChatId($chatId=null) {
-		if ($chatId!=null) $this->telegramChatId=$chatId;
-		return $this->telegramChatId;
-	}
-
- 	function traderTitle($traderTitle=null) {
- 		if ($traderTitle!=null) $this->traderTitle=$traderTitle;
- 		return $this->traderTitle;
- 	}
-
- 	function minEarn($minEarn=null) {
- 		if ($minEarn!=null) $this->minEarn=$minEarn;
- 		return $this->minEarn;
- 	}
-
 	function suspend() {
 		$query=sprintf("UPDATE marketTrader 
 				SET isSuspended=1
@@ -225,10 +262,6 @@ abstract class MarketTrader {
 	}
 
 	function addTraderCustomSettings($ds) {
-	}
-
-	function traderId() {
-		return $this->traderId;
 	}
 
 	function setupMarket(&$market) {
@@ -357,16 +390,6 @@ abstract class MarketTrader {
 		}
 	}
 
-	function settingBuyUnits($buyUnits=null) {
-		if ($buyUnits!=null) $this->settingBuyUnits=$buyUnits;
-		return $this->settingBuyUnits;
-	}
-
-	function settingBuyMinimum($buyMinimum=null) {
-		if ($buyMinimum!=null) $this->settingBuyUnits=$buyMinimum;
-		return $this->settingBuyMinimum;
-	}
-
 	function buyAtLimit($market,$assetId,$limitMultiplier) {
 		$buyQuote=$market->assetQuote($assetId)->buyQuote();
 		$buyQuote=$buyQuote*$limitMultiplier;
@@ -377,10 +400,6 @@ abstract class MarketTrader {
 		$sellQuote=$market->get()->assetQuote($assetId)->sellQuote();
 		$sellQuote=$sellQuote*$limitMultiplier;
 		return $sellQuote;	
-	}
-
-	function nextQueueId() {
-		return $this->nextQueueId++;
 	}
 
 	function defaultStatus() {
@@ -485,14 +504,6 @@ abstract class MarketTrader {
 		$queueId=$order->queueId();
 
 		return $queueId;
-	}
-
-	function setupNotificationsEnabled($enabled) {
-		$this->notificationsEnabled=$enabled;
-	}
-
-	function notificationsEnabled() {
-		return $this->notificationsEnabled;
 	}
 
 	function notifyTelegram(&$order) {		
@@ -838,26 +849,6 @@ MARKDOWN;
 
 	function formatQuantity($value) {
 		return sprintf('<span class="quantity">%s</span>',number_format($value,4));
-	}
-
-	function dailyWaitFromMarketOpen($beats=null) {
-		if ($beats!=null) $this->dailyWaitFromMarketOpen=$beats;
-			return $this->titdailyWaitFromMarketOpen;		
-	}
-
-	function dailyWaitFromMarketClose($beats=null) {
-		if ($beats!=null) $this->dailyWaitFromMarketClose=$beats;
-			return $this->dailyWaitFromMarketClose;
-	}
-	
-	function openTabToBroker($openTabToBroker=null) {
-		if ($openTabToBroker!=null) $this->openTabToBroker=$beats;
-			return $this->openTabToBroker;
-	}
-
-	function botArenaId() {
-		if ($this->botArenaId==null) Nano\nanoCheck()->checkFailed("botArenaId should be assigned");
-		return $this->botArenaId;
 	}
 
 	function orderQueue() {		

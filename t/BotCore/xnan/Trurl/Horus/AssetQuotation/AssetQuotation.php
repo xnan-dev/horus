@@ -11,8 +11,8 @@ Nano\Functions::Load;
 class Functions { const Load=1; }
 
 class AssetQuotation {
-	var $fromAssetId,$toAssetId;
-	var $sellQuote,$buyQuote;
+	private $fromAssetId,$toAssetId;
+	private $sellQuote,$buyQuote;
 
 	function __construct($fromAssetId,$toAssetId,$sellQuote=0,$buyQuote=0) {
 		Asset\checkAssetId($fromAssetId);

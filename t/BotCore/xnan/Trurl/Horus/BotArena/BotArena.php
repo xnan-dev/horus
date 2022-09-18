@@ -26,11 +26,12 @@ Asset\Functions::Load;
 class Functions { const Load=1; }
 
 class BotArena {
-	var $traders=[];
-	var $botArenaId;
-	var $textFormater;	
-	var $marketId;
-	var $market;
+	private $botArenaId;
+	private $marketId;
+
+	private $market;
+	private $traders=[];
+	private $textFormater;	
 
 	function __construct($botArenaId,$marketId) {
 		srand(0);

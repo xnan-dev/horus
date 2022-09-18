@@ -26,14 +26,12 @@ Asset\Functions::Load;
 AssetTradeOperation\Functions::Load;
 
 abstract class AbstractMarket implements Market {
-	var $onBeat;
-	var $marketId;
-	var $marketTitle;
+	private $marketId;
+
+	var $onBeat;	
 	var $textFormater;
 	var $marketSchedule=null;
 	var $useHistory=false;
-	var $defaultExchangeAssetId="USD";
-	var $quoteDecimals=4;
 	var $marketStats,$marketStatsLong,$marketStatsMedium;
 	var $settingMaxHistoryBeats=50;
 	var $statsMediumBeatMultiplier=100; // aprox. 50 muestras en una semana
@@ -56,7 +54,6 @@ abstract class AbstractMarket implements Market {
 
 		$this->textFormatter=Nano\newTextFormatter();
 		$this->marketId=$marketId;
-		$this->marketTitle=$marketId;
 		$this->useHistory=$useHistory;
 		$this->pollContentMaxAgeSeconds=5*60;				
 		$this->onBeat=new Observer\Observable();
@@ -64,7 +61,7 @@ abstract class AbstractMarket implements Market {
 	}
 
 	protected function setupMarket() {
-		$this->textFormatter()->defaultDecimals($quoteDecimals);
+		$this->textFormatter()->defaultDecimals($this->quoteDecimals());
 		$this->setupSettings();
 		$this->setupMarketSchedule();
 		$this->setupMarketStats();			
@@ -186,22 +183,9 @@ abstract class AbstractMarket implements Market {
 		$this->marketStats->get()->marketStatsReset();
 	}
 
-	function quoteDecimals($quoteDecimals=null) {
-		if ($quoteDecimals!=null) {
-			 $this->quoteDecimals=$quoteDecimals;
-			 $this->textFormatter()->defaultDecimals($quoteDecimals);
-		}	
-		return $this->quoteDecimals;
-	}
-
-
-
 	function defaultExchangeAssetId($assetId=null) {
-		if ($assetId!=null) {
-			 $this->defaultExchangeAssetId=$assetId;
-			$this->assets->insert(new Asset\Asset($assetId,AssetType\Currency));
-		}	
-		return $this->defaultExchangeAssetId;
+		//$this->assets->insert(new Asset\Asset($assetId,AssetType\Currency));
+ 		return Horus\persistence()->marketDefaultExchangeAssetId($this->marketId(),$assetId);	
 	}
 
 	function useHistory() {
@@ -239,13 +223,20 @@ abstract class AbstractMarket implements Market {
  	function botArenaId() {
  		return Horus\persistence()->marketBotArenaId($this->marketId());	
  	}
+
  	function marketId() {
  		return $this->marketId;
  	}
 
+ 	function quoteDecimals($quoteDecimals=null) {
+ 		if ($quoteDecimals!=null) {
+			 $this->textFormatter()->defaultDecimals($quoteDecimals);
+ 		}
+ 		return Horus\persistence()->marketQuoteDecimals($this->marketId(),$quoteDecimals);	
+ 	}
+
  	function marketTitle($marketTitle=null) {
- 		if ($marketTitle!=null) $this->marketTitle=$marketTitle;
- 		return $this->marketTitle;
+ 		return Horus\persistence()->marketTitle($this->marketId(),$marketTitle);	
  	}
 
  	function maxBuyQuantity(&$portfolio,$assetId) {

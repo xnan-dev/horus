@@ -52,7 +52,7 @@ class MathMarket extends AbstractMarket {
 		$assetUsd=Asset\assetUsd();
 		$this->assets[]=$assetUsd;
 		$this->assetIds[]=$assetUsd->assetId();
-		$this->assetIdsByType[AssetType\Currency]=$assetUsd->assetId;		
+		$this->assetIdsByType[AssetType\Currency]=$assetUsd->assetId();		
 	}
 
 	function assets() {

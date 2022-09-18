@@ -20,10 +20,11 @@ Nano\Functions::Load;
 class Functions { const Load=1; }
 
 class MarketStats {
-	var $market;
-	var $marketStatsId;
-	var $marketBeatObserver;
-	var $textFormater;
+	private $marketStatsId;
+
+	private $market;
+	private $marketBeatObserver;
+	private $textFormater;
 
 	const MarketIndexAsset="@MarketIndex";
 	const SValue=0;

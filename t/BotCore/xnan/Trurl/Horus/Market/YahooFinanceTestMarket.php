@@ -71,7 +71,7 @@ class YahooFinanceTestMarket extends AbstractMarket {
 			$asset=new Asset\Asset($assetCsv["assetId"]);
 			$this->assets[]=$asset;
 			$this->assetIds[]=$asset->assetId();
-			$this->assetIdsByType[AssetType\CryptoCurrency]=$asset->assetId;
+			$this->assetIdsByType[AssetType\CryptoCurrency]=$asset->assetId();
 			++$index;
 		} 		
 		return $assets;

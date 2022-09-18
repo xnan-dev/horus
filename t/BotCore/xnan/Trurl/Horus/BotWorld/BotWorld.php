@@ -28,10 +28,10 @@ use xnan\Trurl\Horus\Persistence;
 class Functions { const Load=1; }
 
 class BotWorld {
-	var $botArenas;
-	var $settings=null;	
-	static $instance;
-	var $pdo;
+	private $botArenas;
+	private $settings=null;	
+	private static $instance;
+	private $pdo;
 
 	function __construct() {
 		srand(0);
@@ -61,12 +61,7 @@ class BotWorld {
 	}
 
 	private function setupBotArenas() {		
-		$r=$this->pdo()->query("SELECT * FROM botArena");
-		while ($row=$r->fetch()) {
-			$botArenaId=$row["botArenaId"];
-			$b=new BotArena\BotArena($botArenaId,$row["marketId"]);
-			$this->botArenas[$botArenaId]=$b;
-		}		
+		$this->botArenas=Persistence\Persistence::instance()->worldBotArenas();
 	}
 	
 	static function instance() {
@@ -83,8 +78,6 @@ class BotWorld {
 	function setupSettings() {
 		$s=$this->settings();
 		$s->registerChangeListener("botWorld.run",$this);	
-		$s->registerChangeListener("botWorld.portfoliosRecover",$this);	
-		$s->registerChangeListener("botWorld.recover",$this);
 	}
 
 	function onSettingsChange($key,$params) {			
@@ -92,14 +85,6 @@ class BotWorld {
 			$beats=$params["beats"];
 			$botArenaId=$params["botArenaId"];
 			$this->run($beats,$botArenaId); 
-		}
-
-		if ($key=="botWorld.portfoliosRecover" && $params["settingsValue"]=="true") {
-			$this->portfoliosRecover(); 
-		}
-
-		if ($key=="botWorld.recover" && $params["settingsValue"]=="true") {
-			$this->recover(); 
 		}
 	}
 
@@ -127,8 +112,8 @@ class BotWorld {
 	} 
 
 	function trade() {
-		foreach($this->traders as $trader) {
-			$trader->trade($this->market);
+		foreach($this->traders() as $trader) {
+			$trader->trade($this->market());
 		}
 	}
 
@@ -147,14 +132,6 @@ class BotWorld {
 		Nano\msg("BotWorld: end");
 	}
 
-	function save() {
-		Nano\nanoCheck()->checkDiskAvailable();
-		foreach($this->botArenas->values() as $botArena) {
-//			printf("<br>### BOTARENA %s SAVE<br>",$botArena->botArenaId());
-			$botArena->save();
-		}
-	}
-
 	function botArenasAsCsv($live) {	
 		$ds=new DataSet\DataSet(["botArenaId","marketId","marketTitle"]);
 		$useHistory=!$live;
@@ -164,22 +141,6 @@ class BotWorld {
 		}
 
 		return $ds->toCsvRet();
-	}
-
-	function portfoliosRecover() {
-		Nano\msg("BotWorld: portfoliosRecover: start");
-		foreach($this->botArenas->values() as $botArena) {
-			$botArena->portfoliosRecover();				
-		}		
-		Nano\msg("BotWorld: portfoliosRecover: end");
-	}
-
-	function recover() {
-		Nano\msg("BotWorld: recover: start");
-		foreach($this->botArenas->values() as $botArena) {
-			$botArena->recover();				
-		}
-		Nano\msg("BotWorld: recover: end");
 	}
 }
 

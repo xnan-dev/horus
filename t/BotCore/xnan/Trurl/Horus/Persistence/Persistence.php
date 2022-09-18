@@ -10,6 +10,7 @@ use xnan\Trurl\Horus\AssetType;
 use xnan\Trurl\Nano\DataSet;
 use xnan\Trurl\Nano\TextFormatter;
 use xnan\Trurl\Horus\BotWorld;
+use xnan\Trurl\Horus\BotArena;
 use xnan\Trurl\Horus\WorldSettings;
 use xnan\Trurl\Horus\Portfolio;
 
@@ -51,13 +52,46 @@ class Persistence {
 		return $this->marketField($marketId,"beat");
 	}
 
+	function marketTitle($marketId,$marketTitle=null) {		
+		if ($marketTitle!=null) {			
+			$this->marketFieldSetString($marketId,"marketTitle",$marketTitle);
+		}
+		return $this->marketFieldString($marketId,"marketTitle");
+	}
+
+	function marketQuoteDecimals($marketId,$quoteDecimals=null) {		
+		if ($quoteDecimals!=null) {			
+			$this->marketFieldSetInt($marketId,"quoteDecimals",$quoteDecimals);
+		}
+		return $this->marketField($marketId,"quoteDecimals");
+	}
+
+	function marketDefaultExchangeAssetId($marketId,$defaultExchangeAssetId=null) {		
+		if ($defaultExchangeAssetId!=null) {			
+			$this->marketFieldSetString($marketId,"defaultExchangeAssetId",$defaultExchangeAssetId);
+		}
+		return $this->marketFieldString($marketId,"defaultExchangeAssetId");
+	}
+
 	private function marketField($marketId,$field) {
+		return $this->marketRow($marketId)[$field];
+	}
+
+	private function marketFieldString($marketId,$field) {
 		return $this->marketRow($marketId)[$field];
 	}
 
 	private function marketFieldSetInt($marketId,$field,$value) {
 		$query=sprintf(
 			"UPDATE market SET $field=$value WHERE marketId='%s'",
+				$marketId);		
+
+		$this->pdo()->query($query);
+	}
+
+	private function marketFieldSetString($marketId,$field,$value) {
+		$query=sprintf(
+			"UPDATE market SET $field='$value' WHERE marketId='%s'",
 				$marketId);		
 
 		$this->pdo()->query($query);
@@ -84,6 +118,49 @@ class Persistence {
 		}
 	}
 
+
+	private function traderFieldInt($botArenaId,$traderId,$field,$value=null) {
+		if ($value!=null) {
+
+			$query=sprintf(
+				"UPDATE marketTrader 
+					SET $field=$value 
+					WHERE
+					 botArenaId='%s' AND
+					 traderId='%s'
+				",
+					$botArenaId,
+					$traderId);		
+
+			$this->pdo()->query($query);
+
+			return null;
+		} else {
+			return $this->traderRow($botArenaId,$traderId)[$field];
+		}
+	}
+
+	private function traderFieldDouble($botArenaId,$traderId,$field,$value=null) {
+		if ($value!=null) {
+			$value=round($value, 10);
+
+			$query=sprintf(
+				"UPDATE marketTrader 
+					SET $field=$value 
+					WHERE
+					 botArenaId='%s' AND
+					 traderId='%s'
+				",
+					$botArenaId,
+					$traderId);		
+
+			$this->pdo()->query($query);
+
+			return null;
+		} else {
+			return $this->traderRow($botArenaId,$traderId)[$field];
+		}
+	}
 
 	private function marketBotArenaId($marketId) {
 
@@ -166,6 +243,26 @@ class Persistence {
 		}		
 	}
 
+	private function traderRow($botArenaId,$traderId) {
+		$query=sprintf(
+		"SELECT * 
+			FROM marketTrader t
+			WHERE 
+				t.traderId='%s' AND
+				t.botArenaId='%s'
+		"
+		,$traderId
+		,$botArenaId);		
+
+		$r=$this->pdo()->query($query);
+		
+		if ($row=$r->fetch()) {
+			return $row;
+		} else {
+			Nano\nanoCheck()->checkFailed("trader row not found for botArenaId:'$botArena' traderId:'$traderId'");
+		}		
+	}
+
 
 	function dsTraderWaitBeats($botArenaId,$marketId,$waitBeats=null) {
 		return $this->dsTraderFieldInt($botArenaId,$marketId,"waitBeats",$waitBeats);
@@ -201,6 +298,70 @@ class Persistence {
 
 	function dsTraderBuyLimitFactor($botArenaId,$marketId,$buyLimitFactor=null) {
 		return $this->dsTraderFieldDouble($botArenaId,$marketId,"buyLimitFactor",$buyLimitFactor);	
+	}
+
+	function worldBotArenas() {		
+		$r=$this->pdo()->query("SELECT * FROM botArena");
+		$as=[];
+		while ($row=$r->fetch()) {
+			$botArenaId=$row["botArenaId"];
+			$b=new BotArena\BotArena($botArenaId,$row["marketId"]);
+			$as[$botArenaId]=$b;
+		}
+		return $as;		
+	}
+
+
+	function traderNextQueueId($botArenaId,$traderId,$nextQueueId=null) {
+		return $this->traderFieldInt($botArenaId,$traderId,"nextQueueId",$nextQueueId);	
+	}
+
+	function traderAutoApprove($botArenaId,$traderId,$autoApprove=null) {
+		return $this->traderFieldInt($botArenaId,$traderId,"autoApprove",$autoApprove);	
+	}
+
+	function traderMinFlushBeats($botArenaId,$traderId,$minFlushBeats=null) {
+		return $this->traderFieldInt($botArenaId,$traderId,"minFlushBeats",$minFlushBeats);	
+	}
+
+	function traderSettingBuyUnits($botArenaId,$traderId,$settingBuyUnits=null) {
+		return $this->traderFieldInt($botArenaId,$traderId,"settingBuyUnits",$settingBuyUnits);	
+	}
+
+	function traderSettingBuyMinimum($botArenaId,$traderId,$settingBuyMinimum=null) {
+		return $this->traderFieldDouble($botArenaId,$traderId,"settingBuyMinimum",$settingBuyMinimum);	
+	}
+
+	function traderMinEarn($botArenaId,$traderId,$minEarn=null) {
+		return $this->traderFieldInt($botArenaId,$traderId,"minEarn",$minEarn);	
+	}
+
+	function traderNotificationsEnabled($botArenaId,$traderId,$notificationsEnabled=null) {
+		return $this->traderFieldInt($botArenaId,$traderId,"notificationsEnabled",$notificationsEnabled);	
+	}
+
+	function traderAutoCancelBuyBeats($botArenaId,$traderId,$autoCancelBuyBeats=null) {
+		return $this->traderFieldInt($botArenaId,$traderId,"autoCancelBuyBeats",$autoCancelBuyBeats);	
+	}
+
+	function traderTitle($botArenaId,$traderId,$traderTitle=null) {
+		return $this->traderFieldString($botArenaId,$traderId,"traderTitle",$traderTitle);	
+	}
+	
+	function traderDailyWaitFromMarketOpen($botArenaId,$traderId,$dailyWaitFromMarketOpen=null) {
+		return $this->traderFieldInt($botArenaId,$traderId,"dailyWaitFromMarketOpen",$dailyWaitFromMarketOpen);	
+	}
+
+	function traderDailyWaitFromMarketClose($botArenaId,$traderId,$dailyWaitFromMarketClose=null) {
+		return $this->traderFieldInt($botArenaId,$traderId,"dailyWaitFromMarketClose",$dailyWaitFromMarketClose);	
+	}
+
+	function traderOpenTabToBroker($botArenaId,$traderId,$openTabToBroker=null) {
+		return $this->traderFieldInt($botArenaId,$traderId,"openTabToBroker",$openTabToBroker);	
+	}
+
+	function traderTelegramChatId($botArenaId,$traderId,$telegramChatId=null) {
+		return $this->traderFieldInt($botArenaId,$traderId,"telegramChatId",$telegramChatId);	
 	}
 }
 

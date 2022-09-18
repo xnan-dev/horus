@@ -6462,3 +6462,278 @@
 2022-09-18 13:48:10 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
 2022-09-18 13:48:10 - BotWorld: -------------------------
 2022-09-18 13:48:10 - BotWorld: end
+2022-09-18 15:17:30 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 15:17:30 - BotWorld: botArenaId: mathArena run
+2022-09-18 15:17:30 - BotArena: botArenaId:mathArena run
+2022-09-18 15:17:30 - BotArena: botArenaId:mathArena initial status marketBeat:823 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 15:17:30 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002136
+2022-09-18 15:17:37 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 15:17:37 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 15:17:37 - BotWorld: -------------------------
+2022-09-18 15:17:37 - BotWorld: end
+2022-09-18 15:18:31 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 15:18:31 - BotWorld: botArenaId: mathArena run
+2022-09-18 15:18:31 - BotArena: botArenaId:mathArena run
+2022-09-18 15:18:31 - BotArena: botArenaId:mathArena initial status marketBeat:824 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 15:18:31 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002135
+2022-09-18 15:18:38 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 15:18:38 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 15:18:38 - BotWorld: -------------------------
+2022-09-18 15:18:38 - BotWorld: end
+2022-09-18 15:21:12 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 15:21:12 - BotWorld: botArenaId: mathArena run
+2022-09-18 15:21:12 - BotArena: botArenaId:mathArena run
+2022-09-18 15:21:12 - BotArena: botArenaId:mathArena initial status marketBeat:825 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 15:21:12 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002134
+2022-09-18 15:21:19 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 15:21:19 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 15:21:19 - BotWorld: -------------------------
+2022-09-18 15:21:19 - BotWorld: end
+2022-09-18 15:22:49 - 
+2022-09-18 15:22:49 - <b>MarketBotRunner 2.0.0/local</b>
+2022-09-18 15:22:49 - restServiceId:406064
+2022-09-18 15:22:49 - dateCreated:2022-09-18 15:22:48
+2022-09-18 15:22:49 - 
+2022-09-18 15:22:49 - <b>General</b>
+2022-09-18 15:22:49 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-18 15:22:49 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-18 15:22:49 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-18 15:22:49 - 
+2022-09-18 15:22:49 - <b>Markets</b>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-18 15:22:49 - 
+2022-09-18 15:22:49 - <b>Bots</b>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-18 15:22:49 - 
+2022-09-18 15:22:49 - <b>Bot Queues</b>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-18 15:22:49 - 
+2022-09-18 15:22:49 - <b>Bot Runs</b>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-18 15:22:49 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-18 15:22:49 - 
+2022-09-18 15:22:49 - <b>Tests</b>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-18 15:22:49 - 
+2022-09-18 15:22:49 - <b>Settings</b>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.marketTitle&settingsValue=VALUE">market.marketTitle</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.assetCount&settingsValue=VALUE">market.assetCount</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.quoteDecimals&settingsValue=VALUE">market.quoteDecimals</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.pollContentMaxAgeSeconds&settingsValue=VALUE">market.pollContentMaxAgeSeconds</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.reset&settingsValue=VALUE">market.reset</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.asset.quantity&settingsValue=VALUE">portfolio.asset.quantity</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.recover&settingsValue=VALUE">portfolio.recover</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-18 15:22:49 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-18 15:22:50 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 15:22:50 - BotWorld: botArenaId: mathArena run
+2022-09-18 15:22:50 - BotArena: botArenaId:mathArena run
+2022-09-18 15:22:50 - BotArena: botArenaId:mathArena initial status marketBeat:826 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 15:22:50 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002133
+2022-09-18 15:22:56 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 15:22:56 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 15:22:56 - BotWorld: -------------------------
+2022-09-18 15:22:56 - BotWorld: end
+2022-09-18 15:23:30 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 15:23:30 - BotWorld: botArenaId: mathArena run
+2022-09-18 15:23:30 - BotArena: botArenaId:mathArena run
+2022-09-18 15:23:30 - BotArena: botArenaId:mathArena initial status marketBeat:827 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 15:23:30 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002131
+2022-09-18 15:23:37 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 15:23:37 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 15:23:37 - BotWorld: -------------------------
+2022-09-18 15:23:37 - BotWorld: end
+2022-09-18 15:52:39 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 15:52:39 - BotWorld: botArenaId: mathArena run
+2022-09-18 15:52:39 - BotArena: botArenaId:mathArena run
+2022-09-18 15:52:39 - BotArena: botArenaId:mathArena initial status marketBeat:828 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 15:52:40 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002130
+2022-09-18 15:52:40 - trade: failure: msg exception at trader botMath2
+2022-09-18 15:53:24 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 15:53:24 - BotWorld: botArenaId: mathArena run
+2022-09-18 15:53:24 - BotArena: botArenaId:mathArena run
+2022-09-18 15:53:24 - BotArena: botArenaId:mathArena initial status marketBeat:828 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 15:53:24 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002130
+2022-09-18 15:53:24 - trade: failure: msg exception at trader botMath2
+2022-09-18 18:18:11 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 18:18:11 - BotWorld: botArenaId: mathArena run
+2022-09-18 18:18:11 - BotArena: botArenaId:mathArena run
+2022-09-18 18:18:11 - BotArena: botArenaId:mathArena initial status marketBeat:828 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 18:18:14 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002130
+2022-09-18 18:18:15 - trade: failure: msg exception at trader botMath2
+2022-09-18 18:18:16 - 
+2022-09-18 18:18:16 - <b>MarketBotRunner 2.0.0/local</b>
+2022-09-18 18:18:16 - restServiceId:227987
+2022-09-18 18:18:16 - dateCreated:2022-09-18 18:18:12
+2022-09-18 18:18:16 - 
+2022-09-18 18:18:16 - <b>General</b>
+2022-09-18 18:18:16 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-18 18:18:16 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-18 18:18:16 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-18 18:18:16 - 
+2022-09-18 18:18:16 - <b>Markets</b>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-18 18:18:16 - 
+2022-09-18 18:18:16 - <b>Bots</b>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-18 18:18:16 - 
+2022-09-18 18:18:16 - <b>Bot Queues</b>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-18 18:18:16 - 
+2022-09-18 18:18:16 - <b>Bot Runs</b>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-18 18:18:16 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-18 18:18:16 - 
+2022-09-18 18:18:16 - <b>Tests</b>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-18 18:18:16 - 
+2022-09-18 18:18:16 - <b>Settings</b>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.marketTitle&settingsValue=VALUE">market.marketTitle</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.assetCount&settingsValue=VALUE">market.assetCount</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.quoteDecimals&settingsValue=VALUE">market.quoteDecimals</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.pollContentMaxAgeSeconds&settingsValue=VALUE">market.pollContentMaxAgeSeconds</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.reset&settingsValue=VALUE">market.reset</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.asset.quantity&settingsValue=VALUE">portfolio.asset.quantity</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.recover&settingsValue=VALUE">portfolio.recover</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-18 18:18:16 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-18 18:23:59 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 18:23:59 - BotWorld: botArenaId: mathArena run
+2022-09-18 18:23:59 - BotArena: botArenaId:mathArena run
+2022-09-18 18:23:59 - BotArena: botArenaId:mathArena initial status marketBeat:828 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 18:23:59 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002130
+2022-09-18 18:23:59 - trade: failure: msg exception at trader botMath2
+2022-09-18 18:32:55 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 18:32:55 - BotWorld: botArenaId: mathArena run
+2022-09-18 18:32:55 - BotArena: botArenaId:mathArena run
+2022-09-18 18:32:55 - BotArena: botArenaId:mathArena initial status marketBeat:828 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 18:32:55 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002130
+2022-09-18 18:32:55 - trade: failure: msg exception at trader botMath2
+2022-09-18 18:34:19 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 18:34:19 - BotWorld: botArenaId: mathArena run
+2022-09-18 18:34:19 - BotArena: botArenaId:mathArena run
+2022-09-18 18:34:19 - BotArena: botArenaId:mathArena initial status marketBeat:828 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 18:34:19 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002130
+2022-09-18 18:34:26 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 18:34:26 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 18:34:26 - BotWorld: -------------------------
+2022-09-18 18:34:26 - BotWorld: end
+2022-09-18 18:49:42 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 18:49:42 - BotWorld: botArenaId: mathArena run
+2022-09-18 18:49:42 - BotArena: botArenaId:mathArena run
+2022-09-18 18:49:42 - BotArena: botArenaId:mathArena initial status marketBeat:829 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 18:49:42 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002128
+2022-09-18 18:49:48 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 18:49:48 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 18:49:48 - BotWorld: -------------------------
+2022-09-18 18:49:48 - BotWorld: end
+2022-09-18 18:54:31 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 18:54:31 - BotWorld: botArenaId: mathArena run
+2022-09-18 18:54:31 - BotArena: botArenaId:mathArena run
+2022-09-18 18:54:31 - BotArena: botArenaId:mathArena initial status marketBeat:830 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 18:54:31 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002126
+2022-09-18 18:54:37 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 18:54:37 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 18:54:37 - BotWorld: -------------------------
+2022-09-18 18:54:37 - BotWorld: end
+2022-09-18 18:59:53 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 18:59:53 - BotWorld: botArenaId: mathArena run
+2022-09-18 18:59:53 - BotArena: botArenaId:mathArena run
+2022-09-18 18:59:53 - BotArena: botArenaId:mathArena initial status marketBeat:831 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 18:59:53 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002124
+2022-09-18 19:00:00 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 19:00:00 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 19:00:00 - BotWorld: -------------------------
+2022-09-18 19:00:00 - BotWorld: end
+2022-09-18 19:00:19 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 19:00:19 - BotWorld: botArenaId: mathArena run
+2022-09-18 19:00:19 - BotArena: botArenaId:mathArena run
+2022-09-18 19:00:19 - BotArena: botArenaId:mathArena initial status marketBeat:832 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 19:00:19 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002122
+2022-09-18 19:00:25 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 19:00:25 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 19:00:25 - BotWorld: -------------------------
+2022-09-18 19:00:25 - BotWorld: end
+2022-09-18 19:02:34 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 19:02:34 - BotWorld: botArenaId: mathArena run
+2022-09-18 19:02:34 - BotArena: botArenaId:mathArena run
+2022-09-18 19:02:34 - BotArena: botArenaId:mathArena initial status marketBeat:833 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 19:02:34 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002120
+2022-09-18 19:02:41 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 19:02:41 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 19:02:41 - BotWorld: -------------------------
+2022-09-18 19:02:41 - BotWorld: end

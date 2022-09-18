@@ -13,8 +13,8 @@ AssetType\Functions::Load;
 class Functions { const Load=1; }
 
 class Asset {
-	var $assetId;
-	var $assetType;
+	private $assetId;
+	private $assetType;
 	
 	function __construct($assetId="A0",$assetType=AssetType\CryptoCurrency) {
 		$this->assetId=$assetId;
