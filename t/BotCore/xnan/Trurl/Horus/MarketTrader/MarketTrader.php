@@ -368,7 +368,7 @@ abstract class MarketTrader {
 	}
 
 	function buyAtLimit($market,$assetId,$limitMultiplier) {
-		$buyQuote=$market->get()->assetQuote($assetId)->buyQuote();
+		$buyQuote=$market->assetQuote($assetId)->buyQuote();
 		$buyQuote=$buyQuote*$limitMultiplier;
 		return $buyQuote;	
 	}
@@ -528,7 +528,7 @@ MARKDOWN;
 
 	function pendingBuySuggestionsCount() {
 		$count=0;
-		foreach($this->orderQueue()->values() as &$order) {
+		foreach($this->orderQueue() as &$order) {
 			if  (!$order->done() && $order->tradeOp()==AssetTradeOperation\Buy) {
 				if ($order->status()==AssetTradeStatus\Suggested) {
 					++$count;

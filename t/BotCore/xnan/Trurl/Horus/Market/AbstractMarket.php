@@ -105,15 +105,27 @@ abstract class AbstractMarket implements Market {
 		$openFactor=$openHours/24;
 		
 		$this->marketStats=new MarketStats\MarketStats($this,"marketStatsShort");
-		$this->marketStats->maxHistoryBeats($this->settingMaxHistoryBeats);
+		
+		if ($this->marketStats->isMarketStatsNew()) {			
+			$this->marketStats->maxHistoryBeats($this->settingMaxHistoryBeats);
+		}
 
+		
 		$this->marketStatsLong=new MarketStats\MarketStats($this,"marketStatsLong");
-		$this->marketStatsLong->maxHistoryBeats($this->settingMaxHistoryBeats);
-		$this->marketStatsLong->beatMultiplier(floor($this->statsLongBeatMultiplier*$openFactor));
+
+		if ($this->marketStatsLong->isMarketStatsNew())  {
+			$this->marketStatsLong->maxHistoryBeats($this->settingMaxHistoryBeats);
+			$this->marketStatsLong->beatMultiplier(floor($this->statsLongBeatMultiplier*$openFactor));
+		}
+
+
 
 		$this->marketStatsMedium=new MarketStats\MarketStats($this,"marketStatsMedium");
-		$this->marketStatsMedium->maxHistoryBeats($this->settingMaxHistoryBeats);
-		$this->marketStatsMedium->beatMultiplier(floor($this->statsMediumBeatMultiplier*$openFactor));
+
+		if ($this->marketStatsMedium->isMarketStatsNew()) {
+			$this->marketStatsMedium->maxHistoryBeats($this->settingMaxHistoryBeats);
+			$this->marketStatsMedium->beatMultiplier(floor($this->statsMediumBeatMultiplier*$openFactor));
+		}
 	}	
 
 	function settingsAsCsv() {
@@ -224,6 +236,9 @@ abstract class AbstractMarket implements Market {
  	}
 
 
+ 	function botArenaId() {
+ 		return Horus\persistence()->marketBotArenaId($this->marketId());	
+ 	}
  	function marketId() {
  		return $this->marketId;
  	}

@@ -64,7 +64,7 @@ class MarketStats {
 		return $this->marketStatsId;
 	}
 
-	private function isMarketStatsNew() {
+	function isMarketStatsNew() {
 		$query=sprintf(
 				"SELECT COUNT(*) as count FROM marketStats WHERE marketId='%s' AND marketStatsId='%s'",
 					$this->market()->marketId(),
@@ -78,20 +78,35 @@ class MarketStats {
 		return $row["count"]==0;
 	}
 
-	function marketStatsReset() {
+
+	function marketStatsLogReset() {
+		throw new \Exception("log-reset");
 		$delQuery1=sprintf(
 				"DELETE FROM marketStatsLog WHERE marketId='%s' AND marketStatsId='%s'",
 					$this->market()->marketId(),
 					$this->marketStatsId());		
 
+		$r=$this->pdo()->query($delQuery1);
+
+		$this->setupMarketStatsLog();
+	}
+
+	function marketStatsHeadReset() {
 		$delQuery2=sprintf(
 				"DELETE FROM marketStats WHERE marketId='%s' AND marketStatsId='%s'",
 					$this->market()->marketId(),
 					$this->marketStatsId());		
-		
-		$r=$this->pdo()->query($delQuery1);
+
 		$r=$this->pdo()->query($delQuery2);
+
+		$this->setupMarketStatsHead();
 	}
+
+	function marketStatsReset() {
+		$this->marketStatsHeadReset();
+		$this->marketStatsLogReset();				
+	}
+
 
 	private function rowMarketStats() {
 		$query=sprintf(
@@ -124,9 +139,11 @@ class MarketStats {
 
 	function statsScalarSet($statsDim,$assetId,$statsValue) {
 		$marketId=$this->market()->marketId();
-		$marketStatsId=$this->marketStatsId();
+		$marketStatsId=$this->marketStatsId();		
 
-		print "statsScalarSet $statsDim,$assetId,$statsValue $marketId $marketStatsId \n";
+		$statsValue=round($statsValue, 10);
+
+		//print "statsScalarSet $statsDim,$assetId,$statsValue $marketId $marketStatsId \n";
 		$delQuery=sprintf(
 				"DELETE FROM marketStatsLog WHERE marketId='%s'
 					 AND marketStatsId='%s'
@@ -156,6 +173,13 @@ class MarketStats {
 	}
 
 	function statsHistorySet($statsDim,$assetId,$historyIndex,$statsValue) {	
+		$marketId=$this->market()->marketId();
+		$marketStatsId=$this->marketStatsId();		
+
+		$statsValue=round($statsValue, 10);
+
+		//print "statsHistorySet $statsDim,$assetId,$historyIndex $statsValue $marketId $marketStatsId \n";
+
 		$delQuery=sprintf(
 				"DELETE FROM marketStatsLog WHERE marketId='%s'
 					 AND marketStatsId='%s'
@@ -180,7 +204,35 @@ class MarketStats {
 					$statsValue);		
 
 		$r=$this->pdo()->query($delQuery);
+
+		//print $query."\n";
 		$r=$this->pdo()->query($query);
+	}
+
+	function statsHistory($statsDim,$assetId,$historyIndex) {	
+		$marketId=$this->market()->marketId();
+		$marketStatsId=$this->marketStatsId();		
+
+		$query=sprintf(
+				"SELECT statsValue FROM marketStatsLog 
+				WHERE marketId='%s'
+					 AND marketStatsId='%s'
+					 AND assetId='%s'
+					 AND statsDim='%s'
+					 AND historyIndex=%s
+					 ",
+					$this->market()->marketId(),
+					$this->marketStatsId(),
+					$assetId,
+					$statsDim,
+					$historyIndex);		
+
+		$r=$this->pdo()->query($query);
+
+		if ($row=$r->fetch()) {			
+			return $row["statsValue"];
+		}
+		Nano\nanoCheck()->checkFailed("statsHistory row not found");
 	}
 
 	private function setupMarketStatsHead() {		
@@ -299,7 +351,7 @@ class MarketStats {
 					statsDim=%s AND
 					assetId='%s' AND
 				 	historyIndex IS NOT NULL AND
-				 	statsValue<%s
+				 	statsValue<>%s
 				ORDER BY
 					historyIndex ASC
 				 	 "
@@ -321,20 +373,23 @@ class MarketStats {
 	}
 
 	function statsHistoryShift($statsDim,$assetId) {
-		$i=0;
-		$rows=$this->statsHistoryAll($statsDim,$assetId);		
+		//print "--SHIFT START-------------------------------------------------------\n";
+
+		$i=0;		
 		$value=$this->infiniteNegative();
-		$n=count($rows);
+		
 
-		foreach($rows as $row) {
-			$value=$row["statsValue"];			
-			if ($i>0 && $i<$n-1) {
+		$n=$this->maxHistoryBeats();
+
+		for($i=0 ; $i<$n; $i++) {
+			$value=$this->statsHistory($statsDim,$assetId,$i);		
+			if ($i>0 && $i<$n) {
 				$this->statsHistorySet($statsDim,$assetId,$i-1,$value);	
-			}		
-			++$i;
+			}					
 		}		
+		$this->statsHistorySet($statsDim,$assetId,$n-1,$this->infiniteNegative());
+		//print "--SHIFT END ------------------------------------------------------------\n";
 
-		$this->statsHistorySet($statsDim,$assetId,$n-1,$this->infiniteNegative());	
 	}
 
 	function synchedBeat($synchedBeat=null) {
@@ -347,6 +402,7 @@ class MarketStats {
 	function maxHistoryBeats($maxHistoryBeats=null) {
 		if ($maxHistoryBeats!=null) {
 			$this->fieldMarketStatsSetInt("maxHistoryBeats",$maxHistoryBeats);
+			$this->marketStatsLogReset();
 		}
 		return $this->fieldMarketStats("maxHistoryBeats");
 	}
@@ -354,6 +410,7 @@ class MarketStats {
 	function beatMultiplier($beatMultiplier=null) {
 		if ($beatMultiplier!=null) {
 			$this->fieldMarketStatsSetInt("beatMultiplier",$beatMultiplier);
+			$this->marketStatsLogReset();
 		}
 		return $this->fieldMarketStats("beatMultiplier");
 	}
@@ -535,12 +592,12 @@ class MarketStats {
 			$lastValue=$this->statsHistoryLastValue(self::SHValue,$assetId);
 
 	
-			if ($this->beatCount()==$this->settingMaxHistoryBeats && 
+			if ($this->beatCount()==$this->maxHistoryBeats() && 
 					$lastValue!=
 					$this->infiniteNegative()) {				
 				$this->statsHistoryShift(self::SHValue,$assetId);
 				//$this->statsHistory->shift([self::SHCicle,$assetIdx]);
-			}
+			} 
 
 			$this->statsHistorySet(self::SHValue,$assetId,$i,$buyQuote);
 			//$this->statsHistory->set([self::SHCicle,$assetIdx,$i],$this->statsCicle($assetId));

@@ -102,7 +102,7 @@ class MathMarket extends AbstractMarket {
 	}
 	
 	function fnTime() {
-		return $this->beat/100;
+		return $this->beat()/100;
 	}
 
 	function ready() {		

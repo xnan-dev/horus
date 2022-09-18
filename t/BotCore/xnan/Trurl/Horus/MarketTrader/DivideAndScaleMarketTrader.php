@@ -26,17 +26,8 @@ Asset\Functions::Load;
 
 class DivideAndScaleMarketTrader extends MarketTrader {	
 	var $stableAssetIds=array();
-	var $waitBeats=200;
-	var $phase=1;
-	var $startBeat=-1;	
-	var $maxAssetPercentage=0.15;
-	var $waitBeatsForAssetRepeat=10;
 	var $statsBuyStory=array();
 	var $statsSellStory=array();
-	var $buyCicleCut=-0.85;
-	var $sellCicleCut=0.85;
-	var $maxBuySuggestions=1;
-	var $buyLimitFactor=1.001;
 	
 	function __construct($botArenaId,$traderId,$portfolioId) {		
 		parent::__construct($botArenaId,$traderId,$portfolioId);		
@@ -56,7 +47,53 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 		$s->registerChangeListener("dsMarketTrader.buyLimitFactor",$this);
 	}
 
+
+	function waitBeats($waitBeats=null) {
+		return Horus\persistence()->dsTraderWaitBeats($this->botArenaId(),$this->traderId(),$waitBeats);	
+	}
+
+	function phase($phase=null) {
+		return Horus\persistence()->dsTraderPhase($this->botArenaId(),$this->traderId(),$phase);	
+	}
+
+	function startBeat($startBeat=null) {
+		return Horus\persistence()->dsTraderStartBeat($this->botArenaId(),$this->traderId(),$startBeat);	
+	}
+
+
+	function maxAssetPercentage($maxAssetPercentage=null) {
+		return Horus\persistence()->dsTraderMaxAssetPercentage($this->botArenaId(),$this->traderId(),$maxAssetPercentage);	
+	}
+
+
+	function waitBeatsForAssetRepeat($waitBeatsForAssetRepeat=null) {
+		return Horus\persistence()->dsTraderWaitBeatsForAssetRepeat($this->botArenaId(),$this->traderId(),$waitBeatsForAssetRepeat);	
+	}
+
+
+	function buyCicleCut($buyCicleCut=null) {
+		return Horus\persistence()->dsTraderBuyCicleCut($this->botArenaId(),$this->traderId(),$buyCicleCut);	
+	}
+
+
+	function sellCicleCut($sellCicleCut=null) {
+		return Horus\persistence()->dsTraderSellCicleCut($this->botArenaId(),$this->traderId(),$sellCicleCut);	
+	}
+
+
+	function maxBuySuggestions($maxBuySuggestions=null) {
+		return Horus\persistence()->dsTraderMaxBuySuggestions($this->botArenaId(),$this->traderId(),$maxBuySuggestions);	
+	}
+
+
+	function buyLimitFactor($buyLimitFactor=null) {
+		return Horus\persistence()->dsTraderBuyLimitFactor($this->botArenaId(),$this->traderId(),$buyLimitFactor);	
+	}
+
+
+
 	function onSettingsChange($key,$params) {
+		exit("onSettingsChange: unsupported/deferred");
 		parent::onSettingsChange($key,$params);
 		if ($params["traderId"]==$this->traderId()) {
 			if ($key=="dsMarketTrader.waitBeats") { $this->waitBeats=$params["settingsValue"]; }			
@@ -89,9 +126,10 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 	}
 
 	function traderReset() {
+		exit("traderReset: deferred/unsupported");
 		parent::traderReset();
-		$this->phase=1;
-		$this->$startBeat=-1;
+		$this->phase(1);
+		$this->startBeat(-1);
 		//$this->market()->marketStats()->get()->marketStatsReset();
 	}
 
@@ -133,18 +171,6 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 		 return sprintf("{ labels: %s, datasets: %s }",$this->market()->marketStats()->get()->marketHistoryLabels($xcount)
 		 	, $this->traderBoyDatasetsJson($xcount));
 	}
-
-	function setupWaitBeatsForAssetRepeat($waitBeatsForAssetRepeat) {
-		$this->waitBeatsForAssetRepeat=$waitBeatsForAssetRepeat;
-	}
-
-	function waitBeatsForAssetRepeat() {
-		return $this->waitBeatsForAssetRepeat;
-	}
-	
-	function setupWaitBeats($waitBeats) {
-		$this->waitBeats=$waitBeats;
-	}
 	
 	function setupMarket(&$market) {
 		parent::setupMarket($market);		
@@ -155,7 +181,7 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 	}
 
 	function assetSuggestionAllowed($assetId) {
-		foreach($this->orderQueue()->values() as &$order) {
+		foreach($this->orderQueue() as &$order) {
 			if ($order->assetId()==$assetId && !$order->done() && ($order->status()==AssetTradeStatus\Cancelled || $order->status()==AssetTradeStatus\Rejected) ) {
 				if (($order->statusChangeBeat()+$this->waitBeatsForAssetRepeat())>$this->market()->beat() ) {
 					return false;
@@ -169,25 +195,31 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 	//phase 2: trade unstables on lows
 	function trade(&$market) {
 			Nano\nanoPerformance()->track("dsTrader.trade");
-			if ($this->phase==1) $this->tradePhase1($market);
-			if ($this->phase==2) $this->tradePhase2($market);
+			if ($this->phase()==1) $this->tradePhase1($market);
+			if ($this->phase()==2) $this->tradePhase2($market);
 			Nano\nanoPerformance()->track("dsTrader.trade");
 //			BotWorld\BotWorld::instance()->summaryWrite();
 	}
 
 	function tradePhase1(&$market) {
-		if ($this->startBeat==-1) $this->startBeat=$market->beat();		 
+		if ($this->startBeat()==-1) $this->startBeat($market->beat());
 		//printf("(%s-%s)>=%s) ? %s \n",$market->get()->beat(),$this->startBeat,$this->waitBeats,
 		//(($market->get()->beat()-$this->startBeat)>=$this->waitBeats) ? "true" : "false");
 	
-		if (($market->beat()-$this->startBeat)>=$this->waitBeats) {			
+		if (($market->beat()-$this->startBeat())>=$this->waitBeats()) {			
 			$this->nextPhase();
 		}
 	}
 
 
 	function cicleToValue($cicle,$min,$max) {
-		return $max!=$min ? (($cicle+1)/2*($max-$min))+$min : $max;
+
+		$cicleValue=$max!=$min ? (($cicle+1)/2*($max-$min))+$min : $max;
+
+		print_r(["cicleToValue","cicle"=>$cicle,"min"=>$min,
+				"max"=>$max,"cicleValue"=>$cicleValue]);
+		
+		return $cicleValue;
 	}
 
 	function marketStats(){
@@ -246,9 +278,9 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 				"cicle"=>$this->market()->textFormater()->formatDecimal($statsCicle),
 				"linearSlope"=>$this->market()->textFormater()->formatDecimal($statsLinearSlope),
 				"maxBuyQuantityByStrategy"=>$this->market()->textFormater()->formatDecimal(
-					$this->maxBuyQuantityByStrategy($this->market,$assetId) ),
+					$this->maxBuyQuantityByStrategy($this->market(),$assetId) ),
 				"maxBuyByStrategy"=>$this->market()->textFormater()->formatQuantity(
-					$this->maxBuyByStrategy($this->market,$assetId),$this->market()->defaultExchangeAssetId() )
+					$this->maxBuyByStrategy($this->market(),$assetId),$this->market()->defaultExchangeAssetId() )
 			]
 			);			
 
@@ -272,18 +304,18 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 		$maxCicle=-1000*1000;
 		$maxAssetId=-1;		
 		
-		foreach($this->market()->assetIds()->values() as $assetId) {
-			$value=$this->marketStats()->get([MarketStats\MarketStats::SValue,$assetId]);
+		foreach($this->market()->assetIds() as $assetId) {
+			$value=$this->marketStats()->statsScalar(MarketStats\MarketStats::SValue,$assetId);
 
 			Asset\checkAssetId($assetId);
 			// if (!$this->assetSuggestionAllowed($assetId)) echo "**NOT ALLOWED:$assetId<br>";
 			if ($assetId==$this->market()->defaultExchangeAssetId()) continue;
 			if (!$this->assetSuggestionAllowed($assetId)) continue;
 
-			$mean=$this->marketStats()->get()->statsScalar(MarketStats\MarketStats::SMean,$assetId);
-			$max=$this->marketStats()->get()->statsScalar(MarketStats\MarketStats::SMax,$assetId);
-			$min=$this->marketStats()->get()->statsScalar(MarketStats\MarketStats::SMin,$assetId);
-			$cicle=$this->marketStats()->get()->statsScalar(MarketStats\MarketStats::SCicle,$assetId);// entre -1 y +1 respectivamente
+			$mean=$this->marketStats()->statsScalar(MarketStats\MarketStats::SMean,$assetId);
+			$max=$this->marketStats()->statsScalar(MarketStats\MarketStats::SMax,$assetId);
+			$min=$this->marketStats()->statsScalar(MarketStats\MarketStats::SMin,$assetId);
+			$cicle=$this->marketStats()->statsScalar(MarketStats\MarketStats::SCicle,$assetId);// entre -1 y +1 respectivamente
 
 			//print "pick assetId: $assetId cicle:$cicle minCicle:$minCicle<br>";
 			if ($minAssetId==-1 || $minCicle>=$cicle) {
@@ -296,32 +328,36 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 			}
 		}
 		
-		return [$minAssetId,
+		$pick=[$minAssetId,
 				$minCicle,
 				$maxAssetId,
 				$maxCicle,
 				$this->cicleToValue($nextCicle,
-					$this->marketStats()->get()->statsScalar(MarketStats\MarketStats::SMin,$minAssetId),
-					$this->marketStats()->get()->statsScalar(MarketStats\MarketStats::SMax,$minAssetId)
+					$this->marketStats()->statsScalar(MarketStats\MarketStats::SMin,$minAssetId),
+					$this->marketStats()->statsScalar(MarketStats\MarketStats::SMax,$minAssetId)
 				)];
+
+
+		print_r(["pick",$pick]);
+		return $pick;
 	}
 
 	function maxBuyByStrategy(&$market,$assetId) {
-		$valuation=$market->portfolioValuation($this->portfolio); // valuacion de porfolio ($)
+		$valuation=$market->portfolioValuation($this->portfolio() ); // valuacion de porfolio ($)
 		
 		$buyQuote=$market->assetQuote($assetId)->buyQuote(); // precio de compra ($)
 
-		$assetValuation=$this->portfolio->assetQuantity($assetId)*$buyQuote; // valuacion de tenencias del activo ($)
+		$assetValuation=$this->portfolio()->assetQuantity($assetId)*$buyQuote; // valuacion de tenencias del activo ($)
 
 		$assetValuationPending=$this->assetBuyPendingQuantity($assetId)*$buyQuote; // valuacion de tenencias del activo ($)
 
 		//print "$assetId: assetValuationPending: $assetValuationPending<br>";
 
-		$maxBuy=$buyQuote>0 ? max(($valuation*$this->maxAssetPercentage)-$assetValuation-$assetValuationPending,0) : 0; // maxima compra segun porcentaje permitido considerando lo que ya tiene ($)
+		$maxBuy=$buyQuote>0 ? max(($valuation*$this->maxAssetPercentage() )-$assetValuation-$assetValuationPending,0) : 0; // maxima compra segun porcentaje permitido considerando lo que ya tiene ($)
 		//print "************** maxBuy $assetId: $maxBuy<BR>";
 		//print "maxBuy;$maxBuy (($valuation*".$this->maxAssetPercentage.")-$assetValuation)/$buyQuote)<br>";
 		
-		$maxAvailable=$market->maxBuyQuantity($this->portfolio,$assetId); // maxima cantidad (#) comprable segun dinero disponible en cartera, precio de mercado del activo y costo de comisiones
+		$maxAvailable=$market->maxBuyQuantity($this->portfolio(),$assetId); // maxima cantidad (#) comprable segun dinero disponible en cartera, precio de mercado del activo y costo de comisiones
 
 		$maxBuyAvailable=$maxAvailable*$buyQuote;
 
@@ -340,13 +376,11 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 
 	function tradePhase2(&$market) {		
 
-		$this->orderQueue()->markChanged();
+		print "FASE2 traderId: $this->traderId: ".($this->pendingBuySuggestionsCount())." maxBuySugg: ".($this->maxBuySuggestions() )."\n";
 
-		//print "FASE2 A $this->traderId: ".($this->pendingBuySuggestionsCount())."MAX ".($this->maxBuySuggestions)."\n";
+		if ($this->pendingBuySuggestionsCount()>=$this->maxBuySuggestions() ) return;
 
-		if ($this->pendingBuySuggestionsCount()>=$this->maxBuySuggestions) return;
-
-		$buyPick=$this->pickAssetIdByCicle($market,$this->sellCicleCut);
+		$buyPick=$this->pickAssetIdByCicle($market,$this->sellCicleCut() );
 		$assetId=$buyPick[0];
 		$cicle=$buyPick[1];
 		$nextValue=$buyPick[4];
@@ -358,23 +392,23 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 			Nano\msg(sprintf("dsTrader: marketId:%s traderId:%s assetId:$assetId msg: pickAssetIdByCicle assetId:$assetId cicle:$cicle",$this->market()->marketId(),$this->traderId() ));
 		}
 
-		$buyQuote=$market->get()->assetQuote($assetId)->buyQuote();
+		$buyQuote=$market->assetQuote($assetId)->buyQuote();
 
-		if ($cicle<$this->buyCicleCut) {
+		if ($cicle<$this->buyCicleCut() ) {
 
 			$op=AssetTradeOperation\Buy;
 			$negOp=AssetTradeOperation\Sell;
 
 			$quantity=$this->maxBuyQuantityByStrategy($market,$assetId);			
-			$quantity=min($quantity,$market->get()->maxBuyQuantity($this->portfolio,$assetId));
+			$quantity=min($quantity,$market->maxBuyQuantity($this->portfolio() ,$assetId));
 
-			$buyQuote=$this->buyAtLimit($market,$assetId,$this->buyLimitFactor); //1.01
+			$buyQuote=$this->buyAtLimit($market,$assetId,$this->buyLimitFactor() ); //1.01
 			$sellQuote=$nextValue;//*0.99;
 
 			$earn=($sellQuote-$buyQuote)*$quantity;
 
-			printf("#### earn: buyQuote: %s sellQuote(later): %s earn:%s minEarn:%s quantity:$quantity earn ok:%s\n<br>",$buyQuote,$sellQuote,$earn,$this->minEarn,($earn>=$this->minEarn ? "true": "false"));			
-			if ($earn>=$this->minEarn) {
+			printf("#### earn: buyQuote: %s sellQuote(later): %s earn:%s minEarn:%s quantity:$quantity earn ok:%s\n<br>",$buyQuote,$sellQuote,$earn,$this->minEarn() ,($earn>=$this->minEarn() ? "true": "false"));			
+			if ($earn>=$this->minEarn() ) {
 
 				$quote=$op==AssetTradeOperation\Buy ? $buyQuote : $sellQuote;
 
@@ -390,7 +424,7 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 	}
 
 	function nextPhase() {
-		++$this->phase;	
+		$this->phase($this->phase()+1);	
 	}
 
 }
