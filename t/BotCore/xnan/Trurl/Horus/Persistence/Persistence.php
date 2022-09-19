@@ -363,6 +363,96 @@ class Persistence {
 	function traderTelegramChatId($botArenaId,$traderId,$telegramChatId=null) {
 		return $this->traderFieldInt($botArenaId,$traderId,"telegramChatId",$telegramChatId);	
 	}
+
+	function portfolioLastDepositTime($portfolioId=null,$lastDepositTime=null) {
+		return $this->portfolioFieldInt($portfolioId,"lastDepositTime",$lastDepositTime);	
+	}
+
+	function portfolioLastDepositQuantity($portfolioId=null,$lastDepositQuantity=null) {
+		return $this->portfolioFieldInt($portfolioId,"lastDepositQuantity",$lastDepositQuantity);	
+	}
+	
+	function portfolioAssetIds($portfolioId=null) {		
+
+		$query=sprintf(
+			"SELECT * FROM portfolioAsset
+				WHERE
+				 portfolioId='%s'
+			",
+				$portfolioId
+			);		
+
+		$r=$this->pdo()->query($query);
+		
+		$assets=[];
+
+		while ($row=$r->fetch()) {
+			$assets[]=$row["assetId"];
+		}
+
+		return $assets;
+	}
+
+	function portfolioAssetQuantity($portfolioId=null,$assetId) {
+		$query=sprintf(
+			"SELECT * FROM portfolioAsset
+				WHERE
+				 portfolioId='%s' AND
+				 assetId='%s'
+			",
+				$portfolioId,
+				$assetId
+			);		
+
+		$r=$this->pdo()->query($query);
+
+		$assets=[];
+
+		if($row=$r->fetch()) {
+			return $row["assetQuantity"];
+		}
+
+		return $assets;
+	}
+
+	private function portfolioFieldInt($portfolioId,$field,$value=null) {
+		if ($value!=null) {
+			$query=sprintf(
+				"UPDATE portfolio 
+					SET $field=$value 
+					WHERE
+					 portfolioId='%s'					 
+				",
+					$portfolioId
+				);		
+
+			$this->pdo()->query($query);
+
+			return null;
+		} else {
+			return $this->portfolioRow($portfolioId)[$field];
+		}
+	}
+
+	private function portfolioRow($portfolioId) {
+		$query=sprintf(
+		"SELECT * 
+			FROM portfolio p
+			WHERE 
+				p.portfolioId='%s'				
+		"
+		,$portfolioId
+		);		
+
+		$r=$this->pdo()->query($query);
+		
+		if ($row=$r->fetch()) {
+			return $row;
+		} else {
+			Nano\nanoCheck()->checkFailed("porfolio row not found for portfolioId:'$portfolioId'");
+		}		
+	}
+
 }
 
 ?>

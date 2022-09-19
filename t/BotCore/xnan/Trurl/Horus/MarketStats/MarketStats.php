@@ -491,15 +491,15 @@ class MarketStats {
 		$rows=$this->statsHistoryAll(self::SHValue,$assetId);
 		$n=count($rows);
 
-
 		for($i=0;$i<$n;$i++) {
-			$value=$row[$i]["statsValue"];
+			$value=$rows[$i]["statsValue"];
 			if ($value==$this->infiniteNegative()) break;
 			if ($value<$min) $minBeat=$beat;
 			$min=min($min,$value);
 			//print "minHistory-find assetId:$assetId i:$i value:$value min:$min minBeat:$minBeat<br>\n";
 			++$beat;
 		}				
+
 		return [$min,$minBeat];
 	}
 
@@ -512,7 +512,7 @@ class MarketStats {
 		$n=count($rows);
 
 		for($i=0;$i<$n;$i++) {			
-			$value=$row[$i]["statsValue"];
+			$value=$rows[$i]["statsValue"];
 			if ($value==$this->infiniteNegative()) break;
 			if ($value>$max) $maxBeat=$beat;
 			$max=max($max,$value);
@@ -529,6 +529,8 @@ class MarketStats {
 		$min=$this->statsScalar(self::SMin,$assetId);
 		$value=$this->statsScalar(self::SValue,$assetId);
 		$stabilizer=1;
+
+		print "statsCicle $assetId mean:$mean max:$max min:$min value:$value\n";
 		$cicle=$max!=$min ? 
 		(
 			(
@@ -613,7 +615,7 @@ class MarketStats {
 			
 			$minHistory=$this->minHistory($assetId);
 			$maxHistory=$this->maxHistory($assetId);
-									
+								
 			$this->statsScalarSet(self::SMin,$assetId,$minHistory[0]);
 			$this->statsScalarSet(self::SMax,$assetId,$maxHistory[0]);
 			$cicle=$this->statsCicle($assetId);

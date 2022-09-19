@@ -120,7 +120,7 @@ abstract class MarketTrader {
 		$r=$this->pdo()->query($query);
 
 		if ($row=$r->fetch()) {
-			$this->portfolio=new Portfolio\Portfolio($row["portfolioId"],$row["lastDepositTime"],$row["lastDepositQuantity"]);		
+			$this->portfolio=new Portfolio\Portfolio($row["portfolioId"]);		
 		}		
 	}
 

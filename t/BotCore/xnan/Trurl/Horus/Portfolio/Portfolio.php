@@ -21,23 +21,12 @@ Nano\Functions::Load;
 class Functions { const Load=1; }
 
 class Portfolio {
-	var $assetQuantity=array();
-	var $portfolioId=null;
-	var $lastDepositQuantity=0;
-	var $lastDepositTime=null;
+	private $portfolioId=null;
 
-	function __construct($portfolioId=null, $lastDepositTime=null,$lastDepositQuantity=0) {
-
-		if ($portfolioId==null) {
-			$portfolioId=rand(1,1000*1000);	
-		}
-		if ($lastDepositTime==null) {
-			$lastDepositTime=time();
-		}
+	function __construct($portfolioId=null) {
+		if ($portfolioId==null) Nano\nanoCheck()->checkFailed("portfolioId should not be null");
 		
 		$this->portfolioId=$portfolioId;
-		$this->lastDepositQuantity=$lastDepositQuantity;
-		$this->lastDepositTime=$lastDepositTime;
 
 		$this->setupSettings();
 	}	
@@ -71,38 +60,29 @@ class Portfolio {
 		$this->lastDepositTime=time();
 	}
 
+	function portfolioId() {		
+		return $this->portfolioId;
+	}
+
 	function lastDepositTime($time=null) {
-		if ($time!=null) $this->lastDepositTime=$time;
-		return $this->lastDepositTime;
+		return Horus\persistence()->portfolioLastDepositTime($this->portfolioId(),$time);
 	}
 
 	function lastDepositQuantity($quantity=null) {
-		if ($quantity!=null) $this->lastDepositQuantity=$quantity;
-		return $this->lastDepositQuantity;
-	}
-
-	function portfolioId($portfolioId=null) {
-		if ($portfolioId!=null) $this->portfolioId=$portfolioId;
-		return $this->portfolioId;
+		return Horus\persistence()->lastDepositQuantity($this->portfolioId(),$quantity);
 	}
 	
-	function assetIds() {
-		$this->cleanAssetIds();
-		return array_keys($this->assetQuantity);
-	}
-
-	private function cleanAssetIds() {
-		foreach ($this->assetQuantity as $assetId=>$quantity) {
-			//if ($quantity==0) unset($this->assetQuantity[$assetId]);
-		}
+	function assetIds() {		
+		return Horus\persistence()->portfolioAssetIds($this->portfolioId());
 	}
 
 	function assetQuantity($assetId) {
-		if (!array_key_exists($assetId,$this->assetQuantity)) return 0;
-		return $this->assetQuantity[$assetId];
+		return Horus\persistence()->portfolioAssetQuantity($this->portfolioId(),$assetId);
 	}
 
 	function addAssetQuantity($assetId,$quantity,&$market,$isDeposit=false) {
+		exit("addAssetQuantity: deferred/unsupported");
+
 		Asset\checkAssetId($assetId);
 		if (!array_key_exists($assetId,$this->assetQuantity)) $this->assetQuantity[$assetId]=0;
 		$this->assetQuantity[$assetId]+=$quantity;
@@ -115,7 +95,7 @@ class Portfolio {
 
 	function nonCurrencyAssetIds(&$market) {
 		$as=array();
-		foreach($this->assetQuantity as $assetId=>$quantity) {
+		foreach($this->assetQuantities() as $assetId=>$quantity) {
 			$asset=$market->assetById($assetId);
 			if($asset->assetType()!=AssetType\Currency && $quantity>0) {
 				$as[]=$assetId;
@@ -125,13 +105,15 @@ class Portfolio {
 	}
 
 	function removeAssetQuantity($assetId,$quantity,&$market) {
+		exit("removeAssetQuantity: deferred/unsupported");
+
 		if (!array_key_exists($assetId,$this->assetQuantity)) return;
 		$this->assetQuantity[$assetId]-=$quantity;
 	}
 
 	function currencyAssetIds(&$market) {
 		$as=array();
-		foreach($this->assetQuantity as $assetId=>$quantity) {
+		foreach($this->assetQuantities() as $assetId=>$quantity) {
 			$asset=$market->assetById($assetId);
 			if($asset->assetType()==AssetType\Currency) {
 				$as[]=$assetId;

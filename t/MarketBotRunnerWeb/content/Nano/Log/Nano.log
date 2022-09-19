@@ -6737,3 +6737,178 @@
 2022-09-18 19:02:41 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
 2022-09-18 19:02:41 - BotWorld: -------------------------
 2022-09-18 19:02:41 - BotWorld: end
+2022-09-18 23:31:58 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 23:31:58 - BotWorld: botArenaId: mathArena run
+2022-09-18 23:31:58 - BotArena: botArenaId:mathArena run
+2022-09-18 23:31:58 - BotArena: botArenaId:mathArena initial status marketBeat:834 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 23:31:58 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002117
+2022-09-18 23:32:06 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 23:32:06 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 23:32:06 - BotWorld: -------------------------
+2022-09-18 23:32:06 - BotWorld: end
+2022-09-18 23:34:09 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 23:34:09 - BotWorld: botArenaId: mathArena run
+2022-09-18 23:34:09 - BotArena: botArenaId:mathArena run
+2022-09-18 23:34:09 - BotArena: botArenaId:mathArena initial status marketBeat:835 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 23:34:09 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002115
+2022-09-18 23:34:15 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 23:34:15 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 23:34:15 - BotWorld: -------------------------
+2022-09-18 23:34:15 - BotWorld: end
+2022-09-18 23:36:38 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 23:36:38 - BotWorld: botArenaId: mathArena run
+2022-09-18 23:36:38 - BotArena: botArenaId:mathArena run
+2022-09-18 23:36:38 - BotArena: botArenaId:mathArena initial status marketBeat:836 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 23:36:38 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002113
+2022-09-18 23:37:43 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 23:37:43 - BotWorld: botArenaId: mathArena run
+2022-09-18 23:37:43 - BotArena: botArenaId:mathArena run
+2022-09-18 23:37:43 - BotArena: botArenaId:mathArena initial status marketBeat:837 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 23:37:43 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002113
+2022-09-18 23:38:25 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 23:38:25 - BotWorld: botArenaId: mathArena run
+2022-09-18 23:38:25 - BotArena: botArenaId:mathArena run
+2022-09-18 23:38:25 - BotArena: botArenaId:mathArena initial status marketBeat:838 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 23:38:25 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002113
+2022-09-18 23:39:04 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 23:39:04 - BotWorld: botArenaId: mathArena run
+2022-09-18 23:39:04 - BotArena: botArenaId:mathArena run
+2022-09-18 23:39:04 - BotArena: botArenaId:mathArena initial status marketBeat:839 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 23:39:04 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002113
+2022-09-18 23:39:23 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 23:39:23 - BotWorld: botArenaId: mathArena run
+2022-09-18 23:39:23 - BotArena: botArenaId:mathArena run
+2022-09-18 23:39:23 - BotArena: botArenaId:mathArena initial status marketBeat:840 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 23:39:24 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000002113
+2022-09-18 23:39:31 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 23:39:31 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 23:39:31 - BotWorld: -------------------------
+2022-09-18 23:39:31 - BotWorld: end
+2022-09-18 23:40:04 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 23:40:04 - BotWorld: botArenaId: mathArena run
+2022-09-18 23:40:04 - BotArena: botArenaId:mathArena run
+2022-09-18 23:40:04 - BotArena: botArenaId:mathArena initial status marketBeat:841 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 23:40:04 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:40:10 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 23:40:10 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 23:40:10 - BotWorld: -------------------------
+2022-09-18 23:40:10 - BotWorld: end
+2022-09-18 23:40:28 - BotWorld: run beats:50 botArenaId:mathArena botArenaCount:15
+2022-09-18 23:40:28 - BotWorld: botArenaId: mathArena run
+2022-09-18 23:40:28 - BotArena: botArenaId:mathArena run
+2022-09-18 23:40:28 - BotArena: botArenaId:mathArena initial status marketBeat:842 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:50
+2022-09-18 23:40:28 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:40:35 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:40:41 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:40:47 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:40:54 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:41:00 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:41:07 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:41:13 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:41:20 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:41:26 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:41:33 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:41:40 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:41:46 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:41:53 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:42:00 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:42:06 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:42:13 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:42:20 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-18 23:42:26 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:42:33 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:42:40 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:42:47 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:42:53 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:43:02 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:43:11 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:43:23 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:43:34 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:43:41 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:43:48 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:43:54 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:44:01 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:44:07 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:44:14 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:44:20 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:44:27 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:44:33 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:44:40 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:44:47 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-18 23:44:54 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:45:01 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:45:07 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:45:14 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:45:20 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:45:27 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:45:34 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:45:40 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:45:47 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:45:53 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:46:00 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:46:07 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:46:17 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 23:46:17 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 23:46:17 - BotWorld: -------------------------
+2022-09-18 23:46:17 - BotWorld: end
+2022-09-18 23:47:12 - BotWorld: run beats:50 botArenaId:mathArena botArenaCount:15
+2022-09-18 23:47:12 - BotWorld: botArenaId: mathArena run
+2022-09-18 23:47:12 - BotArena: botArenaId:mathArena run
+2022-09-18 23:47:12 - BotArena: botArenaId:mathArena initial status marketBeat:892 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:50
+2022-09-18 23:47:12 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:47:20 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:47:22 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-18 23:47:22 - BotWorld: botArenaId: mathArena run
+2022-09-18 23:47:22 - BotArena: botArenaId:mathArena run
+2022-09-18 23:47:22 - BotArena: botArenaId:mathArena initial status marketBeat:894 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-18 23:47:22 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:47:30 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:47:34 - Trader:botMath1 Portfolio [] portfolioValuation:0.00
+2022-09-18 23:47:34 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
+2022-09-18 23:47:34 - BotWorld: -------------------------
+2022-09-18 23:47:34 - BotWorld: end
+2022-09-18 23:47:39 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:47:45 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:47:52 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:47:58 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:48:06 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:48:13 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:48:20 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC1 msg: pickAssetIdByCicle assetId:CC1 cicle:-1.0000000000
+2022-09-18 23:48:27 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC3 msg: pickAssetIdByCicle assetId:CC3 cicle:-1.0000000000
+2022-09-18 23:48:33 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC3 msg: pickAssetIdByCicle assetId:CC3 cicle:-1.0000000000
+2022-09-19 00:08:35 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-19 00:08:35 - BotWorld: botArenaId: mathArena run
+2022-09-19 00:08:35 - BotArena: botArenaId:mathArena run
+2022-09-19 00:08:35 - BotArena: botArenaId:mathArena initial status marketBeat:905 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-19 00:08:35 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC3 msg: pickAssetIdByCicle assetId:CC3 cicle:-1.0000000000
+2022-09-19 00:08:35 - trade: failure: msg exception at trader botMath2
+2022-09-19 00:09:26 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-19 00:09:26 - BotWorld: botArenaId: mathArena run
+2022-09-19 00:09:26 - BotArena: botArenaId:mathArena run
+2022-09-19 00:09:26 - BotArena: botArenaId:mathArena initial status marketBeat:905 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-19 00:09:26 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC3 msg: pickAssetIdByCicle assetId:CC3 cicle:-1.0000000000
+2022-09-19 00:09:26 - trade: failure: msg exception at trader botMath2
+2022-09-19 00:10:43 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-19 00:10:43 - BotWorld: botArenaId: mathArena run
+2022-09-19 00:10:43 - BotArena: botArenaId:mathArena run
+2022-09-19 00:10:43 - BotArena: botArenaId:mathArena initial status marketBeat:905 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-19 00:10:44 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC3 msg: pickAssetIdByCicle assetId:CC3 cicle:-1.0000000000
+2022-09-19 00:10:44 - trade: failure: msg exception at trader botMath2
+2022-09-19 00:11:29 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-19 00:11:29 - BotWorld: botArenaId: mathArena run
+2022-09-19 00:11:29 - BotArena: botArenaId:mathArena run
+2022-09-19 00:11:29 - BotArena: botArenaId:mathArena initial status marketBeat:905 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-19 00:11:30 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC3 msg: pickAssetIdByCicle assetId:CC3 cicle:-1.0000000000
+2022-09-19 00:11:30 - trade: failure: msg exception at trader botMath2
+2022-09-19 00:11:49 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-19 00:11:49 - BotWorld: botArenaId: mathArena run
+2022-09-19 00:11:49 - BotArena: botArenaId:mathArena run
+2022-09-19 00:11:49 - BotArena: botArenaId:mathArena initial status marketBeat:905 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-19 00:11:49 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC3 msg: pickAssetIdByCicle assetId:CC3 cicle:-1.0000000000
+2022-09-19 00:11:49 - trade: failure: msg exception at trader botMath2
+2022-09-19 00:12:03 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-19 00:12:03 - BotWorld: botArenaId: mathArena run
+2022-09-19 00:12:03 - BotArena: botArenaId:mathArena run
+2022-09-19 00:12:03 - BotArena: botArenaId:mathArena initial status marketBeat:905 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-19 00:12:03 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC3 msg: pickAssetIdByCicle assetId:CC3 cicle:-1.0000000000
+2022-09-19 00:12:03 - trade: failure: msg exception at trader botMath2

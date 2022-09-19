@@ -240,6 +240,8 @@ abstract class AbstractMarket implements Market {
  	}
 
  	function maxBuyQuantity(&$portfolio,$assetId) {
+
+ 		print_r(["portfolio",$portfolio]);
  		$portfolioCredit=$portfolio->currencyCredit($this);
  		$quote=$this->assetQuote($assetId);
  		$fixedFees=$this->tradeFixedFeesSum();
