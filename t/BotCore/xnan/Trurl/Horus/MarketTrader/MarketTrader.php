@@ -268,10 +268,6 @@ abstract class MarketTrader {
 		$this->market=$market;
 	}
 
-	function setupAutoApprove($autoApprove) {
-		$this->autoApprove=$autoApprove;
-	}
-
 	function market() {
 		return $this->market;
 	}
@@ -333,25 +329,25 @@ abstract class MarketTrader {
 	}
 
 	function flushOrders(&$market) {
-		//print_r($this->orderQueue);
+		//print_r(["orderQueue",$this->orderQueue()]);
 		//print $this->queueCancelledAsCsv();
 
 		foreach($this->orderQueue() as &$order) {
 
 
-			$flushAllowed=$this->minFlushBeats < ($market->get()->beat() - $order->queueBeat()) ? true:false;
-			//PRINT "\nACA1 flushAllowed:$flushAllowed autoApprove:".($this->autoApprove)." status ".($order->status())."\n";
+			$flushAllowed=$this->minFlushBeats() < ($market->beat() - $order->queueBeat()) ? true:false;
+			PRINT "\nACA1 flushAllowed:$flushAllowed autoApprove:".($this->autoApprove())." status ".($order->statusDesc())."\n";
 
 			if (!$order->done() && $flushAllowed && $order->status()==AssetTradeStatus\Approved) {			
 
-				$quote=$market->get()->assetQuote($order->assetId());
+				$quote=$market->assetQuote($order->assetId());
 				$doOp=false;
 
 				$quantity=0;
 				$doable=$this->orderIsDoable($order,$quantity,true);
 
-				if (!$doable && $order->tradeOp()==AssetTradeOperation\Buy && $this->autoCancelBuyBeats>0 && 
-					$market->get()->beat()-$order->statusChangeBeat() > $this->autoCancelBuyBeats) {
+				if (!$doable && $order->tradeOp()==AssetTradeOperation\Buy && $this->autoCancelBuyBeats()>0 && 
+					$market->beat()-$order->statusChangeBeat() > $this->autoCancelBuyBeats()) {
 					//print sprintf("%%%%%%%%%%%%%%%%%%%% ORDERCANCELLED %s %s!\n",$market->get()->beat(),$order->statusChangeBeat());
 					$this->cancelOrder($order->queueId());
 				}
@@ -375,12 +371,13 @@ abstract class MarketTrader {
 				}
 
 				if ($doOp) {
-					$doneQuote=$market->get()->assetTrade($this->portfolio,$order->assetId(),$order->tradeOp(),$quantity);	
+					$doneQuote=$market->assetTrade($this->portfolio(),$order->assetId(),$order->tradeOp(),$quantity);	
 					if (!($doneQuote===false)) {
 						$order->done(true);
 						$order->doneQuote($doneQuote);
 						$order->doneBeat($this->market()->beat());
-						$order->doneTime(time());						
+						$order->doneTime(time());	
+						Horus\persistence()->traderOrderUpdate($order);					
 					} else {
 						printf("########################### FAILTRADE! %s op:%s \n",$order->queueId(),$order->tradeOp());
 					}
@@ -484,10 +481,10 @@ abstract class MarketTrader {
 	}
 
 	function queueOrder($assetId,&$tradeOp,$quantity,$quote,$status=null,$parentQueueId=null) {
-		$this->orderQueue()->markChanged();
 		
 		if ($status==null) $status=$this->defaultStatus();
 		$order=new AssetTradeOrder\AssetTradeOrder();
+		$order->botArenaId($this->botArenaId());
 		$order->traderId($this->traderId());
 		$order->queueId($this->nextQueueId());
 		$order->assetId($assetId);
@@ -499,7 +496,8 @@ abstract class MarketTrader {
 		$order->parentQueueId($parentQueueId);
 		$order->statusChangeBeat($this->market()->beat());
 		$order->queueBeat($this->market()->beat());
-		$this->orderQueue()->insert($order);
+
+		Horus\persistence()->traderQueueOrder($order);
 		
 		$queueId=$order->queueId();
 
@@ -507,7 +505,6 @@ abstract class MarketTrader {
 	}
 
 	function notifyTelegram(&$order) {		
-		$this->orderQueue()->markChanged();
 		
 		if ($this->notificationsEnabled()) {			
 			$quantity=0;
@@ -551,12 +548,12 @@ MARKDOWN;
 
 	function findPendingOrder($parentQueueId,$assetId,$tradeOp) {
 		$retOrder=null;
-		foreach($this->orderQueue()->values() as &$order) {
+		foreach($this->orderQueue() as &$order) {
 			if  (!$order->done() && $order->parentQueueId()==$parentQueueId  && $order->assetId()==$assetId && $order->tradeOp()==$tradeOp) {
 				if ($order->status()!=AssetTradeStatus\Rejected && $order->status()!=AssetTradeStatus\Cancelled && $order->status()!=AssetTradeStatus\Approved) {
 					$retOrder=$order;	
 					break;
-				}				
+				}
 			}
 		}
 		return $retOrder;
@@ -564,7 +561,7 @@ MARKDOWN;
 
 	function findOrderById($queueId) {
 		$retOrder=null;
-		foreach($this->orderQueue()->values() as &$order) {
+		foreach($this->orderQueue() as &$order) {
 			if  ($order->queueId()==$queueId) {
 				$retOrder=$order;	
 				break;
@@ -585,7 +582,6 @@ MARKDOWN;
 	}
 
 	function queueOrUpdateOrder($parentQueueId,$assetId,$tradeOp,$quantity,$quote,$status=null,$newParentQueueId=null) {		
-		$this->orderQueue()->markChanged();
 		
 		$order=$this->findPendingOrder($parentQueueId,$assetId,$tradeOp);
 		//echo sprintf("find %s,$assetId,$tradeOp,parent:$parentQueueId:%s<br>",$this->traderId() ,($order!=null ? "yes": "no"));
@@ -852,81 +848,10 @@ MARKDOWN;
 	}
 
 	function orderQueue() {		
-		$os=[];		
-		$query=sprintf("SELECT * FROM assetTradeOrder as o						
-							WHERE botArenaId='%s' 
-								AND traderId='%s'",$this->botArenaId(),$this->traderId());
-
-		$r=$this->pdo()->query($query);
-
-		while  ($row=$r->fetch()) {
-
-			$o=new AssetTradeOrder\AssetTradeOrder();
-
-			$o->botArenaId($row["botArenaId"]);
-			$o->traderId($row["traderId"]);
-			$o->queueId($row["queueId"]);
-			$o->parentQueueId($row["parentQueueId"]);
-			$o->assetId($row["assetId"]);
-			$o->statusChangeBeat($row["statusChangeBeat"]);
-			$o->statusChangeTime($row["statusChangeTime"]);
-			$o->doneBeat($row["doneBeat"]);
-			$o->doneTime($row["doneTime"]);
-			$o->tradeOp($row["tradeOp"]);
-			$o->quantity($row["quantity"]);
-			$o->targetQuote($row["targetQuote"]);
-			$o->doneQuote($row["doneQuote"]);
-			$o->status($row["status"]);
-			$o->done( $row["done"]==1 );
-			$o->notified($row["notified"]);
-			$o->queueBeat($row["queueBeat"]);
-			$os[]=$o;
-		}		
-		return $os;
+		return Horus\persistence()->traderOrderQueue($this->botArenaId(),$this->traderId());
 	}
 
-	function save() {
-		$this->portfolio->save();
-		$this->queueSave();
-	}
-
-	function queueSave() {
-		Nano\nanoCheck()->checkDiskAvailable();
-
-		if (!file_exists("content/MarketTrader")) mkdir("content/MarketTrader");
-		file_put_contents(sprintf("content/MarketTrader/marketTrader.%s.%s.csv",
-			$this->market()->marketId(),$this->traderId()),$this->queueCanonicalAsCsv() );
-	}
-
-	function traderRecover() {
-		$this->portfolio->portfolioRecover();
-		$this->queueRecover();
-	}
-
-	function queueRecover() {
-		//debug_print_backtrace();
-
-		$fileName=sprintf("content/MarketTrader/marketTrader.%s.%s.csv",$this->market()->marketId(),$this->traderId());
-		if (file_exists($fileName)) {
-			$csv=file_get_contents($fileName );
-			$rows=Nano\nanoCsv()->csvContentToArray($csv,';');
-			$this->orderQueue()->reset();
-
-			foreach($rows as $row) {
-				$q=new AssetTradeOrder\AssetTradeOrder();
-
-				foreach($row as $key=>$value) {
-					$q->$key=$value;
-				}
-				$this->orderQueue()->insert($q);
-			}		
-
-			Nano\msg(sprintf("MarketTrader: traderId:%s.%s queueRecover: done",$this->market()->marketId(),$this->traderId() ));			
-		} else {
-			Nano\msg(sprintf("MarketTrader: traderId:%s.%s queueRecover: ignored msg: no file from which recover",$this->market()->marketId(),$this->traderId() ));
-		}
-	}
-
+	
 	function queueCanonicalAsCsv() {
 		$ds=new DataSet\DataSet(explode(",","traderId,queueId,assetId,tradeOp,quantity,targetQuote,status,done,statusChangeBeat,statusChangeTime,queueBeat,parentQueueId,notified,doneBeat,doneTime,doneQuote"));
 					

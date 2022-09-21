@@ -13,6 +13,10 @@ class Check {
 		throw new \exception("checkFailed: $msg");
 	}
 
+	function checkNotNull($v,$msg) {
+		if ($v==null) throw new \Exception("checkNotNull: $msg");
+	}
+	
 	function checkDiskAvailable() {
 		$free=\disk_free_space(".");
 		if ($free<Nano\minDiskAvailable()) {

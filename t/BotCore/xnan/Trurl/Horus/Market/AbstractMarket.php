@@ -205,7 +205,7 @@ abstract class AbstractMarket implements Market {
 
 	function assetById($assetId) {
 		Asset\checkAssetId($assetId);
-		foreach($this->assets->values() as $asset) {
+		foreach($this->assets() as $asset) {
 			if ($asset->assetId()==$assetId) return $asset;
 		}
 		throw new \exception("asset not found: assetId:$assetId");
@@ -240,8 +240,6 @@ abstract class AbstractMarket implements Market {
  	}
 
  	function maxBuyQuantity(&$portfolio,$assetId) {
-
- 		print_r(["portfolio",$portfolio]);
  		$portfolioCredit=$portfolio->currencyCredit($this);
  		$quote=$this->assetQuote($assetId);
  		$fixedFees=$this->tradeFixedFeesSum();
@@ -250,6 +248,8 @@ abstract class AbstractMarket implements Market {
  			return 0;
  		}
 		$quantity=$portfolioCredit/$quote->buyQuote()-$fixedFees;
+ 		
+ 		// print_r(["AbsMarket.maxBuyQuantity","portfolioCredit"=>"$portfolioCredit","maxBuyQuantity"=>$quantity,"portfolio",$portfolio]);
 		return max($quantity,0);
  	}
 

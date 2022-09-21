@@ -69,7 +69,7 @@ class Portfolio {
 	}
 
 	function lastDepositQuantity($quantity=null) {
-		return Horus\persistence()->lastDepositQuantity($this->portfolioId(),$quantity);
+		return Horus\persistence()->portfolioLastDepositQuantity($this->portfolioId(),$quantity);
 	}
 	
 	function assetIds() {		
@@ -80,17 +80,12 @@ class Portfolio {
 		return Horus\persistence()->portfolioAssetQuantity($this->portfolioId(),$assetId);
 	}
 
+	function assetQuantities() {
+		return Horus\persistence()->portfolioAssetQuantities($this->portfolioId());
+	}
+
 	function addAssetQuantity($assetId,$quantity,&$market,$isDeposit=false) {
-		exit("addAssetQuantity: deferred/unsupported");
-
-		Asset\checkAssetId($assetId);
-		if (!array_key_exists($assetId,$this->assetQuantity)) $this->assetQuantity[$assetId]=0;
-		$this->assetQuantity[$assetId]+=$quantity;
-		if ($isDeposit) {
-			$this->lastDepositTime(time());
-			$this->lastDepositQuantity($quantity);	
-		} 
-
+		Horus\persistence()->portfolioAddAssetQuantity($this->portfolioId(),$assetId,$quantity,$market,$isDeposit);
 	}
 
 	function nonCurrencyAssetIds(&$market) {
@@ -105,15 +100,14 @@ class Portfolio {
 	}
 
 	function removeAssetQuantity($assetId,$quantity,&$market) {
-		exit("removeAssetQuantity: deferred/unsupported");
-
-		if (!array_key_exists($assetId,$this->assetQuantity)) return;
-		$this->assetQuantity[$assetId]-=$quantity;
+		Horus\persistence()->portfolioRemoveAssetQuantity($this->portfolioId(),$assetId,$quantity,$market);
 	}
 
 	function currencyAssetIds(&$market) {
 		$as=array();
+
 		foreach($this->assetQuantities() as $assetId=>$quantity) {
+			print "************** currencyAssetIds $assetId:$quantity\n";
 			$asset=$market->assetById($assetId);
 			if($asset->assetType()==AssetType\Currency) {
 				$as[]=$assetId;
@@ -134,7 +128,7 @@ class Portfolio {
 		$as=$this->currencyAssetIds($market);
 		if (count($as)==0) return 0;
 		$currencyAssetId=$as[0];
-		return $this->assetQuantity[$currencyAssetId];
+		return $this->assetQuantity($currencyAssetId);
 	}
 
 	function __toString() {
@@ -144,7 +138,7 @@ class Portfolio {
 	function portfolioAsCsv() {
 		$header=explode(",","assetId,assetQuantity");
 		$ds=new DataSet\DataSet($header);
-		foreach($this->assetQuantity as $assetId=>$assetQuantity) {
+		foreach($this->assetQuantities() as $assetId=>$assetQuantity) {
 			$ds->addRow([$assetId,$assetQuantity ]);				
 		}
 		return $ds->toCsvRet();
@@ -178,7 +172,7 @@ class Portfolio {
 
 function toCanonical($portfolio) {
 	$s="";
-	foreach ($portfolio->assetQuantity as $assetId=>$quantity) {
+	foreach ($portfolio->assetQuantities() as $assetId=>$quantity) {
 		if (strlen($s)>0) $s.=" ";
 		$s.=sprintf("%s:%s",$assetId,Nano\nanoTextFormatter()->quantityToCanonical($quantity));
 	}

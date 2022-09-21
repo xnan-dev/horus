@@ -3,6 +3,9 @@
 namespace xnan\Trurl\Horus\AssetTradeOrder;
 use xnan\Trurl;
 use xnan\Trurl\Horus;
+use xnan\Trurl\Horus\AssetTradeStatus;
+
+AssetTradeStatus\Functions::Load;
 
 class Functions { const Load=1; }
 
@@ -98,6 +101,9 @@ class AssetTradeOrder {
 		return $this->status;
 	}
 
+	function statusDesc() {
+		return AssetTradeStatus\toCanonical($this->status());
+	}
 	function done($done=null) {
 		if ($done!=null) $this->done=$done;
 		return $this->done;

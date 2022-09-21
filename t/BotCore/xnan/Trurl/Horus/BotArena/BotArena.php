@@ -59,7 +59,8 @@ class BotArena {
 
 		while ($row=$r->fetch()) {						
 			$b=new MarketTrader\DivideAndScaleMarketTrader($row["botArenaId"],$row["traderId"],$row["portfolioId"]);
-			$b->setupMarket($this->market());
+			$m=$this->market();
+			$b->setupMarket($m);
 			$this->traders[]=$b;				
 		}		
 	}
@@ -158,7 +159,7 @@ class BotArena {
 		$row=$r->fetch();
 		if ($row!=null) {
 			$market=new Market\yahooFinanceMarket(
-				$row["marketId"],$row["assetCount"],false,$row["pollerName"]);
+				$row["marketId"],$row["pollerName"]);
 
 			$market->marketTitle($row["marketTitle"]);
 		}
@@ -174,7 +175,7 @@ class BotArena {
 		$row=$r3->fetch();
 		if ($row!=null) {			
 			$market=new Market\yahooFinanceTestMarket(
-				$row["marketId"],$row["assetCount"],$row["pollerName"]);
+				$row["marketId"],$row["pollerName"]);
 
 			$market->marketTitle($row["marketTitle"]);
 		}
@@ -192,10 +193,10 @@ class BotArena {
 
 	function marketStatus() {
 
-		foreach($this->market->get()->assetIds() as $assetId) {			
-			$marketBeat=$this->market->get()->beat();
+		foreach($this->market->assetIds() as $assetId) {			
+			$marketBeat=$this->market->beat();
 			Nano\msg(sprintf("marketBeat:$marketBeat assetId:$assetId quote:%s",
-				$this->market->get()->assetQuote($assetId)
+				$this->market->assetQuote($assetId)
 			));
 		}		
 	}
@@ -217,16 +218,16 @@ class BotArena {
 
 	function logMarketStatus() {
 		$header[]="marketBeat";
-		foreach($this->market->get()->assetIds() as $assetId) {
+		foreach($this->market()->assetIds() as $assetId) {
 			$header[]=$assetId;
 		}
 		$ds=new DataSet\DataSet($header);
 
 		Nano\nanoPerformance()->track("botArena.logMarketStatus");
-		$marketBeat=$this->market->beat();			
+		$marketBeat=$this->market()->beat();			
 
-		foreach($this->market->assetIds() as $assetId) {
-			$line[]=$this->market->assetQuote($assetId)->buyQuote();			
+		foreach($this->market()->assetIds() as $assetId) {
+			$line[]=$this->market()->assetQuote($assetId)->buyQuote();			
 		}
 		$ds->addRow($line);			
 		Nano\nanoPerformance()->track("botArena.logMarketStatus");
@@ -273,7 +274,7 @@ class BotArena {
 			foreach($trader->portfolio()->assetIds() as $assetId) {
 				$portfolioId=$trader->portfolio()->portfolioId();
 				$assetQuantity=$trader->portfolio()->assetQuantity($assetId);
-				$assetQuote=$this->market->get()->assetQuote($assetId);				
+				$assetQuote=$this->market->assetQuote($assetId);				
 
 				if ($assetQuantity>0) {				
 					$sellQuote=$assetQuote->sellQuote();
@@ -284,9 +285,9 @@ class BotArena {
 						$assetIndex==0 ? $trader->traderId : "",
 						$assetId,						
 						$this->textFormatter->formatQuantity($assetQuantity,$quantitySaveUrl),
-						$this->textFormatter->formatDecimal($sellQuote,$this->market()->get()->defaultExchangeAssetId()),
+						$this->textFormatter->formatDecimal($sellQuote,$this->market()->defaultExchangeAssetId()),
 						"",
-						$this->textFormatter->formatDecimal($assetQuantity*$sellQuote,$this->market()->get()->defaultExchangeAssetId()),						
+						$this->textFormatter->formatDecimal($assetQuantity*$sellQuote,$this->market()->defaultExchangeAssetId()),						
 						$trader->portfolio()->lastDepositQuantity(),
 						$trader->portfolio()->lastDepositTime(),
 						""

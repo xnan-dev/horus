@@ -29,7 +29,7 @@ class YahooFinanceTestMarket extends AbstractMarket {
 	var $cacheBeat=-1;
 	var $pollerName="";
 
-	function __construct($marketId,$assetCount,$pollerName="Cryptos") {
+	function __construct($marketId,$pollerName="Cryptos") {
 		$this->pollerName=$pollerName;		
 		if ($pollerName=="") Nano\nanoCheck()->checkFailed("pollerName cannot be empty");
 		parent::__construct($marketId,true);		

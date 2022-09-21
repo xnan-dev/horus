@@ -78,14 +78,6 @@ class MathMarket extends AbstractMarket {
 		}
 	} 
 
- 	function maxBuyQuantity(&$portfolio,$assetId) {
- 		$portfolioCredit=$portfolio->currencyCredit($this);
- 		$quote=$this->assetQuote($assetId);
- 		$fixedFees=$this->tradeFixedFeesSum();
-		$quantity=$portfolioCredit/$quote->buyQuote()-$fixedFees;
-		return max($quantity,0);
- 	}
-
 	function assetQuote($assetId):AssetQuotation\AssetQuotation {
 		Asset\checkAssetId($assetId);
 		if ($assetId==Asset\assetUsd()->assetId()) {

@@ -13,12 +13,15 @@ use xnan\Trurl\Horus\BotWorld;
 use xnan\Trurl\Horus\BotArena;
 use xnan\Trurl\Horus\WorldSettings;
 use xnan\Trurl\Horus\Portfolio;
+use xnan\Trurl\Horus\Asset;
 
 //Uses: Start
 
 // Uses: Nano: Shortcuts
 use xnan\Trurl\Nano;
 Nano\Functions::Load;
+
+Asset\Functions::Load;
 
 
 class Persistence {
@@ -70,7 +73,43 @@ class Persistence {
 		if ($defaultExchangeAssetId!=null) {			
 			$this->marketFieldSetString($marketId,"defaultExchangeAssetId",$defaultExchangeAssetId);
 		}
-		return $this->marketFieldString($marketId,"defaultExchangeAssetId");
+		$v=$this->marketFieldString($marketId,"defaultExchangeAssetId");
+		Nano\nanoCheck()->checkNotNull($v,"marketId:$marketId defaultExchangeAssetId should not be null");
+		return $v;
+	}
+
+	function traderOrderQueue($botArenaId,$traderId) {		
+		$os=[];		
+		$query=sprintf("SELECT * FROM assetTradeOrder as o						
+							WHERE botArenaId='%s' 
+								AND traderId='%s'",$botArenaId,$traderId);
+
+		$r=$this->pdo()->query($query);
+
+		while  ($row=$r->fetch()) {
+
+			$o=new AssetTradeOrder\AssetTradeOrder();
+
+			$o->botArenaId($row["botArenaId"]);
+			$o->traderId($row["traderId"]);
+			$o->queueId($row["queueId"]);
+			$o->parentQueueId($row["parentQueueId"]);
+			$o->assetId($row["assetId"]);
+			$o->statusChangeBeat($row["statusChangeBeat"]);
+			$o->statusChangeTime($row["statusChangeTime"]);
+			$o->doneBeat($row["doneBeat"]);
+			$o->doneTime($row["doneTime"]);
+			$o->tradeOp($row["tradeOp"]);
+			$o->quantity($row["quantity"]);
+			$o->targetQuote($row["targetQuote"]);
+			$o->doneQuote($row["doneQuote"]);
+			$o->status($row["status"]);
+			$o->done( $row["done"]==1 );
+			$o->notified($row["notified"]);
+			$o->queueBeat($row["queueBeat"]);
+			$os[]=$o;
+		}		
+		return $os;
 	}
 
 	private function marketField($marketId,$field) {
@@ -393,7 +432,7 @@ class Persistence {
 		return $assets;
 	}
 
-	function portfolioAssetQuantity($portfolioId=null,$assetId) {
+	function portfolioAssetQuantity($portfolioId,$assetId) {
 		$query=sprintf(
 			"SELECT * FROM portfolioAsset
 				WHERE
@@ -404,15 +443,97 @@ class Persistence {
 				$assetId
 			);		
 
-		$r=$this->pdo()->query($query);
-
-		$assets=[];
+		$r=$this->pdo()->query($query);		
 
 		if($row=$r->fetch()) {
 			return $row["assetQuantity"];
 		}
 
+		return 0;
+	}
+	
+	function portfolioAssetQuantities($portfolioId) {
+		$query=sprintf(
+			"SELECT * FROM portfolioAsset
+				WHERE
+				 portfolioId='%s'
+			",
+				$portfolioId
+			);		
+
+		$r=$this->pdo()->query($query);				
+		$assets=[];
+
+		while ($row=$r->fetch()) {
+			$assetId=$row["assetId"];
+			$assetQuantity=$row["assetQuantity"];
+			$assets[$assetId]=$assetQuantity;
+		}
+
 		return $assets;
+	}
+
+
+	function portfolioAddAssetQuantity($portfolioId,$assetId,$quantity,&$market,$isDeposit) {
+		Asset\checkAssetId($assetId);
+		$originalQuantity=$this->portfolioAssetQuantity($portfolioId,$assetId);
+		$assetQuantity=$originalQuantity+$quantity;
+
+		$delQuery=sprintf(
+			"DELETE FROM portfolioAsset 
+				WHERE portfolioId='%s' AND assetId='%s'
+			",
+				$portfolioId,$assetId
+			);		
+
+		$query=sprintf(
+			"INSERT INTO portfolioAsset 
+				(portfolioId,assetId,assetQuantity)
+				VALUES 
+				 ('%s','%s',%s)
+			",
+				$portfolioId,$assetId,$assetQuantity
+			);				
+
+		$r=$this->pdo()->query($delQuery);
+		$r=$this->pdo()->query($query);				
+
+		if ($isDeposit) {
+			$this->portfolioLastDepositTime($portfolioId,time());
+			$this->portfolioLastDepositQuantity($portfolioId,$quantity);	
+		} 
+	}
+
+	function portfolioRemoveAssetQuantity($portfolioId,$assetId,$quantity,&$market) {
+		Asset\checkAssetId($assetId);
+		$originalQuantity=$this->portfolioAssetQuantity($portfolioId,$assetId);
+
+		if ($originalQuantity==0) return;
+
+		$assetQuantity=$originalQuantity-$quantity;
+
+		if ($assetQuantity<0) {
+			throw new \Exception("Removing more than remaining in portfolio portfolioId:$portfolioId assetId:$assetId");
+		}
+
+		$delQuery=sprintf(
+			"DELETE FROM portfolioAsset 
+				WHERE portfolioId='%s' AND assetId='%s'
+			",
+				$portfolioId,$assetId
+			);		
+
+		$query=sprintf(
+			"INSERT INTO portfolioAsset 
+				(portfolioId,assetId,assetQuantity)
+				VALUES
+				 '%s','%s',%s
+			",
+				$portfolioId,$assetId,$assetQuantity
+			);		
+
+		$r=$this->pdo()->query($delQuery);
+		$r=$this->pdo()->query($query);
 	}
 
 	private function portfolioFieldInt($portfolioId,$field,$value=null) {
@@ -452,6 +573,78 @@ class Persistence {
 			Nano\nanoCheck()->checkFailed("porfolio row not found for portfolioId:'$portfolioId'");
 		}		
 	}
+
+	function boolToSql($v) {
+		return $v ? 1 : 0;
+	}
+
+	function nullableSql($v) {
+		return $v===null ? "NULL" : $v;
+	}
+
+	function valueSql($v) {
+		return round($v, 10);	
+	}
+	
+	function nullableValueSql($v) {
+		return $v===null ? "NULL" : $this->valueSql($v);
+	}
+
+	function traderQueueOrder($order) {
+		$query=sprintf(
+		"INSERT INTO assetTradeOrder(
+				botArenaId,traderId,queueId,
+				assetId,tradeOp,quantity,
+				targetQuote,status,done,
+				statusChangeBeat,statusChangeTime,queueBeat,
+				parentQueueId,notified,doneBeat,
+				doneTime,doneQuote
+				) VALUES (
+				'%s','%s',%s,\n
+				'%s',%s,%s,\n
+				%s,%s,%s,\n
+				%s,%s,%s,\n
+				%s,%s,%s,\n
+				%s,%s\n
+				)
+		"
+		,
+		$order->botArenaId(),$order->traderId(),$order->queueId(),
+		$order->assetId(),$order->tradeOp(),$order->quantity(),
+		$this->valueSql($order->targetQuote()),$order->status(),$this->boolToSql($order->done()),
+		$this->nullableSql($order->statusChangeBeat()),$this->nullableSql($order->statusChangeTime()),$this->nullableSql($order->queueBeat()),
+		$this->nullableSql($order->parentQueueId()),$this->boolToSql($order->notified()),$this->nullableSql($order->doneBeat()),
+		$this->nullableSql($order->doneTime()),$this->nullableValueSql($order->doneQuote())
+		);		
+
+		$r=$this->pdo()->query($query);
+	}		
+
+	function traderOrderUpdate($order) {
+		$query=sprintf(
+		"UPDATE assetTradeOrder
+			SET				
+				assetId='%s',tradeOp=%s,quantity=%s,
+				targetQuote=%s,status=%s,done=%s,
+				statusChangeBeat=%s,statusChangeTime=%s,queueBeat=%s,
+				parentQueueId=%s,notified=%s,doneBeat=%s,
+				doneTime=%s,doneQuote=%s
+
+				WHERE botArenaId='%s',traderId='%s',queueId=%s
+		"
+		,
+		$order->assetId(),$order->tradeOp(),$order->quantity(),
+		$this->valueSql($order->targetQuote()),$order->status(),$this->boolToSql($order->done()),
+		$this->nullableSql($order->statusChangeBeat()),$this->nullableSql($order->statusChangeTime()),$this->nullableSql($order->queueBeat()),
+		$this->nullableSql($order->parentQueueId()),$this->boolToSql($order->notified()),$this->nullableSql($order->doneBeat()),
+		$this->nullableSql($order->doneTime()),$this->nullableValueSql($order->doneQuote()),
+
+		$order->botArenaId(),$order->traderId(),$order->queueId()
+
+		);		
+
+		$r=$this->pdo()->query($query);
+	}		
 
 }
 

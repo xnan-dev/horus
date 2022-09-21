@@ -24,6 +24,8 @@ Nano\Functions::Load;
 AssetTradeOperation\Functions::Load;
 Asset\Functions::Load;
 
+error_reporting(E_ALL);
+
 class DivideAndScaleMarketTrader extends MarketTrader {	
 	var $stableAssetIds=array();
 	var $statsBuyStory=array();
@@ -294,7 +296,7 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 
 
 	function maxBuyQuantityByStrategy(&$market,$assetId) {
-		$buyQuote=$market->assetQuote($assetId)->buyQuote(); // precio de compra ($)
+		$buyQuote=$market->assetQuote($assetId)->buyQuote(); // precio de compra ($)		"
 		return $buyQuote!=0 ? $this->maxBuyByStrategy($market,$assetId)/$buyQuote : 0;
 	}
 
@@ -347,16 +349,17 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 		
 		$buyQuote=$market->assetQuote($assetId)->buyQuote(); // precio de compra ($)
 
+		//print "ASSET-QUANTITY:".$this->portfolio()->assetQuantity($assetId)."\n";
 		$assetValuation=$this->portfolio()->assetQuantity($assetId)*$buyQuote; // valuacion de tenencias del activo ($)
 
-		$assetValuationPending=$this->assetBuyPendingQuantity($assetId)*$buyQuote; // valuacion de tenencias del activo ($)
+		$assetValuationPending=$this->assetBuyPendingQuantity($assetId)*$buyQuote; // valuacion de tenencias del activo pendientes ($)
 
-		//print "$assetId: assetValuationPending: $assetValuationPending<br>";
+		// print "$assetId: assetValuationPending: $assetValuationPending\n";
 
 		$maxBuy=$buyQuote>0 ? max(($valuation*$this->maxAssetPercentage() )-$assetValuation-$assetValuationPending,0) : 0; // maxima compra segun porcentaje permitido considerando lo que ya tiene ($)
-		//print "************** maxBuy $assetId: $maxBuy<BR>";
-		//print "maxBuy;$maxBuy (($valuation*".$this->maxAssetPercentage.")-$assetValuation)/$buyQuote)<br>";
 		
+		//print "maxBuy;$maxBuy (($valuation*".$this->maxAssetPercentage().")-$assetValuation)/$buyQuote)\n";
+
 		$maxAvailable=$market->maxBuyQuantity($this->portfolio(),$assetId); // maxima cantidad (#) comprable segun dinero disponible en cartera, precio de mercado del activo y costo de comisiones
 
 		$maxBuyAvailable=$maxAvailable*$buyQuote;
@@ -368,15 +371,15 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 		if ($buy<$this->settingBuyMinimum()) $buy=0; // maximo comprable ($) considerando el lìmite de compra mìnima (en caso de no llegar al mínimo da cero)
 		//print "************** buy $assetId: $buy<BR>";
 
-		//print_r(["assetId"=>$assetId,"buyQuote"=>$buyQuote,"valation"=>$valuation,"assetValuation"=>$assetValuation,"assetValuationPending"=>$assetValuationPending,
-		//	"maxAvailable"=>$maxAvailable,"maxBuyAvailable"=>$maxBuyAvailable,"maxBuy"=>$maxBuy,"maxBuyLimitedUnits"=>$maxBuyLimitedUnits,"buy"=>$buy]);
+		print_r(["assetId"=>$assetId,"buyQuote"=>$buyQuote,"valuation(of portfolio)(USD)"=>$valuation,"assetValuation(asset in portfolio)(USD)"=>$assetValuation,"assetValuationPending)(asset pending to buy)(USD)"=>$assetValuationPending,
+			"maxAvailable(asset #)"=>$maxAvailable,"maxBuyAvailable(asset USD)"=>$maxBuyAvailable,"maxBuy(asset allowed by free % USD)"=>$maxBuy,"maxBuyLimitedUnits"=>$maxBuyLimitedUnits,"buy"=>$buy]);
 		
 		return $buy;
 	}
 
 	function tradePhase2(&$market) {		
 
-		print "FASE2 traderId: $this->traderId: ".($this->pendingBuySuggestionsCount())." maxBuySugg: ".($this->maxBuySuggestions() )."\n";
+		//print "FASE2 traderId: $this->traderId: ".($this->pendingBuySuggestionsCount())." maxBuySugg: ".($this->maxBuySuggestions() )."\n";
 
 		if ($this->pendingBuySuggestionsCount()>=$this->maxBuySuggestions() ) return;
 
@@ -400,6 +403,7 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 			$negOp=AssetTradeOperation\Sell;
 
 			$quantity=$this->maxBuyQuantityByStrategy($market,$assetId);			
+			print "MAXBYSTRAT:$quantity\n";
 			$quantity=min($quantity,$market->maxBuyQuantity($this->portfolio() ,$assetId));
 
 			$buyQuote=$this->buyAtLimit($market,$assetId,$this->buyLimitFactor() ); //1.01
@@ -413,7 +417,7 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 				$quote=$op==AssetTradeOperation\Buy ? $buyQuote : $sellQuote;
 
 				if ($quantity!=0) {					
-					print "### doingBuy/Sell assetId:$assetId quantity:$quantity<br>\n";
+					print "### doingBuy/Sell assetId:$assetId quantity:$quantity\n";
 					$newQueueId=$this->queueOrUpdateOrder(null,$assetId,$op,$quantity,$quote);
 					//printf("#### quantity: $quantity ok , newQueueId:$newQueueId\n<br>");
 					$this->queueOrUpdateOrder($newQueueId,$assetId,$negOp,$quantity,$nextValue,$this->defaultStatus(),$newQueueId);

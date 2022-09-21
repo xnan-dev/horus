@@ -34,9 +34,9 @@ class YahooFinanceMarket extends AbstractMarket {
 	var $assetIds=[]; // cached
 	var $assetIdsByType=[]; // cached
 
-	function __construct($marketId,$assetCount,$useHistory=true,$pollerName="Cryptos") {		
+	function __construct($marketId,$pollerName="Cryptos") {		
 		$this->pollerName=$pollerName;		
-		parent::__construct($marketId,$useHistory);
+		parent::__construct($marketId,false);
 	}
 
 	protected function setupMarket() {
