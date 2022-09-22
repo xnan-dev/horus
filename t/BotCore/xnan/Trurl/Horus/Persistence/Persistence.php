@@ -84,7 +84,7 @@ class Persistence {
 							WHERE botArenaId='%s' 
 								AND traderId='%s'",$botArenaId,$traderId);
 
-		$r=$this->pdo()->query($query);
+		$r=$this->pdoQuery($query);
 
 		while  ($row=$r->fetch()) {
 
@@ -125,7 +125,7 @@ class Persistence {
 			"UPDATE market SET $field=$value WHERE marketId='%s'",
 				$marketId);		
 
-		$this->pdo()->query($query);
+		$this->pdoQuery($query);
 	}
 
 	private function marketFieldSetString($marketId,$field,$value) {
@@ -133,7 +133,7 @@ class Persistence {
 			"UPDATE market SET $field='$value' WHERE marketId='%s'",
 				$marketId);		
 
-		$this->pdo()->query($query);
+		$this->pdoQuery($query);
 	}
 
 	private function dsTraderFieldInt($botArenaId,$traderId,$field,$value=null) {
@@ -149,7 +149,7 @@ class Persistence {
 					$botArenaId,
 					$traderId);		
 
-			$this->pdo()->query($query);
+			$this->pdoQuery($query);
 
 			return null;
 		} else {
@@ -171,7 +171,7 @@ class Persistence {
 					$botArenaId,
 					$traderId);		
 
-			$this->pdo()->query($query);
+			$this->pdoQuery($query);
 
 			return null;
 		} else {
@@ -193,7 +193,7 @@ class Persistence {
 					$botArenaId,
 					$traderId);		
 
-			$this->pdo()->query($query);
+			$this->pdoQuery($query);
 
 			return null;
 		} else {
@@ -211,7 +211,7 @@ class Persistence {
 				$marketId
 			);		
 
-		$r=$this->pdo()->query($query);
+		$r=$this->pdoQuery($query);
 
 		if ($row=$r->fetch()) {
 			return $row["botArenaId"];
@@ -235,7 +235,7 @@ class Persistence {
 					$botArenaId,
 					$traderId);		
 
-			$this->pdo()->query($query);
+			$this->pdoQuery($query);
 
 			return null;
 		} else {
@@ -248,7 +248,7 @@ class Persistence {
 		"SELECT * FROM market WHERE marketId='%s'",
 			$marketId);		
 
-		$r=$this->pdo()->query($query);
+		$r=$this->pdoQuery($query);
 		
 		if ($row=$r->fetch()) {
 			return $row;
@@ -273,7 +273,7 @@ class Persistence {
 
 //		print $query;
 
-		$r=$this->pdo()->query($query);
+		$r=$this->pdoQuery($query);
 		
 		if ($row=$r->fetch()) {
 			return $row;
@@ -293,7 +293,7 @@ class Persistence {
 		,$traderId
 		,$botArenaId);		
 
-		$r=$this->pdo()->query($query);
+		$r=$this->pdoQuery($query);
 		
 		if ($row=$r->fetch()) {
 			return $row;
@@ -340,7 +340,7 @@ class Persistence {
 	}
 
 	function worldBotArenas() {		
-		$r=$this->pdo()->query("SELECT * FROM botArena");
+		$r=$this->pdoQuery("SELECT * FROM botArena");
 		$as=[];
 		while ($row=$r->fetch()) {
 			$botArenaId=$row["botArenaId"];
@@ -351,8 +351,16 @@ class Persistence {
 	}
 
 
-	function traderNextQueueId($botArenaId,$traderId,$nextQueueId=null) {
-		return $this->traderFieldInt($botArenaId,$traderId,"nextQueueId",$nextQueueId);	
+	function traderNextQueueId($botArenaId,$traderId) {
+		$query=
+		$r=$this->pdoQuery(sprintf("
+				SELECT COALESCE(MAX(queueId)+1,0) as nextQueueId 
+					FROM assetTradeOrder
+					WHERE botArenaId='%s' AND traderId='%s'"
+					,$botArenaId,$traderId));
+
+		$row=$r->fetch();
+		return $row["nextQueueId"];	
 	}
 
 	function traderAutoApprove($botArenaId,$traderId,$autoApprove=null) {
@@ -414,14 +422,14 @@ class Persistence {
 	function portfolioAssetIds($portfolioId=null) {		
 
 		$query=sprintf(
-			"SELECT * FROM portfolioAsset
+			"SELECT DISTINCT(assetId) FROM portfolioAsset
 				WHERE
 				 portfolioId='%s'
 			",
 				$portfolioId
 			);		
 
-		$r=$this->pdo()->query($query);
+		$r=$this->pdoQuery($query);
 		
 		$assets=[];
 
@@ -434,16 +442,18 @@ class Persistence {
 
 	function portfolioAssetQuantity($portfolioId,$assetId) {
 		$query=sprintf(
-			"SELECT * FROM portfolioAsset
+			"SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
 				WHERE
 				 portfolioId='%s' AND
 				 assetId='%s'
+				 GROUP By
+				 	portfolioId,assetId
 			",
 				$portfolioId,
 				$assetId
 			);		
 
-		$r=$this->pdo()->query($query);		
+		$r=$this->pdoQuery($query);		
 
 		if($row=$r->fetch()) {
 			return $row["assetQuantity"];
@@ -452,16 +462,24 @@ class Persistence {
 		return 0;
 	}
 	
+	private function pdoQuery($query) {
+		$r=$this->pdo()->query($query);		
+		if ($r===false) Nano\nanoCheck()->checkFailed("pdoQuery: failed to execute query.\nquery:$query");
+		return $r;
+	}
+
 	function portfolioAssetQuantities($portfolioId) {
 		$query=sprintf(
-			"SELECT * FROM portfolioAsset
+			"SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
 				WHERE
 				 portfolioId='%s'
+				GROUP BY
+					portfolioId,assetId
 			",
 				$portfolioId
 			);		
 
-		$r=$this->pdo()->query($query);				
+		$r=$this->pdoQuery($query);				
 		$assets=[];
 
 		while ($row=$r->fetch()) {
@@ -476,27 +494,17 @@ class Persistence {
 
 	function portfolioAddAssetQuantity($portfolioId,$assetId,$quantity,&$market,$isDeposit) {
 		Asset\checkAssetId($assetId);
-		$originalQuantity=$this->portfolioAssetQuantity($portfolioId,$assetId);
-		$assetQuantity=$originalQuantity+$quantity;
-
-		$delQuery=sprintf(
-			"DELETE FROM portfolioAsset 
-				WHERE portfolioId='%s' AND assetId='%s'
-			",
-				$portfolioId,$assetId
-			);		
 
 		$query=sprintf(
 			"INSERT INTO portfolioAsset 
-				(portfolioId,assetId,assetQuantity)
+				(portfolioId,assetId,assetQuantity,opTime,opType)
 				VALUES 
-				 ('%s','%s',%s)
+				 ('%s','%s',%s,%s,%s)
 			",
-				$portfolioId,$assetId,$assetQuantity
+				$portfolioId,$assetId,$quantity,time(),AssetTradeOperation\Buy
 			);				
-
-		$r=$this->pdo()->query($delQuery);
-		$r=$this->pdo()->query($query);				
+		
+		$r=$this->pdoQuery($query);				
 
 		if ($isDeposit) {
 			$this->portfolioLastDepositTime($portfolioId,time());
@@ -516,24 +524,16 @@ class Persistence {
 			throw new \Exception("Removing more than remaining in portfolio portfolioId:$portfolioId assetId:$assetId");
 		}
 
-		$delQuery=sprintf(
-			"DELETE FROM portfolioAsset 
-				WHERE portfolioId='%s' AND assetId='%s'
-			",
-				$portfolioId,$assetId
-			);		
-
 		$query=sprintf(
 			"INSERT INTO portfolioAsset 
-				(portfolioId,assetId,assetQuantity)
+				(portfolioId,assetId,assetQuantity,opTime,opType)
 				VALUES
-				 '%s','%s',%s
+				 ('%s','%s',%s,%s,%s)
 			",
-				$portfolioId,$assetId,$assetQuantity
+				$portfolioId,$assetId,-1*$quantity,time(),AssetTradeOperation\Sell
 			);		
 
-		$r=$this->pdo()->query($delQuery);
-		$r=$this->pdo()->query($query);
+		$r=$this->pdoQuery($query);		
 	}
 
 	private function portfolioFieldInt($portfolioId,$field,$value=null) {
@@ -547,7 +547,7 @@ class Persistence {
 					$portfolioId
 				);		
 
-			$this->pdo()->query($query);
+			$this->pdoQuery($query);
 
 			return null;
 		} else {
@@ -565,7 +565,7 @@ class Persistence {
 		,$portfolioId
 		);		
 
-		$r=$this->pdo()->query($query);
+		$r=$this->pdoQuery($query);
 		
 		if ($row=$r->fetch()) {
 			return $row;
@@ -591,6 +591,7 @@ class Persistence {
 	}
 
 	function traderQueueOrder($order) {
+		$nextQueueId=$this->traderNextQueueId($order->botArenaId(),$order->traderId());
 		$query=sprintf(
 		"INSERT INTO assetTradeOrder(
 				botArenaId,traderId,queueId,
@@ -609,7 +610,7 @@ class Persistence {
 				)
 		"
 		,
-		$order->botArenaId(),$order->traderId(),$order->queueId(),
+		$order->botArenaId(),$order->traderId(),$nextQueueId,
 		$order->assetId(),$order->tradeOp(),$order->quantity(),
 		$this->valueSql($order->targetQuote()),$order->status(),$this->boolToSql($order->done()),
 		$this->nullableSql($order->statusChangeBeat()),$this->nullableSql($order->statusChangeTime()),$this->nullableSql($order->queueBeat()),
@@ -617,7 +618,7 @@ class Persistence {
 		$this->nullableSql($order->doneTime()),$this->nullableValueSql($order->doneQuote())
 		);		
 
-		$r=$this->pdo()->query($query);
+		$r=$this->pdoQuery($query);
 	}		
 
 	function traderOrderUpdate($order) {
@@ -630,7 +631,7 @@ class Persistence {
 				parentQueueId=%s,notified=%s,doneBeat=%s,
 				doneTime=%s,doneQuote=%s
 
-				WHERE botArenaId='%s',traderId='%s',queueId=%s
+				WHERE botArenaId='%s' AND traderId='%s' AND queueId=%s
 		"
 		,
 		$order->assetId(),$order->tradeOp(),$order->quantity(),
@@ -643,7 +644,7 @@ class Persistence {
 
 		);		
 
-		$r=$this->pdo()->query($query);
+		$r=$this->pdoQuery($query);
 	}		
 
 }

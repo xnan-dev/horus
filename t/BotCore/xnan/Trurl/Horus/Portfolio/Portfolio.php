@@ -107,7 +107,6 @@ class Portfolio {
 		$as=array();
 
 		foreach($this->assetQuantities() as $assetId=>$quantity) {
-			print "************** currencyAssetIds $assetId:$quantity\n";
 			$asset=$market->assetById($assetId);
 			if($asset->assetType()==AssetType\Currency) {
 				$as[]=$assetId;

@@ -218,8 +218,7 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 
 		$cicleValue=$max!=$min ? (($cicle+1)/2*($max-$min))+$min : $max;
 
-		print_r(["cicleToValue","cicle"=>$cicle,"min"=>$min,
-				"max"=>$max,"cicleValue"=>$cicleValue]);
+		//print_r(["cicleToValue","cicle"=>$cicle,"min"=>$min,"max"=>$max,"cicleValue"=>$cicleValue]);
 		
 		return $cicleValue;
 	}
@@ -340,7 +339,7 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 				)];
 
 
-		print_r(["pick",$pick]);
+		//print_r(["pick",$pick]);
 		return $pick;
 	}
 
@@ -371,8 +370,8 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 		if ($buy<$this->settingBuyMinimum()) $buy=0; // maximo comprable ($) considerando el lìmite de compra mìnima (en caso de no llegar al mínimo da cero)
 		//print "************** buy $assetId: $buy<BR>";
 
-		print_r(["assetId"=>$assetId,"buyQuote"=>$buyQuote,"valuation(of portfolio)(USD)"=>$valuation,"assetValuation(asset in portfolio)(USD)"=>$assetValuation,"assetValuationPending)(asset pending to buy)(USD)"=>$assetValuationPending,
-			"maxAvailable(asset #)"=>$maxAvailable,"maxBuyAvailable(asset USD)"=>$maxBuyAvailable,"maxBuy(asset allowed by free % USD)"=>$maxBuy,"maxBuyLimitedUnits"=>$maxBuyLimitedUnits,"buy"=>$buy]);
+		//print_r(["maxBuyByStrategy","assetId"=>$assetId,"buyQuote"=>$buyQuote,"valuation(of portfolio)(USD)"=>$valuation,"assetValuation(asset in portfolio)(USD)"=>$assetValuation,"assetValuationPending)(asset pending to buy)(USD)"=>$assetValuationPending,
+		//"maxAvailable(asset #)"=>$maxAvailable,"maxBuyAvailable(asset USD)"=>$maxBuyAvailable,"maxBuy(asset allowed by free % USD)"=>$maxBuy,"maxBuyLimitedUnits"=>$maxBuyLimitedUnits,"buy"=>$buy]);
 		
 		return $buy;
 	}
@@ -403,7 +402,7 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 			$negOp=AssetTradeOperation\Sell;
 
 			$quantity=$this->maxBuyQuantityByStrategy($market,$assetId);			
-			print "MAXBYSTRAT:$quantity\n";
+			
 			$quantity=min($quantity,$market->maxBuyQuantity($this->portfolio() ,$assetId));
 
 			$buyQuote=$this->buyAtLimit($market,$assetId,$this->buyLimitFactor() ); //1.01

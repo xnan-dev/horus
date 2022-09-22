@@ -7783,3 +7783,518 @@
 2022-09-20 21:32:26 - Trader:botMath2 Portfolio [] portfolioValuation:0.00
 2022-09-20 21:32:26 - BotWorld: -------------------------
 2022-09-20 21:32:26 - BotWorld: end
+2022-09-21 10:17:37 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 10:17:37 - BotWorld: botArenaId: mathArena run
+2022-09-21 10:17:37 - BotArena: botArenaId:mathArena run
+2022-09-21 10:17:37 - BotArena: botArenaId:mathArena initial status marketBeat:943 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 10:17:38 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC3 msg: pickAssetIdByCicle assetId:CC3 cicle:-0.9932963463
+2022-09-21 10:17:44 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 10:17:44 - Trader:botMath2 Portfolio [CC3:1,021.00] portfolioValuation:14,331.08
+2022-09-21 10:17:44 - BotWorld: -------------------------
+2022-09-21 10:17:44 - BotWorld: end
+2022-09-21 10:27:59 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 10:27:59 - BotWorld: botArenaId: mathArena run
+2022-09-21 10:27:59 - BotArena: botArenaId:mathArena run
+2022-09-21 10:27:59 - BotArena: botArenaId:mathArena initial status marketBeat:944 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 10:27:59 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC3 msg: pickAssetIdByCicle assetId:CC3 cicle:-0.9854518439
+2022-09-21 10:28:06 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 10:28:06 - Trader:botMath2 Portfolio [CC3:1,021.00] portfolioValuation:14,358.61
+2022-09-21 10:28:06 - BotWorld: -------------------------
+2022-09-21 10:28:06 - BotWorld: end
+2022-09-21 10:31:52 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 10:31:52 - BotWorld: botArenaId: mathArena run
+2022-09-21 10:31:52 - BotArena: botArenaId:mathArena run
+2022-09-21 10:31:52 - BotArena: botArenaId:mathArena initial status marketBeat:945 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 10:31:53 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC3 msg: pickAssetIdByCicle assetId:CC3 cicle:-0.9740377567
+2022-09-21 10:31:59 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 10:31:59 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,643.00] portfolioValuation:100,036.63
+2022-09-21 10:31:59 - BotWorld: -------------------------
+2022-09-21 10:31:59 - BotWorld: end
+2022-09-21 10:35:24 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 10:35:24 - BotWorld: botArenaId: mathArena run
+2022-09-21 10:35:24 - BotArena: botArenaId:mathArena run
+2022-09-21 10:35:24 - BotArena: botArenaId:mathArena initial status marketBeat:946 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 10:35:24 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC3 msg: pickAssetIdByCicle assetId:CC3 cicle:-0.9589453299
+2022-09-21 10:35:31 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 10:35:31 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,608.00] portfolioValuation:100,044.06
+2022-09-21 10:35:31 - BotWorld: -------------------------
+2022-09-21 10:35:31 - BotWorld: end
+2022-09-21 10:42:15 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 10:42:15 - BotWorld: botArenaId: mathArena run
+2022-09-21 10:42:15 - BotArena: botArenaId:mathArena run
+2022-09-21 10:42:15 - BotArena: botArenaId:mathArena initial status marketBeat:947 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 10:42:15 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 10:43:45 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 10:43:45 - BotWorld: botArenaId: mathArena run
+2022-09-21 10:43:45 - BotArena: botArenaId:mathArena run
+2022-09-21 10:43:45 - BotArena: botArenaId:mathArena initial status marketBeat:947 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 10:43:45 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 10:43:52 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 10:43:52 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,565.00] portfolioValuation:100,050.80
+2022-09-21 10:43:52 - BotWorld: -------------------------
+2022-09-21 10:43:52 - BotWorld: end
+2022-09-21 10:45:44 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 10:45:44 - BotWorld: botArenaId: mathArena run
+2022-09-21 10:45:44 - BotArena: botArenaId:mathArena run
+2022-09-21 10:45:44 - BotArena: botArenaId:mathArena initial status marketBeat:948 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 10:45:44 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 10:45:51 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 10:45:51 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,516.00] portfolioValuation:100,058.70
+2022-09-21 10:45:51 - BotWorld: -------------------------
+2022-09-21 10:45:51 - BotWorld: end
+2022-09-21 11:03:24 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 11:03:24 - BotWorld: botArenaId: mathArena run
+2022-09-21 11:03:24 - BotArena: botArenaId:mathArena run
+2022-09-21 11:03:24 - BotArena: botArenaId:mathArena initial status marketBeat:949 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 11:03:24 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 11:03:24 - trade: failure: msg exception at trader botMath2
+2022-09-21 11:05:02 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 11:05:02 - BotWorld: botArenaId: mathArena run
+2022-09-21 11:05:02 - BotArena: botArenaId:mathArena run
+2022-09-21 11:05:02 - BotArena: botArenaId:mathArena initial status marketBeat:949 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 11:05:02 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 11:05:02 - trade: failure: msg exception at trader botMath2
+2022-09-21 11:09:48 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 11:09:48 - BotWorld: botArenaId: mathArena run
+2022-09-21 11:09:48 - BotArena: botArenaId:mathArena run
+2022-09-21 11:09:48 - BotArena: botArenaId:mathArena initial status marketBeat:949 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 11:09:48 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 11:09:48 - trade: failure: msg exception at trader botMath2
+2022-09-21 11:09:59 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 11:09:59 - BotWorld: botArenaId: mathArena run
+2022-09-21 11:09:59 - BotArena: botArenaId:mathArena run
+2022-09-21 11:09:59 - BotArena: botArenaId:mathArena initial status marketBeat:949 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 11:09:59 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 11:09:59 - trade: failure: msg exception at trader botMath2
+2022-09-21 11:11:35 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 11:11:35 - BotWorld: botArenaId: mathArena run
+2022-09-21 11:11:35 - BotArena: botArenaId:mathArena run
+2022-09-21 11:11:35 - BotArena: botArenaId:mathArena initial status marketBeat:949 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 11:11:36 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 11:11:36 - trade: failure: msg exception at trader botMath2
+2022-09-21 11:12:58 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 11:12:58 - BotWorld: botArenaId: mathArena run
+2022-09-21 11:12:58 - BotArena: botArenaId:mathArena run
+2022-09-21 11:12:58 - BotArena: botArenaId:mathArena initial status marketBeat:949 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 11:12:58 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 11:13:05 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 11:13:05 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,516.00] portfolioValuation:100,122.65
+2022-09-21 11:13:05 - BotWorld: -------------------------
+2022-09-21 11:13:05 - BotWorld: end
+2022-09-21 11:17:53 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 11:17:53 - BotWorld: botArenaId: mathArena run
+2022-09-21 11:17:53 - BotArena: botArenaId:mathArena run
+2022-09-21 11:17:53 - BotArena: botArenaId:mathArena initial status marketBeat:950 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 11:17:53 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 11:18:00 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 11:18:00 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,516.00] portfolioValuation:100,193.46
+2022-09-21 11:18:00 - BotWorld: -------------------------
+2022-09-21 11:18:00 - BotWorld: end
+2022-09-21 12:21:34 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 12:21:34 - BotWorld: botArenaId: mathArena run
+2022-09-21 12:21:34 - BotArena: botArenaId:mathArena run
+2022-09-21 12:21:34 - BotArena: botArenaId:mathArena initial status marketBeat:951 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 12:21:35 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 12:21:42 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:21:42 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,516.00] portfolioValuation:100,270.98
+2022-09-21 12:21:42 - BotWorld: -------------------------
+2022-09-21 12:21:42 - BotWorld: end
+2022-09-21 12:23:28 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 12:23:28 - BotWorld: botArenaId: mathArena run
+2022-09-21 12:23:28 - BotArena: botArenaId:mathArena run
+2022-09-21 12:23:28 - BotArena: botArenaId:mathArena initial status marketBeat:952 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 12:23:28 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 12:23:34 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:23:34 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,246.00] portfolioValuation:100,085.00
+2022-09-21 12:23:34 - BotWorld: -------------------------
+2022-09-21 12:23:34 - BotWorld: end
+2022-09-21 12:24:56 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 12:24:56 - BotWorld: botArenaId: mathArena run
+2022-09-21 12:24:56 - BotArena: botArenaId:mathArena run
+2022-09-21 12:24:56 - BotArena: botArenaId:mathArena initial status marketBeat:953 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 12:24:56 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 12:25:03 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:25:03 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,246.00] portfolioValuation:100,175.31
+2022-09-21 12:25:03 - BotWorld: -------------------------
+2022-09-21 12:25:03 - BotWorld: end
+2022-09-21 12:28:52 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 12:28:52 - BotWorld: botArenaId: mathArena run
+2022-09-21 12:28:52 - BotArena: botArenaId:mathArena run
+2022-09-21 12:28:52 - BotArena: botArenaId:mathArena initial status marketBeat:954 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 12:28:52 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 12:28:59 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:28:59 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,246.00] portfolioValuation:100,271.69
+2022-09-21 12:28:59 - BotWorld: -------------------------
+2022-09-21 12:28:59 - BotWorld: end
+2022-09-21 12:29:15 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 12:29:15 - BotWorld: botArenaId: mathArena run
+2022-09-21 12:29:15 - BotArena: botArenaId:mathArena run
+2022-09-21 12:29:15 - BotArena: botArenaId:mathArena initial status marketBeat:955 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 12:29:15 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 12:29:22 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:29:22 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,246.00] portfolioValuation:100,373.90
+2022-09-21 12:29:22 - BotWorld: -------------------------
+2022-09-21 12:29:22 - BotWorld: end
+2022-09-21 12:29:54 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 12:29:54 - BotWorld: botArenaId: mathArena run
+2022-09-21 12:29:54 - BotArena: botArenaId:mathArena run
+2022-09-21 12:29:54 - BotArena: botArenaId:mathArena initial status marketBeat:956 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 12:29:54 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 12:30:30 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:30:30 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,246.00] portfolioValuation:100,481.67
+2022-09-21 12:30:30 - BotWorld: -------------------------
+2022-09-21 12:30:30 - BotWorld: end
+2022-09-21 12:32:51 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 12:32:51 - BotWorld: botArenaId: mathArena run
+2022-09-21 12:32:51 - BotArena: botArenaId:mathArena run
+2022-09-21 12:32:51 - BotArena: botArenaId:mathArena initial status marketBeat:957 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 12:32:51 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 12:32:58 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:32:58 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,246.00] portfolioValuation:100,594.76
+2022-09-21 12:32:58 - BotWorld: -------------------------
+2022-09-21 12:32:58 - BotWorld: end
+2022-09-21 12:33:35 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 12:33:35 - BotWorld: botArenaId: mathArena run
+2022-09-21 12:33:35 - BotArena: botArenaId:mathArena run
+2022-09-21 12:33:35 - BotArena: botArenaId:mathArena initial status marketBeat:958 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 12:33:35 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 12:33:41 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:33:41 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,246.00] portfolioValuation:100,712.86
+2022-09-21 12:33:41 - BotWorld: -------------------------
+2022-09-21 12:33:41 - BotWorld: end
+2022-09-21 12:36:25 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 12:36:25 - BotWorld: botArenaId: mathArena run
+2022-09-21 12:36:25 - BotArena: botArenaId:mathArena run
+2022-09-21 12:36:25 - BotArena: botArenaId:mathArena initial status marketBeat:959 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 12:36:25 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 12:36:31 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:36:31 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,246.00] portfolioValuation:100,835.68
+2022-09-21 12:36:31 - BotWorld: -------------------------
+2022-09-21 12:36:31 - BotWorld: end
+2022-09-21 12:39:55 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 12:39:55 - BotWorld: botArenaId: mathArena run
+2022-09-21 12:39:55 - BotArena: botArenaId:mathArena run
+2022-09-21 12:39:55 - BotArena: botArenaId:mathArena initial status marketBeat:960 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 12:40:01 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:40:01 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,246.00] portfolioValuation:100,962.92
+2022-09-21 12:40:01 - BotWorld: -------------------------
+2022-09-21 12:40:01 - BotWorld: end
+2022-09-21 12:43:05 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 12:43:05 - BotWorld: botArenaId: mathArena run
+2022-09-21 12:43:05 - BotArena: botArenaId:mathArena run
+2022-09-21 12:43:05 - BotArena: botArenaId:mathArena initial status marketBeat:961 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 12:43:05 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 12:43:11 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:43:11 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,246.00] portfolioValuation:101,094.26
+2022-09-21 12:43:11 - BotWorld: -------------------------
+2022-09-21 12:43:11 - BotWorld: end
+2022-09-21 12:43:28 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 12:43:28 - BotWorld: botArenaId: mathArena run
+2022-09-21 12:43:28 - BotArena: botArenaId:mathArena run
+2022-09-21 12:43:28 - BotArena: botArenaId:mathArena initial status marketBeat:962 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 12:43:28 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 12:43:35 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:43:35 - Trader:botMath2 Portfolio [CC3:1,021.00 USD:85,246.00] portfolioValuation:101,229.38
+2022-09-21 12:43:35 - BotWorld: -------------------------
+2022-09-21 12:43:35 - BotWorld: end
+2022-09-21 12:44:21 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 12:44:21 - BotWorld: botArenaId: mathArena run
+2022-09-21 12:44:21 - BotArena: botArenaId:mathArena run
+2022-09-21 12:44:21 - BotArena: botArenaId:mathArena initial status marketBeat:963 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 12:44:21 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 12:44:28 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:44:28 - Trader:botMath2 Portfolio [CC3:1,021.00 CC5:241.00 USD:70,166.00] portfolioValuation:101,338.39
+2022-09-21 12:44:28 - BotWorld: -------------------------
+2022-09-21 12:44:28 - BotWorld: end
+2022-09-21 12:45:31 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 12:45:31 - BotWorld: botArenaId: mathArena run
+2022-09-21 12:45:31 - BotArena: botArenaId:mathArena run
+2022-09-21 12:45:31 - BotArena: botArenaId:mathArena initial status marketBeat:964 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 12:45:31 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 12:45:38 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:45:38 - Trader:botMath2 Portfolio [CC3:1,021.00 CC5:241.00 USD:70,166.00] portfolioValuation:101,449.55
+2022-09-21 12:45:38 - BotWorld: -------------------------
+2022-09-21 12:45:38 - BotWorld: end
+2022-09-21 12:46:05 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 12:46:05 - BotWorld: botArenaId: mathArena run
+2022-09-21 12:46:05 - BotArena: botArenaId:mathArena run
+2022-09-21 12:46:05 - BotArena: botArenaId:mathArena initial status marketBeat:965 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 12:46:05 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 12:46:11 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:46:11 - Trader:botMath2 Portfolio [CC3:1,021.00 CC5:243.00 USD:70,060.00] portfolioValuation:101,582.86
+2022-09-21 12:46:11 - BotWorld: -------------------------
+2022-09-21 12:46:11 - BotWorld: end
+2022-09-21 12:59:30 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 12:59:30 - BotWorld: botArenaId: mathArena run
+2022-09-21 12:59:30 - BotArena: botArenaId:mathArena run
+2022-09-21 12:59:30 - BotArena: botArenaId:mathArena initial status marketBeat:966 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 12:59:31 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 12:59:40 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:59:40 - Trader:botMath2 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 12:59:40 - BotWorld: -------------------------
+2022-09-21 12:59:40 - BotWorld: end
+2022-09-21 13:03:49 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 13:03:49 - BotWorld: botArenaId: mathArena run
+2022-09-21 13:03:49 - BotArena: botArenaId:mathArena run
+2022-09-21 13:03:49 - BotArena: botArenaId:mathArena initial status marketBeat:967 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 13:03:49 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 13:03:56 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 13:03:56 - Trader:botMath2 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 13:03:56 - BotWorld: -------------------------
+2022-09-21 13:03:56 - BotWorld: end
+2022-09-21 13:05:26 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 13:05:26 - BotWorld: botArenaId: mathArena run
+2022-09-21 13:05:26 - BotArena: botArenaId:mathArena run
+2022-09-21 13:05:26 - BotArena: botArenaId:mathArena initial status marketBeat:968 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 13:05:26 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 13:05:26 - trade: failure: msg exception at trader botMath2
+2022-09-21 13:06:39 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 13:06:39 - BotWorld: botArenaId: mathArena run
+2022-09-21 13:06:39 - BotArena: botArenaId:mathArena run
+2022-09-21 13:06:39 - BotArena: botArenaId:mathArena initial status marketBeat:968 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 13:06:39 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 13:06:50 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 13:06:50 - Trader:botMath2 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 13:06:50 - BotWorld: -------------------------
+2022-09-21 13:06:50 - BotWorld: end
+2022-09-21 18:49:40 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 18:49:40 - BotWorld: botArenaId: mathArena run
+2022-09-21 18:49:40 - BotArena: botArenaId:mathArena run
+2022-09-21 18:49:40 - BotArena: botArenaId:mathArena initial status marketBeat:969 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 18:49:41 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 18:50:08 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 18:50:08 - Trader:botMath2 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 18:50:08 - BotWorld: -------------------------
+2022-09-21 18:50:08 - BotWorld: end
+2022-09-21 18:50:14 - 
+2022-09-21 18:50:14 - <b>MarketBotRunner 2.0.0/local</b>
+2022-09-21 18:50:14 - restServiceId:311610
+2022-09-21 18:50:14 - dateCreated:2022-09-21 18:50:11
+2022-09-21 18:50:14 - 
+2022-09-21 18:50:14 - <b>General</b>
+2022-09-21 18:50:14 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-21 18:50:14 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-21 18:50:14 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-21 18:50:14 - 
+2022-09-21 18:50:14 - <b>Markets</b>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-21 18:50:14 - 
+2022-09-21 18:50:14 - <b>Bots</b>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-21 18:50:14 - 
+2022-09-21 18:50:14 - <b>Bot Queues</b>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-21 18:50:14 - 
+2022-09-21 18:50:14 - <b>Bot Runs</b>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-21 18:50:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-21 18:50:14 - 
+2022-09-21 18:50:14 - <b>Tests</b>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-21 18:50:14 - 
+2022-09-21 18:50:14 - <b>Settings</b>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.marketTitle&settingsValue=VALUE">market.marketTitle</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.assetCount&settingsValue=VALUE">market.assetCount</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.quoteDecimals&settingsValue=VALUE">market.quoteDecimals</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.pollContentMaxAgeSeconds&settingsValue=VALUE">market.pollContentMaxAgeSeconds</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.reset&settingsValue=VALUE">market.reset</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.asset.quantity&settingsValue=VALUE">portfolio.asset.quantity</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.recover&settingsValue=VALUE">portfolio.recover</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-21 18:50:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-21 20:30:34 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 20:30:34 - BotWorld: botArenaId: mathArena run
+2022-09-21 20:30:34 - BotArena: botArenaId:mathArena run
+2022-09-21 20:30:34 - BotArena: botArenaId:mathArena initial status marketBeat:970 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 20:30:34 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 20:30:35 - trade: failure: msg exception at trader botMath2
+2022-09-21 20:31:59 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 20:31:59 - BotWorld: botArenaId: mathArena run
+2022-09-21 20:31:59 - BotArena: botArenaId:mathArena run
+2022-09-21 20:31:59 - BotArena: botArenaId:mathArena initial status marketBeat:970 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 20:31:59 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 20:32:08 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 20:32:08 - Trader:botMath2 Portfolio [CC5:242.00 USD:85,049.00] portfolioValuation:185,020.51
+2022-09-21 20:32:08 - BotWorld: -------------------------
+2022-09-21 20:32:08 - BotWorld: end
+2022-09-21 20:33:13 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 20:33:13 - BotWorld: botArenaId: mathArena run
+2022-09-21 20:33:13 - BotArena: botArenaId:mathArena run
+2022-09-21 20:33:13 - BotArena: botArenaId:mathArena initial status marketBeat:971 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 20:33:13 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 20:33:23 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 20:33:23 - Trader:botMath2 Portfolio [CC5:242.00 USD:85,049.00] portfolioValuation:184,998.46
+2022-09-21 20:33:23 - BotWorld: -------------------------
+2022-09-21 20:33:23 - BotWorld: end
+2022-09-21 20:39:40 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 20:39:40 - BotWorld: botArenaId: mathArena run
+2022-09-21 20:39:40 - BotArena: botArenaId:mathArena run
+2022-09-21 20:39:40 - BotArena: botArenaId:mathArena initial status marketBeat:972 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 20:39:40 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 20:39:47 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 20:39:47 - Trader:botMath2 Portfolio [CC5:242.00 USD:85,049.00] portfolioValuation:184,977.88
+2022-09-21 20:39:47 - BotWorld: -------------------------
+2022-09-21 20:39:47 - BotWorld: end
+2022-09-21 20:41:38 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 20:41:38 - BotWorld: botArenaId: mathArena run
+2022-09-21 20:41:38 - BotArena: botArenaId:mathArena run
+2022-09-21 20:41:38 - BotArena: botArenaId:mathArena initial status marketBeat:973 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 20:41:38 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 20:41:45 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 20:41:45 - Trader:botMath2 Portfolio [CC5:450.00 USD:72,254.00] portfolioValuation:99,887.76
+2022-09-21 20:41:45 - BotWorld: -------------------------
+2022-09-21 20:41:45 - BotWorld: end
+2022-09-21 20:42:40 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 20:42:40 - BotWorld: botArenaId: mathArena run
+2022-09-21 20:42:40 - BotArena: botArenaId:mathArena run
+2022-09-21 20:42:40 - BotArena: botArenaId:mathArena initial status marketBeat:974 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 20:42:40 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 20:42:47 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 20:42:47 - Trader:botMath2 Portfolio [CC5:450.00 USD:72,254.00] portfolioValuation:99,855.23
+2022-09-21 20:42:47 - BotWorld: -------------------------
+2022-09-21 20:42:47 - BotWorld: end
+2022-09-21 20:44:47 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 20:44:47 - BotWorld: botArenaId: mathArena run
+2022-09-21 20:44:47 - BotArena: botArenaId:mathArena run
+2022-09-21 20:44:47 - BotArena: botArenaId:mathArena initial status marketBeat:975 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 20:44:47 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 20:44:54 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 20:44:54 - Trader:botMath2 Portfolio [CC5:450.00 USD:72,254.00] portfolioValuation:99,825.70
+2022-09-21 20:44:54 - BotWorld: -------------------------
+2022-09-21 20:44:54 - BotWorld: end
+2022-09-21 20:58:26 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 20:58:26 - BotWorld: botArenaId: mathArena run
+2022-09-21 20:58:26 - BotArena: botArenaId:mathArena run
+2022-09-21 20:58:26 - BotArena: botArenaId:mathArena initial status marketBeat:976 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 20:58:26 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 20:58:33 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 20:58:33 - Trader:botMath2 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 20:58:33 - BotWorld: -------------------------
+2022-09-21 20:58:33 - BotWorld: end
+2022-09-21 21:00:20 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 21:00:20 - BotWorld: botArenaId: mathArena run
+2022-09-21 21:00:20 - BotArena: botArenaId:mathArena run
+2022-09-21 21:00:20 - BotArena: botArenaId:mathArena initial status marketBeat:977 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 21:00:20 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 21:00:26 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 21:00:26 - Trader:botMath2 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 21:00:26 - BotWorld: -------------------------
+2022-09-21 21:00:26 - BotWorld: end
+2022-09-21 21:02:07 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 21:02:07 - BotWorld: botArenaId: mathArena run
+2022-09-21 21:02:07 - BotArena: botArenaId:mathArena run
+2022-09-21 21:02:07 - BotArena: botArenaId:mathArena initial status marketBeat:978 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 21:02:07 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 21:02:13 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 21:02:13 - Trader:botMath2 Portfolio [CC5:245.00 USD:85,026.00] portfolioValuation:99,999.19
+2022-09-21 21:02:13 - BotWorld: -------------------------
+2022-09-21 21:02:13 - BotWorld: end
+2022-09-21 21:05:14 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 21:05:14 - BotWorld: botArenaId: mathArena run
+2022-09-21 21:05:14 - BotArena: botArenaId:mathArena run
+2022-09-21 21:05:14 - BotArena: botArenaId:mathArena initial status marketBeat:979 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 21:05:14 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 21:05:20 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 21:05:20 - Trader:botMath2 Portfolio [CC5:245.00 USD:85,026.00] portfolioValuation:99,990.00
+2022-09-21 21:05:20 - BotWorld: -------------------------
+2022-09-21 21:05:20 - BotWorld: end
+2022-09-21 21:07:38 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 21:07:38 - BotWorld: botArenaId: mathArena run
+2022-09-21 21:07:38 - BotArena: botArenaId:mathArena run
+2022-09-21 21:07:38 - BotArena: botArenaId:mathArena initial status marketBeat:980 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 21:07:38 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 21:07:45 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 21:07:45 - Trader:botMath2 Portfolio [CC5:245.00 USD:85,026.00] portfolioValuation:99,982.60
+2022-09-21 21:07:45 - BotWorld: -------------------------
+2022-09-21 21:07:45 - BotWorld: end
+2022-09-21 21:07:55 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 21:07:55 - BotWorld: botArenaId: mathArena run
+2022-09-21 21:07:55 - BotArena: botArenaId:mathArena run
+2022-09-21 21:07:55 - BotArena: botArenaId:mathArena initial status marketBeat:981 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 21:07:56 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 21:08:05 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 21:08:05 - Trader:botMath2 Portfolio [CC5:245.00 USD:85,026.00] portfolioValuation:99,977.00
+2022-09-21 21:08:05 - BotWorld: -------------------------
+2022-09-21 21:08:05 - BotWorld: end
+2022-09-21 21:08:08 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 21:08:08 - BotWorld: botArenaId: mathArena run
+2022-09-21 21:08:08 - BotArena: botArenaId:mathArena run
+2022-09-21 21:08:08 - BotArena: botArenaId:mathArena initial status marketBeat:982 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 21:08:08 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 21:08:15 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 21:08:15 - Trader:botMath2 Portfolio [CC5:245.00 USD:85,026.00] portfolioValuation:99,973.23
+2022-09-21 21:08:15 - BotWorld: -------------------------
+2022-09-21 21:08:15 - BotWorld: end
+2022-09-21 21:08:18 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 21:08:18 - BotWorld: botArenaId: mathArena run
+2022-09-21 21:08:18 - BotArena: botArenaId:mathArena run
+2022-09-21 21:08:18 - BotArena: botArenaId:mathArena initial status marketBeat:983 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 21:08:18 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 21:08:25 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 21:08:25 - Trader:botMath2 Portfolio [CC5:245.00 USD:85,026.00] portfolioValuation:99,971.29
+2022-09-21 21:08:25 - BotWorld: -------------------------
+2022-09-21 21:08:25 - BotWorld: end
+2022-09-21 21:08:43 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 21:08:43 - BotWorld: botArenaId: mathArena run
+2022-09-21 21:08:43 - BotArena: botArenaId:mathArena run
+2022-09-21 21:08:43 - BotArena: botArenaId:mathArena initial status marketBeat:984 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 21:08:43 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 21:08:49 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 21:08:49 - Trader:botMath2 Portfolio [CC5:245.00 USD:85,026.00] portfolioValuation:99,971.18
+2022-09-21 21:08:49 - BotWorld: -------------------------
+2022-09-21 21:08:49 - BotWorld: end
+2022-09-21 21:08:53 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 21:08:53 - BotWorld: botArenaId: mathArena run
+2022-09-21 21:08:53 - BotArena: botArenaId:mathArena run
+2022-09-21 21:08:53 - BotArena: botArenaId:mathArena initial status marketBeat:985 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 21:08:53 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:-1.0000000000
+2022-09-21 21:09:01 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 21:09:01 - Trader:botMath2 Portfolio [CC5:245.00 USD:85,026.00] portfolioValuation:99,972.91
+2022-09-21 21:09:01 - BotWorld: -------------------------
+2022-09-21 21:09:01 - BotWorld: end
+2022-09-21 21:09:54 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-21 21:09:54 - BotWorld: botArenaId: mathArena run
+2022-09-21 21:09:54 - BotArena: botArenaId:mathArena run
+2022-09-21 21:09:54 - BotArena: botArenaId:mathArena initial status marketBeat:986 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-21 21:09:54 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-21 21:10:00 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-21 21:10:00 - Trader:botMath2 Portfolio [CC5:245.00 USD:85,026.00] portfolioValuation:99,976.47
+2022-09-21 21:10:00 - BotWorld: -------------------------
+2022-09-21 21:10:00 - BotWorld: end

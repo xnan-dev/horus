@@ -58,8 +58,8 @@ abstract class MarketTrader {
 		return $this->traderId;
 	}
 
-	function nextQueueId($nextQueueId=null) {
-		return Horus\persistence()->traderNextQueueId($this->botArenaId(),$this->traderId(),$nextQueueId);	
+	function nextQueueId() {
+		return Horus\persistence()->traderNextQueueId($this->botArenaId(),$this->traderId());	
 	}
 
 	function autoApprove($autoApprove=null) {
@@ -196,7 +196,6 @@ abstract class MarketTrader {
 	function traderReset() {
 		exit("traderReset: deferred");
 		$this->orderQueue()->reset();
-		$this->nextQueueId=1;
 	}
 
 	function suspend() {
@@ -336,7 +335,7 @@ abstract class MarketTrader {
 
 
 			$flushAllowed=$this->minFlushBeats() < ($market->beat() - $order->queueBeat()) ? true:false;
-			PRINT "\nACA1 flushAllowed:$flushAllowed autoApprove:".($this->autoApprove())." status ".($order->statusDesc())."\n";
+			//PRINT "flushOrders: flushAllowed:$flushAllowed autoApprove:".($this->autoApprove())." status ".($order->statusDesc())."\n";
 
 			if (!$order->done() && $flushAllowed && $order->status()==AssetTradeStatus\Approved) {			
 
@@ -371,7 +370,7 @@ abstract class MarketTrader {
 				}
 
 				if ($doOp) {
-					$doneQuote=$market->assetTrade($this->portfolio(),$order->assetId(),$order->tradeOp(),$quantity);	
+					$doneQuote=$market->assetTrade($this->portfolio(),$order->assetId(),$order->tradeOp(),$quantity);					
 					if (!($doneQuote===false)) {
 						$order->done(true);
 						$order->doneQuote($doneQuote);
@@ -400,7 +399,7 @@ abstract class MarketTrader {
 	}
 
 	function defaultStatus() {
-		$status=$this->autoApprove ? AssetTradeStatus\Approved : AssetTradeStatus\Suggested;
+		$status=$this->autoApprove() ? AssetTradeStatus\Approved : AssetTradeStatus\Suggested;
 		return $status;
 	}
 
@@ -486,7 +485,6 @@ abstract class MarketTrader {
 		$order=new AssetTradeOrder\AssetTradeOrder();
 		$order->botArenaId($this->botArenaId());
 		$order->traderId($this->traderId());
-		$order->queueId($this->nextQueueId());
 		$order->assetId($assetId);
 		$order->tradeOp($tradeOp);
 		$order->quantity($quantity);
@@ -566,6 +564,9 @@ MARKDOWN;
 				$retOrder=$order;	
 				break;
 			}				
+		}
+		if ($retOrder==null) {
+			Nano\nanoCheck()->checkNotNull($retOrder,"findOrderById: queueId:$queueId order not found");
 		}
 		return $retOrder;
 	}

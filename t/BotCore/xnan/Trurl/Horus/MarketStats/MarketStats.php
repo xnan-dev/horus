@@ -530,7 +530,7 @@ class MarketStats {
 		$value=$this->statsScalar(self::SValue,$assetId);
 		$stabilizer=1;
 
-		print "statsCicle $assetId mean:$mean max:$max min:$min value:$value\n";
+		//print "statsCicle $assetId mean:$mean max:$max min:$min value:$value\n";
 		$cicle=$max!=$min ? 
 		(
 			(
