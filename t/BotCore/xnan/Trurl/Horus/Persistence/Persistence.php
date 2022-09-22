@@ -48,6 +48,10 @@ class Persistence {
 		return $this->pdo;
 	}
 
+	function marketPollContentMaxAgeSeconds($marketId) {
+		return $this->marketField($marketId,"pollContentMaxAgeSeconds");
+	}
+
 	function marketBeat($marketId,$beat=null) {		
 		if ($beat!=null) {			
 			$this->marketFieldSetInt($marketId,"beat",$beat);
@@ -157,6 +161,10 @@ class Persistence {
 		}
 	}
 
+
+	private function traderFieldString($botArenaId,$traderId,$field,$value=null) {
+		return $this->traderFieldInt($botArenaId,$traderId,$field,$value);
+	}
 
 	private function traderFieldInt($botArenaId,$traderId,$field,$value=null) {
 		if ($value!=null) {

@@ -91,7 +91,7 @@ abstract class MarketTrader {
 	}
 
 	function traderTitle($traderTitle=null) {
-		return Horus\persistence()->traderTraderTitle($this->botArenaId(),$this->traderId(),$traderTitle);	
+		return Horus\persistence()->traderTitle($this->botArenaId(),$this->traderId(),$traderTitle);	
 	}
 	
 	function dailyWaitFromMarketOpen($dailyWaitFromMarketOpen=null) {

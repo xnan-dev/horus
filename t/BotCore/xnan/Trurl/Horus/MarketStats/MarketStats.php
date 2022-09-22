@@ -570,7 +570,10 @@ class MarketStats {
 		$this->setupStatsIfReq();
 		if (  $this->beatMultiplier()>1 && 
 			(($market->beat() % $this->beatMultiplier()) != 0) ) {
-			echo "ONBEAT-ESQUIVADO: $this->beatMultiplier on beat: $market->beat\n";
+		
+			//echo sprintf("marketStats: %s beatSkip: beatMultiplier:%s onBeat: %s\n",
+			//	$this->marketStatsId(),$this->beatMultiplier(),$market->beat());
+
 			return; // saltamos los beats que se deben ignorar de acuerdo al multiplicador.
 		}
 
@@ -650,7 +653,9 @@ class MarketStats {
 
 
 		$this->synchedBeat($market->beat());
-		printf("ONBEAT-ACA %s : %s %s\n",$this->marketStatsId(),$this->beatMultiplier(),$this->synchedBeat());
+
+		//printf("marketStats: %s beatMultiplier: %s synchedBeat: %s\n",
+//			$this->marketStatsId(),$this->beatMultiplier(),$this->synchedBeat());
 
 		Nano\nanoPerformance()->track("marketStats.onBeat.".$market->marketId());
 	}

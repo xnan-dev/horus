@@ -264,12 +264,12 @@ class BotArena {
 		$header=explode(",","traderId,assetId,assetQuantity,assetQuote,monthRoi,valuation,lastDepositQuantity,lastDepositTime,rowClazz");
 		$ds=new DataSet\DataSet($header);
 
-		Nano\nanoPerformance()->track("botArena.logTraderPortfolio");
-
+		Nano\nanoPerformance()->track("botArena.logTraderPortfolio");		
 		$line=array();		
 		$ds->deleteRows();
+
 		foreach($this->traders() as $trader) {
-			if ($traderId!="" && $trader->traderId!=$traderId) continue;
+			if ($traderId!="" && $trader->traderId()!=$traderId) continue;
 			$assetIndex=0;
 			foreach($trader->portfolio()->assetIds() as $assetId) {
 				$portfolioId=$trader->portfolio()->portfolioId();

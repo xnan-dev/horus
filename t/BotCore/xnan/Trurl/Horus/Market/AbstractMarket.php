@@ -55,7 +55,6 @@ abstract class AbstractMarket implements Market {
 		$this->textFormatter=Nano\newTextFormatter();
 		$this->marketId=$marketId;
 		$this->useHistory=$useHistory;
-		$this->pollContentMaxAgeSeconds=5*60;				
 		$this->onBeat=new Observer\Observable();
 		$this->setupMarket();
 	}
@@ -128,25 +127,25 @@ abstract class AbstractMarket implements Market {
 	function settingsAsCsv() {
 		$ds=new DataSet\DataSet(["settingsKey","settingsDescription","settingsValue"]);
 		
-		$marketId=$this->marketId;
+		$marketId=$this->marketId();
 
 		$pollContentAgeDate=new \DateTime();
 		$pollContentAgeDate->setTimestamp(time()-$this->pollContentAgeSeconds());
 		$pollContentAgeDateStr=date_format($pollContentAgeDate,'Y-m-d H:i:s');
 
-		$ds->addRow(["marketId","ID Mercado",$this->marketId]);
+		$ds->addRow(["marketId","ID Mercado",$marketId]);
 		$ds->addRow(["marketClazz","Clase de Mercado",get_class($this)]);
-		$ds->addRow(["marketTitle","Título de Mercado",$this->textFormatter()->formatString($this->marketTitle,"settingsKey=market.marketTitle&marketId=$marketId")]);
+		$ds->addRow(["marketTitle","Título de Mercado",$this->textFormatter()->formatString($this->marketTitle(),"settingsKey=market.marketTitle&marketId=$marketId")]);
 		$ds->addRow(["beat","Pulso",$this->beat()]);
-		$ds->addRow(["tradeFixedFees","Costos fijos por operación",implode(", ",$this->tradeFixedFees->values()) ]);
-		$ds->addRow(["assetCount","Activos permitidos",$this->textFormatter()->formatInt($this->assetCount,"settingsKey=market.assetCount&marketId=$marketId")]);
-		$ds->addRow(["assetIds","Activos",implode(", ",$this->assetIds()->values() )]);
-		$ds->addRow(["useHistory","Usa información histórica",$this->useHistory ? "true" : "false"]);
+		$ds->addRow(["tradeFixedFees","Costos fijos por operación",implode(", ",$this->tradeFixedFees()) ]);
+		//$ds->addRow(["assetCount","Activos permitidos",$this->textFormatter()->formatInt($this->assetCount,"settingsKey=market.assetCount&marketId=$marketId")]);
+		$ds->addRow(["assetIds","Activos",implode(", ",$this->assetIds() )]);
+		$ds->addRow(["useHistory","Usa información histórica",$this->useHistory() ? "true" : "false"]);
 		$ds->addRow(["defaultExchangeAssetId","Divisa de intercambio por defecto",$this->defaultExchangeAssetId()]);
-		$ds->addRow(["quoteDecimals","Decimales de precisión para cotizaciones",$this->textFormatter()->formatInt($this->quoteDecimals,"settingsKey=market.quoteDecimals&marketId=$marketId")]);		
+		$ds->addRow(["quoteDecimals","Decimales de precisión para cotizaciones",$this->textFormatter()->formatInt($this->quoteDecimals(),"settingsKey=market.quoteDecimals&marketId=$marketId")]);		
 		$ds->addRow(["pollContentAgeSeconds","Edad del contenido de la fuente (segundos)",$this->pollContentAgeSeconds() ]);		
 		$ds->addRow(["pollContentAgeDate","Edad del contenido de la fuente (fecha)",$pollContentAgeDateStr ]);	
-		$ds->addRow(["pollContentMaxAgeSeconds","Edad máxima de contenido de la fuente",$this->textFormatter()->formatInt($this->pollContentMaxAgeSeconds,"settingsKey=market.pollContentMaxAgeSeconds&marketId=$marketId")]);
+		$ds->addRow(["pollContentMaxAgeSeconds","Edad máxima de contenido de la fuente",$this->textFormatter()->formatInt($this->pollContentMaxAgeSeconds(),"settingsKey=market.pollContentMaxAgeSeconds&marketId=$marketId")]);
 		$ds->addRow(["pollContentOutdated","Si el contenido de la fuente está desactualizado",$this->textFormatter()->formatBool($this->pollContentOutdated())]);
 
 		$this->addCustomSettings($ds);
@@ -184,9 +183,12 @@ abstract class AbstractMarket implements Market {
 	}
 
 	function defaultExchangeAssetId($assetId=null) {
-		//$this->assets->insert(new Asset\Asset($assetId,AssetType\Currency));
  		return Horus\persistence()->marketDefaultExchangeAssetId($this->marketId(),$assetId);	
 	}
+
+	function pollContentMaxAgeSeconds() {
+ 		return Horus\persistence()->marketPollContentMaxAgeSeconds($this->marketId());
+	}		
 
 	function useHistory() {
 		return $this->useHistory;

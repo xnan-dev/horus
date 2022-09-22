@@ -136,37 +136,13 @@ class Portfolio {
 
 	function portfolioAsCsv() {
 		$header=explode(",","assetId,assetQuantity");
-		$ds=new DataSet\DataSet($header);
+		$ds=new DataSet\DataSet($header);		
 		foreach($this->assetQuantities() as $assetId=>$assetQuantity) {
 			$ds->addRow([$assetId,$assetQuantity ]);				
 		}
 		return $ds->toCsvRet();
 	}
 
-	function save() {
-		Nano\nanoCheck()->checkDiskAvailable();
-
-		if (!file_exists("content/Portfolio")) mkdir("content/Portfolio");
-		file_put_contents(sprintf("content/Portfolio/portfolio.%s.csv",$this->portfolioId()),$this->portfolioAsCsv() );		
-	}
-
-	function portfolioRecover() {
-		$fileName=sprintf("content/Portfolio/portfolio.%s.csv",$this->portfolioId());
-		if (file_exists($fileName)) {
-			$csv=file_get_contents($fileName );
-			$rows=Nano\nanoCsv()->csvContentToArray($csv,';');
-			foreach($rows  as $row) {
-				$assetId=$row["assetId"];
-				$assetQuantity=$row["assetQuantity"];
-				$this->assetQuantity[$assetId]=$assetQuantity;
-			}		
-
-			Nano\msg(sprintf("Portfolio: portfolioId:%s portfolioRecover: done",$this->portfolioId() ));
-		} else {
-			Nano\msg(sprintf("Portfolio: portfolioId:%s portfolioRecover: ignored msg: no file from which recover",$this->portfolioId() ));
-		}
-
-	}
 }
 
 function toCanonical($portfolio) {

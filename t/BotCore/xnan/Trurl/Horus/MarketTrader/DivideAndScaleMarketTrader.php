@@ -114,16 +114,16 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 		$ds->addRow(["boundMarketId","ID de mercado asociado",$this->market()->marketId() ]);
 		$ds->addRow(["boundMarketClazz","Clase de mercado asociado",get_class($this->market())]);
 		$ds->addRow(["boundMarketBeat","Pulso de mercado asociado",$this->market()->beat()]);
-		$ds->addRow(["waitBeats","Pulsos de espera antes de operar",$this->textFormatter()->formatInt($this->waitBeats,"settingsKey=dsMarketTrader.waitBeats&traderId=$traderId")]);		
-		$ds->addRow(["phase","Fase de operación",$this->phase]);
-		$ds->addRow(["maxAssetPercentage","Porcentaje máximo en portfolio de un activo",$this->textFormatter()->formatDecimal($this->maxAssetPercentage,"","settingsKey=dsMarketTrader.maxAssetPercentage&traderId=$traderId")]);
-		$ds->addRow(["waitBeatsForAssetRepeat","Pulsos de espera antes de sugerir de nuevo un activo",$this->textFormatter()->formatInt($this->waitBeatsForAssetRepeat,"settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&traderId=$traderId")]);		
-		$ds->addRow(["startBeat","Pulso de comienzo de operaciones",$this->startBeat]);			
-		$ds->addRow(["marketStats.maxHistoryBeats","Tamaño de la ventana de estadísticas en pulsos",$this->textFormatter()->formatInt($this->market()->marketStats()->settingMaxHistoryBeats(),"settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&traderId=$traderId")]);
-		$ds->addRow(["buyCicleCut","Umbral de corte de ciclo para compras",$this->textFormatter()->formatDecimal($this->buyCicleCut,"","settingsKey=dsMarketTrader.buyCicleCut&traderId=$traderId")]);
-		$ds->addRow(["sellCicleCut","Umbral de corte de ciclo para ventas",$this->textFormatter()->formatDecimal($this->sellCicleCut,"","settingsKey=dsMarketTrader.sellCicleCut&traderId=$traderId")]);		
-		$ds->addRow(["maxBuySuggestions","Máximo de sugerencias de compra simultáneas",$this->textFormatter()->formatInt($this->maxBuySuggestions,"settingsKey=dsMarketTrader.maxBuySuggestions&traderId=$traderId")]);
-		$ds->addRow(["buyLimitFactor","Factor de ajuste para compra límite",$this->textFormatter()->formatDecimal($this->buyLimitFactor,"","settingsKey=dsMarketTrader.buyLimitFactor&traderId=$traderId")]);
+		$ds->addRow(["waitBeats","Pulsos de espera antes de operar",$this->textFormatter()->formatInt($this->waitBeats(),"settingsKey=dsMarketTrader.waitBeats&traderId=$traderId")]);		
+		$ds->addRow(["phase","Fase de operación",$this->phase()]);
+		$ds->addRow(["maxAssetPercentage","Porcentaje máximo en portfolio de un activo",$this->textFormatter()->formatDecimal($this->maxAssetPercentage(),"","settingsKey=dsMarketTrader.maxAssetPercentage&traderId=$traderId")]);
+		$ds->addRow(["waitBeatsForAssetRepeat","Pulsos de espera antes de sugerir de nuevo un activo",$this->textFormatter()->formatInt($this->waitBeatsForAssetRepeat(),"settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&traderId=$traderId")]);		
+		$ds->addRow(["startBeat","Pulso de comienzo de operaciones",$this->startBeat()]);			
+		$ds->addRow(["marketStats.maxHistoryBeats","Tamaño de la ventana de estadísticas en pulsos",$this->textFormatter()->formatInt($this->market()->marketStats()->maxHistoryBeats(),"settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&traderId=$traderId")]);
+		$ds->addRow(["buyCicleCut","Umbral de corte de ciclo para compras",$this->textFormatter()->formatDecimal($this->buyCicleCut(),"","settingsKey=dsMarketTrader.buyCicleCut&traderId=$traderId")]);
+		$ds->addRow(["sellCicleCut","Umbral de corte de ciclo para ventas",$this->textFormatter()->formatDecimal($this->sellCicleCut(),"","settingsKey=dsMarketTrader.sellCicleCut&traderId=$traderId")]);		
+		$ds->addRow(["maxBuySuggestions","Máximo de sugerencias de compra simultáneas",$this->textFormatter()->formatInt($this->maxBuySuggestions(),"settingsKey=dsMarketTrader.maxBuySuggestions&traderId=$traderId")]);
+		$ds->addRow(["buyLimitFactor","Factor de ajuste para compra límite",$this->textFormatter()->formatDecimal($this->buyLimitFactor(),"","settingsKey=dsMarketTrader.buyLimitFactor&traderId=$traderId")]);
 
 	}
 
@@ -410,7 +410,7 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 
 			$earn=($sellQuote-$buyQuote)*$quantity;
 
-			printf("#### earn: buyQuote: %s sellQuote(later): %s earn:%s minEarn:%s quantity:$quantity earn ok:%s\n<br>",$buyQuote,$sellQuote,$earn,$this->minEarn() ,($earn>=$this->minEarn() ? "true": "false"));			
+			printf("#### earn: buyQuote: %s sellQuote(later): %s earn:%s minEarn:%s quantity:$quantity earn ok:%s\n",$buyQuote,$sellQuote,$earn,$this->minEarn() ,($earn>=$this->minEarn() ? "true": "false"));			
 			if ($earn>=$this->minEarn() ) {
 
 				$quote=$op==AssetTradeOperation\Buy ? $buyQuote : $sellQuote;
