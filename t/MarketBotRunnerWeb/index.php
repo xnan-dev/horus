@@ -24,6 +24,8 @@ use xnan\Trurl\Horus\PdoSettings;
 
 //Uses: End
 
+error_reporting(E_ALL);
+
 
 $pdoSettings=(new PdoSettings\PdoSettings())
 	->withHostname("localhost")

@@ -172,21 +172,21 @@ abstract class MarketTrader {
 		$lastDepositDate=new \DateTime();
 		$lastDepositDate->setTimestamp($this->portfolio()->lastDepositTime());
 
-		$ds->addRow(["traderId","ID Bot",$this->traderId]);
-		$ds->addRow(["traderTitle","Título del Bot",$this->textFormatter()->formatString($this->traderTitle,"settingsKey=marketTrader.traderTitle&traderId=$traderId")]);
-		$ds->addRow(["autoApprove","Auto aprobar órdenes",$this->autoApprove ? "true":"false"]);
-		$ds->addRow(["minFlushBeats","Espera antes de procesar orden",$this->textFormatter()->formatInt($this->minFlushBeats,"settingsKey=marketTrader.minFlushBeats&traderId=$traderId")]);
-		$ds->addRow(["settingBuyUnits","Unidades de compra (redondeo)",$this->textFormatter()->formatDecimal($this->settingBuyUnits,"","settingsKey=marketTrader.settingBuyUnits&traderId=$traderId")]);
-		$ds->addRow(["settingBuyMinimum","Minimo de compra (cantidad)",$this->textFormatter()->formatDecimal($this->settingBuyMinimum,"","settingsKey=marketTrader.settingBuyMinimum&traderId=$traderId")]);
-		$ds->addRow(["minEarn","Ganancia mínima esperada (monto)",$this->textFormatter()->formatDecimal($this->minEarn,"","settingsKey=marketTrader.minEarn&traderId=$traderId")]);
-		$ds->addRow(["notificationsEnabled","Notifaciones habilitadas",$this->textFormatter()->formatBool($this->notificationsEnabled,"settingsKey=marketTrader.notificationsEnabled&traderId=$traderId")]);
-		$ds->addRow(["nextQueueId","ID orden próximo",$this->nextQueueId]);
-		$ds->addRow(["telegramChatId","Chat ID de telegram",$this->textFormatter()->formatString($this->telegramChatId,"settingsKey=marketTrader.telegramChatId&traderId=$traderId")]);
+		$ds->addRow(["traderId","ID Bot",$this->traderId()]);
+		$ds->addRow(["traderTitle","Título del Bot",$this->textFormatter()->formatString($this->traderTitle(),"settingsKey=marketTrader.traderTitle&traderId=$traderId")]);
+		$ds->addRow(["autoApprove","Auto aprobar órdenes",$this->autoApprove() ? "true":"false"]);
+		$ds->addRow(["minFlushBeats","Espera antes de procesar orden",$this->textFormatter()->formatInt($this->minFlushBeats(),"settingsKey=marketTrader.minFlushBeats&traderId=$traderId")]);
+		$ds->addRow(["settingBuyUnits","Unidades de compra (redondeo)",$this->textFormatter()->formatDecimal($this->settingBuyUnits(),"","settingsKey=marketTrader.settingBuyUnits&traderId=$traderId")]);
+		$ds->addRow(["settingBuyMinimum","Minimo de compra (cantidad)",$this->textFormatter()->formatDecimal($this->settingBuyMinimum(),"","settingsKey=marketTrader.settingBuyMinimum&traderId=$traderId")]);
+		$ds->addRow(["minEarn","Ganancia mínima esperada (monto)",$this->textFormatter()->formatDecimal($this->minEarn(),"","settingsKey=marketTrader.minEarn&traderId=$traderId")]);
+		$ds->addRow(["notificationsEnabled","Notifaciones habilitadas",$this->textFormatter()->formatBool($this->notificationsEnabled(),"settingsKey=marketTrader.notificationsEnabled&traderId=$traderId")]);
+		$ds->addRow(["nextQueueId","ID orden próximo",$this->nextQueueId()]);
+		$ds->addRow(["telegramChatId","Chat ID de telegram",$this->textFormatter()->formatString($this->telegramChatId(),"settingsKey=marketTrader.telegramChatId&traderId=$traderId")]);
 		$ds->addRow(["isSuspended","Suspendido",$this->textFormatter->formatBool($this->isSuspended())]);
-		$ds->addRow(["autoCancelBuyBeats","Pulsos de espera hasta cancelar compras aprobadas",$this->textFormatter()->formatInt($this->autoCancelBuyBeats,"settingsKey=marketTrader.autoCancelBuyBeats&traderId=$traderId")]);
+		$ds->addRow(["autoCancelBuyBeats","Pulsos de espera hasta cancelar compras aprobadas",$this->textFormatter()->formatInt($this->autoCancelBuyBeats(),"settingsKey=marketTrader.autoCancelBuyBeats&traderId=$traderId")]);
 		$ds->addRow(["porfolio.lastDepositQuantity","Cantidad de último depósito",$this->portfolio()->lastDepositQuantity()]);
 		$ds->addRow(["porfolio.lastDepositTime","Fecha de último depósito",date_format($lastDepositDate,'Y-m-d H:i:s')]);
-		$ds->addRow(["nextQueueId","ID orden próximo",$this->nextQueueId]);
+		$ds->addRow(["nextQueueId","ID orden próximo",$this->nextQueueId()]);
 		//$ds->addRow(["randomInt","Valor al azar de prueba",random_int(1,1000)]);
 
 		$this->addTraderCustomSettings($ds);

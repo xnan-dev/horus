@@ -85,7 +85,7 @@ class YahooFinanceTestMarket extends AbstractMarket {
 	
 
 	function addCustomSettings($ds) {		
-		$ds->addRow(["pollerName","Nombre de fuente de cotizaciones",$this->pollerName]);
+		$ds->addRow(["pollerName","Nombre de fuente de cotizaciones",$this->pollerName()]);
 		$ds->addRow(["finalBeat","Último pulso",$this->finalBeat() ]);
 	}	
 	

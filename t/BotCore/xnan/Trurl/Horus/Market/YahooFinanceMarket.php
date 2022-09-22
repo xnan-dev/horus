@@ -78,9 +78,9 @@ class YahooFinanceMarket extends AbstractMarket {
 	}
 
 	function addCustomSettings($ds) {		
-		$ds->addRow(["useHistory","Usar cotizaciones históricas",$this->useHistory ? "true":"false"]);
-		$ds->addRow(["pollerName","Nombre de poller asociado",$this->pollerName]);
-		$ds->addRow(["lastBeatRead","Último pulso procesado",$this->lastBeatRead]);		
+		$ds->addRow(["useHistory","Usar cotizaciones históricas",$this->useHistory() ? "true":"false"]);
+		$ds->addRow(["pollerName","Nombre de poller asociado",$this->pollerName() ]);
+		$ds->addRow(["lastBeatRead","Último pulso procesado",$this->lastBeatRead() ]);		
 	}
 	
 	function quotesAsCsv() {		
