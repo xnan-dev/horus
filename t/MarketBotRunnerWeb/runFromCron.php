@@ -44,9 +44,8 @@ if(cronEnabled() || (array_key_exists("runOnce",$_GET) && $_GET["runOnce"]=="tru
 		runFromCronSetup();
 
 		Nano\nanoLog()->open();
-		Hydra\hydra()->hydrate();
+		(MarketBotRunner\MarketBotRunner::instance())->pdoSettings(pdoSettings());
 		(MarketBotRunner\MarketBotRunner::instance())->serviceProcess();
-		Hydra\hydra()->dehydrate();			
 		Nano\nanoLog()->close();
 	}		
 	file_put_contents($lastRunFile,time());	

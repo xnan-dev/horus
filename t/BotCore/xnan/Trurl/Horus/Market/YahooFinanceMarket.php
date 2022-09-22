@@ -29,7 +29,6 @@ set_time_limit(120*10);
 
 class YahooFinanceMarket extends AbstractMarket {
 	var $lastQuotesCache=null;
-	var $lastBeatRead=-1;
 	var $assets=[]; // cached
 	var $assetIds=[]; // cached
 	var $assetIdsByType=[]; // cached
@@ -55,6 +54,11 @@ class YahooFinanceMarket extends AbstractMarket {
 			$this->assetIdsByType[AssetType\CryptoCurrency]=$asset->assetId();
 			++$index;
 		} 				
+	}
+
+
+	function lastBeatRead($lastBeatRead=null) {
+		return Horus\persistence()->yfMarketLastBeatRead($this->marketId(),$lastBeatRead);
 	}
 
 	function assets() {		
@@ -172,14 +176,14 @@ class YahooFinanceMarket extends AbstractMarket {
 		$this->lastQuotesCache=null;
 
 		$this->setupLastQuotesCache();
-		$ret=$this->lastBeatRead<$this->beat();
+		$ret=$this->lastBeatRead()<$this->beat();
 		return $ret;
 	}
 
 	function nextBeat() {		
-		$this->lastBeatRead=$this->beat();
+		$this->lastBeatRead($this->beat());
 		$this->lastQuotesCache=null;
-		Nano\nanoLog()->msg(printf("lastRead:%s\n",$this->lastBeatRead));
+		Nano\nanoLog()->msg(printf("lastRead:%s\n",$this->lastBeatRead() ));
 		Nano\nanoPerformance()->track("yfMarket.observeAll");
 		$this->onBeat()->observeAll($this);		
 		Nano\nanoPerformance()->track("yfMarket.observeAll");

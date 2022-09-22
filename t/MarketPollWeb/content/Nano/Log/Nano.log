@@ -441,3 +441,71 @@
 2022-09-05 14:02:46 - <b>Polling</b>
 2022-09-05 14:02:46 - <a href="http://local.t.trurl.xnan.click/MarketPollWeb/index.php?q=pollQuotes&beats=1&beatSleep=0">pollQuotes</a>
 2022-09-05 14:02:46 - <a href="http://local.t.trurl.xnan.click/MarketPollWeb/index.php?q=pollHistoryDISABLED">pollHistory</a>
+2022-09-22 11:03:58 - 
+2022-09-22 11:03:58 - <b>Help</b>
+2022-09-22 11:03:58 - sessionId:
+2022-09-22 11:03:58 - q:
+2022-09-22 11:03:58 - 
+2022-09-22 11:03:58 - <b>General</b>
+2022-09-22 11:03:58 - <a href="http://local.t.trurl.xnan.click/MarketPollWeb/tester.php">Poll Tester</a>
+2022-09-22 11:03:58 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-22 11:03:58 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index	.php">Bot Runner main</a>
+2022-09-22 11:03:58 - 
+2022-09-22 11:03:58 - <b>Consultas</b>
+2022-09-22 11:03:58 - <a href="http://local.t.trurl.xnan.click/MarketPollWeb/index.php?q=assetsAsCsv">assetsAsCsv</a>
+2022-09-22 11:03:58 - <a href="http://local.t.trurl.xnan.click/MarketPollWeb/index.php?q=marketQuotesAsCsv">marketQuotesAsCsv</a>
+2022-09-22 11:03:58 - <a href="http://local.t.trurl.xnan.click/MarketPollWeb/index.php?q=marketLastQuotesAsCsv">marketLastQuotesAsCsv</a>
+2022-09-22 11:03:58 - <a href="http://local.t.trurl.xnan.click/MarketPollWeb/index.php?q=marketHistoryAsCsv&page=0&pageSize=20">marketHistoryAsCsv</a>
+2022-09-22 11:03:58 - 
+2022-09-22 11:03:58 - <b>Polling</b>
+2022-09-22 11:03:58 - <a href="http://local.t.trurl.xnan.click/MarketPollWeb/index.php?q=pollQuotes&beats=1&beatSleep=0">pollQuotes</a>
+2022-09-22 11:03:58 - <a href="http://local.t.trurl.xnan.click/MarketPollWeb/index.php?q=pollHistoryDISABLED">pollHistory</a>
+2022-09-22 11:06:57 - 
+2022-09-22 11:06:57 - <b>Help</b>
+2022-09-22 11:06:57 - sessionId:
+2022-09-22 11:06:57 - q:lastQuotesAsCsv
+2022-09-22 11:06:57 - 
+2022-09-22 11:06:57 - <b>General</b>
+2022-09-22 11:06:57 - <a href="http://local.t.trurl.xnan.click/MarketPollWeb/tester.php">Poll Tester</a>
+2022-09-22 11:06:57 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-22 11:06:57 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index	.php">Bot Runner main</a>
+2022-09-22 11:06:57 - 
+2022-09-22 11:06:57 - <b>Consultas</b>
+2022-09-22 11:06:57 - <a href="http://local.t.trurl.xnan.click/MarketPollWeb/index.php?q=assetsAsCsv">assetsAsCsv</a>
+2022-09-22 11:06:57 - <a href="http://local.t.trurl.xnan.click/MarketPollWeb/index.php?q=marketQuotesAsCsv">marketQuotesAsCsv</a>
+2022-09-22 11:06:57 - <a href="http://local.t.trurl.xnan.click/MarketPollWeb/index.php?q=marketLastQuotesAsCsv">marketLastQuotesAsCsv</a>
+2022-09-22 11:06:57 - <a href="http://local.t.trurl.xnan.click/MarketPollWeb/index.php?q=marketHistoryAsCsv&page=0&pageSize=20">marketHistoryAsCsv</a>
+2022-09-22 11:06:57 - 
+2022-09-22 11:06:57 - <b>Polling</b>
+2022-09-22 11:06:57 - <a href="http://local.t.trurl.xnan.click/MarketPollWeb/index.php?q=pollQuotes&beats=1&beatSleep=0">pollQuotes</a>
+2022-09-22 11:06:57 - <a href="http://local.t.trurl.xnan.click/MarketPollWeb/index.php?q=pollHistoryDISABLED">pollHistory</a>
+2022-09-22 11:07:19 - PollWorld: pollQuotes beats:1 pollerName: pollerCount:7
+2022-09-22 11:07:19 - BotWorld: pollerName: Cryptos run
+2022-09-22 11:07:20 - YahooFinanceMarketPoll: poll pollDate:2022-09-22 11:07:19 marketBeat:4
+2022-09-22 11:07:20 - YahooFinanceMarketPoll: pollerName:Cryptos poll-completed: quotes:100
+2022-09-22 11:07:20 - PollWorld: -------------------------
+2022-09-22 11:07:20 - BotWorld: pollerName: MervalAccionesLideres run
+2022-09-22 11:07:21 - YahooFinanceMarketPoll: poll pollDate:2022-09-22 11:07:20 marketBeat:4
+2022-09-22 11:07:21 - YahooFinanceMarketPoll: pollerName:MervalAccionesLideres poll-completed: quotes:21
+2022-09-22 11:07:21 - PollWorld: -------------------------
+2022-09-22 11:07:21 - BotWorld: pollerName: SnP100 run
+2022-09-22 11:07:22 - YahooFinanceMarketPoll: poll pollDate:2022-09-22 11:07:21 marketBeat:4
+2022-09-22 11:07:22 - YahooFinanceMarketPoll: pollerName:SnP100 poll-completed: quotes:93
+2022-09-22 11:07:22 - PollWorld: -------------------------
+2022-09-22 11:07:22 - BotWorld: pollerName: MervalCedears run
+2022-09-22 11:07:23 - YahooFinanceMarketPoll: poll pollDate:2022-09-22 11:07:22 marketBeat:4
+2022-09-22 11:07:23 - YahooFinanceMarketPoll: pollerName:MervalCedears poll-completed: quotes:192
+2022-09-22 11:07:23 - PollWorld: -------------------------
+2022-09-22 11:07:23 - BotWorld: pollerName: Nasdaq100 run
+2022-09-22 11:07:25 - YahooFinanceMarketPoll: poll pollDate:2022-09-22 11:07:23 marketBeat:4
+2022-09-22 11:07:25 - YahooFinanceMarketPoll: pollerName:Nasdaq100 poll-completed: quotes:100
+2022-09-22 11:07:25 - PollWorld: -------------------------
+2022-09-22 11:07:25 - BotWorld: pollerName: MervalAccionesGeneral run
+2022-09-22 11:07:26 - YahooFinanceMarketPoll: poll pollDate:2022-09-22 11:07:25 marketBeat:4
+2022-09-22 11:07:26 - YahooFinanceMarketPoll: pollerName:MervalAccionesGeneral poll-completed: quotes:41
+2022-09-22 11:07:26 - PollWorld: -------------------------
+2022-09-22 11:07:26 - BotWorld: pollerName: YFFOREXUSD run
+2022-09-22 11:07:27 - YahooFinanceMarketPoll: poll pollDate:2022-09-22 11:07:26 marketBeat:4
+2022-09-22 11:07:27 - YahooFinanceMarketPoll: pollerName:YFFOREXUSD poll-completed: quotes:122
+2022-09-22 11:07:27 - PollWorld: -------------------------
+2022-09-22 11:07:27 - PollWorld: end

@@ -82,6 +82,10 @@ class Persistence {
 		return $v;
 	}
 
+	function yfMarketLastBeatRead($marketId,$lastBeatRead=null) {		
+		return $this->yfMarketFieldInt($marketId,"lastBeatRead",$lastBeatRead);		
+	}
+
 	function traderOrderQueue($botArenaId,$traderId) {		
 		$os=[];		
 		$query=sprintf("SELECT * FROM assetTradeOrder as o						
@@ -138,6 +142,25 @@ class Persistence {
 				$marketId);		
 
 		$this->pdoQuery($query);
+	}
+
+	private function yfMarketFieldInt($marketId,$field,$value=null) {
+		if ($value!=null) {
+
+			$query=sprintf(
+				"UPDATE yahooFinanceMarket 
+					SET $field=$value 
+					WHERE
+					 marketId='%s'
+				",
+					$marketId);		
+
+			$this->pdoQuery($query);
+
+			return null;
+		} else {
+			return $this->yfMarketRow($marketId)[$field];
+		}
 	}
 
 	private function dsTraderFieldInt($botArenaId,$traderId,$field,$value=null) {
@@ -264,6 +287,26 @@ class Persistence {
 			Nano\nanoCheck()->checkFailed("marketStats row not found");
 		}		
 	}
+
+	private function yfMarketRow($marketId) {
+		$query=sprintf(
+		"SELECT yf.*,m.* FROM yahooFinanceMarket yf
+			INNER JOIN market m ON 
+				yf.marketId=m.marketId
+			WHERE
+				yf.marketId='%s'",
+			$marketId);		
+
+		$r=$this->pdoQuery($query);
+		
+		if ($row=$r->fetch()) {
+			return $row;
+		} else {
+			Nano\nanoCheck()->checkFailed("yfMarket row not found");
+		}		
+	}
+
+
 
 
 	private function dsTraderRow($botArenaId,$traderId) {

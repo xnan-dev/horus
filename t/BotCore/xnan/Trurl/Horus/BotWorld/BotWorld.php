@@ -40,6 +40,7 @@ class BotWorld {
 	}
 
 	function pdo(&$pdo=null) {
+		
 		if ($pdo!=null) {
 			$this->pdo=$pdo;
 		} else {

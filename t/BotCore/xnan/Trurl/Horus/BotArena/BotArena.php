@@ -347,7 +347,7 @@ class BotArena {
 				++$beatsRun;				
 
 			} else {				
-				Nano\msg(sprintf("BotArena: botArenaId:%s beat: %s msg: market not ready",$this->botArenaId,$this->market->get()->beat() ));	
+				Nano\msg(sprintf("BotArena: botArenaId:%s beat: %s msg: market not ready",$this->botArenaId(),$this->market->beat() ));	
 			}
 		}
 		Nano\nanoPerformance()->track("botArena.run.B");

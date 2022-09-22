@@ -1,10 +1,11 @@
 <?php
-namespace xnan\MarketBotRunner;
+namespace xnan\Trurl\Horus\MarketBotRunner;
 
 chdir( __DIR__ );
 
 require("autoloader.php");
 require '../vendor/autoload.php';
+include_once("settings.php");
 
 // Uses: Nano: Shortcuts
 use xnan\Trurl\Nano;
@@ -26,19 +27,9 @@ use xnan\Trurl\Horus\PdoSettings;
 
 error_reporting(E_ALL);
 
-
-$pdoSettings=(new PdoSettings\PdoSettings())
-	->withHostname("localhost")
-	->withDatabase("horus_t")
-	->withUser("root")
-	->withPassword("root11");
-
 Nano\nanoLog()->open();
-
-//Hydra\hydra()->hydrate();
-(MarketBotRunner\MarketBotRunner::instance())->pdoSettings($pdoSettings);
+(MarketBotRunner\MarketBotRunner::instance())->pdoSettings(pdoSettings());
 (MarketBotRunner\MarketBotRunner::instance())->serviceProcess();
-//Hydra\hydra()->dehydrate();			
 Nano\nanoLog()->close();
 
 ?>
