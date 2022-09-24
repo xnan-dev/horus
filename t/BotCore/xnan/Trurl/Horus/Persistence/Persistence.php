@@ -698,6 +698,310 @@ class Persistence {
 		$r=$this->pdoQuery($query);
 	}		
 
+
+	function msStatsScalar($marketId,$marketStatsId,$statsDim,$assetId) {
+		$query=sprintf(
+			"SELECT * 
+				FROM marketStatsLog
+				WHERE
+					marketId='%s' AND
+					marketStatsId='%s' AND
+					statsDim=%s AND
+					assetId='%s' AND
+					historyIndex IS NULL",
+			$marketId,
+			$marketStatsId,
+			$statsDim,
+			$assetId);		
+
+		$r=$this->pdoQuery($query);		
+
+		if ($row=$r->fetch()) {
+			return $row["statsValue"];
+		} else {
+			print "RRR:$row";
+		}
+		Nano\nanoCheck()->checkFailed("marketId:'$marketId' marketStatsId:'$marketStatsId'msg: stats not found");
+	}
+
+
+	function msStatsHistoryLastValue($marketId,$marketStatsId,$statsDim,$assetId) {
+
+		$query=sprintf(
+			"SELECT * 
+				FROM marketStatsLog
+				WHERE
+					marketId='%s' AND
+					marketStatsId='%s' AND
+					statsDim=%s AND
+					assetId='%s' AND
+					historyIndex IS NOT NULL
+				ORDER BY
+					historyIndex DESC 
+				LIMIT 1",
+			$marketId,
+			$marketStatsId,
+			$statsDim,
+			$assetId);
+
+
+
+		$r=$this->pdo()->query($query);		
+
+		if ($row=$r->fetch()) {
+			return $row["statsValue"];
+		}		
+
+		Nano\nanoCheck()->checkFailed("stats not found");
+
+	}
+
+	function msStatsHistoryAll($marketId,$marketStatsId,$statsDim,$assetId) {
+
+		$query=sprintf(
+			"SELECT statsValue 
+				FROM marketStatsLog
+				WHERE
+					marketId='%s' AND
+					marketStatsId='%s' AND
+					statsDim=%s AND
+					assetId='%s' AND
+				 	historyIndex IS NOT NULL AND
+				 	statsValue<>%s
+				ORDER BY
+					historyIndex ASC
+				 	 "
+,
+			$marketId,
+			$marketStatsId,
+			$statsDim,
+			$assetId,
+			$this->infiniteNegative());		
+
+		$r=$this->pdo()->query($query);		
+
+		$rows=[];
+		while ($row=$r->fetch()) {
+			$rows[]=$row;
+		}
+
+		return $rows;
+	}
+
+	function infinitePositive() {
+		return 1000000000;
+	}
+
+	function infiniteNegative() {
+		return -1000000000;
+	}	
+
+
+	function dsIsMarketStatsNew($marketId,$marketStatsId) {
+		$query=sprintf(
+				"SELECT COUNT(*) as count FROM marketStats WHERE marketId='%s' AND marketStatsId='%s'",
+					$marketId,
+					$marketStatsId);				
+
+		$r=$this->pdo()->query($query);
+		
+
+		$row=$r->fetch();
+
+		return $row["count"]==0;
+	}
+
+	function dsMarketStatsLogReset($marketId,$marketStatsId) {
+		$delQuery1=sprintf(
+				"DELETE FROM marketStatsLog WHERE marketId='%s' AND marketStatsId='%s'",
+					$marketId,
+					$marketStatsId);		
+
+		$r=$this->pdo()->query($delQuery1);
+
+		$this->dsSetupMarketStatsLog($marketId,$marketStatsId);
+	}
+
+	function dsMarketStatsHeadReset($marketId,$marketStatsId) {
+		$delQuery2=sprintf(
+				"DELETE FROM marketStats WHERE marketId='%s' AND marketStatsId='%s'",
+					$marketId,
+					$marketStatsId);		
+
+		$r=$this->pdo()->query($delQuery2);
+
+		$this->dsSetupMarketStatsHead($marketId,$marketStatsId);
+	}
+
+	private function dsRowMarketStats($marketId,$marketStatsId) {
+		$query=sprintf(
+		"SELECT * FROM marketStats WHERE marketId='%s' AND marketStatsId='%s'",
+			$marketId,
+			$marketStatsId);		
+
+		$r=$this->pdo()->query($query);
+		
+		if ($row=$r->fetch()) {
+			return $row;
+		} else {
+			Nano\nanoCheck()->checkFailed("marketStats row not found");
+		}		
+	}
+
+	private function dsFieldMarketStats($marketId,$marketStatsId,$field) {
+		return $this->dsRowMarketStats($marketId,$marketStatsId)[$field];
+	}
+
+	private function dsFieldMarketStatsSetInt($marketId,$marketStatsId,$field,$value) {		
+		$query=sprintf(
+			"UPDATE marketStats SET $field=$value WHERE marketId='%s' AND marketStatsId='%s'",
+				$marketId,
+				$marketStatsId);		
+
+		$this->pdo()->query($query);
+	}
+
+	function dsStatsScalarSet($marketId,$marketStatsId,$statsDim,$assetId,$statsValue) {
+
+		$statsValue=round($statsValue, 10);
+
+		//print "statsScalarSet $statsDim,$assetId,$statsValue $marketId $marketStatsId \n";
+		$delQuery=sprintf(
+				"DELETE FROM marketStatsLog WHERE marketId='%s'
+					 AND marketStatsId='%s'
+					 AND assetId='%s'
+					 AND statsDim='%s'
+					 AND historyIndex IS NULL
+					 ",
+					$marketId,
+					$marketStatsId,
+					$assetId,
+					$statsDim);		
+		
+
+		$query=sprintf(
+				"INSERT INTO marketStatsLog(marketId,marketStatsId,assetId,statsDim,statsValue) 
+				VALUES('%s','%s','%s',%s,%s)",
+					$marketId,
+					$marketStatsId,
+					$assetId,
+					$statsDim,					
+					$statsValue);		
+		
+		//print "$query\n";
+
+		$r=$this->pdo()->query($delQuery);		
+		$r=$this->pdo()->query($query);		
+	}
+
+	function dsStatsHistorySet($marketId,$marketStatsId,$statsDim,$assetId,$historyIndex,$statsValue) {	
+
+		$statsValue=round($statsValue, 10);
+
+		//print "statsHistorySet $statsDim,$assetId,$historyIndex $statsValue $marketId $marketStatsId \n";
+
+		$delQuery=sprintf(
+				"DELETE FROM marketStatsLog WHERE marketId='%s'
+					 AND marketStatsId='%s'
+					 AND assetId='%s'
+					 AND statsDim='%s'
+					 AND historyIndex=%s
+					 ",
+					$marketId,
+					$marketStatsId,
+					$assetId,
+					$statsDim,
+					$historyIndex);		
+
+		$query=sprintf(
+				"INSERT INTO marketStatsLog(marketId,marketStatsId,assetId,statsDim,historyIndex,statsValue) 
+				VALUES('%s','%s','%s',%s,%s,%s)",
+					$marketId,
+					$marketStatsId,
+					$assetId,
+					$statsDim,					
+					$historyIndex,
+					$statsValue);		
+
+		$r=$this->pdo()->query($delQuery);
+
+		//print $query."\n";
+		$r=$this->pdo()->query($query);
+	}
+
+	function dsStatsHistory($marketId,$marketStatsId,$statsDim,$assetId,$historyIndex) {	
+
+		$query=sprintf(
+				"SELECT statsValue FROM marketStatsLog 
+				WHERE marketId='%s'
+					 AND marketStatsId='%s'
+					 AND assetId='%s'
+					 AND statsDim='%s'
+					 AND historyIndex=%s
+					 ",
+					$marketId,
+					$marketStatsId,
+					$assetId,
+					$statsDim,
+					$historyIndex);		
+
+		$r=$this->pdo()->query($query);
+
+		if ($row=$r->fetch()) {			
+			return $row["statsValue"];
+		}
+		Nano\nanoCheck()->checkFailed("statsHistory row not found");
+	}
+
+	private function dsSetupMarketStatsHead($marketId,$marketStatsId) {		
+		$delQuery=sprintf(
+				"DELETE FROM marketStats WHERE marketId='%s' AND marketStatsId='%s'",
+					$marketId,
+					$marketStatsId);		
+
+		$query=sprintf(
+				"INSERT INTO marketStats(marketId,marketStatsId,endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES ('%s','%s',%s,%s,%s,%s)",
+					$marketId,
+					$marketStatsId,
+					0,100,-1,1);		
+
+
+		$this->pdo()->query($query);
+	}
+
+	function dsSynchedBeat($marketId,$marketStatsId,$synchedBeat=null) {
+		if ($synchedBeat!=null) {
+			$this->dsFieldMarketStatsSetInt($marketId,$marketStatsId,"synchedBeat",$synchedBeat);
+		}
+		return $this->dsFieldMarketStats($marketId,$marketStatsId,"synchedBeat");
+	}
+	
+	function dsMaxHistoryBeats($marketId,$marketStatsId,$maxHistoryBeats=null) {
+		if ($maxHistoryBeats!=null) {
+			$this->dsFieldMarketStatsSetInt($marketId,$marketStatsId,"maxHistoryBeats",$maxHistoryBeats);
+			$this->dsMarketStatsLogReset($marketId,$marketStatsId);
+		}
+		return $this->dsFieldMarketStats($marketId,$marketStatsId,"maxHistoryBeats");
+	}
+
+	function dsBeatMultiplier($marketId,$marketStatsId,$beatMultiplier=null) {
+		if ($beatMultiplier!=null) {
+			$this->dsFieldMarketStatsSetInt($marketId,$marketStatsId,"beatMultiplier",$beatMultiplier);
+			$this->dsMarketStatsLogReset($marketId,$marketStatsId);
+		}
+		return $this->dsFieldMarketStats($marketId,$marketStatsId,"beatMultiplier");
+	}
+
+	function dsEndBeat($marketId,$marketStatsId,$endBeat=null) {
+		if ($endBeat!=null) {
+			$this->dsFieldMarketStatsSetInt($marketId,$marketStatsId,"endBeat",$endBeat);
+		}
+		return $this->dsFieldMarketStats($marketId,$marketStatsId,"endBeat");
+	}
+
 }
+
 
 ?>

@@ -39,6 +39,7 @@ class YahooFinanceMarket extends AbstractMarket {
 	}
 
 	protected function setupMarket() {
+		parent::setupMarket();
 		$this->setupAssets();
 	}
 

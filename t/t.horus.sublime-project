@@ -2,7 +2,10 @@
 	"folders":
 	[
 		{
-			"path": "."
-		}
+			"path": ".",
+		},
+		{
+			"path": "D:\\mios\\livianos\\produccion\\software\\productivos\\trurl\\rc"
+		},
 	],
 }
