@@ -32,10 +32,19 @@ set_time_limit(120*10);
 class YahooFinanceMarketPoll {
 	var $dsMarketHistory;
 	var $pollerName;
+	var $pdo;
 
 	function __construct($pollerName) {
 		$this->pollerName=$pollerName;
 	}
+
+	function pdo($pdo=null) {
+		if ($pdo!=null) {
+			$this->pdo=$pdo;
+		}
+		return $this->pdo;
+	}
+
 
 	function pollerName() {
 		return $this->pollerName;
@@ -88,20 +97,51 @@ class YahooFinanceMarketPoll {
 	}
 
 	function marketQuotesAsCsv() {
-		$marketQuotes=file_get_contents($this->pollCsvFile("marketQuotes.csv"));
-		return  $marketQuotes;		
+		$ds=new DataSet\DataSet($this->marketQuotesHeader());
+		$sql=sprintf("SELECT * FROM %s ORDER BY marketBeat ASC",$this->pollQuotesTable());
+		$r=$this->pdoQuery($sql);
+		while ($row=$r->fetch()) {
+			$ds->addRow($row);
+		}
+		return  $ds->toCsvRet();
 	}
 
 	function marketLastQuotesAsCsv() {
-		$marketQuotes=file_get_contents($this->pollCsvFile("marketLastQuotes.csv"));
-		return  $marketQuotes;		
+		$ds=new DataSet\DataSet($this->marketQuotesHeader());
+		$sql=sprintf("SELECT * FROM %s",$this->pollLastQuotesTable());
+		$r=$this->pdoQuery($sql);
+		while ($row=$r->fetch()) {
+			$ds->addRow($row);
+		}
+		return  $ds->toCsvRet();		
 	}
+
+	function marketLastQuotesClean() {
+		$ds=new DataSet\DataSet($this->marketQuotesHeader());
+		$sql=sprintf(sprintf("TRUNCATE %s",$this->pollLastQuotesTable() ));
+		$r=$this->pdoQuery($sql);
+	}
+
 	function marketQuotes() {
-		return Nano\nanoCsv()->csvToArray($this->pollCsvFile("marketQuotes.csv"));
+		$ds=new DataSet\DataSet($this->marketQuotesHeader());
+		$sql=sprintf("SELECT * FROM %s ORDER BY marketBeat ASC",$this->pollQuotesTable());
+		$r=$this->pdoQuery($sql);
+		$rows=[];
+		while ($row=$r->fetch()) {
+			$rows[]=$row;
+		}
+		return  $rows;
 	}
 
 	function marketLastQuotes() {
-		return Nano\nanoCsv()->csvToArray($this->pollCsvFile("marketLastQuotes.csv"));
+		$ds=new DataSet\DataSet($this->marketQuotesHeader());
+		$sql=sprintf("SELECT * FROM %s",$this->pollLastQuotesTable());
+		$r=$this->pdoQuery($sql);
+		$rows=[];
+		while ($row=$r->fetch()) {
+			$rows[]=$row;
+		}
+		return  $rows;
 	}
 
 	function historicalDataToArray($historicalData,$assetId,$assetName) {
@@ -231,7 +271,96 @@ class YahooFinanceMarketPoll {
 		}
 	}
 
+	function pollQuotesTable() {
+		return sprintf("marketQuotes%s",ucfirst($this->pollerName() ));
+	}
+
+	function pollLastQuotesTable() {
+		return sprintf("marketLastQuotes%s",ucfirst($this->pollerName() ));
+	}
+
+	public function pollQuotesCreateTableIfReq() {
+		$sql=sprintf("CREATE TABLE IF NOT EXISTS `%s` (
+				`marketBeat` BIGINT(20) NOT NULL,
+				`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+				`buyQuote` DECIMAL(20,10) NULL DEFAULT NULL,
+				`sellQuote` DECIMAL(20,10) NULL DEFAULT NULL,
+				`reportedDate` DATETIME NULL DEFAULT NULL,
+				`pollTime` BIGINT(20) NULL DEFAULT NULL,
+				`pollDate` DATETIME NULL DEFAULT NULL,
+				PRIMARY KEY (`marketBeat`, `assetId`) USING BTREE
+			)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB",$this->pollQuotesTable() );
+
+		$this->pdoQuery($sql);
+		
+	}
+
+	public function pollLastQuotesCreateTableIfReq() {
+		$sql=sprintf("CREATE TABLE IF NOT EXISTS `%s` (
+				`marketBeat` BIGINT(20) NOT NULL,
+				`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+				`buyQuote` DECIMAL(20,10) NULL DEFAULT NULL,
+				`sellQuote` DECIMAL(20,10) NULL DEFAULT NULL,
+				`reportedDate` DATETIME NULL DEFAULT NULL,
+				`pollTime` BIGINT(20) NULL DEFAULT NULL,
+				`pollDate` DATETIME NULL DEFAULT NULL,
+				PRIMARY KEY (`marketBeat`, `assetId`) USING BTREE
+			)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB",$this->pollLastQuotesTable() );
+
+		$this->pdoQuery($sql);		
+	}
+
+	function pollQuoteAdd($row) {		
+		$query=sprintf("
+				INSERT INTO %s(marketBeat,assetId,buyQuote,sellQuote,reportedDate,pollTime,pollDate)
+				VALUES (%s,'%s',%s,%s,'%s',%s,'%s')",
+			$this->pollQuotesTable(),
+			$row["marketBeat"],
+			$row["assetId"],
+			round($row["buyQuote"],10),
+			round($row["sellQuote"],10),
+			$row["reportedDate"],
+			$row["pollTime"],
+			$row["pollDate"]
+			);
+		
+		$this->pdoQuery($query);
+	}
+
+	function pollLastQuoteAdd($row) {		
+		$query=sprintf("
+				INSERT INTO %s(marketBeat,assetId,buyQuote,sellQuote,reportedDate,pollTime,pollDate)
+				VALUES (%s,'%s',%s,%s,'%s',%s,'%s')",
+			$this->pollLastQuotesTable(),
+			$row["marketBeat"],
+			$row["assetId"],
+			round($row["buyQuote"],10),
+			round($row["sellQuote"],10),
+			$row["reportedDate"],
+			$row["pollTime"],
+			$row["pollDate"]
+			);
+		
+		$this->pdoQuery($query);
+	}
+
+	private function pdoQuery($query) {
+		$r=$this->pdo()->query($query);		
+		if ($r===false) Nano\nanoCheck()->checkFailed("pdoQuery: failed to execute query.\nquery:$query");
+		return $r;
+	}
+
+
 	function pollQuotesOnBeat($beats=1,$beatSleep=0) {
+
+		$this->pollQuotesCreateTableIfReq();
+		$this->pollLastQuotesCreateTableIfReq();
+		$this->marketLastQuotesClean();
+
 		$marketBeat=$this->nextQuotesBeat();
 		$timeObj=new \DateTime();
 		$time=time();
@@ -276,31 +405,18 @@ class YahooFinanceMarketPoll {
 			
 			//print_r($line);
 
+
 			if ($lastQuote!=null && $lastQuote["reportedDate"]==$reportedDate) {
 				//printf("REPEATED!: %s:%s==%s",$quote->getSymbol(),$lastQuote["reportedDate"],$reportedDate);
 			} else {
 				++$newLines;
 				$dsMarketQuotes->addRow($line);	
+				$this->pollQuoteAdd($line);	
+				$this->pollLastQuoteAdd($line);					
 			}			
 		}
 
 		if ($newLines>0) {
-			@unlink($this->pollCsvFile("marketQuotes.csv.tmp"));
-			copy($this->pollCsvFile("marketQuotes.csv"),$this->pollCsvFile("marketQuotes.csv.tmp"));
-			$ok=$dsMarketQuotes->toCsv($this->pollCsvFile("marketQuotes.csv.tmp"),true);
-			$ok=$ok && $dsMarketQuotes->toCsv($this->pollCsvFile("marketLastQuotes.csv.tmp"),false);
-
-			if ($ok) {
-				@unlink($this->pollCsvFile("marketQuotes.csv"));
-				rename($this->pollCsvFile("marketQuotes.csv.tmp"),$this->pollCsvFile("marketQuotes.csv"));
-
-				@unlink($this->pollCsvFile("marketLastQuotes.csv"));
-				rename($this->pollCsvFile("marketLastQuotes.csv.tmp"),$this->pollCsvFile("marketLastQuotes.csv"));
-			}
-
-			@unlink($this->pollCsvFile("marketQuotes.csv.tmp"));
-			@unlink($this->pollCsvFile("marketLastQuotes.csv.tmp"));
-
 			Nano\msg(sprintf("YahooFinanceMarketPoll: pollerName:%s poll-completed: quotes:%s",$this->pollerName, $newLines ));
 		} else {
 			Nano\msg(sprintf("YahooFinanceMarketPoll: poll-repeated: poll source not ready"));

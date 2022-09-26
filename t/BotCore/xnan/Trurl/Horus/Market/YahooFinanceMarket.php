@@ -32,7 +32,8 @@ class YahooFinanceMarket extends AbstractMarket {
 	var $assets=[]; // cached
 	var $assetIds=[]; // cached
 	var $assetIdsByType=[]; // cached
-
+	var $tradeFixedFees=[]; // TODO impl.
+	
 	function __construct($marketId,$pollerName="Cryptos") {		
 		$this->pollerName=$pollerName;		
 		parent::__construct($marketId,false);
@@ -55,6 +56,11 @@ class YahooFinanceMarket extends AbstractMarket {
 			$this->assetIdsByType[AssetType\CryptoCurrency]=$asset->assetId();
 			++$index;
 		} 				
+
+		$defaultAssetId=$this->defaultExchangeAssetId();
+		$this->assets[]=new Asset\Asset($defaultAssetId,AssetType\Currency);
+		$this->assetIds[]=$defaultAssetId;
+		$this->assetIdsByType[AssetType\Currency]=$defaultAssetId;
 	}
 
 

@@ -9518,3 +9518,352 @@
 2022-09-24 12:17:35 - Trader:botMath2 Portfolio [CC4:148.00 CC5:0.00 USD:94,696.00] portfolioValuation:97,655.09
 2022-09-24 12:17:35 - BotWorld: -------------------------
 2022-09-24 12:17:35 - BotWorld: end
+2022-09-24 12:31:15 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-24 12:31:15 - BotWorld: botArenaId: mathArena run
+2022-09-24 12:31:15 - BotArena: botArenaId:mathArena run
+2022-09-24 12:31:15 - BotArena: botArenaId:mathArena initial status marketBeat:1005 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-24 12:31:15 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC4 msg: pickAssetIdByCicle assetId:CC4 cicle:-1.0000000000
+2022-09-24 12:31:21 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-24 12:31:21 - Trader:botMath2 Portfolio [CC4:148.00 CC5:0.00 USD:94,696.00] portfolioValuation:97,653.11
+2022-09-24 12:31:21 - BotWorld: -------------------------
+2022-09-24 12:31:21 - BotWorld: end
+2022-09-24 15:09:56 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:15
+2022-09-24 15:09:56 - BotWorld: botArenaId: mathArena run
+2022-09-24 15:09:56 - BotArena: botArenaId:mathArena run
+2022-09-24 15:09:56 - BotArena: botArenaId:mathArena initial status marketBeat:1006 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-24 15:15:43 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0.0000000000
+2022-09-24 15:16:11 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-24 15:16:11 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:97,646.39
+2022-09-24 15:16:11 - BotWorld: -------------------------
+2022-09-24 15:16:11 - BotWorld: end
+2022-09-24 15:40:29 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:2
+2022-09-24 15:40:29 - BotWorld: botArenaId: mathArena run
+2022-09-24 15:40:29 - BotArena: botArenaId:mathArena run
+2022-09-24 15:40:29 - BotArena: botArenaId:mathArena initial status marketBeat:1007 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-24 15:40:50 - trade: failure: msg exception at trader botMath2
+2022-09-24 15:41:11 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:2
+2022-09-24 15:41:11 - BotWorld: botArenaId: mathArena run
+2022-09-24 15:41:11 - BotArena: botArenaId:mathArena run
+2022-09-24 15:41:11 - BotArena: botArenaId:mathArena initial status marketBeat:1007 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-24 15:52:02 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0.0000000000
+2022-09-24 15:52:49 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-24 15:52:49 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:157,162.54
+2022-09-24 15:52:49 - BotWorld: -------------------------
+2022-09-24 15:52:49 - BotWorld: end
+2022-09-24 15:57:08 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:2
+2022-09-24 15:57:08 - BotWorld: botArenaId: mathArena run
+2022-09-24 15:57:08 - BotArena: botArenaId:mathArena run
+2022-09-24 15:57:08 - BotArena: botArenaId:mathArena initial status marketBeat:1008 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-24 16:07:35 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0.0000000000
+2022-09-24 16:08:24 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-24 16:08:24 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:157,184.10
+2022-09-24 16:08:24 - BotWorld: -------------------------
+2022-09-24 16:08:24 - BotWorld: end
+2022-09-24 16:14:50 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:2
+2022-09-24 16:14:50 - BotWorld: botArenaId: mathArena run
+2022-09-24 16:14:50 - BotArena: botArenaId:mathArena run
+2022-09-24 16:14:50 - BotArena: botArenaId:mathArena initial status marketBeat:1009 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-24 16:14:50 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0.0000000000
+2022-09-24 16:15:24 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-24 16:15:24 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:157,211.03
+2022-09-24 16:15:24 - BotWorld: -------------------------
+2022-09-24 16:15:24 - BotWorld: end
+2022-09-24 16:15:39 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:2
+2022-09-24 16:15:39 - BotWorld: botArenaId: mathArena run
+2022-09-24 16:15:39 - BotArena: botArenaId:mathArena run
+2022-09-24 16:15:39 - BotArena: botArenaId:mathArena initial status marketBeat:1010 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-24 16:15:39 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC3 msg: pickAssetIdByCicle assetId:CC3 cicle:-1.0000000000
+2022-09-24 16:16:35 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-24 16:16:35 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:157,243.26
+2022-09-24 16:16:35 - BotWorld: -------------------------
+2022-09-24 16:16:35 - BotWorld: end
+2022-09-24 17:15:31 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralArena botArenaCount:2
+2022-09-24 17:15:31 - BotWorld: end
+2022-09-24 17:15:52 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneraLivelArena botArenaCount:2
+2022-09-24 17:15:52 - BotWorld: end
+2022-09-24 17:16:04 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneraLiveArena botArenaCount:2
+2022-09-24 17:16:04 - BotWorld: end
+2022-09-24 17:16:19 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-24 17:16:19 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-24 17:16:19 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-24 17:16:19 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-24 17:16:19 - BotArena: botArenaId:mervalAccionesGeneralLiveArena beat: 4 msg: market not ready
+2022-09-24 17:16:19 - BotWorld: -------------------------
+2022-09-24 17:16:19 - BotWorld: end
+2022-09-24 19:28:48 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-24 19:28:48 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-24 19:28:48 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-24 19:28:48 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-24 19:28:48 - BotArena: botArenaId:mervalAccionesGeneralLiveArena beat: 4 msg: market not ready
+2022-09-24 19:28:48 - BotWorld: -------------------------
+2022-09-24 19:28:48 - BotWorld: end
+2022-09-24 19:34:21 - 
+2022-09-24 19:34:21 - <b>MarketBotRunner 2.0.0/local</b>
+2022-09-24 19:34:21 - restServiceId:28239
+2022-09-24 19:34:21 - dateCreated:2022-09-24 19:34:21
+2022-09-24 19:34:21 - 
+2022-09-24 19:34:21 - <b>General</b>
+2022-09-24 19:34:21 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-24 19:34:21 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-24 19:34:21 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-24 19:34:21 - 
+2022-09-24 19:34:21 - <b>Markets</b>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-24 19:34:21 - 
+2022-09-24 19:34:21 - <b>Bots</b>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-24 19:34:21 - 
+2022-09-24 19:34:21 - <b>Bot Queues</b>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-24 19:34:21 - 
+2022-09-24 19:34:21 - <b>Bot Runs</b>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-24 19:34:21 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-24 19:34:21 - 
+2022-09-24 19:34:21 - <b>Tests</b>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-24 19:34:21 - 
+2022-09-24 19:34:21 - <b>Settings</b>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.marketTitle&settingsValue=VALUE">market.marketTitle</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.assetCount&settingsValue=VALUE">market.assetCount</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.quoteDecimals&settingsValue=VALUE">market.quoteDecimals</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.pollContentMaxAgeSeconds&settingsValue=VALUE">market.pollContentMaxAgeSeconds</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.reset&settingsValue=VALUE">market.reset</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.asset.quantity&settingsValue=VALUE">portfolio.asset.quantity</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.recover&settingsValue=VALUE">portfolio.recover</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-24 19:34:21 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-24 19:34:48 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-24 19:34:48 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-24 19:34:48 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-24 19:34:48 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-24 19:34:48 - 11
+2022-09-24 19:34:57 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-24 19:34:57 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-24 19:34:57 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-24 19:34:57 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-24 19:34:57 - BotArena: botArenaId:mervalAccionesGeneralLiveArena beat: 5 msg: market not ready
+2022-09-24 19:34:57 - BotWorld: -------------------------
+2022-09-24 19:34:57 - BotWorld: end
+2022-09-24 19:44:39 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-24 19:44:39 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-24 19:44:39 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-24 19:44:39 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-24 19:44:39 - 11
+2022-09-24 19:44:39 - srvRun: failed
+2022-09-24 19:45:29 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-24 19:45:29 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-24 19:45:29 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-24 19:45:29 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-24 19:45:29 - 11
+2022-09-24 19:45:29 - srvRun: failed: checkFailed: stats not found
+2022-09-24 19:45:36 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-24 19:45:36 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-24 19:45:36 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-24 19:45:36 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-24 19:45:36 - 11
+2022-09-24 19:45:36 - srvRun: failed: checkFailed: stats not found
+2022-09-24 19:48:42 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-24 19:48:42 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-24 19:48:42 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-24 19:48:42 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-24 19:48:42 - 11
+2022-09-24 19:48:42 - srvRun: failed: checkFailed: marketId: mervalAccionesGeneralLiveArenaMarket marketStatsId: marketStatsShort msg: stats not found
+2022-09-24 19:49:04 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-24 19:49:04 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-24 19:49:04 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-24 19:49:04 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-24 19:49:04 - 11
+2022-09-24 19:49:04 - srvRun: failed: checkFailed: marketId: mervalAccionesGeneralLiveArenaMarket marketStatsId: marketStatsShort msg: stats not found
+2022-09-24 20:21:01 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-24 20:21:01 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-24 20:21:01 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-24 20:21:01 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-24 20:21:01 - 11
+2022-09-24 20:21:11 - Trader:botLive1 Portfolio [$AR:100,000.00] portfolioValuation:0.00
+2022-09-24 20:21:11 - Trader:botLive2 Portfolio [$AR:100,000.00] portfolioValuation:0.00
+2022-09-24 20:21:11 - Trader:botLive3 Portfolio [$AR:100,000.00] portfolioValuation:0.00
+2022-09-24 20:21:11 - BotWorld: -------------------------
+2022-09-24 20:21:11 - BotWorld: end
+2022-09-24 20:21:23 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-24 20:21:23 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-24 20:21:23 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-24 20:21:23 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-24 20:21:23 - BotArena: botArenaId:mervalAccionesGeneralLiveArena beat: 6 msg: market not ready
+2022-09-24 20:21:23 - BotWorld: -------------------------
+2022-09-24 20:21:23 - BotWorld: end
+2022-09-24 20:21:40 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-24 20:21:40 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-24 20:21:40 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-24 20:21:40 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-24 20:21:40 - 11
+2022-09-24 20:21:41 - Trader:botLive1 Portfolio [$AR:100,000.00] portfolioValuation:0.00
+2022-09-24 20:21:41 - Trader:botLive2 Portfolio [$AR:100,000.00] portfolioValuation:0.00
+2022-09-24 20:21:41 - Trader:botLive3 Portfolio [$AR:100,000.00] portfolioValuation:0.00
+2022-09-24 20:21:41 - BotWorld: -------------------------
+2022-09-24 20:21:41 - BotWorld: end
+2022-09-24 20:22:30 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-24 20:22:30 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-24 20:22:30 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-24 20:22:30 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-24 20:22:30 - BotArena: botArenaId:mervalAccionesGeneralLiveArena beat: 7 msg: market not ready
+2022-09-24 20:22:30 - BotWorld: -------------------------
+2022-09-24 20:22:30 - BotWorld: end
+2022-09-24 20:22:41 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-24 20:22:41 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-24 20:22:41 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-24 20:22:41 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-24 20:22:41 - 11
+2022-09-24 20:22:42 - Trader:botLive1 Portfolio [$AR:100,000.00] portfolioValuation:0.00
+2022-09-24 20:22:42 - Trader:botLive2 Portfolio [$AR:100,000.00] portfolioValuation:0.00
+2022-09-24 20:22:42 - Trader:botLive3 Portfolio [$AR:100,000.00] portfolioValuation:0.00
+2022-09-24 20:22:42 - BotWorld: -------------------------
+2022-09-24 20:22:42 - BotWorld: end
+2022-09-25 16:39:38 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-25 16:39:38 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-25 16:39:38 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-25 16:39:38 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-25 16:39:39 - BotArena: botArenaId:mervalAccionesGeneralLiveArena beat: 8 msg: market not ready
+2022-09-25 16:39:41 - BotWorld: -------------------------
+2022-09-25 16:39:41 - BotWorld: end
+2022-09-25 19:54:13 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-25 19:54:13 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-25 19:54:13 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-25 19:54:13 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-25 19:54:13 - 11
+2022-09-25 19:54:15 - Trader:botLive1 Portfolio [$AR:100,000.00] portfolioValuation:0.00
+2022-09-25 19:54:15 - Trader:botLive2 Portfolio [$AR:100,000.00] portfolioValuation:0.00
+2022-09-25 19:54:15 - Trader:botLive3 Portfolio [$AR:100,000.00] portfolioValuation:0.00
+2022-09-25 19:54:15 - BotWorld: -------------------------
+2022-09-25 19:54:15 - BotWorld: end
+2022-09-25 20:30:24 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-25 20:30:24 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-25 20:30:24 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-25 20:30:24 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-25 20:30:24 - 12
+2022-09-25 20:30:25 - srvRun: failed: checkFailed: marketId: mervalAccionesGeneralLiveArenaMarket marketStatsId: marketStatsShort msg: stats not found
+2022-09-25 20:31:31 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-25 20:31:31 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-25 20:31:31 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-25 20:31:31 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-25 20:31:31 - 12
+2022-09-25 20:31:32 - srvRun: failed: checkFailed: marketId: mervalAccionesGeneralLiveArenaMarket marketStatsId: marketStatsShort msg: stats not found
+2022-09-25 20:38:08 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-25 20:38:08 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-25 20:38:08 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-25 20:38:08 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-25 20:38:08 - 12
+2022-09-25 20:38:09 - srvRun: failed: checkFailed: msStatsHistoryLastValue: marketId: mervalAccionesGeneralLiveArenaMarket marketStatsId: marketStatsShort statsDim:0 assetId:AR$ msg: stats not found
+2022-09-25 20:39:56 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-25 20:39:56 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-25 20:39:56 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-25 20:39:56 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-25 20:39:56 - 12
+2022-09-25 20:45:16 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-25 20:45:16 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-25 20:45:16 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-25 20:45:16 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-25 20:45:16 - 12
+2022-09-25 20:45:17 - Trader:botLive1 Portfolio [$AR:100,000.00] portfolioValuation:0.00
+2022-09-25 20:45:17 - Trader:botLive2 Portfolio [$AR:100,000.00] portfolioValuation:0.00
+2022-09-25 20:45:17 - Trader:botLive3 Portfolio [$AR:100,000.00] portfolioValuation:0.00
+2022-09-25 20:45:17 - BotWorld: -------------------------
+2022-09-25 20:45:17 - BotWorld: end
+2022-09-25 21:25:20 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-25 21:25:20 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-25 21:25:20 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-25 21:25:20 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-25 21:25:20 - BotArena: botArenaId:mervalAccionesGeneralLiveArena beat: 10 msg: market not ready
+2022-09-25 21:25:20 - BotWorld: -------------------------
+2022-09-25 21:25:20 - BotWorld: end
+2022-09-25 21:27:29 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-25 21:27:29 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-25 21:27:29 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-25 21:27:29 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-25 21:27:29 - BotArena: botArenaId:mervalAccionesGeneralLiveArena beat: 10 msg: market not ready
+2022-09-25 21:27:29 - BotWorld: -------------------------
+2022-09-25 21:27:29 - BotWorld: end
+2022-09-25 22:16:16 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-25 22:16:16 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-25 22:16:16 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-25 22:16:16 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-25 22:16:16 - 12
+2022-09-25 22:16:18 - Trader:botLive1 Portfolio [AR$:100,000.00] portfolioValuation:100,000.00
+2022-09-25 22:16:18 - Trader:botLive2 Portfolio [AR$:100,000.00] portfolioValuation:100,000.00
+2022-09-25 22:16:18 - Trader:botLive3 Portfolio [AR$:100,000.00] portfolioValuation:100,000.00
+2022-09-25 22:16:18 - BotWorld: -------------------------
+2022-09-25 22:16:18 - BotWorld: end
+2022-09-25 22:19:12 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-25 22:19:12 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-25 22:19:12 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-25 22:19:12 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-25 22:19:12 - BotArena: botArenaId:mervalAccionesGeneralLiveArena beat: 11 msg: market not ready
+2022-09-25 22:19:12 - BotWorld: -------------------------
+2022-09-25 22:19:12 - BotWorld: end
+2022-09-25 22:19:24 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-25 22:19:24 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-25 22:19:24 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-25 22:19:24 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-25 22:19:24 - 12
+2022-09-25 22:19:25 - Trader:botLive1 Portfolio [AR$:100,000.00] portfolioValuation:100,000.00
+2022-09-25 22:19:25 - Trader:botLive2 Portfolio [AR$:100,000.00] portfolioValuation:100,000.00
+2022-09-25 22:19:25 - Trader:botLive3 Portfolio [AR$:100,000.00] portfolioValuation:100,000.00
+2022-09-25 22:19:25 - BotWorld: -------------------------
+2022-09-25 22:19:25 - BotWorld: end
+2022-09-26 11:19:11 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-26 11:19:11 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-26 11:19:11 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-26 11:19:11 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-26 11:19:11 - 12
+2022-09-26 11:19:13 - Trader:botLive1 Portfolio [AR$:100,000.00] portfolioValuation:100,000.00
+2022-09-26 11:19:13 - Trader:botLive2 Portfolio [AR$:100,000.00] portfolioValuation:100,000.00
+2022-09-26 11:19:13 - Trader:botLive3 Portfolio [AR$:100,000.00] portfolioValuation:100,000.00
+2022-09-26 11:19:13 - BotWorld: -------------------------
+2022-09-26 11:19:13 - BotWorld: end
+2022-09-26 12:59:16 - BotWorld: run beats:1 botArenaId:mervalAccionesGeneralLiveArena botArenaCount:2
+2022-09-26 12:59:16 - BotWorld: botArenaId: mervalAccionesGeneralLiveArena run
+2022-09-26 12:59:16 - BotArena: botArenaId:mervalAccionesGeneralLiveArena run
+2022-09-26 12:59:16 - BotArena: botArenaId:mervalAccionesGeneralLiveArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-26 12:59:17 - 12
+2022-09-26 12:59:20 - Trader:botLive1 Portfolio [AR$:100,000.00] portfolioValuation:100,000.00
+2022-09-26 12:59:20 - Trader:botLive2 Portfolio [AR$:100,000.00] portfolioValuation:100,000.00
+2022-09-26 12:59:20 - Trader:botLive3 Portfolio [AR$:100,000.00] portfolioValuation:100,000.00
+2022-09-26 12:59:20 - BotWorld: -------------------------
+2022-09-26 12:59:20 - BotWorld: end

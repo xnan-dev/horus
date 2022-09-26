@@ -39,9 +39,33 @@ function timeZone() {
 
 class MarketPollRunner {
 	var $pollWorld;
+	var $pdoSettings;
+	var $pdo;
 
 	function __construct() {		
 		$this->pollWorld=PollWorld\pollWorldBuild();
+	}
+
+	private function pdoConnect() {
+		$this->pdo = new \PDO(
+		    sprintf('mysql:host=%s;dbname=%s',
+		    	$this->pdoSettings->hostname(),
+		    	$this->pdoSettings->database()),
+			    $this->pdoSettings->user(),
+			    $this->pdoSettings->password());
+	}
+
+	private function pdo() {
+		return $this->pdo;
+	}
+
+	function pdoSettings($pdoSettings=null) {
+		if ($pdoSettings!=null) {
+			$this->pdoSettings=$pdoSettings;	
+			$this->pdoConnect();
+			$this->pollWorld->pdo($this->pdo);
+		}
+		return $this->pdoSettings;
 	}
 
 	function pollWorld() {
@@ -102,6 +126,7 @@ function my_title($title) {
 Nano\nanoLog()->open();
 
 $runner=new MarketPollRunner();
+$runner->pdoSettings(pdoSettings());
 
 date_default_timezone_set(timeZone());
 

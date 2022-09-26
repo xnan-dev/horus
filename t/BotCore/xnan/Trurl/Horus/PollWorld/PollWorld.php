@@ -25,12 +25,24 @@ class Functions { const Load=1; }
 
 class PollWorld {
 	var $pollers=[];
+	var $pdo;
 
 	function __construct() {
 	}
 
+	function pdo($pdo=null) {
+		if ($pdo!=null) {
+			$this->pdo=$pdo;
+
+			foreach($this->pollers as $poller) {
+				$poller->pdo($this->pdo);
+			}
+		}
+		return $this->pdo;
+	}
+
 	function addPoller(&$poller) {
-		$this->pollers[$poller->pollerName()]=$poller;
+		$this->pollers[$poller->pollerName()]=$poller;			
 	}
 
 	function pollerNames() {

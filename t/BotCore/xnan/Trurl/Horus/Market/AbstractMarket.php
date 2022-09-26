@@ -207,10 +207,15 @@ abstract class AbstractMarket implements Market {
 
 	function assetById($assetId) {
 		Asset\checkAssetId($assetId);
+		$defaultExchangeAssetId=$this->defaultExchangeAssetId();
+
+		if  ($assetId==$defaultExchangeAssetId)
+			 return new Asset\Asset($assetId,AssetType\Currency);		
+
 		foreach($this->assets() as $asset) {
 			if ($asset->assetId()==$assetId) return $asset;
 		}
-		throw new \exception("asset not found: assetId:$assetId");
+		throw new \exception("assetById: assetId:'$assetId' default: '$defaultExchangeAssetId' msg: asset not found");
 	}
 
  	function tradeFixedFeesSum() {

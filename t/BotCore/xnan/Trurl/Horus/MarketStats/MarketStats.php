@@ -70,16 +70,19 @@ class MarketStats {
 	}
 
 	function isMarketStatsNew() {
-		return Horus\persistence()->dsIsMarketStatsNew($this->marketId(),$this->marketStatsId());
+		return Horus\persistence()->msIsMarketStatsNew($this->marketId(),$this->marketStatsId());
 	}
 
+	function isMarketStatsLogEmpty() {
+		return Horus\persistence()->msIsMarketStatsLogEmpty($this->marketId(),$this->marketStatsId());
+	}
 
 	function marketStatsLogReset() {
-		return Horus\persistence()->dsMarketStatsLogReset($this->marketId(),$this->marketStatsId());		
+		return Horus\persistence()->msMarketStatsLogReset($this->marketId(),$this->marketStatsId());		
 	}
 
 	function marketStatsHeadReset() {
-		return Horus\persistence()->dsMarketStatsHeadReset($this->marketId(),$this->marketStatsId());
+		return Horus\persistence()->msMarketStatsHeadReset($this->marketId(),$this->marketStatsId());
 	}
 
 	function marketStatsReset() {
@@ -88,22 +91,24 @@ class MarketStats {
 	}
 
 	function statsScalarSet($statsDim,$assetId,$statsValue) {
-		return Horus\persistence()->dsStatsScalarSet($this->marketId(),$this->marketStatsId(),$statsDim,$assetId,$statsValue);
+		return Horus\persistence()->msStatsScalarSet($this->marketId(),$this->marketStatsId(),$statsDim,$assetId,$statsValue);
 	}
 
 	function statsHistorySet($statsDim,$assetId,$historyIndex,$statsValue) {	
-		return Horus\persistence()->dsStatsHistorySet($this->marketId(),$this->marketStatsId(),$statsDim,$assetId,$historyIndex,$statsValue);
+		return Horus\persistence()->msStatsHistorySet($this->marketId(),$this->marketStatsId(),$statsDim,$assetId,$historyIndex,$statsValue);
 	}
 
 	function statsHistory($statsDim,$assetId,$historyIndex) {	
-		return Horus\persistence()->dsStatsHistory($this->marketId(),$this->marketStatsId(),$statsDim,$assetId,$historyIndex);
+		if ($assetId==$this->market()->defaultExchangeAssetId()) return 1;
+
+		return Horus\persistence()->msStatsHistory($this->marketId(),$this->marketStatsId(),$statsDim,$assetId,$historyIndex);
 	}
 
-	private function setupMarketStatsHead() {		
-		return Horus\persistence()->dsSetupMarketStatsHead($this->marketId(),$this->marketStatsId());
+	private function setupMarketStatsHead() {				
+		return Horus\persistence()->msSetupMarketStatsHead($this->marketId(),$this->marketStatsId());
 	}
 
-	private function setupMarketStatsLog() {
+	private function setupMarketStatsLog() {		
 		foreach ($this->market()->assetIds() as $assetId) {
 			$this->statsScalarSet(self::SValue,$assetId,0);
 			$this->statsScalarSet(self::SMin,$assetId,$this->infinitePositive());
@@ -127,18 +132,21 @@ class MarketStats {
 
 	}
 
-	private function setupMarketStats() {		
 
+	private function setupMarketStats() {		
 		$this->setupMarketStatsHead();
 		$this->setupMarketStatsLog();
 	}
 
 	function statsScalar($statsDim,$assetId) {
+		if ($assetId==$this->market()->defaultExchangeAssetId()) return 1;
+
 		return Horus\persistence()->msStatsScalar($this->market()->marketId(),$this->marketStatsId(),$statsDim,$assetId);
 	}
 
 
 	function statsHistoryLastValue($statsDim,$assetId) {
+		if ($assetId==$this->market()->defaultExchangeAssetId()) return 1;
 
 		return Horus\persistence()->msStatsHistoryLastValue($this->market()->marketId(),$this->marketStatsId(),$statsDim,$assetId);
 	}
@@ -170,15 +178,15 @@ class MarketStats {
 	}
 
 	function synchedBeat($synchedBeat=null) {
-		return Horus\persistence()->dsSynchedBeat($this->marketId(),$this->marketStatsId(),$synchedBeat);
+		return Horus\persistence()->msSynchedBeat($this->marketId(),$this->marketStatsId(),$synchedBeat);
 	}
 	
 	function maxHistoryBeats($maxHistoryBeats=null) {
-		return Horus\persistence()->dsMaxHistoryBeats($this->marketId(),$this->marketStatsId(),$maxHistoryBeats);
+		return Horus\persistence()->msMaxHistoryBeats($this->marketId(),$this->marketStatsId(),$maxHistoryBeats);
 	}
 
 	function beatMultiplier($beatMultiplier=null) {
-		return Horus\persistence()->dsBeatMultiplier($this->marketId(),$this->marketStatsId(),$beatMultiplier);
+		return Horus\persistence()->msBeatMultiplier($this->marketId(),$this->marketStatsId(),$beatMultiplier);
 	}
 
 	function textFormatter() {
@@ -190,7 +198,7 @@ class MarketStats {
 	}
 
 	function endBeat($endBeat=null) {
-		return Horus\persistence()->dsEndBeat($this->marketId(),$this->marketStatsId(),$endBeat);
+		return Horus\persistence()->msEndBeat($this->marketId(),$this->marketStatsId(),$endBeat);
 	}
 
 	function beatCount() {
@@ -308,8 +316,8 @@ class MarketStats {
 		//print "SETUP IFREQ maxHistoryBeats:$this->settingMaxHistoryBeats<br>\n";
 		if ($this->isMarketStatsNew()) {
 			$this->setupMarketStats();
-		} else {
-
+		} else if ($this->isMarketStatsLogEmpty()) {
+			$this->setupMarketStatsLog();
 		}
 	}
 

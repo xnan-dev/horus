@@ -44,10 +44,14 @@ class MarketBotRunner extends RestService\RestService {
 			    $this->pdoSettings->password());		
 
 		$this->botWorld()->pdo($this->pdo);		
+		$this->botWorld()->persistence()->pdoSettings($this->pdoSettings);		
 		$this->botWorld()->persistence()->pdo($this->pdo);		
 		$this->botWorld()->afterPdoSetup();		
 	}
 
+	private function pdo() {
+		return $this->pdo;
+	}
 
 	function botWorld() {
 		return BotWorld\BotWorld::instance();
@@ -239,9 +243,19 @@ class MarketBotRunner extends RestService\RestService {
 
 	function srvRun() {
 		header("Content-Type: text/plain");		
-		Nano\nanoPerformance()->track("runner.run");
-		$this->botWorld()->run($this->prmBeats(),$this->prmBotArenaId(),$this->prmTraderId(),$this->prmBeatSleep(),$this->prmLive());
-		Nano\nanoPerformance()->track("runner.run");
+		try {
+			$this->pdo()->beginTransaction();
+
+			Nano\nanoPerformance()->track("runner.run");
+			$this->botWorld()->run($this->prmBeats(),$this->prmBotArenaId(),$this->prmTraderId(),$this->prmBeatSleep(),$this->prmLive());
+			Nano\nanoPerformance()->track("runner.run");
+
+			$this->pdo()->commit();
+
+		} catch (\Exception $e) {
+			$this->pdo()->rollback();			
+			Nano\nanoLog()->msg("srvRun: failed: ".$e->getMessage());
+		}
 	}
 
 	function srvWorldSettingsChange() {
