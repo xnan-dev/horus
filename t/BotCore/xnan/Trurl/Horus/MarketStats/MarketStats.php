@@ -108,7 +108,9 @@ class MarketStats {
 		return Horus\persistence()->msSetupMarketStatsHead($this->marketId(),$this->marketStatsId());
 	}
 
-	private function setupMarketStatsLog() {		
+	private function setupMarketStatsLog() {	
+		Horus\persistence()->msStatsLogCreate($this->marketId(),$this->marketStatsId());
+
 		foreach ($this->market()->assetIds() as $assetId) {
 			$this->statsScalarSet(self::SValue,$assetId,0);
 			$this->statsScalarSet(self::SMin,$assetId,$this->infinitePositive());

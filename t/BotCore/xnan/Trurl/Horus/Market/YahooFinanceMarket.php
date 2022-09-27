@@ -135,12 +135,13 @@ class YahooFinanceMarket extends AbstractMarket {
 	}
 
 	function setupLastQuotesCache() {
-		$ret=Horus\callServiceMarketPollerArray("q=marketLastQuotesAsCsv",$this->pollerName());
+		$ret=Horus\callServiceMarketPollerArray("q=marketLastQuotesAsCsv",$this->pollerName());		
 		$this->lastQuotesCache=$ret;
 		return $ret;
 	}
 
 	function marketLastQuotes() {
+		if ($this->lastQuotesCache==null) $this->setupLastQuotesCache();
 		return $this->lastQuotesCache;
 	}
 

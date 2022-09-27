@@ -321,8 +321,8 @@ class BotArena {
 		Nano\nanoPerformance()->track("botArena.run.A");
 
 
-		Nano\msg(sprintf("BotArena: botArenaId:%s initial status marketBeat:%s marketClazz:%s beats:%s",$this->botArenaId,$this->market()->beat(), get_class($this->market()),$beats ));		
-
+		Nano\msg(sprintf("BotArena: botArenaId:%s initial status marketBeat:%s marketClazz:%s beats:%s",$this->botArenaId(),$this->market()->beat(), get_class($this->market()),$beats ));		
+		
 		$beatsRun=0;
 
 		Nano\nanoPerformance()->track("botArena.run.A");

@@ -73,8 +73,15 @@ class MarketPollRunner {
 	}
 
 	function marketPollQuotes($beats,$pollerName,$beatSleep) {
-		$w=$this->pollWorld();
-		$w->pollQuotes($beats,$pollerName,$beatSleep);
+		try {
+			$this->pdo()->beginTransaction();
+			$w=$this->pollWorld();
+			$w->pollQuotes($beats,$pollerName,$beatSleep);
+			$this->pdo()->commit();
+		} catch(\Exception $e) {
+			$this->pdo()->rollback();
+			Nano\nanoCheck()->checkFailed("marketPollQuotes: msg:".$e->getMessage());
+		}
 	}
 
 	 function marketPollHistory($pollerName) {

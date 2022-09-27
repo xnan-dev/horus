@@ -33,7 +33,7 @@ abstract class AbstractMarket implements Market {
 	var $marketSchedule=null;
 	var $useHistory=false;
 	var $marketStats,$marketStatsLong,$marketStatsMedium;
-	var $settingMaxHistoryBeats=50;
+	var $maxHistoryBeats=50;
 	var $statsMediumBeatMultiplier=100; // aprox. 50 muestras en una semana
 	var $statsLongBeatMultiplier=400; // aprox. 50 muestras en un mes.
 
@@ -96,6 +96,10 @@ abstract class AbstractMarket implements Market {
 		}
 	}
 
+	function maxHistoryBeats() {
+		return $this->maxHistoryBeats;
+	}
+
 	private function setupMarketStats() {
 		$openHours=$this->marketSchedule()->marketOpenHoursCount();
 		$openFactor=$openHours/24;
@@ -103,15 +107,17 @@ abstract class AbstractMarket implements Market {
 		$this->marketStats=new MarketStats\MarketStats($this,"marketStatsShort");
 		
 		if ($this->marketStats->isMarketStatsNew()) {			
-			$this->marketStats->maxHistoryBeats($this->settingMaxHistoryBeats);
+			$this->marketStats->maxHistoryBeats($this->maxHistoryBeats());
+			$this->marketStats->setupStatsIfReq();
 		}
 
 		
 		$this->marketStatsLong=new MarketStats\MarketStats($this,"marketStatsLong");
 
 		if ($this->marketStatsLong->isMarketStatsNew())  {
-			$this->marketStatsLong->maxHistoryBeats($this->settingMaxHistoryBeats);
+			$this->marketStatsLong->maxHistoryBeats($this->maxHistoryBeats());
 			$this->marketStatsLong->beatMultiplier(floor($this->statsLongBeatMultiplier*$openFactor));
+			$this->marketStatsLong->setupStatsIfReq();
 		}
 
 
@@ -119,8 +125,9 @@ abstract class AbstractMarket implements Market {
 		$this->marketStatsMedium=new MarketStats\MarketStats($this,"marketStatsMedium");
 
 		if ($this->marketStatsMedium->isMarketStatsNew()) {
-			$this->marketStatsMedium->maxHistoryBeats($this->settingMaxHistoryBeats);
+			$this->marketStatsMedium->maxHistoryBeats($this->maxHistoryBeats());
 			$this->marketStatsMedium->beatMultiplier(floor($this->statsMediumBeatMultiplier*$openFactor));
+			$this->marketStatsMedium->setupStatsIfReq();
 		}
 	}	
 

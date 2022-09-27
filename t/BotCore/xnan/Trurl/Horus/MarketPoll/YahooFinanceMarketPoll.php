@@ -101,7 +101,15 @@ class YahooFinanceMarketPoll {
 		$sql=sprintf("SELECT * FROM %s ORDER BY marketBeat ASC",$this->pollQuotesTable());
 		$r=$this->pdoQuery($sql);
 		while ($row=$r->fetch()) {
-			$ds->addRow($row);
+			$row2=[];
+			$row2["marketBeat"]=$row["marketBeat"];
+			$row2["assetId"]=$row["assetId"];
+			$row2["buyQuote"]=$row["buyQuote"];
+			$row2["sellQuote"]=$row["sellQuote"];
+			$row2["reportedDate"]=$row["reportedDate"];
+			$row2["pollTime"]=$row["pollTime"];
+			$row2["pollDate"]=$row["pollDate"];
+			$ds->addRow($row2);			
 		}
 		return  $ds->toCsvRet();
 	}
@@ -111,7 +119,15 @@ class YahooFinanceMarketPoll {
 		$sql=sprintf("SELECT * FROM %s",$this->pollLastQuotesTable());
 		$r=$this->pdoQuery($sql);
 		while ($row=$r->fetch()) {
-			$ds->addRow($row);
+			$row2=[];
+			$row2["marketBeat"]=$row["marketBeat"];
+			$row2["assetId"]=$row["assetId"];
+			$row2["buyQuote"]=$row["buyQuote"];
+			$row2["sellQuote"]=$row["sellQuote"];
+			$row2["reportedDate"]=$row["reportedDate"];
+			$row2["pollTime"]=$row["pollTime"];
+			$row2["pollDate"]=$row["pollDate"];
+			$ds->addRow($row2);			
 		}
 		return  $ds->toCsvRet();		
 	}
@@ -128,7 +144,16 @@ class YahooFinanceMarketPoll {
 		$r=$this->pdoQuery($sql);
 		$rows=[];
 		while ($row=$r->fetch()) {
-			$rows[]=$row;
+			$row2=[];
+  	 	 	$row2["marketBeat"]=$row["marketBeat"];
+			$row2["assetId"]=$row["assetId"];
+			$row2["buyQuote"]=$row["buyQuote"];
+			$row2["sellQuote"]=$row["sellQuote"];
+			$row2["reportedDate"]=$row["reportedDate"];
+			$row2["pollTime"]=$row["pollTime"];
+			$row2["pollDate"]=$row["pollDate"];
+	
+			$rows[]=$row2;
 		}
 		return  $rows;
 	}
@@ -139,7 +164,16 @@ class YahooFinanceMarketPoll {
 		$r=$this->pdoQuery($sql);
 		$rows=[];
 		while ($row=$r->fetch()) {
-			$rows[]=$row;
+			$row2=[];
+  	 	 	$row2["marketBeat"]=$row["marketBeat"];
+			$row2["assetId"]=$row["assetId"];
+			$row2["buyQuote"]=$row["buyQuote"];
+			$row2["sellQuote"]=$row["sellQuote"];
+			$row2["reportedDate"]=$row["reportedDate"];
+			$row2["pollTime"]=$row["pollTime"];
+			$row2["pollDate"]=$row["pollDate"];
+	
+			$rows[]=$row2;
 		}
 		return  $rows;
 	}
@@ -246,12 +280,19 @@ class YahooFinanceMarketPoll {
 	}
 
 	function lastQuotesBeat() {
-		$lastQuotes=$this->marketLastQuotes();
+/*		$lastQuotes=$this->marketLastQuotes();
 		if (count($lastQuotes)>0) {
 			return $lastQuotes[0]["marketBeat"];
 		} else {
 			return 0;
-		}		
+		}		*/
+
+		$query=sprintf("SELECT max(marketBeat)+1 as nextMarketBeat FROM %s",$this->pollQuotesTable());
+		$r=$this->pdoQuery($query);
+		if ($row=$r->fetch()) {
+			return $row["nextMarketBeat"];
+		}
+		return 0;
 	}
 
 	function marketQuotesHeader() {
@@ -359,8 +400,7 @@ class YahooFinanceMarketPoll {
 
 		$this->pollQuotesCreateTableIfReq();
 		$this->pollLastQuotesCreateTableIfReq();
-		$this->marketLastQuotesClean();
-
+		
 		$marketBeat=$this->nextQuotesBeat();
 		$timeObj=new \DateTime();
 		$time=time();
@@ -387,6 +427,9 @@ class YahooFinanceMarketPoll {
 		$lastQuotes=$this->marketLastQuotes();
 		$lastQuote=count($lastQuotes)>0 ? $lastQuotes[0] : null;
 		//print_r($lastQuotes[0]);
+
+		$lastQuotesClean=false;
+
 		foreach($quotes as $quote) {
 			//printf("************* quote :%s\n",$quote->getSymbol());
 			$regTime=$quote->getRegularMarketTime();
@@ -411,7 +454,14 @@ class YahooFinanceMarketPoll {
 			} else {
 				++$newLines;
 				$dsMarketQuotes->addRow($line);	
+
 				$this->pollQuoteAdd($line);	
+
+				if (!$lastQuotesClean) {
+					$lastQuotesClean=true;
+					$this->marketLastQuotesClean();	
+				} 
+
 				$this->pollLastQuoteAdd($line);					
 			}			
 		}

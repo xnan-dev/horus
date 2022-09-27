@@ -1,90 +1,90 @@
-;DROP TABLE marketstatscryptoslivelong
-;DROP TABLE marketstatscryptoslivelonglog
-;DROP TABLE marketstatscryptoslivemedium
-;DROP TABLE marketstatscryptoslivemediumlog
-;DROP TABLE marketstatscryptosliveshort
-;DROP TABLE marketstatscryptosliveshortlog
-;DROP TABLE marketstatscryptostestlong
-;DROP TABLE marketstatscryptostestlonglog
-;DROP TABLE marketstatscryptostestmedium
-;DROP TABLE marketstatscryptostestmediumlog
-;DROP TABLE marketstatscryptostestshort
-;DROP TABLE marketstatscryptostestshortlog
-;DROP TABLE marketstatsmathlong
-;DROP TABLE marketstatsmathlonglog
-;DROP TABLE marketstatsmathmedium
-;DROP TABLE marketstatsmathmediumlog
-;DROP TABLE marketstatsmathshort
-;DROP TABLE marketstatsmathshortlog
-;DROP TABLE marketstatsmervalaccionesgenerallivelong
-;DROP TABLE marketstatsmervalaccionesgenerallivelonglog
-;DROP TABLE marketstatsmervalaccionesgenerallivemedium
-;DROP TABLE marketstatsmervalaccionesgenerallivemediumlog
-;DROP TABLE marketstatsmervalaccionesgeneralliveshort
-;DROP TABLE marketstatsmervalaccionesgeneralliveshortlog
-;DROP TABLE marketstatsmervalaccionesgeneraltestlong
-;DROP TABLE marketstatsmervalaccionesgeneraltestlonglog
-;DROP TABLE marketstatsmervalaccionesgeneraltestmedium
-;DROP TABLE marketstatsmervalaccionesgeneraltestmediumlog
-;DROP TABLE marketstatsmervalaccionesgeneraltestshort
-;DROP TABLE marketstatsmervalaccionesgeneraltestshortlog
-;DROP TABLE marketstatsmervalaccioneslidereslivelong
-;DROP TABLE marketstatsmervalaccioneslidereslivelonglog
-;DROP TABLE marketstatsmervalaccioneslidereslivemedium
-;DROP TABLE marketstatsmervalaccioneslidereslivemediumlog
-;DROP TABLE marketstatsmervalaccioneslideresliveshort
-;DROP TABLE marketstatsmervalaccioneslideresliveshortlog
-;DROP TABLE marketstatsmervalaccionesliderestestlong
-;DROP TABLE marketstatsmervalaccionesliderestestlonglog
-;DROP TABLE marketstatsmervalaccionesliderestestmedium
-;DROP TABLE marketstatsmervalaccionesliderestestmediumlog
-;DROP TABLE marketstatsmervalaccionesliderestestshort
-;DROP TABLE marketstatsmervalaccionesliderestestshortlog
-;DROP TABLE marketstatsmervalcedearslivelong
-;DROP TABLE marketstatsmervalcedearslivelonglog
-;DROP TABLE marketstatsmervalcedearslivemedium
-;DROP TABLE marketstatsmervalcedearslivemediumlog
-;DROP TABLE marketstatsmervalcedearsliveshort
-;DROP TABLE marketstatsmervalcedearsliveshortlog
-;DROP TABLE marketstatsmervalcedearstestlong
-;DROP TABLE marketstatsmervalcedearstestlonglog
-;DROP TABLE marketstatsmervalcedearstestmedium
-;DROP TABLE marketstatsmervalcedearstestmediumlog
-;DROP TABLE marketstatsmervalcedearstestshort
-;DROP TABLE marketstatsmervalcedearstestshortlog
-;DROP TABLE marketstatsnasdaq100livelong
-;DROP TABLE marketstatsnasdaq100livelonglog
-;DROP TABLE marketstatsnasdaq100livemedium
-;DROP TABLE marketstatsnasdaq100livemediumlog
-;DROP TABLE marketstatsnasdaq100liveshort
-;DROP TABLE marketstatsnasdaq100liveshortlog
-;DROP TABLE marketstatsnasdaq100testlong
-;DROP TABLE marketstatsnasdaq100testlonglog
-;DROP TABLE marketstatsnasdaq100testmedium
-;DROP TABLE marketstatsnasdaq100testmediumlog
-;DROP TABLE marketstatsnasdaq100testshort
-;DROP TABLE marketstatsnasdaq100testshortlog
-;DROP TABLE marketstatssnp100livelong
-;DROP TABLE marketstatssnp100livelonglog
-;DROP TABLE marketstatssnp100livemedium
-;DROP TABLE marketstatssnp100livemediumlog
-;DROP TABLE marketstatssnp100liveshort
-;DROP TABLE marketstatssnp100liveshortlog
-;DROP TABLE marketstatssnp100testlong
-;DROP TABLE marketstatssnp100testlonglog
-;DROP TABLE marketstatssnp100testmedium
-;DROP TABLE marketstatssnp100testmediumlog
-;DROP TABLE marketstatssnp100testshort
-;DROP TABLE marketstatssnp100testshortlog
-;DROP TABLE marketstatsyfforexusdlivelong
-;DROP TABLE marketstatsyfforexusdlivelonglog
-;DROP TABLE marketstatsyfforexusdlivemedium
-;DROP TABLE marketstatsyfforexusdlivemediumlog
-;DROP TABLE marketstatsyfforexusdliveshort
-;DROP TABLE marketstatsyfforexusdliveshortlog
-;DROP TABLE marketstatsyfforexusdtestlong
-;DROP TABLE marketstatsyfforexusdtestlonglog
-;DROP TABLE marketstatsyfforexusdtestmedium
-;DROP TABLE marketstatsyfforexusdtestmediumlog
-;DROP TABLE marketstatsyfforexusdtestshort
-;DROP TABLE marketstatsyfforexusdtestshortlog
+;DROP TABLE IF EXISTS marketstatscryptoslivelong
+;DROP TABLE IF EXISTS marketstatscryptoslivelonglog
+;DROP TABLE IF EXISTS marketstatscryptoslivemedium
+;DROP TABLE IF EXISTS marketstatscryptoslivemediumlog
+;DROP TABLE IF EXISTS marketstatscryptosliveshort
+;DROP TABLE IF EXISTS marketstatscryptosliveshortlog
+;DROP TABLE IF EXISTS marketstatscryptostestlong
+;DROP TABLE IF EXISTS marketstatscryptostestlonglog
+;DROP TABLE IF EXISTS marketstatscryptostestmedium
+;DROP TABLE IF EXISTS marketstatscryptostestmediumlog
+;DROP TABLE IF EXISTS marketstatscryptostestshort
+;DROP TABLE IF EXISTS marketstatscryptostestshortlog
+;DROP TABLE IF EXISTS marketstatsmathlong
+;DROP TABLE IF EXISTS marketstatsmathlonglog
+;DROP TABLE IF EXISTS marketstatsmathmedium
+;DROP TABLE IF EXISTS marketstatsmathmediumlog
+;DROP TABLE IF EXISTS marketstatsmathshort
+;DROP TABLE IF EXISTS marketstatsmathshortlog
+;DROP TABLE IF EXISTS marketstatsmervalaccionesgenerallivelong
+;DROP TABLE IF EXISTS marketstatsmervalaccionesgenerallivelonglog
+;DROP TABLE IF EXISTS marketstatsmervalaccionesgenerallivemedium
+;DROP TABLE IF EXISTS marketstatsmervalaccionesgenerallivemediumlog
+;DROP TABLE IF EXISTS marketstatsmervalaccionesgeneralliveshort
+;DROP TABLE IF EXISTS marketstatsmervalaccionesgeneralliveshortlog
+;DROP TABLE IF EXISTS marketstatsmervalaccionesgeneraltestlong
+;DROP TABLE IF EXISTS marketstatsmervalaccionesgeneraltestlonglog
+;DROP TABLE IF EXISTS marketstatsmervalaccionesgeneraltestmedium
+;DROP TABLE IF EXISTS marketstatsmervalaccionesgeneraltestmediumlog
+;DROP TABLE IF EXISTS marketstatsmervalaccionesgeneraltestshort
+;DROP TABLE IF EXISTS marketstatsmervalaccionesgeneraltestshortlog
+;DROP TABLE IF EXISTS marketstatsmervalaccioneslidereslivelong
+;DROP TABLE IF EXISTS marketstatsmervalaccioneslidereslivelonglog
+;DROP TABLE IF EXISTS marketstatsmervalaccioneslidereslivemedium
+;DROP TABLE IF EXISTS marketstatsmervalaccioneslidereslivemediumlog
+;DROP TABLE IF EXISTS marketstatsmervalaccioneslideresliveshort
+;DROP TABLE IF EXISTS marketstatsmervalaccioneslideresliveshortlog
+;DROP TABLE IF EXISTS marketstatsmervalaccionesliderestestlong
+;DROP TABLE IF EXISTS marketstatsmervalaccionesliderestestlonglog
+;DROP TABLE IF EXISTS marketstatsmervalaccionesliderestestmedium
+;DROP TABLE IF EXISTS marketstatsmervalaccionesliderestestmediumlog
+;DROP TABLE IF EXISTS marketstatsmervalaccionesliderestestshort
+;DROP TABLE IF EXISTS marketstatsmervalaccionesliderestestshortlog
+;DROP TABLE IF EXISTS marketstatsmervalcedearslivelong
+;DROP TABLE IF EXISTS marketstatsmervalcedearslivelonglog
+;DROP TABLE IF EXISTS marketstatsmervalcedearslivemedium
+;DROP TABLE IF EXISTS marketstatsmervalcedearslivemediumlog
+;DROP TABLE IF EXISTS marketstatsmervalcedearsliveshort
+;DROP TABLE IF EXISTS marketstatsmervalcedearsliveshortlog
+;DROP TABLE IF EXISTS marketstatsmervalcedearstestlong
+;DROP TABLE IF EXISTS marketstatsmervalcedearstestlonglog
+;DROP TABLE IF EXISTS marketstatsmervalcedearstestmedium
+;DROP TABLE IF EXISTS marketstatsmervalcedearstestmediumlog
+;DROP TABLE IF EXISTS marketstatsmervalcedearstestshort
+;DROP TABLE IF EXISTS marketstatsmervalcedearstestshortlog
+;DROP TABLE IF EXISTS marketstatsnasdaq100livelong
+;DROP TABLE IF EXISTS marketstatsnasdaq100livelonglog
+;DROP TABLE IF EXISTS marketstatsnasdaq100livemedium
+;DROP TABLE IF EXISTS marketstatsnasdaq100livemediumlog
+;DROP TABLE IF EXISTS marketstatsnasdaq100liveshort
+;DROP TABLE IF EXISTS marketstatsnasdaq100liveshortlog
+;DROP TABLE IF EXISTS marketstatsnasdaq100testlong
+;DROP TABLE IF EXISTS marketstatsnasdaq100testlonglog
+;DROP TABLE IF EXISTS marketstatsnasdaq100testmedium
+;DROP TABLE IF EXISTS marketstatsnasdaq100testmediumlog
+;DROP TABLE IF EXISTS marketstatsnasdaq100testshort
+;DROP TABLE IF EXISTS marketstatsnasdaq100testshortlog
+;DROP TABLE IF EXISTS marketstatssnp100livelong
+;DROP TABLE IF EXISTS marketstatssnp100livelonglog
+;DROP TABLE IF EXISTS marketstatssnp100livemedium
+;DROP TABLE IF EXISTS marketstatssnp100livemediumlog
+;DROP TABLE IF EXISTS marketstatssnp100liveshort
+;DROP TABLE IF EXISTS marketstatssnp100liveshortlog
+;DROP TABLE IF EXISTS marketstatssnp100testlong
+;DROP TABLE IF EXISTS marketstatssnp100testlonglog
+;DROP TABLE IF EXISTS marketstatssnp100testmedium
+;DROP TABLE IF EXISTS marketstatssnp100testmediumlog
+;DROP TABLE IF EXISTS marketstatssnp100testshort
+;DROP TABLE IF EXISTS marketstatssnp100testshortlog
+;DROP TABLE IF EXISTS marketstatsyfforexusdlivelong
+;DROP TABLE IF EXISTS marketstatsyfforexusdlivelonglog
+;DROP TABLE IF EXISTS marketstatsyfforexusdlivemedium
+;DROP TABLE IF EXISTS marketstatsyfforexusdlivemediumlog
+;DROP TABLE IF EXISTS marketstatsyfforexusdliveshort
+;DROP TABLE IF EXISTS marketstatsyfforexusdliveshortlog
+;DROP TABLE IF EXISTS marketstatsyfforexusdtestlong
+;DROP TABLE IF EXISTS marketstatsyfforexusdtestlonglog
+;DROP TABLE IF EXISTS marketstatsyfforexusdtestmedium
+;DROP TABLE IF EXISTS marketstatsyfforexusdtestmediumlog
+;DROP TABLE IF EXISTS marketstatsyfforexusdtestshort
+;DROP TABLE IF EXISTS marketstatsyfforexusdtestshortlog

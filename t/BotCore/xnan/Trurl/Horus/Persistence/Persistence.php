@@ -816,6 +816,26 @@ class Persistence {
 		return $this->pdoSettings()->database();
 	}
 
+	private function tableExists($tableName) {
+
+		$schema=$this->schema();
+
+		$query=sprintf("
+			SELECT COUNT(TABLE_NAME) as count
+			FROM 
+			   information_schema.TABLES 
+			WHERE 
+			   TABLE_SCHEMA LIKE '$schema' AND 
+				TABLE_TYPE LIKE 'BASE TABLE' AND
+				TABLE_NAME = '$tableName';
+		");
+
+		$r=$this->pdoQuery($query);
+		$row=$r->fetch();
+
+		return $row["count"]!=0;
+	}
+
 	function msIsMarketStatsNew($marketId,$marketStatsId) {
 		$schema=$this->schema();
 
@@ -847,25 +867,33 @@ class Persistence {
 		return $row["count"]==0;
 	}
 
-	function msIsMarketStatsLogEmpty($marketId,$marketStatsId) {
 
-		$statsTableHead=$this->msStatsTableHead($marketId,$marketStatsId);
-		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
-
+	private function tableHasRows($tableName) {
 		$query=sprintf(
-				"SELECT COUNT(*) as count FROM $statsTableLog");				
+				"SELECT COUNT(*) as count FROM $tableName");				
 
 		$r=$this->pdoQuery($query);
 		
 		$row=$r->fetch();
-		return $row["count"]==0;
+		return $row["count"]!=0;
+	}
+
+	function msIsMarketStatsLogEmpty($marketId,$marketStatsId) {
+
+		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
+
+		$ret= 
+			!$this->tableExists($statsTableLog) ||
+				!$this->tableHasRows($statsTableLog);
+
+		return $ret;
 	}
 
 	function msMarketStatsLogReset($marketId,$marketStatsId) {
-
 		$delQuery1=sprintf("TRUNCATE %s",$this->msStatsTableLog($marketId,$marketStatsId));		
 
 		$r=$this->pdoQuery($delQuery1);
+		exit("ACAMMSS");
 	}
 
 	function msMarketStatsHeadReset($marketId,$marketStatsId) {
@@ -1041,7 +1069,7 @@ class Persistence {
 		return $this->msFieldMarketStats($marketId,$marketStatsId,"endBeat");
 	}
 
-	function msStatsCreate($marketId,$marketStatsId) {
+	function msStatsHeadCreate($marketId,$marketStatsId) {
 		$tableHead=$this->msStatsTableHead($marketId,$marketStatsId);
 		$tableLog=$this->msStatsTableLog($marketId,$marketStatsId);
 
@@ -1054,6 +1082,15 @@ class Persistence {
 				COLLATE='utf8mb4_general_ci'
 				ENGINE=InnoDB
 			";
+
+		$this->pdoQuery($sql1);
+	}
+
+	function msStatsLogCreate($marketId,$marketStatsId) {
+		print "msStatsLogCreate $marketId $marketStatsId\n";
+		
+		$tableHead=$this->msStatsTableHead($marketId,$marketStatsId);
+		$tableLog=$this->msStatsTableLog($marketId,$marketStatsId);
 	
 		$sql2="CREATE TABLE IF NOT EXISTS `$tableLog` (
 			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
@@ -1066,8 +1103,12 @@ class Persistence {
 			COLLATE='utf8mb4_general_ci'
 			ENGINE=InnoDB";
 
-		$this->pdoQuery($sql1);
-		$this->pdoQuery($sql2);
+		$this->pdoQuery($sql2);		
+	}
+
+	function msStatsCreate($marketId,$marketStatsId) {
+		$this->msStatsHeadCreate($marketId,$marketStatsId);
+		$this->msStatsLogCreate($marketId,$marketStatsId);
 	}
 }
 
