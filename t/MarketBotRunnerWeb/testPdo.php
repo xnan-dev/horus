@@ -17,6 +17,11 @@ Nano\Functions::Load;
 use xnan\Trurl\Hydra;
 Hydra\Functions::Load;
 
+// Uses: Hydra: Shortcuts
+use xnan\Trurl\Hydra\HMatrixes;
+use xnan\Trurl\Hydra\HMatrixes\HPdoMatrix;
+Hydra\Functions::Load;
+
 
 /*	
 	$r1=(HRefs\HRefs::instance())->createHRef("ref1");
@@ -168,26 +173,6 @@ function pdoSettings() {
 }
 
 
-function testMatrix2() {
-
-	$dim=[2,26,50];
-	$m=new PdoMatrix($pdo,"testMatrix",$dim);
-
-	$used=[2*26*50];
-	for ($i=0;$i<2*26*50;$i++) $used[$i]=false;
-
-	for ($a=0;$a<2;$a++) {
-		for ($b=0;$b<26;$b++) {
-			for ($c=0;$c<50;$c++) {
-				$off=$m->offset([$a,$b,$c])/4;
-				if ($used[$off]==true) exit("FAIL: offset $a x $b x $c: off: $off already used");
-				$used[$off]=true;	
-			}
-		}	
-	}
-	exit ("PASS");
-	(Hydra\hydra())->dehydrate();
-}
 
 class ValObj1 {
 	var $val1=1;
@@ -195,15 +180,17 @@ class ValObj1 {
 
 function testPdoMatrix() {
 	$pdoSettings=pdoSettings();
-	
-	$this->pdo = new \PDO(
+
+	$pdo = new \PDO(
 		    sprintf('mysql:host=%s;dbname=%s',
 		    	$pdoSettings->hostname(),
 		    	$pdoSettings->database()),
 			    $pdoSettings->user(),
 			    $pdoSettings->password());	
-	$m=(Hydra\hydra())->matrixes()->retrieveOrCreate
-	HMatrix(1,"testMatrix",[7,26]);		
+
+	$m=new HPdoMatrix($pdo,"testMatrix",[7,26]);
+
+	$m->hydrate();
 
 		for ($b=0;$b<26;$b++) {
 			for ($a=0;$a<7;$a++) {
@@ -213,14 +200,20 @@ function testPdoMatrix() {
 			}	
 		}
 
+	$m->dehydrate();
+
+	$m1=new HPdoMatrix($pdo,"testMatrix",[7,26]);
+	$m1->hydrate();
+
+
 	for ($b=0;$b<26;$b++) {
 		for ($a=0;$a<7;$a++) {
-			printf("value %s,%s: %s<br>",$a,$b,$m->get([$a,$b])); 			
+			printf("value %s,%s: %s<br>",$a,$b,$m1->get([$a,$b])); 			
 		}
 	}
 
 
-	(Hydra\hydra())->dehydrate();
+	$m1->dehydrate();
 }
 
 

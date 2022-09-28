@@ -109,7 +109,8 @@ class MarketStats {
 
 	private function setupIdxScalarDim() { //MIG-NEW
 		$dims=[ self::SValue,self::SMin,self::SMax,self::SAvg,self::SSum,
-				self::SMean,self::SCicle,self::SMinBeat,self::SMaxBeat,self::SCicleBeats];
+				self::SMean,self::SCicle,self::SMinBeat,self::SMaxBeat,self::SCicleBeats,
+				self::SLinearSlope];
 
 		$i=0;
 		foreach($dims as $dim) {
@@ -137,7 +138,7 @@ class MarketStats {
 	}
 
 	private function mtxHistoryId() { //MIG-NEW
-		return sprintf("mtxMarketStats%s%sScalar",
+		return sprintf("mtxMarketStats%s%sHistory",
 				ucfirst(str_replace("ArenaMarket","",$this->marketId() )),
 				str_replace("marketStats","",$this->marketStatsId() )
 			);
@@ -155,13 +156,23 @@ class MarketStats {
 	private function setupStatsIfReq() { //MIG
 
 		$dim=[count($this->idxScalarDim),count($this->idxAsset)];
-		$this->mtxScalar=new HMatrixes\HPdoMatrix($this->pdo(),$this->mtxScalarId(),$this->mtxScalarId(),$dim);
+		$this->mtxScalar=new HMatrixes\HPdoMatrix($this->pdo(),$this->mtxScalarId(),$dim);
 
 		$dim=[count($this->idxHistoryDim),count($this->idxAsset),$this->maxHistoryBeats()];
-		$this->mtxHistory=new HMatrixes\HPdoMatrix($this->pdo(),$this->mtxHistoryId(),$this->mtxHistoryId(),$dim);		
+		
+		$this->mtxHistory=new HMatrixes\HPdoMatrix($this->pdo(),$this->mtxHistoryId(),$dim);
 
 		$this->mtxScalar->hydrateIfReq();
 		$this->mtxHistory->hydrateIfReq();
+
+		if ($this->marketId()=="mathArenaMarket") {
+
+			/*foreach($this->assetIds() as $assetId) {
+				printf("debug-statsScalar assetId:%s value:%s\n<br>",
+					$assetId,$this->statsScalar(self::SValue,$assetId));
+			}*/
+
+		}
 
 		if ($this->mtxScalar->isNew()) {
 
@@ -178,8 +189,7 @@ class MarketStats {
 				$this->statsScalarSet(self::SCicleBeats,$assetId,$this->infiniteNegative());
 			}
 			$this->mtxScalar->dehydrate();
-			$this->mtxScalar->hydrateIfReq();
-
+			$this->mtxScalar->hydrate();
 		}
 		
 		if ($this->mtxHistory->isNew()) {
@@ -192,13 +202,18 @@ class MarketStats {
 			}
 	
 			$this->mtxHistory->dehydrate();
-			$this->mtxHistory->hydrateIfReq();
+			$this->mtxHistory->hydrate();
 		}
 	}
 
 	function statsScalar($dim,$assetId) { //MIG		
 		$coord=[$dim,$this->idxAsset[$assetId]];		
 		$ret=$this->mtxScalar->get($coord);
+/*		if ($this->marketId()=="mathArenaMarket") {
+			printf("statsScalar %s %s assetId:$assetId - dim:$dim coord:%s,%s v:%s\n",
+				$this->marketId(),$this->marketStatsId(),$coord[0],$coord[1],$ret);
+		}		*/
+		
 		return $ret;
 	}
 
@@ -215,6 +230,8 @@ class MarketStats {
 	function statsHistorySet($dim,$assetId,$historyIndex,$v) { //MIG
 		$coord=[$dim,$this->idxAsset[$assetId],$historyIndex];
 		$this->mtxHistory->set($coord,$v);
+		$vv=$this->mtxHistory->get($coord);
+		//print "statsHistorySet: dim:$dim assetId:$assetId historyIndex:$historyIndex v:$v vv:$vv\n";
 	}
 
 	function synchedBeat($synchedBeat=null) { //MIG
@@ -270,12 +287,16 @@ class MarketStats {
 
 		$assetIdx=$this->idxAsset[$assetId];
 
-		for($i=0;$i<$this->mtxHistory->lastDimension();$i++) {
+		//print "mtxHistory.dimensions:".print_r($this->mtxHistory->dimensions(),true)."\n";
+		//print "mtxHistory.lastDimension:".$this->mtxHistory->lastDimension()."\n";
+		for($i=0;$i<$this->mtxHistory->lastDimension();$i++) {			
 			$value=$this->mtxHistory->get([self::SHValue,$assetIdx,$i]);
+
+			//print "minHistory-find assetId:$assetId i:$i value:$value min:$min minBeat:$minBeat<br>\n";
+
 			if ($value==$this->infiniteNegative()) break;
 			if ($value<$min) $minBeat=$beat;
-			$min=min($min,$value);
-			//print "minHistory-find assetId:$assetId i:$i value:$value min:$min minBeat:$minBeat<br>\n";
+			$min=min($min,$value);			
 			++$beat;
 		}				
 		return [$min,$minBeat];
@@ -360,9 +381,10 @@ class MarketStats {
 	}
 
 	private function updateStats(&$market) {
-				Nano\nanoPerformance()->track("marketStats.updateStats.".$market->marketId());
+		Nano\nanoPerformance()->track("marketStats.updateStats.".$market->marketId());
 		$this->endBeat($market->beat());
-	
+
+
 		$assetIds=$this->assetIds();	
 
 		foreach($assetIds as $assetId) {
@@ -389,6 +411,9 @@ class MarketStats {
 			//$this->statsHistory->set([self::SHCicle,$assetIdx,$i],$this->statsCicle($assetId));
 			
 			$this->statsScalarSet(self::SValue,$assetId,$buyQuote);						
+
+			//print("debug: statsScalarSet assetId:$assetId buyQuote:$buyQuote\n");
+
 			$this->statsScalarSet(self::SSum,$assetId,$this->sumHistory($assetId));
 			$this->statsScalarSet(self::SLinearSlope,$assetId,$this->calcLinearSlope($assetId));
 		
@@ -428,7 +453,7 @@ class MarketStats {
 						$this->statsScalar(self::SMaxBeat,$assetId)-
 						$this->statsScalar(self::SMinBeat,$assetId)
 					)
-				);
+				);			
 		}
 
 		Nano\nanoPerformance()->track("marketStats.updateStats.".$market->marketId());

@@ -33,11 +33,11 @@ class HPdoMatrix implements  \Serializable {
 	var $pdo=null;
 	var $isNew=true;
 
-	function __construct($pdo, $id,$name=null,$dimensions=[2,2]) {
-		if ($id===null) Nano\nanoCheck()->checkFailed("id cannot be null");
+	function __construct($pdo,$name,$dimensions=[2,2]) {
 		if ($pdo==null) Nano\nanoCheck()->checkFailed("pdo cannot be null");
+		if ($dimensions==null) Nano\nanoCheck()->checkFailed("dimensions cannot be null");
+		if ($dimensions==null) Nano\nanoCheck()->checkFailed("dimensions cannot be null");
 		$this->pdo=$pdo;
-		$this->id=$id;
 		$this->changed=true;
 		if ($name!=null) $this->name=$name;
 		if ($dimensions!=null) $this->dimensions=$dimensions;
@@ -274,6 +274,10 @@ class HPdoMatrix implements  \Serializable {
 	function markChanged() {
 		$this->hydrateIfReq();
 		$this->changed=true;
+	}
+
+	function dimensions() {
+		return $this->dimensions;
 	}
 
 	function serialize() {
