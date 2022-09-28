@@ -33,9 +33,8 @@ abstract class AbstractMarket implements Market {
 	var $marketSchedule=null;
 	var $useHistory=false;
 	var $marketStats,$marketStatsLong,$marketStatsMedium;
-	var $maxHistoryBeats=50;
-	var $statsMediumBeatMultiplier=100; // aprox. 50 muestras en una semana
-	var $statsLongBeatMultiplier=400; // aprox. 50 muestras en un mes.
+	// statsMediumBeatMultiplier:100  aprox. 50 muestras en una semana
+	// statsLongBeatMultiplier:400 aprox. 50 muestras en un mes.
 
 	abstract function assets();
 
@@ -51,6 +50,7 @@ abstract class AbstractMarket implements Market {
 	
 
 	function __construct($marketId,$useHistory=false) {
+		print "ConstuctMarketCALLED $marketId\n";
 
 		$this->textFormatter=Nano\newTextFormatter();
 		$this->marketId=$marketId;
@@ -61,9 +61,9 @@ abstract class AbstractMarket implements Market {
 
 	protected function setupMarket() {
 		$this->textFormatter()->defaultDecimals($this->quoteDecimals());
-		$this->setupSettings();
 		$this->setupMarketSchedule();
 		$this->setupMarketStats();			
+		$this->setupSettings();
 	}
 
 	function textFormatter() {
@@ -97,10 +97,20 @@ abstract class AbstractMarket implements Market {
 	}
 
 	function maxHistoryBeats() {
-		return $this->maxHistoryBeats;
+		return Horus\persistence()->marketMaxHistoryBeats($this->marketId());
 	}
 
+	function statsLongBeatMultiplier() {
+		return Horus\persistence()->marketStatsLongBeatMultiplier($this->marketId());
+	}
+
+	function statsMediumBeatMultiplier() {
+		return Horus\persistence()->marketStatsMediumBeatMultiplier($this->marketId());
+	}
+
+
 	private function setupMarketStats() {
+		print "setupMarketStatsCALLED\n";
 		$openHours=$this->marketSchedule()->marketOpenHoursCount();
 		$openFactor=$openHours/24;
 		
@@ -116,7 +126,7 @@ abstract class AbstractMarket implements Market {
 
 		if ($this->marketStatsLong->isMarketStatsNew())  {
 			$this->marketStatsLong->maxHistoryBeats($this->maxHistoryBeats());
-			$this->marketStatsLong->beatMultiplier(floor($this->statsLongBeatMultiplier*$openFactor));
+			$this->marketStatsLong->beatMultiplier(floor($this->statsLongBeatMultiplier()*$openFactor));
 			$this->marketStatsLong->setupStatsIfReq();
 		}
 
@@ -126,7 +136,7 @@ abstract class AbstractMarket implements Market {
 
 		if ($this->marketStatsMedium->isMarketStatsNew()) {
 			$this->marketStatsMedium->maxHistoryBeats($this->maxHistoryBeats());
-			$this->marketStatsMedium->beatMultiplier(floor($this->statsMediumBeatMultiplier*$openFactor));
+			$this->marketStatsMedium->beatMultiplier(floor($this->statsMediumBeatMultiplier()*$openFactor));
 			$this->marketStatsMedium->setupStatsIfReq();
 		}
 	}	

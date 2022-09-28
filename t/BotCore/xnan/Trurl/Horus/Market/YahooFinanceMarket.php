@@ -34,19 +34,18 @@ class YahooFinanceMarket extends AbstractMarket {
 	var $assetIdsByType=[]; // cached
 	var $tradeFixedFees=[]; // TODO impl.
 	
-	function __construct($marketId,$pollerName="Cryptos") {		
+	function __construct($marketId,$pollerName="Cryptos") {
 		$this->pollerName=$pollerName;		
 		parent::__construct($marketId,false);
 	}
 
 	protected function setupMarket() {
-		parent::setupMarket();
 		$this->setupAssets();
+		parent::setupMarket();
 	}
 
-	private function setupAssets() {
-		$assetsCsv = Nano\nanoCsv()->csvContentToArray($this->assetsAsCsv(),';');
-				
+	private function setupAssets() {		
+		$assetsCsv = Nano\nanoCsv()->csvContentToArray($this->assetsAsCsv(),';');		
 		$index=0;
 		foreach($assetsCsv as $assetCsv) {
 			//if ($index>=$assetCount) break;

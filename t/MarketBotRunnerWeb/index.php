@@ -30,6 +30,7 @@ error_reporting(E_ALL);
 Nano\nanoLog()->open();
 (MarketBotRunner\MarketBotRunner::instance())->pdoSettings(pdoSettings());
 (MarketBotRunner\MarketBotRunner::instance())->serviceProcess();
+if (showPerformance()) Nano\nanoPerformance()->summaryWrite();
 Nano\nanoLog()->close();
 
 ?>

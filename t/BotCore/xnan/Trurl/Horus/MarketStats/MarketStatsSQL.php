@@ -8,13 +8,6 @@ use xnan\Trurl\Nano\DataSet;
 use xnan\Trurl\Nano\TextFormatter;
 use xnan\Trurl\Nano\Performance;
 use xnan\Trurl\Horus\BotWorld;
-use xnan\Trurl\Hydra;
-use xnan\Trurl\Hydra\HMaps;
-use xnan\Trurl\Hydra\HMatrixes;
-use xnan\Trurl\Hydra\HMatrixes\HMatrix;
-use xnan\Trurl\Hydra\HMatrixes\HPdoMatrix;
-
-Hydra\Functions::Load;
 
 //Uses: Start
 
@@ -27,21 +20,13 @@ Nano\Functions::Load;
 class Functions { const Load=1; }
 
 class MarketStats {
-	var $marketStatsId;
+	private $marketStatsId;
 
-	var $market;
-	var $textFormater;
-	var $marketBeatObserver;
-
-	var $mtxScalar;
-	var $mtxHistory;
-
-	var $idxAsset=[];
-	var $idxScalarDim=[];
-	var $idxHistoryDim=[];
+	private $market;
+	private $marketBeatObserver;
+	private $textFormater;
 
 	const MarketIndexAsset="@MarketIndex";
-
 	const SValue=0;
 	const SMin=1;
 	const SMax=2;
@@ -53,120 +38,78 @@ class MarketStats {
 	const SMaxBeat=8;
 	const SCicleBeats=9;
 	const SLinearSlope=10;
-	
+
 	const SHValue=0;
 	const SHCicle=1;
 
-
-	function __construct(&$market,$marketStatsId) {	//MIG
+	function __construct(&$market,$marketStatsId) {		
 		if ($marketStatsId==null) Nano\nanoCheck()->checkFailed("marketStatsId cannot be null");
 		$this->market=$market;
 		$this->marketStatsId=$marketStatsId;
 		$this->marketBeatObserver=new MarketBeatObserver($this);
 		$this->textFormatter=Nano\newTextFormatter();
-
-		$this->setupIdxAsset(); // always constructed from market.
-		$this->setupIdxScalarDim();// always constructed from stats dimensions.
-		$this->setupIdxHistoryDim();// always constructed from stats dimensions.
-
 		$this->setupStatsIfReq();
-
 		$market->onBeat()->addObserver($this->marketBeatObserver);		
 	}
 
 
-	private function pdo() { //MIG
+	private function pdo() {
 		return BotWorld\BotWorld::instance()->pdo();
 	}
 
-	function market() { //MIG
+	function market() {
 		return $this->market;
 	}
 
-	function marketId() { //MIG
+	function marketId() {
 		return $this->market()->marketId();
 	}
 
-	function marketStatsId() {//MIG
+	function marketStatsId() {
 		return $this->marketStatsId;
 	}
 
-	function marketStatsReset() { //MIG-TODO
-		Nano\nanoCheck()->checkFailed("inhab");
-		$this->endBeat=0;
-		$this->statsValue->reset();
+	function isMarketStatsNew() {
+		return Horus\persistence()->msIsMarketStatsNew($this->marketId(),$this->marketStatsId());
 	}
 
-	function isMarketStatsNew() { // MIG-TODO
-		return true;
+	function isMarketStatsLogEmpty() {
+		return Horus\persistence()->msIsMarketStatsLogEmpty($this->marketId(),$this->marketStatsId());
 	}
 
-	private function setupIdxAsset() { //MIG-NEW
-		$assetIds=$this->market()->assetIds();
-
-		$i=0;
-		foreach($assetIds as $assetId) {
-			$this->idxAsset[$assetId]=$i;
-			++$i;
-		}		
+	function marketStatsLogReset() {
+		return Horus\persistence()->msMarketStatsLogReset($this->marketId(),$this->marketStatsId());		
 	}
 
-	private function setupIdxScalarDim() { //MIG-NEW
-		$dims=[ self::SValue,self::SMin,self::SMax,self::SAvg,self::SSum,
-				self::SMean,self::SCicle,self::SMinBeat,self::SMaxBeat,self::SCicleBeats];
-
-		$i=0;
-		foreach($dims as $dim) {
-			$this->idxScalarDim[$dim]=$i;
-			++$i;
-		}
+	function marketStatsHeadReset() {
+		return Horus\persistence()->msMarketStatsHeadReset($this->marketId(),$this->marketStatsId());
 	}
 
-	private function setupIdxHistoryDim() { //MIG-NEW
-		$dims=[self::SHValue,self::SHCicle];
-
-		$i=0;
-		foreach($dims as $dim) {
-			$this->idxHistoryDim[$dim]=$i;
-			++$i;
-		}
-
+	function marketStatsReset() {
+		$this->marketStatsHeadReset();
+		$this->marketStatsLogReset();				
 	}
 
-	private function mtxScalarId() { //MIG-NEW
-		return sprintf("mtxMarketStats%s%sScalar",
-				ucfirst(str_replace("ArenaMarket","",$this->marketId() )),
-				str_replace("marketStats","",$this->marketStatsId() )
-			);
+	function statsScalarSet($statsDim,$assetId,$statsValue) {
+		return Horus\persistence()->msStatsScalarSet($this->marketId(),$this->marketStatsId(),$statsDim,$assetId,$statsValue);
 	}
 
-	private function mtxHistoryId() { //MIG-NEW
-		return sprintf("mtxMarketStats%s%sScalar",
-				ucfirst(str_replace("ArenaMarket","",$this->marketId() )),
-				str_replace("marketStats","",$this->marketStatsId() )
-			);
+	function statsHistorySet($statsDim,$assetId,$historyIndex,$statsValue) {	
+		return Horus\persistence()->msStatsHistorySet($this->marketId(),$this->marketStatsId(),$statsDim,$assetId,$historyIndex,$statsValue);
 	}
 
-	private function statsHistoryLastValue($statsDim,$assetId) {
-		return $this->statsHistory($statsDim,$assetId,$this->maxHistoryBeats()-1);
+	function statsHistory($statsDim,$assetId,$historyIndex) {	
+		if ($assetId==$this->market()->defaultExchangeAssetId()) return 1;
+
+		return Horus\persistence()->msStatsHistory($this->marketId(),$this->marketStatsId(),$statsDim,$assetId,$historyIndex);
 	}
 
+	private function setupMarketStatsHead() {				
+		return Horus\persistence()->msSetupMarketStatsHead($this->marketId(),$this->marketStatsId());
+	}
 
-	private function setupStats() { //MIG
-		print "SETUPStatsCALLED ".$this->marketId()." ".$this->marketStatsId()."\n";
-
-		Horus\persistence()->msStatsHeadCreate($this->marketId(),$this->marketStatsId());
-		Horus\persistence()->msSetupMarketStatsHead($this->marketId(),$this->marketStatsId());
-
-		$dim=[count($this->idxScalarDim),count($this->idxAsset)];
-		$this->mtxScalar=new HMatrixes\HPdoMatrix($this->pdo(),$this->mtxScalarId(),$this->mtxScalarId(),$dim);
-
-		$dim=[count($this->idxHistoryDim),count($this->idxAsset),$this->maxHistoryBeats()];
-		$this->mtxHistory=new HMatrixes\HPdoMatrix($this->pdo(),$this->mtxHistoryId(),$this->mtxHistoryId(),$dim);
-
-
-		$this->mtxScalar->hydrateIfReq();
-		$this->mtxHistory->hydrateIfReq();
+	private function setupMarketStatsLog() {	
+		Horus\persistence()->msStatsLogCreate($this->marketId(),$this->marketStatsId());
 
 		foreach ($this->market()->assetIds() as $assetId) {
 			$this->statsScalarSet(self::SValue,$assetId,0);
@@ -179,132 +122,123 @@ class MarketStats {
 			$this->statsScalarSet(self::SMinBeat,$assetId,$this->infiniteNegative());
 			$this->statsScalarSet(self::SMaxBeat,$assetId,$this->infiniteNegative());
 			$this->statsScalarSet(self::SCicleBeats,$assetId,$this->infiniteNegative());
+			$this->statsScalarSet(self::SLinearSlope,$assetId,0);
 		}
 
 		foreach ($this->market()->assetIds() as $assetId) {
-			for ($i=0;$i<$this->maxHistoryBeats();$i++) {				
+			for ($i=0;$i<$this->maxHistoryBeats();$i++) {						
 				$this->statsHistorySet(self::SHValue,$assetId,$i,$this->infiniteNegative());
-				$this->statsHistorySet(self::SHCicle,$assetId,$i,$this->infiniteNegative());				
+				$this->statsHistorySet(self::SHCicle,$assetId,$i,$this->infiniteNegative());	
 			}
 		}
 
 	}
 
-	function statsScalar($dim,$assetId) { //MIG		
-		$coord=[$dim,$this->idxAsset[$assetId]];		
-		$ret=$this->mtxScalar->get($coord);
-		return $ret;
+
+	private function setupMarketStats() {		
+		$this->setupMarketStatsHead();
+		$this->setupMarketStatsLog();
 	}
 
-	function statsHistory($dim,$assetId,$historyIndex) { //MIG
-		$coord=[$dim,$this->idxAsset[$assetId],$historyIndex];
-		return $this->mtxHistory->get($coord);
+	function statsScalar($statsDim,$assetId) {
+		if ($assetId==$this->market()->defaultExchangeAssetId()) return 1;
+
+		return Horus\persistence()->msStatsScalar($this->market()->marketId(),$this->marketStatsId(),$statsDim,$assetId);
 	}
 
-	function statsScalarSet($dim,$assetId,$v) { //MIG
-		$coord=[$dim,$this->idxAsset[$assetId]];		
-		$this->mtxScalar->set($coord,$v);
-	}
-	
-	function statsHistorySet($dim,$assetId,$historyIndex,$v) { //MIG
-		$coord=[$dim,$this->idxAsset[$assetId],$historyIndex];
-		$this->mtxHistory->set($coord,$v);
+
+	function statsHistoryLastValue($statsDim,$assetId) {
+		if ($assetId==$this->market()->defaultExchangeAssetId()) return 1;
+
+		return Horus\persistence()->msStatsHistoryLastValue($this->market()->marketId(),$this->marketStatsId(),$statsDim,$assetId);
 	}
 
-	function synchedBeat($synchedBeat=null) { //MIG
+
+	function statsHistoryAll($statsDim,$assetId) {
+
+		return Horus\persistence()->msStatsHistoryAll($this->market()->marketId(),$this->marketStatsId(),$statsDim,$assetId);
+	}
+
+	function statsHistoryShift($statsDim,$assetId) {
+		//print "--SHIFT START-------------------------------------------------------\n";
+
+		$i=0;		
+		$value=$this->infiniteNegative();
+		
+
+		$n=$this->maxHistoryBeats();
+
+		for($i=0 ; $i<$n; $i++) {
+			$value=$this->statsHistory($statsDim,$assetId,$i);		
+			if ($i>0 && $i<$n) {
+				$this->statsHistorySet($statsDim,$assetId,$i-1,$value);	
+			}					
+		}		
+		$this->statsHistorySet($statsDim,$assetId,$n-1,$this->infiniteNegative());
+		//print "--SHIFT END ------------------------------------------------------------\n";
+
+	}
+
+	function synchedBeat($synchedBeat=null) {
 		return Horus\persistence()->msSynchedBeat($this->marketId(),$this->marketStatsId(),$synchedBeat);
 	}
 	
-	function maxHistoryBeats($maxHistoryBeats=null) { //MIG
+	function maxHistoryBeats($maxHistoryBeats=null) {
 		return Horus\persistence()->msMaxHistoryBeats($this->marketId(),$this->marketStatsId(),$maxHistoryBeats);
 	}
 
-	function beatMultiplier($beatMultiplier=null) { //MIG
+	function beatMultiplier($beatMultiplier=null) {
 		return Horus\persistence()->msBeatMultiplier($this->marketId(),$this->marketStatsId(),$beatMultiplier);
 	}
 
-	function textFormatter() { //MIG
+	function textFormatter() {
 		return $this->textFormatter;
 	}
 
-	function startBeat() { //MIG
+	function startBeat() {		
 		return max(0,$this->endBeat()-$this->maxHistoryBeats()+1);
 	}
 
-	function endBeat($endBeat=null) { //MIG
+	function endBeat($endBeat=null) {
 		return Horus\persistence()->msEndBeat($this->marketId(),$this->marketStatsId(),$endBeat);
 	}
 
-	function beatCount() { //MIG
+	function beatCount() {
 		return $this->endBeat()-$this->startBeat()+1;
 	}
 
-	function infinitePositive() { //MIG
-		return 1000000000;
+	function infinitePositive() {
+		return Horus\persistence()->infinitePositive();
 	}
 
-	function infiniteNegative() { //MIG
-		return -1000000000;
+	function infiniteNegative() {
+		return Horus\persistence()->infiniteNegative();
 	}	
 
-	function sumHistory($assetId) {	//MIG
+	function sumHistory($assetId) {		
 		$sum=0;
-		$assetIdx=$this->idxAsset[$assetId];
 
-		for($i=0;$i<$this->mtxHistory->lastDimension();$i++) {
-			$sum+=$this->mtxHistory->get([$this->SHValue,$assetIdx,$i]);
+		$rows=$this->statsHistoryAll(self::SHValue,$assetId);		
+		foreach($rows as $row) {
+			$sum+=$row["statsValue"];
 		}		
 		return $sum;
 	}
 
-	function minHistory($assetId) { //MIG
-		$min=$this->infinitePositive();
-		$beat=$this->startBeat();
-		$minBeat=$beat;
-
-		$assetIdx=$this->idxAsset[$assetId];
-
-		for($i=0;$i<$this->mtxHistory->lastDimension();$i++) {
-			$value=$this->mtxHistory->get([self::SHValue,$assetIdx,$i]);
-			if ($value==$this->infiniteNegative()) break;
-			if ($value<$min) $minBeat=$beat;
-			$min=min($min,$value);
-			//print "minHistory-find assetId:$assetId i:$i value:$value min:$min minBeat:$minBeat<br>\n";
-			++$beat;
-		}				
-		return [$min,$minBeat];
-	}
-
-	function maxHistory($assetId) { // MIG
-		$max=$this->infiniteNegative();
-		$beat=$this->startBeat();
-		$maxBeat=$beat;
-
-		$assetIdx=$this->idxAsset[$assetId];
-
-		for($i=0;$i<$this->mtxHistory->lastDimension();$i++) {			
-			if ($value==$this->infiniteNegative()) break;
-			$value=$this->mtxHistory->get([self::SHValue,$assetIdx,$i]);
-			if ($value>$max) $maxBeat=$beat;
-			$max=max($max,$value);
-			++$beat;
-		}
-
-		return [$max,$maxBeat];
-	}
-
-
-	function calcLinearSlope($assetId) { // MIG	
+	function calcLinearSlope($assetId) {		
 		$xsum=0;
 		$ysum=0;
 		$xysum=0;
 		$x2sum=0;
 
 		$x=1;
-				
-		for($i=0;$i<$this->maxHistoryBeats();$i++) {
+
+		$rows=$this->statsHistoryAll(self::SHValue,$assetId);
+
+		$n=count($rows);
 		
-			$y=$this->statsHistory(self::SHValue,$assetId,$i);
+		for($i=0;$i<$n;$i++) {
+			$y=$rows[$i]["stastValue"];
 			$ysum+=$y;
 			$xsum+=$x;
 			$x2sum+=($x*$x);
@@ -321,12 +255,54 @@ class MarketStats {
 		}		
 	}
 
-	function statsCicle($assetId) { //MIG
+	function minHistory($assetId) {
+		$min=$this->infinitePositive();
+		$beat=$this->startBeat();
+		$minBeat=$beat;		
+
+		$rows=$this->statsHistoryAll(self::SHValue,$assetId);
+		$n=count($rows);
+
+		for($i=0;$i<$n;$i++) {
+			$value=$rows[$i]["statsValue"];
+			if ($value==$this->infiniteNegative()) break;
+			if ($value<$min) $minBeat=$beat;
+			$min=min($min,$value);
+			//print "minHistory-find assetId:$assetId i:$i value:$value min:$min minBeat:$minBeat<br>\n";
+			++$beat;
+		}				
+
+		return [$min,$minBeat];
+	}
+
+	function maxHistory($assetId) {
+		$max=$this->infiniteNegative();
+		$beat=$this->startBeat();
+		$maxBeat=$beat;
+
+		$rows=$this->statsHistoryAll(self::SHValue,$assetId);
+		$n=count($rows);
+
+		for($i=0;$i<$n;$i++) {			
+			$value=$rows[$i]["statsValue"];
+			if ($value==$this->infiniteNegative()) break;
+			if ($value>$max) $maxBeat=$beat;
+			$max=max($max,$value);
+			++$beat;
+		}
+
+		return [$max,$maxBeat];
+	}
+
+
+	function statsCicle($assetId) {		
 		$mean=$this->statsScalar(self::SMean,$assetId);
 		$max=$this->statsScalar(self::SMax,$assetId);
 		$min=$this->statsScalar(self::SMin,$assetId);
 		$value=$this->statsScalar(self::SValue,$assetId);
 		$stabilizer=1;
+
+		//print "statsCicle $assetId mean:$mean max:$max min:$min value:$value\n";
 		$cicle=$max!=$min ? 
 		(
 			(
@@ -338,14 +314,15 @@ class MarketStats {
 		return $cicle;
 	}
 
-	function setupStatsIfReq() {		
-		print "setupStatsIfReq ".$this->marketId()." ".$this->marketStatsId()."\n";
-
+	function setupStatsIfReq() {
+		//print "SETUP IFREQ maxHistoryBeats:$this->settingMaxHistoryBeats<br>\n";
 		if ($this->isMarketStatsNew()) {
-			 $this->setupStats();
+			$this->setupMarketStats();
+		} else if ($this->isMarketStatsLogEmpty()) {
+			$this->setupMarketStatsLog();
 		}
 	}
-	
+
 	function marketBuyQuoteAvg(&$market) {
 		$sum=0;
 		$count=0;
@@ -361,7 +338,7 @@ class MarketStats {
 		return $this->market()->assetIds(); // TODO agregar Mercado Promedio.
 	}
 
-	function onBeat($market) { // MIG
+	function onBeat($market) {
 		$this->setupStatsIfReq();
 		if (  $this->beatMultiplier()>1 && 
 			(($market->beat() % $this->beatMultiplier()) != 0) ) {
@@ -447,9 +424,6 @@ class MarketStats {
 		}
 
 
-		$this->mtxScalar->dehydrate();
-		$this->mtxHistory->dehydrate();
-
 		$this->synchedBeat($market->beat());
 
 		//printf("marketStats: %s beatMultiplier: %s synchedBeat: %s\n",
@@ -458,9 +432,75 @@ class MarketStats {
 		Nano\nanoPerformance()->track("marketStats.onBeat.".$market->marketId());
 	}
 
+	/*function assetIndex($assetId) {
+		$index=0;
+		foreach($this->statsValue->keys() as $candidateAssetId) {
+			$value=$this->statsValue->get($candidateAssetId);
+			if ($assetId==$candidateAssetId) return $index;
+			++$index;
+		}
+		return -1;
+	}	*/
+
+	/*function mapAsJsonList($map,$xName,$yName) {
+			$x="";
+			$y="";
+			foreach($map as $key=>$value) {
+			if (strlen($x)>0) $x.=",";
+			if (strlen($y)>0) $y.=",";
+			$x.=$key;
+			$y.=$value;
+
+		}		
+
+		$json=sprintf('{"%s":[%s],"%s":[%s]}',$xName,$x,$yName,$y);		
+		return $json;
+	}*/
+
+	/*function arrayAsJsonList($array,$xcount=100) {
+		$x="";
+		$windowCount=min(count($array),$xcount);
+		for ($i=0;$i<$windowCount;$i++) {
+			if (strlen($x)>0) $x.=",";
+			$value=$array[count($array)-$windowCount+$i];
+			$x.=$value;
+		}
+
+		$json=sprintf('[%s]',$x);		
+		return $json;
+	}*/
+	
+	/*function marketHistoryLabels($xcount=100) {
+		if (count($this->statsValueHistory() )==0) return $this->arrayAsJsonList([],$xcount); 
+		$firstAssetId=array_keys($this->statsValueHistory)[0];
+		return $this->arrayAsJsonList(array_keys($this->statsValueHistory[$firstAssetId]),$xcount);
+	}*/
+
+	/*function marketHistoryDatasetJson($assetId,$valueHistory,$xcount=100,$label=null,$dash=false,$color=null) {		
+		$colors=array("rgb(200,150,150)","rgb(150,200,150)","rgb(0,0,200)","rgb(200,200,0)","rgb(0,200,200)","rgb(200,0,200)","rgb(200,200,200)");
+		if ($color==null) $color=$colors[$this->assetIndex($assetId)%(count($colors)-1)];
+		$extra=$dash ? ",borderDash: [5, 5]" : "";
+
+		return sprintf("{label:'%s' $extra,fill: false,backgroundColor: '%s',borderColor: '%s',data: %s }",$label!=null ? $label : $assetId,$color,$color,$this->arrayAsJsonList($valueHistory,$xcount));
+	}*/
+
+	/*function marketHistoryDatasetsJson($xcount=100) {
+		$json="";
+		foreach($this->statsCicleHistory() as $assetId=>$valueHistory) {
+			if ($assetId==$this->market->defaultExchangeAssetId()) continue;
+			//if ($assetId!="BTC-USD") continue;
+			if (strlen($json)>0) $json.=",";
+			$json.=$this->marketHistoryDatasetJson($assetId,$valueHistory,$xcount);
+		}
+		return sprintf("[%s]",$json);
+	}*/
+
+	/*function marketHistoryAsJson($xcount=100) {		
+		 return sprintf("{ labels: %s, datasets: %s }",$this->marketHistoryLabels($xcount), $this->marketHistoryDatasetsJson($xcount));
+	}*/
 }
 
-class MarketBeatObserver extends Observer\Observer { //MIG
+class MarketBeatObserver extends Observer\Observer {
 	var $marketStats;
 
 	public function __construct(&$marketStats) {

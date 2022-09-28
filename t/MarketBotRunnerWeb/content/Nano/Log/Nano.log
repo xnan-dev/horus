@@ -10161,3 +10161,1869 @@ query:DELETE FROM marketStatsCryptosLiveShortLog WHERE
 2022-09-27 10:32:58 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive1 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0.0000000000
 2022-09-27 10:33:05 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive2 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0.0000000000
 2022-09-27 10:33:05 - 15
+2022-09-27 10:43:13 - Trader:botLive1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 10:43:13 - Trader:botLive2 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 10:43:13 - Trader:botLive3 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 10:43:13 - BotWorld: -------------------------
+2022-09-27 10:43:13 - BotWorld: end
+2022-09-27 10:44:12 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 10:44:12 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 10:44:12 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 10:44:12 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28931 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 10:44:12 - BotArena: botArenaId:cryptosLiveArena beat: 28931 msg: market not ready
+2022-09-27 10:44:12 - BotWorld: -------------------------
+2022-09-27 10:44:12 - BotWorld: end
+2022-09-27 10:44:53 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 10:44:53 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 10:44:53 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 10:44:53 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28933 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 10:45:00 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive1 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0.0000000000
+2022-09-27 10:45:08 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive2 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0.0000000000
+2022-09-27 10:45:08 - 15
+2022-09-27 10:45:59 - Trader:botLive1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 10:45:59 - Trader:botLive2 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 10:45:59 - Trader:botLive3 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 10:45:59 - BotWorld: -------------------------
+2022-09-27 10:45:59 - BotWorld: end
+2022-09-27 10:48:10 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 10:48:10 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 10:48:10 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 10:48:11 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28933 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 10:48:11 - BotArena: botArenaId:cryptosLiveArena beat: 28933 msg: market not ready
+2022-09-27 10:48:11 - BotWorld: -------------------------
+2022-09-27 10:48:11 - BotWorld: end
+2022-09-27 10:49:18 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 10:49:18 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 10:49:18 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 10:49:18 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28935 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 10:49:25 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive1 assetId:LUNA1-USD msg: pickAssetIdByCicle assetId:LUNA1-USD cicle:-1.0000000000
+2022-09-27 10:49:32 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive2 assetId:LUNA1-USD msg: pickAssetIdByCicle assetId:LUNA1-USD cicle:-1.0000000000
+2022-09-27 10:49:32 - 15
+2022-09-27 10:50:17 - Trader:botLive1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 10:50:17 - Trader:botLive2 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 10:50:17 - Trader:botLive3 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 10:50:17 - BotWorld: -------------------------
+2022-09-27 10:50:17 - BotWorld: end
+2022-09-27 10:51:58 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 10:51:58 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 10:51:58 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 10:51:58 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28935 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 10:51:58 - BotArena: botArenaId:cryptosLiveArena beat: 28935 msg: market not ready
+2022-09-27 10:51:58 - BotWorld: -------------------------
+2022-09-27 10:51:58 - BotWorld: end
+2022-09-27 10:53:21 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 10:53:21 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 10:53:21 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 10:53:21 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28937 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 10:53:28 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive1 assetId:CCXX-USD msg: pickAssetIdByCicle assetId:CCXX-USD cicle:-1.0000000000
+2022-09-27 10:53:36 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive2 assetId:CCXX-USD msg: pickAssetIdByCicle assetId:CCXX-USD cicle:-1.0000000000
+2022-09-27 10:53:36 - 15
+2022-09-27 10:54:23 - Trader:botLive1 Portfolio [LUNA1-USD:53,773,309.00 USD:84,997.00] portfolioValuation:99,999.62
+2022-09-27 10:54:23 - Trader:botLive2 Portfolio [LUNA1-USD:53,773,309.00 USD:84,997.00] portfolioValuation:99,999.62
+2022-09-27 10:54:23 - Trader:botLive3 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 10:54:23 - BotWorld: -------------------------
+2022-09-27 10:54:23 - BotWorld: end
+2022-09-27 10:55:15 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 10:55:15 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 10:55:15 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 10:55:15 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28937 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 10:55:16 - BotArena: botArenaId:cryptosLiveArena beat: 28937 msg: market not ready
+2022-09-27 10:55:16 - BotWorld: -------------------------
+2022-09-27 10:55:16 - BotWorld: end
+2022-09-27 10:56:27 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 10:56:27 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 10:56:27 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 10:56:27 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28939 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 10:56:35 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive1 assetId:LUNA1-USD msg: pickAssetIdByCicle assetId:LUNA1-USD cicle:-0.9970688402
+2022-09-27 10:56:43 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive2 assetId:LUNA1-USD msg: pickAssetIdByCicle assetId:LUNA1-USD cicle:-0.9970688402
+2022-09-27 10:56:43 - 15
+2022-09-27 10:57:34 - Trader:botLive1 Portfolio [LUNA1-USD:53,773,309.00 USD:84,997.00] portfolioValuation:99,885.05
+2022-09-27 10:57:34 - Trader:botLive2 Portfolio [LUNA1-USD:53,773,309.00 USD:84,997.00] portfolioValuation:99,885.05
+2022-09-27 10:57:34 - Trader:botLive3 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 10:57:34 - BotWorld: -------------------------
+2022-09-27 10:57:34 - BotWorld: end
+2022-09-27 11:07:08 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 11:07:08 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 11:07:08 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 11:07:08 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28939 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 11:07:08 - BotArena: botArenaId:cryptosLiveArena beat: 28939 msg: market not ready
+2022-09-27 11:07:08 - BotWorld: -------------------------
+2022-09-27 11:07:08 - BotWorld: end
+2022-09-27 11:07:47 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 11:07:47 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 11:07:47 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 11:07:48 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28941 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 11:12:01 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive1 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0.0000000000
+2022-09-27 11:12:09 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive2 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0.0000000000
+2022-09-27 11:12:09 - 15
+2022-09-27 11:21:30 - Trader:botLive1 Portfolio [LUNA1-USD:54,112,822.00 USD:84,904.00] portfolioValuation:99,779.36
+2022-09-27 11:21:30 - Trader:botLive2 Portfolio [LUNA1-USD:54,112,822.00 USD:84,904.00] portfolioValuation:99,779.36
+2022-09-27 11:21:30 - Trader:botLive3 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 11:21:30 - BotWorld: -------------------------
+2022-09-27 11:21:30 - BotWorld: end
+2022-09-27 12:14:09 - 
+2022-09-27 12:14:09 - <b>MarketBotRunner 2.0.0/local</b>
+2022-09-27 12:14:09 - restServiceId:800571
+2022-09-27 12:14:09 - dateCreated:2022-09-27 12:14:09
+2022-09-27 12:14:09 - 
+2022-09-27 12:14:09 - <b>General</b>
+2022-09-27 12:14:09 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-27 12:14:09 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-27 12:14:09 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-27 12:14:09 - 
+2022-09-27 12:14:09 - <b>Markets</b>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-27 12:14:09 - 
+2022-09-27 12:14:09 - <b>Bots</b>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-27 12:14:09 - 
+2022-09-27 12:14:09 - <b>Bot Queues</b>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-27 12:14:09 - 
+2022-09-27 12:14:09 - <b>Bot Runs</b>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-27 12:14:09 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-27 12:14:09 - 
+2022-09-27 12:14:09 - <b>Tests</b>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-27 12:14:09 - 
+2022-09-27 12:14:09 - <b>Settings</b>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.marketTitle&settingsValue=VALUE">market.marketTitle</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.assetCount&settingsValue=VALUE">market.assetCount</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.quoteDecimals&settingsValue=VALUE">market.quoteDecimals</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.pollContentMaxAgeSeconds&settingsValue=VALUE">market.pollContentMaxAgeSeconds</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.reset&settingsValue=VALUE">market.reset</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.asset.quantity&settingsValue=VALUE">portfolio.asset.quantity</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.recover&settingsValue=VALUE">portfolio.recover</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-27 12:14:09 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-27 12:14:09 - Nano: Performance: ##########################
+2022-09-27 12:14:09 - Nano: Performance: Summary
+2022-09-27 12:14:09 - Nano: Performance: persistence.pdoQuery costSum:0.3054 count:137
+2022-09-27 12:14:09 - Nano: Performance: ##########################
+2022-09-27 12:14:18 - 
+2022-09-27 12:14:18 - <b>MarketBotRunner 2.0.0/local</b>
+2022-09-27 12:14:18 - restServiceId:245060
+2022-09-27 12:14:18 - dateCreated:2022-09-27 12:14:18
+2022-09-27 12:14:18 - 
+2022-09-27 12:14:18 - <b>General</b>
+2022-09-27 12:14:18 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-27 12:14:18 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-27 12:14:18 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-27 12:14:18 - 
+2022-09-27 12:14:18 - <b>Markets</b>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-27 12:14:18 - 
+2022-09-27 12:14:18 - <b>Bots</b>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-27 12:14:18 - 
+2022-09-27 12:14:18 - <b>Bot Queues</b>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-27 12:14:18 - 
+2022-09-27 12:14:18 - <b>Bot Runs</b>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-27 12:14:18 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-27 12:14:18 - 
+2022-09-27 12:14:18 - <b>Tests</b>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-27 12:14:18 - 
+2022-09-27 12:14:18 - <b>Settings</b>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.marketTitle&settingsValue=VALUE">market.marketTitle</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.assetCount&settingsValue=VALUE">market.assetCount</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.quoteDecimals&settingsValue=VALUE">market.quoteDecimals</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.pollContentMaxAgeSeconds&settingsValue=VALUE">market.pollContentMaxAgeSeconds</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.reset&settingsValue=VALUE">market.reset</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.asset.quantity&settingsValue=VALUE">portfolio.asset.quantity</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.recover&settingsValue=VALUE">portfolio.recover</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-27 12:14:18 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-27 12:14:25 - 
+2022-09-27 12:14:25 - <b>MarketBotRunner 2.0.0/local</b>
+2022-09-27 12:14:25 - restServiceId:980465
+2022-09-27 12:14:25 - dateCreated:2022-09-27 12:14:25
+2022-09-27 12:14:25 - 
+2022-09-27 12:14:25 - <b>General</b>
+2022-09-27 12:14:25 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-27 12:14:25 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-27 12:14:25 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-27 12:14:25 - 
+2022-09-27 12:14:25 - <b>Markets</b>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-27 12:14:25 - 
+2022-09-27 12:14:25 - <b>Bots</b>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-27 12:14:25 - 
+2022-09-27 12:14:25 - <b>Bot Queues</b>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-27 12:14:25 - 
+2022-09-27 12:14:25 - <b>Bot Runs</b>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-27 12:14:25 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-27 12:14:25 - 
+2022-09-27 12:14:25 - <b>Tests</b>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-27 12:14:25 - 
+2022-09-27 12:14:25 - <b>Settings</b>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.marketTitle&settingsValue=VALUE">market.marketTitle</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.assetCount&settingsValue=VALUE">market.assetCount</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.quoteDecimals&settingsValue=VALUE">market.quoteDecimals</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.pollContentMaxAgeSeconds&settingsValue=VALUE">market.pollContentMaxAgeSeconds</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.reset&settingsValue=VALUE">market.reset</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.asset.quantity&settingsValue=VALUE">portfolio.asset.quantity</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.recover&settingsValue=VALUE">portfolio.recover</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-27 12:14:25 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-27 12:14:25 - Nano: Performance: ##########################
+2022-09-27 12:14:25 - Nano: Performance: Summary
+2022-09-27 12:14:25 - Nano: Performance: persistence.pdoQuery costSum:0.1919 count:137
+2022-09-27 12:14:25 - Nano: Performance: ##########################
+2022-09-27 12:14:51 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 12:14:51 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 12:14:51 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 12:14:51 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28941 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 12:14:51 - BotArena: botArenaId:cryptosLiveArena beat: 28941 msg: market not ready
+2022-09-27 12:14:51 - BotWorld: -------------------------
+2022-09-27 12:14:51 - BotWorld: end
+2022-09-27 12:14:51 - Nano: Performance: ##########################
+2022-09-27 12:14:51 - Nano: Performance: Summary
+2022-09-27 12:14:51 - Nano: Performance: botArena.run.A costSum:0.0513 count:1
+2022-09-27 12:14:51 - Nano: Performance: persistence.pdoQuery costSum:0.0443 count:173
+2022-09-27 12:14:51 - Nano: Performance: botArena.run.B costSum:0.0698 count:1
+2022-09-27 12:14:51 - Nano: Performance: yfMarket.assetQuote costSum:0.0381 count:29
+2022-09-27 12:14:51 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0424 count:1
+2022-09-27 12:14:51 - Nano: Performance: botArena.run costSum:0.1644 count:1
+2022-09-27 12:14:51 - Nano: Performance: ##########################
+2022-09-27 12:15:56 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 12:15:56 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 12:15:56 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 12:15:56 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28943 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 12:16:03 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive1 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0.0000000000
+2022-09-27 12:16:11 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive2 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0.0000000000
+2022-09-27 12:16:11 - 15
+2022-09-27 12:17:21 - Trader:botLive1 Portfolio [LUNA1-USD:54,112,822.00 USD:84,904.00] portfolioValuation:100,104.15
+2022-09-27 12:17:21 - Trader:botLive2 Portfolio [LUNA1-USD:54,112,822.00 USD:84,904.00] portfolioValuation:100,104.15
+2022-09-27 12:17:21 - Trader:botLive3 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 12:17:21 - BotWorld: -------------------------
+2022-09-27 12:17:21 - BotWorld: end
+2022-09-27 12:17:21 - Nano: Performance: ##########################
+2022-09-27 12:17:21 - Nano: Performance: Summary
+2022-09-27 12:17:21 - Nano: Performance: botArena.run.A costSum:0.0380 count:1
+2022-09-27 12:17:21 - Nano: Performance: persistence.pdoQuery costSum:84.9676 count:300383
+2022-09-27 12:17:21 - Nano: Performance: yfMarket.assetQuote costSum:77.6976 count:725
+2022-09-27 12:17:21 - Nano: Performance: dsTrader.trade costSum:14.8535 count:5
+2022-09-27 12:17:21 - Nano: Performance: marketStats.onBeat.cryptosLiveArenaMarket costSum:69.9886 count:5
+2022-09-27 12:17:21 - Nano: Performance: yfMarket.observeAll costSum:70.0808 count:1
+2022-09-27 12:17:21 - Nano: Performance: botArena.run.B costSum:84.9706 count:1
+2022-09-27 12:17:21 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0192 count:1
+2022-09-27 12:17:21 - Nano: Performance: botArena.run.C costSum:0.0257 count:1
+2022-09-27 12:17:21 - Nano: Performance: botArena.run costSum:85.0343 count:1
+2022-09-27 12:17:21 - Nano: Performance: ##########################
+2022-09-27 12:39:12 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 12:39:12 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 12:39:12 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 12:39:12 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28943 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 12:39:12 - BotArena: botArenaId:cryptosLiveArena beat: 28943 msg: market not ready
+2022-09-27 12:39:12 - BotWorld: -------------------------
+2022-09-27 12:39:12 - BotWorld: end
+2022-09-27 12:39:12 - Nano: Performance: ##########################
+2022-09-27 12:39:12 - Nano: Performance: Summary
+2022-09-27 12:39:12 - Nano: Performance: botArena.run.A costSum:0.0568 count:1
+2022-09-27 12:39:12 - Nano: Performance: persistence.pdoQuery costSum:0.0343 count:173
+2022-09-27 12:39:12 - Nano: Performance: botArena.run.B costSum:0.0640 count:1
+2022-09-27 12:39:12 - Nano: Performance: yfMarket.assetQuote costSum:0.0316 count:29
+2022-09-27 12:39:12 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0330 count:1
+2022-09-27 12:39:12 - Nano: Performance: botArena.run costSum:0.1546 count:1
+2022-09-27 12:39:12 - Nano: Performance: ##########################
+2022-09-27 12:40:59 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 12:40:59 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 12:40:59 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 12:40:59 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28945 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 12:41:07 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive1 assetId:DFI-USD msg: pickAssetIdByCicle assetId:DFI-USD cicle:-1.0000000000
+2022-09-27 12:41:15 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive2 assetId:DFI-USD msg: pickAssetIdByCicle assetId:DFI-USD cicle:-1.0000000000
+2022-09-27 12:41:15 - 15
+2022-09-27 12:41:58 - Trader:botLive1 Portfolio [LUNA1-USD:54,112,822.00 USD:84,904.00] portfolioValuation:100,050.43
+2022-09-27 12:41:58 - Trader:botLive2 Portfolio [LUNA1-USD:54,112,822.00 USD:84,904.00] portfolioValuation:100,050.43
+2022-09-27 12:41:58 - Trader:botLive3 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 12:41:58 - BotWorld: -------------------------
+2022-09-27 12:41:58 - BotWorld: end
+2022-09-27 12:41:58 - Nano: Performance: ##########################
+2022-09-27 12:41:58 - Nano: Performance: Summary
+2022-09-27 12:41:58 - Nano: Performance: botArena.run.A costSum:0.0357 count:1
+2022-09-27 12:41:58 - Nano: Performance: persistence.pdoQuery costSum:59.4121 count:299983
+2022-09-27 12:41:58 - Nano: Performance: persistence.msStatsScalar costSum:59.2617 count:10607
+2022-09-27 12:41:58 - Nano: Performance: yfMarket.assetQuote costSum:51.0939 count:725
+2022-09-27 12:41:58 - Nano: Performance: dsTrader.trade costSum:15.4987 count:5
+2022-09-27 12:41:58 - Nano: Performance: persistence.msStatsHistoryLastValue costSum:43.5628 count:599
+2022-09-27 12:41:58 - Nano: Performance: persistence.msStatsHistory costSum:43.6841 count:59999
+2022-09-27 12:41:58 - Nano: Performance: marketStats.onBeat.cryptosLiveArenaMarket costSum:43.8178 count:5
+2022-09-27 12:41:58 - Nano: Performance: yfMarket.observeAll costSum:43.8891 count:1
+2022-09-27 12:41:58 - Nano: Performance: botArena.run.B costSum:59.4337 count:1
+2022-09-27 12:41:58 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0171 count:1
+2022-09-27 12:41:58 - Nano: Performance: botArena.run.C costSum:0.0218 count:1
+2022-09-27 12:41:58 - Nano: Performance: botArena.run costSum:59.4913 count:1
+2022-09-27 12:41:58 - Nano: Performance: ##########################
+2022-09-27 21:30:14 - 
+2022-09-27 21:30:14 - <b>MarketBotRunner 2.0.0/local</b>
+2022-09-27 21:30:14 - restServiceId:202109
+2022-09-27 21:30:14 - dateCreated:2022-09-27 21:30:02
+2022-09-27 21:30:14 - 
+2022-09-27 21:30:14 - <b>General</b>
+2022-09-27 21:30:14 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-27 21:30:14 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-27 21:30:14 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-27 21:30:14 - 
+2022-09-27 21:30:14 - <b>Markets</b>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-27 21:30:14 - 
+2022-09-27 21:30:14 - <b>Bots</b>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-27 21:30:14 - 
+2022-09-27 21:30:14 - <b>Bot Queues</b>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-27 21:30:14 - 
+2022-09-27 21:30:14 - <b>Bot Runs</b>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-27 21:30:14 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-27 21:30:14 - 
+2022-09-27 21:30:14 - <b>Tests</b>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-27 21:30:14 - 
+2022-09-27 21:30:14 - <b>Settings</b>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.marketTitle&settingsValue=VALUE">market.marketTitle</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.assetCount&settingsValue=VALUE">market.assetCount</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.quoteDecimals&settingsValue=VALUE">market.quoteDecimals</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.pollContentMaxAgeSeconds&settingsValue=VALUE">market.pollContentMaxAgeSeconds</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.reset&settingsValue=VALUE">market.reset</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.asset.quantity&settingsValue=VALUE">portfolio.asset.quantity</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.recover&settingsValue=VALUE">portfolio.recover</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-27 21:30:14 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-27 21:30:14 - Nano: Performance: ##########################
+2022-09-27 21:30:14 - Nano: Performance: Summary
+2022-09-27 21:30:14 - Nano: Performance: persistence.pdoQuery costSum:11.5529 count:70861
+2022-09-27 21:30:14 - Nano: Performance: HMatrix.hydrate costSum:9.6287 count:35
+2022-09-27 21:30:14 - Nano: Performance: ##########################
+2022-09-27 21:30:52 - 
+2022-09-27 21:30:52 - <b>MarketBotRunner 2.0.0/local</b>
+2022-09-27 21:30:52 - restServiceId:345768
+2022-09-27 21:30:52 - dateCreated:2022-09-27 21:30:44
+2022-09-27 21:30:52 - 
+2022-09-27 21:30:52 - <b>General</b>
+2022-09-27 21:30:52 - <a href="/BotArenaWeb/index.php">Bot Arena Web</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/tester.php">Bot Runner Tester</a>
+2022-09-27 21:30:52 - <a href="/MarketPollWeb/tester.php">Market Poll Tester</a>
+2022-09-27 21:30:52 - <a href="/MarketPollWeb/index.php">Market Poll main</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=killDISABLED">kill</a>
+2022-09-27 21:30:52 - 
+2022-09-27 21:30:52 - <b>Markets</b>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenasAsCsv&live=true">botArenaAsCsv</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketSettingsAsCsv&botArenaId=">marketSettingsAsCsv</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketScheduleAsCsv&botArenaId=">marketScheduleAsCsv</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketQuotes&botArenaId=">marketQuotes</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=marketLastQuotesAsCsv&botArenaId=">marketLastQuotesAsCsv</a>
+2022-09-27 21:30:52 - 
+2022-09-27 21:30:52 - <b>Bots</b>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botArenaTradersAsCsv&botArenaId=">botArenaTradersAsCsv</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=botSuggestionsAsCsv&botArenaId=&traderId=">botSuggestionsAsCsv</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderPortfolioAsCsv&botArenaId=">traderPortfolioAsCsv</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpCancel&botArenaId=&traderId=&queueId=1">tradeOpCancel</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=tradeOpAccept&botArenaId=&traderId=&queueId=1">tradeOpAccept</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSuspend&botArenaId=&traderId=">traderSuspend</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderResume&botArenaId=&traderId=">traderResume</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderSettingsAsCsv&botArenaId=&traderId=">traderSettingsAsCsv</a>
+2022-09-27 21:30:52 - 
+2022-09-27 21:30:52 - <b>Bot Queues</b>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueuePendingAsCsv&botArenaId=&traderId=">traderQueuePendingAsCsv</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueDoneAsCsv</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderQueueDoneAsCsv&botArenaId=&traderId=">traderQueueCancelledCsv</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsAsCsv&botArenaId=&traderId=">traderStatsAsCsv</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsMediumAsCsv&botArenaId=&traderId=">traderStatsMediumAsCsv</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?q=traderStatsLongAsCsv&botArenaId=&traderId=">traderStatsLongAsCsv</a>
+2022-09-27 21:30:52 - 
+2022-09-27 21:30:52 - <b>Bot Runs</b>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=1&botArenaId=&q=run">run</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=20&botArenaId=&q=run">runx20</a>
+2022-09-27 21:30:52 - <a href="http://local.t.trurl.xnan.click/MarketBotRunnerWeb/index.php?beats=100&q=run">runx100</a>
+2022-09-27 21:30:52 - 
+2022-09-27 21:30:52 - <b>Tests</b>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/sanityTest.php">sanityTest</a>
+2022-09-27 21:30:52 - 
+2022-09-27 21:30:52 - <b>Settings</b>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=botWorld.run&settingsValue=VALUE">botWorld.run</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.marketTitle&settingsValue=VALUE">market.marketTitle</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.assetCount&settingsValue=VALUE">market.assetCount</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.quoteDecimals&settingsValue=VALUE">market.quoteDecimals</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.pollContentMaxAgeSeconds&settingsValue=VALUE">market.pollContentMaxAgeSeconds</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=market.reset&settingsValue=VALUE">market.reset</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.asset.quantity&settingsValue=VALUE">portfolio.asset.quantity</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=portfolio.recover&settingsValue=VALUE">portfolio.recover</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.traderTitle&settingsValue=VALUE">marketTrader.traderTitle</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minFlushBeats&settingsValue=VALUE">marketTrader.minFlushBeats</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyUnits&settingsValue=VALUE">marketTrader.settingBuyUnits</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.settingBuyMinimum&settingsValue=VALUE">marketTrader.settingBuyMinimum</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.minEarn&settingsValue=VALUE">marketTrader.minEarn</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.autoCancelBuyBeats&settingsValue=VALUE">marketTrader.autoCancelBuyBeats</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketOpen&settingsValue=VALUE">marketTrader.dailyWaitFromMarketOpen</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.dailyWaitFromMarketClose&settingsValue=VALUE">marketTrader.dailyWaitFromMarketClose</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.telegramChatId&settingsValue=VALUE">marketTrader.telegramChatId</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.notificationsEnabled&settingsValue=VALUE">marketTrader.notificationsEnabled</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=marketTrader.recover&settingsValue=VALUE">marketTrader.recover</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeats&settingsValue=VALUE">dsMarketTrader.waitBeats</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxAssetPercentage&settingsValue=VALUE">dsMarketTrader.maxAssetPercentage</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.waitBeatsForAssetRepeat&settingsValue=VALUE">dsMarketTrader.waitBeatsForAssetRepeat</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.marketStats.maxHistoryBeats&settingsValue=VALUE">dsMarketTrader.marketStats.maxHistoryBeats</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyCicleCut&settingsValue=VALUE">dsMarketTrader.buyCicleCut</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.sellCicleCut&settingsValue=VALUE">dsMarketTrader.sellCicleCut</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.maxBuySuggestions&settingsValue=VALUE">dsMarketTrader.maxBuySuggestions</a>
+2022-09-27 21:30:52 - <a href="/MarketBotRunnerWeb/index.php?q=worldSettingsChangeDISABLED&settingsKey=dsMarketTrader.buyLimitFactor&settingsValue=VALUE">dsMarketTrader.buyLimitFactor</a>
+2022-09-27 21:30:52 - Nano: Performance: ##########################
+2022-09-27 21:30:52 - Nano: Performance: Summary
+2022-09-27 21:30:52 - Nano: Performance: persistence.pdoQuery costSum:7.5641 count:46061
+2022-09-27 21:30:52 - Nano: Performance: HMatrix.hydrate costSum:6.8287 count:35
+2022-09-27 21:30:52 - Nano: Performance: ##########################
+2022-09-27 21:31:25 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 21:31:25 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 21:31:25 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 21:31:25 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28949 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 21:31:25 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive1 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0
+2022-09-27 21:31:26 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive2 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0
+2022-09-27 21:31:26 - 15
+2022-09-27 21:36:50 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 21:36:50 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 21:36:50 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 21:36:50 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28949 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 21:36:50 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive1 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0
+2022-09-27 21:36:50 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive2 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0
+2022-09-27 21:36:50 - 15
+2022-09-27 21:37:38 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 21:37:38 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 21:37:38 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 21:37:38 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28949 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 21:37:38 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive1 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0
+2022-09-27 21:37:39 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive2 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0
+2022-09-27 21:37:39 - 15
+2022-09-27 21:38:29 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 21:38:29 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 21:38:29 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 21:38:29 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28949 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 21:38:29 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive1 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0
+2022-09-27 21:38:29 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive2 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0
+2022-09-27 21:38:29 - 15
+2022-09-27 21:39:26 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 21:39:26 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 21:39:26 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 21:39:27 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28949 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 21:39:27 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive1 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0
+2022-09-27 21:39:27 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive2 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0
+2022-09-27 21:39:27 - 15
+2022-09-27 22:18:48 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 22:18:48 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 22:18:48 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 22:18:48 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28949 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 22:18:48 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive1 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0
+2022-09-27 22:18:48 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive2 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0
+2022-09-27 22:18:48 - 15
+2022-09-27 22:20:46 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 22:20:46 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 22:20:46 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 22:20:46 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28949 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 22:20:46 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive1 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0
+2022-09-27 22:20:46 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive2 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0
+2022-09-27 22:20:46 - 15
+2022-09-27 22:20:48 - Trader:botLive1 Portfolio [DFI-USD:19,465.00 LUNA1-USD:54,112,822.00 USD:70,718.00] portfolioValuation:99,950.78
+2022-09-27 22:20:48 - Trader:botLive2 Portfolio [DFI-USD:19,465.00 LUNA1-USD:54,112,822.00 USD:70,718.00] portfolioValuation:99,950.78
+2022-09-27 22:20:48 - Trader:botLive3 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 22:20:48 - BotWorld: -------------------------
+2022-09-27 22:20:48 - BotWorld: end
+2022-09-27 22:20:48 - Nano: Performance: ##########################
+2022-09-27 22:20:48 - Nano: Performance: Summary
+2022-09-27 22:20:48 - Nano: Performance: botArena.run.A costSum:0.0476 count:1
+2022-09-27 22:20:48 - Nano: Performance: persistence.pdoQuery costSum:1.6417 count:15657
+2022-09-27 22:20:48 - Nano: Performance: yfMarket.assetQuote costSum:1.5418 count:369
+2022-09-27 22:20:48 - Nano: Performance: dsTrader.trade costSum:0.2415 count:5
+2022-09-27 22:20:48 - Nano: Performance: HMatrix.dehydrate costSum:0.0033 count:3
+2022-09-27 22:20:48 - Nano: Performance: marketStats.onBeat.cryptosLiveArenaMarket costSum:1.3010 count:1
+2022-09-27 22:20:48 - Nano: Performance: yfMarket.observeAll costSum:1.3544 count:1
+2022-09-27 22:20:48 - Nano: Performance: botArena.run.B costSum:1.6438 count:1
+2022-09-27 22:20:48 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0324 count:1
+2022-09-27 22:20:48 - Nano: Performance: botArena.run.C costSum:0.0424 count:1
+2022-09-27 22:20:48 - Nano: Performance: botArena.run costSum:1.7338 count:1
+2022-09-27 22:20:48 - Nano: Performance: ##########################
+2022-09-27 22:21:50 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 22:21:50 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 22:21:50 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 22:21:50 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28949 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 22:21:50 - BotArena: botArenaId:cryptosLiveArena beat: 28949 msg: market not ready
+2022-09-27 22:21:50 - BotWorld: -------------------------
+2022-09-27 22:21:50 - BotWorld: end
+2022-09-27 22:21:50 - Nano: Performance: ##########################
+2022-09-27 22:21:50 - Nano: Performance: Summary
+2022-09-27 22:21:50 - Nano: Performance: botArena.run.A costSum:0.0287 count:1
+2022-09-27 22:21:50 - Nano: Performance: persistence.pdoQuery costSum:0.0485 count:225
+2022-09-27 22:21:50 - Nano: Performance: botArena.run.B costSum:0.0536 count:1
+2022-09-27 22:21:50 - Nano: Performance: yfMarket.assetQuote costSum:0.0425 count:41
+2022-09-27 22:21:50 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0468 count:1
+2022-09-27 22:21:50 - Nano: Performance: botArena.run costSum:0.1301 count:1
+2022-09-27 22:21:50 - Nano: Performance: ##########################
+2022-09-27 22:22:04 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 22:22:04 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 22:22:04 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 22:22:04 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28949 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 22:22:04 - BotArena: botArenaId:cryptosLiveArena beat: 28949 msg: market not ready
+2022-09-27 22:22:04 - BotWorld: -------------------------
+2022-09-27 22:22:04 - BotWorld: end
+2022-09-27 22:22:04 - Nano: Performance: ##########################
+2022-09-27 22:22:04 - Nano: Performance: Summary
+2022-09-27 22:22:04 - Nano: Performance: botArena.run.A costSum:0.0485 count:1
+2022-09-27 22:22:04 - Nano: Performance: persistence.pdoQuery costSum:0.0312 count:225
+2022-09-27 22:22:04 - Nano: Performance: botArena.run.B costSum:0.0349 count:1
+2022-09-27 22:22:04 - Nano: Performance: yfMarket.assetQuote costSum:0.0281 count:41
+2022-09-27 22:22:04 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0298 count:1
+2022-09-27 22:22:04 - Nano: Performance: botArena.run costSum:0.1138 count:1
+2022-09-27 22:22:04 - Nano: Performance: ##########################
+2022-09-27 22:23:13 - BotWorld: run beats:1 botArenaId:cryptosLiveArena botArenaCount:3
+2022-09-27 22:23:13 - BotWorld: botArenaId: cryptosLiveArena run
+2022-09-27 22:23:13 - BotArena: botArenaId:cryptosLiveArena run
+2022-09-27 22:23:13 - BotArena: botArenaId:cryptosLiveArena initial status marketBeat:28951 marketClazz:xnan\Trurl\Horus\Market\YahooFinanceMarket beats:1
+2022-09-27 22:23:14 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive1 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0
+2022-09-27 22:23:14 - dsTrader: marketId:cryptosLiveArenaMarket traderId:botLive2 assetId:VLX-USD msg: pickAssetIdByCicle assetId:VLX-USD cicle:0
+2022-09-27 22:23:14 - 15
+2022-09-27 22:23:15 - Trader:botLive1 Portfolio [DFI-USD:19,465.00 LUNA1-USD:54,112,822.00 USD:70,718.00] portfolioValuation:99,668.34
+2022-09-27 22:23:15 - Trader:botLive2 Portfolio [DFI-USD:19,465.00 LUNA1-USD:54,112,822.00 USD:70,718.00] portfolioValuation:99,668.34
+2022-09-27 22:23:15 - Trader:botLive3 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 22:23:15 - BotWorld: -------------------------
+2022-09-27 22:23:15 - BotWorld: end
+2022-09-27 22:23:15 - Nano: Performance: ##########################
+2022-09-27 22:23:15 - Nano: Performance: Summary
+2022-09-27 22:23:15 - Nano: Performance: botArena.run.A costSum:0.0364 count:1
+2022-09-27 22:23:15 - Nano: Performance: persistence.pdoQuery costSum:1.8212 count:15589
+2022-09-27 22:23:15 - Nano: Performance: yfMarket.assetQuote costSum:1.7113 count:357
+2022-09-27 22:23:15 - Nano: Performance: dsTrader.trade costSum:0.2494 count:5
+2022-09-27 22:23:15 - Nano: Performance: HMatrix.dehydrate costSum:0.0045 count:3
+2022-09-27 22:23:15 - Nano: Performance: marketStats.onBeat.cryptosLiveArenaMarket costSum:1.4551 count:1
+2022-09-27 22:23:15 - Nano: Performance: yfMarket.observeAll costSum:1.5076 count:1
+2022-09-27 22:23:15 - Nano: Performance: botArena.run.B costSum:1.8082 count:1
+2022-09-27 22:23:15 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0508 count:1
+2022-09-27 22:23:15 - Nano: Performance: botArena.run.C costSum:0.0613 count:1
+2022-09-27 22:23:15 - Nano: Performance: botArena.run costSum:1.9059 count:1
+2022-09-27 22:23:15 - Nano: Performance: ##########################
+2022-09-27 22:34:58 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-27 22:34:58 - BotWorld: botArenaId: mathArena run
+2022-09-27 22:34:58 - BotArena: botArenaId:mathArena run
+2022-09-27 22:34:58 - BotArena: botArenaId:mathArena initial status marketBeat:0 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-27 22:34:58 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-27 22:34:58 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 22:34:58 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:97,657.52
+2022-09-27 22:34:58 - BotWorld: -------------------------
+2022-09-27 22:34:58 - BotWorld: end
+2022-09-27 22:34:58 - Nano: Performance: ##########################
+2022-09-27 22:34:58 - Nano: Performance: Summary
+2022-09-27 22:34:58 - Nano: Performance: persistence.pdoQuery costSum:0.2459 count:1161
+2022-09-27 22:34:58 - Nano: Performance: botArena.run.A costSum:0.0008 count:1
+2022-09-27 22:34:58 - Nano: Performance: dsTrader.trade costSum:0.0464 count:3
+2022-09-27 22:34:58 - Nano: Performance: HMatrix.dehydrate costSum:0.0021 count:3
+2022-09-27 22:34:58 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:0.1482 count:1
+2022-09-27 22:34:58 - Nano: Performance: market.observeAll costSum:0.1527 count:1
+2022-09-27 22:34:58 - Nano: Performance: botArena.run.B costSum:0.2192 count:1
+2022-09-27 22:34:58 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0209 count:1
+2022-09-27 22:34:58 - Nano: Performance: botArena.run.C costSum:0.0259 count:1
+2022-09-27 22:34:58 - Nano: Performance: botArena.run costSum:0.2460 count:1
+2022-09-27 22:34:58 - Nano: Performance: ##########################
+2022-09-27 22:36:48 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-27 22:36:48 - BotWorld: botArenaId: mathArena run
+2022-09-27 22:36:48 - BotArena: botArenaId:mathArena run
+2022-09-27 22:36:48 - BotArena: botArenaId:mathArena initial status marketBeat:1 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-27 22:36:53 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-27 22:36:54 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-27 22:36:54 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:97,640.56
+2022-09-27 22:36:54 - BotWorld: -------------------------
+2022-09-27 22:36:54 - BotWorld: end
+2022-09-27 22:36:54 - Nano: Performance: ##########################
+2022-09-27 22:36:54 - Nano: Performance: Summary
+2022-09-27 22:36:54 - Nano: Performance: persistence.pdoQuery costSum:5.5584 count:42581
+2022-09-27 22:36:54 - Nano: Performance: botArena.run.A costSum:0.0007 count:1
+2022-09-27 22:36:54 - Nano: Performance: dsTrader.trade costSum:4.3659 count:3
+2022-09-27 22:36:54 - Nano: Performance: HMatrix.hydrate costSum:5.1685 count:123
+2022-09-27 22:36:54 - Nano: Performance: HMatrix.dehydrate costSum:0.7948 count:11
+2022-09-27 22:36:54 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:0.9806 count:5
+2022-09-27 22:36:54 - Nano: Performance: market.observeAll costSum:1.1698 count:1
+2022-09-27 22:36:54 - Nano: Performance: botArena.run.B costSum:5.5410 count:1
+2022-09-27 22:36:54 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0135 count:1
+2022-09-27 22:36:54 - Nano: Performance: botArena.run.C costSum:0.0167 count:1
+2022-09-27 22:36:54 - Nano: Performance: botArena.run costSum:5.5584 count:1
+2022-09-27 22:36:54 - Nano: Performance: ##########################
+2022-09-28 10:05:06 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:05:06 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:05:06 - BotArena: botArenaId:mathArena run
+2022-09-28 10:05:06 - BotArena: botArenaId:mathArena initial status marketBeat:2 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:05:10 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:05:12 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:05:12 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:97,618.19
+2022-09-28 10:05:12 - BotWorld: -------------------------
+2022-09-28 10:05:12 - BotWorld: end
+2022-09-28 10:05:12 - Nano: Performance: ##########################
+2022-09-28 10:05:12 - Nano: Performance: Summary
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery costSum:5.3922 count:42629
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT * FROM market WHERE marketId='mathArenaMarket' costSum:5.3911 count:227
+2022-09-28 10:05:12 - Nano: Performance: botArena.run.A costSum:0.0008 count:1
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT * 
+			FROM marketTrader t
+			INNER JOIN divideAndScaleMarketTrader ds 
+				ON t.botArenaId=ds.botArenaId AND t.traderId=ds.traderId
+			WHERE 
+				t.traderId='botMath1' AND
+				t.botArenaId='mathArena'
+		 costSum:0.0041 count:9
+2022-09-28 10:05:12 - Nano: Performance: dsTrader.trade costSum:4.1650 count:3
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT * FROM assetTradeOrder as o						
+							WHERE botArenaId='mathArena' 
+								AND traderId='botMath1' costSum:0.0518 count:3
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT * 
+			FROM marketTrader t
+			WHERE 
+				t.traderId='botMath1' AND
+				t.botArenaId='mathArena'
+		 costSum:0.0110 count:15
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT * 
+			FROM marketTrader t
+			INNER JOIN divideAndScaleMarketTrader ds 
+				ON t.botArenaId=ds.botArenaId AND t.traderId=ds.traderId
+			WHERE 
+				t.traderId='botMath2' AND
+				t.botArenaId='mathArena'
+		 costSum:4.1001 count:13
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT * FROM assetTradeOrder as o						
+							WHERE botArenaId='mathArena' 
+								AND traderId='botMath2' costSum:4.1007 count:17
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathShort` (
+			`endBeat` BIGINT(20) NULL DEFAULT NULL,
+			`maxHistoryBeats` INT(11) NULL DEFAULT NULL,
+			`synchedBeat` BIGINT(20) NULL DEFAULT NULL,
+			`beatMultiplier` INT(11) NULL DEFAULT NULL			
+			)
+				COLLATE='utf8mb4_general_ci'
+				ENGINE=InnoDB
+			 costSum:4.1305 count:115
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathShortLog` (
+			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+			`statsDim` INT(11) NOT NULL,
+			`historyIndex` INT(11) NULL DEFAULT NULL,
+			`statsValue` DECIMAL(20,10) NULL DEFAULT NULL,
+			INDEX `StatsHistoryAllIdx` (`assetId`, `statsDim`) USING HASH,
+			INDEX `StatsScalarAndHistoryIdx` (`assetId`, `statsDim`, `historyIndex`) USING HASH
+		)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB costSum:4.1308 count:57
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathShort costSum:4.1488 count:57
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathShort(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:4.1288 count:57
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathShort costSum:4.5260 count:36617
+2022-09-28 10:05:12 - Nano: Performance: HMatrix.hydrate costSum:4.8635 count:123
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT DISTINCT(assetId) FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath2Portfolio'
+			 costSum:1.2345 count:9
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath2Portfolio' AND
+				 assetId='CC4'
+				 GROUP By
+				 	portfolioId,assetId
+			 costSum:1.2335 count:9
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath2Portfolio' AND
+				 assetId='CC5'
+				 GROUP By
+				 	portfolioId,assetId
+			 costSum:1.2329 count:11
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath2Portfolio' AND
+				 assetId='USD'
+				 GROUP By
+				 	portfolioId,assetId
+			 costSum:1.2331 count:13
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath2Portfolio'
+				GROUP BY
+					portfolioId,assetId
+			 costSum:1.2315 count:5
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT * 
+			FROM marketTrader t
+			WHERE 
+				t.traderId='botMath2' AND
+				t.botArenaId='mathArena'
+		 costSum:0.0118 count:51
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.UPDATE market SET beat=3 WHERE marketId='mathArenaMarket' costSum:0.0236 count:1
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathShort SET endBeat=3 costSum:0.0063 count:1
+2022-09-28 10:05:12 - Nano: Performance: HMatrix.dehydrate costSum:0.7510 count:11
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathShort SET synchedBeat=3 costSum:0.0078 count:1
+2022-09-28 10:05:12 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:0.9085 count:5
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathLong` (
+			`endBeat` BIGINT(20) NULL DEFAULT NULL,
+			`maxHistoryBeats` INT(11) NULL DEFAULT NULL,
+			`synchedBeat` BIGINT(20) NULL DEFAULT NULL,
+			`beatMultiplier` INT(11) NULL DEFAULT NULL			
+			)
+				COLLATE='utf8mb4_general_ci'
+				ENGINE=InnoDB
+			 costSum:0.0004 count:3
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathLongLog` (
+			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+			`statsDim` INT(11) NOT NULL,
+			`historyIndex` INT(11) NULL DEFAULT NULL,
+			`statsValue` DECIMAL(20,10) NULL DEFAULT NULL,
+			INDEX `StatsHistoryAllIdx` (`assetId`, `statsDim`) USING HASH,
+			INDEX `StatsScalarAndHistoryIdx` (`assetId`, `statsDim`, `historyIndex`) USING HASH
+		)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB costSum:0.0005 count:1
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathLong costSum:0.0057 count:1
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathLong(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0085 count:1
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathLong costSum:0.3005 count:2625
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathLong SET endBeat=3 costSum:0.0081 count:1
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathLong SET synchedBeat=3 costSum:0.0076 count:1
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathMedium` (
+			`endBeat` BIGINT(20) NULL DEFAULT NULL,
+			`maxHistoryBeats` INT(11) NULL DEFAULT NULL,
+			`synchedBeat` BIGINT(20) NULL DEFAULT NULL,
+			`beatMultiplier` INT(11) NULL DEFAULT NULL			
+			)
+				COLLATE='utf8mb4_general_ci'
+				ENGINE=InnoDB
+			 costSum:0.0006 count:3
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathMediumLog` (
+			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+			`statsDim` INT(11) NOT NULL,
+			`historyIndex` INT(11) NULL DEFAULT NULL,
+			`statsValue` DECIMAL(20,10) NULL DEFAULT NULL,
+			INDEX `StatsHistoryAllIdx` (`assetId`, `statsDim`) USING HASH,
+			INDEX `StatsScalarAndHistoryIdx` (`assetId`, `statsDim`, `historyIndex`) USING HASH
+		)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB costSum:0.0008 count:1
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathMedium costSum:0.0062 count:1
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathMedium(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0084 count:1
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathMedium costSum:0.3753 count:2625
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathMedium SET endBeat=3 costSum:0.0244 count:1
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathMedium SET synchedBeat=3 costSum:0.0066 count:1
+2022-09-28 10:05:12 - Nano: Performance: market.observeAll costSum:1.1710 count:1
+2022-09-28 10:05:12 - Nano: Performance: botArena.run.B costSum:5.3454 count:1
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT DISTINCT(assetId) FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath1Portfolio'
+			 costSum:0.0098 count:7
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath1Portfolio' AND
+				 assetId='USD'
+				 GROUP By
+				 	portfolioId,assetId
+			 costSum:0.0094 count:7
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT * 
+			FROM portfolio p
+			WHERE 
+				p.portfolioId='botMath1Portfolio'				
+		 costSum:0.0022 count:9
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT * 
+			FROM portfolio p
+			WHERE 
+				p.portfolioId='botMath2Portfolio'				
+		 costSum:0.0048 count:13
+2022-09-28 10:05:12 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0097 count:1
+2022-09-28 10:05:12 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath1Portfolio'
+				GROUP BY
+					portfolioId,assetId
+			 costSum:0.0003 count:1
+2022-09-28 10:05:12 - Nano: Performance: botArena.run.C costSum:0.0462 count:1
+2022-09-28 10:05:12 - Nano: Performance: botArena.run costSum:5.3923 count:1
+2022-09-28 10:05:12 - Nano: Performance: ##########################
+2022-09-28 10:09:46 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:09:46 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:09:46 - BotArena: botArenaId:mathArena run
+2022-09-28 10:09:46 - BotArena: botArenaId:mathArena initial status marketBeat:3 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:09:50 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:09:51 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:09:51 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:97,590.46
+2022-09-28 10:09:51 - BotWorld: -------------------------
+2022-09-28 10:09:51 - BotWorld: end
+2022-09-28 10:09:51 - Nano: Performance: ##########################
+2022-09-28 10:09:51 - Nano: Performance: Summary
+2022-09-28 10:09:51 - Nano: Performance: persistence.pdoQuery costSum:4.8431 count:42629
+2022-09-28 10:09:51 - Nano: Performance: botArena.run.A costSum:0.0002 count:1
+2022-09-28 10:09:51 - Nano: Performance: dsTrader.trade costSum:3.7699 count:3
+2022-09-28 10:09:51 - Nano: Performance: HMatrix.hydrate costSum:4.4110 count:123
+2022-09-28 10:09:51 - Nano: Performance: HMatrix.dehydrate costSum:0.7438 count:11
+2022-09-28 10:09:51 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:0.9085 count:5
+2022-09-28 10:09:51 - Nano: Performance: market.observeAll costSum:1.0424 count:1
+2022-09-28 10:09:51 - Nano: Performance: botArena.run.B costSum:4.8237 count:1
+2022-09-28 10:09:51 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0154 count:1
+2022-09-28 10:09:51 - Nano: Performance: botArena.run.C costSum:0.0192 count:1
+2022-09-28 10:09:51 - Nano: Performance: botArena.run costSum:4.8432 count:1
+2022-09-28 10:09:51 - Nano: Performance: ##########################
+2022-09-28 10:10:45 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:10:45 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:10:45 - BotArena: botArenaId:mathArena run
+2022-09-28 10:10:45 - BotArena: botArenaId:mathArena initial status marketBeat:4 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:10:49 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:10:50 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:10:50 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:97,557.44
+2022-09-28 10:10:50 - BotWorld: -------------------------
+2022-09-28 10:10:50 - BotWorld: end
+2022-09-28 10:10:50 - Nano: Performance: ##########################
+2022-09-28 10:10:50 - Nano: Performance: Summary
+2022-09-28 10:10:50 - Nano: Performance: persistence.pdoQuery costSum:5.1173 count:42629
+2022-09-28 10:10:50 - Nano: Performance: botArena.run.A costSum:0.0008 count:1
+2022-09-28 10:10:50 - Nano: Performance: dsTrader.trade costSum:4.1656 count:3
+2022-09-28 10:10:50 - Nano: Performance: HMatrix.hydrate costSum:4.7181 count:123
+2022-09-28 10:10:50 - Nano: Performance: HMatrix.dehydrate costSum:0.6216 count:11
+2022-09-28 10:10:50 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:0.7692 count:5
+2022-09-28 10:10:50 - Nano: Performance: market.observeAll costSum:0.9212 count:1
+2022-09-28 10:10:50 - Nano: Performance: botArena.run.B costSum:5.0963 count:1
+2022-09-28 10:10:50 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0157 count:1
+2022-09-28 10:10:50 - Nano: Performance: botArena.run.C costSum:0.0203 count:1
+2022-09-28 10:10:50 - Nano: Performance: botArena.run costSum:5.1174 count:1
+2022-09-28 10:10:50 - Nano: Performance: ##########################
+2022-09-28 10:11:41 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:11:41 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:11:41 - BotArena: botArenaId:mathArena run
+2022-09-28 10:11:41 - BotArena: botArenaId:mathArena initial status marketBeat:5 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:11:46 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:11:47 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:11:47 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:97,519.21
+2022-09-28 10:11:47 - BotWorld: -------------------------
+2022-09-28 10:11:47 - BotWorld: end
+2022-09-28 10:11:47 - Nano: Performance: ##########################
+2022-09-28 10:11:47 - Nano: Performance: Summary
+2022-09-28 10:11:47 - Nano: Performance: persistence.pdoQuery costSum:6.8441 count:42629
+2022-09-28 10:11:47 - Nano: Performance: botArena.run.A costSum:0.0005 count:1
+2022-09-28 10:11:47 - Nano: Performance: dsTrader.trade costSum:4.9562 count:3
+2022-09-28 10:11:47 - Nano: Performance: HMatrix.hydrate costSum:6.4334 count:123
+2022-09-28 10:11:47 - Nano: Performance: HMatrix.dehydrate costSum:0.7730 count:11
+2022-09-28 10:11:47 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:1.0935 count:5
+2022-09-28 10:11:47 - Nano: Performance: market.observeAll costSum:1.8195 count:1
+2022-09-28 10:11:47 - Nano: Performance: botArena.run.B costSum:6.7880 count:1
+2022-09-28 10:11:47 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0445 count:1
+2022-09-28 10:11:47 - Nano: Performance: botArena.run.C costSum:0.0558 count:1
+2022-09-28 10:11:47 - Nano: Performance: botArena.run costSum:6.8442 count:1
+2022-09-28 10:11:47 - Nano: Performance: ##########################
+2022-09-28 10:14:11 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:14:11 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:14:11 - BotArena: botArenaId:mathArena run
+2022-09-28 10:14:11 - BotArena: botArenaId:mathArena initial status marketBeat:6 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:14:16 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:14:18 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:14:18 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:97,475.87
+2022-09-28 10:14:18 - BotWorld: -------------------------
+2022-09-28 10:14:18 - BotWorld: end
+2022-09-28 10:14:18 - Nano: Performance: ##########################
+2022-09-28 10:14:18 - Nano: Performance: Summary
+2022-09-28 10:14:18 - Nano: Performance: persistence.pdoQuery costSum:6.9992 count:42629
+2022-09-28 10:14:18 - Nano: Performance: botArena.run.A costSum:0.0006 count:1
+2022-09-28 10:14:18 - Nano: Performance: dsTrader.trade costSum:5.4136 count:3
+2022-09-28 10:14:18 - Nano: Performance: HMatrix.hydrate costSum:6.2223 count:123
+2022-09-28 10:14:18 - Nano: Performance: HMatrix.dehydrate costSum:1.1166 count:11
+2022-09-28 10:14:18 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:1.3230 count:5
+2022-09-28 10:14:18 - Nano: Performance: market.observeAll costSum:1.5385 count:1
+2022-09-28 10:14:18 - Nano: Performance: botArena.run.B costSum:6.9683 count:1
+2022-09-28 10:14:18 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0204 count:1
+2022-09-28 10:14:18 - Nano: Performance: botArena.run.C costSum:0.0305 count:1
+2022-09-28 10:14:18 - Nano: Performance: botArena.run costSum:6.9995 count:1
+2022-09-28 10:14:18 - Nano: Performance: ##########################
+2022-09-28 10:15:14 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:15:14 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:15:14 - BotArena: botArenaId:mathArena run
+2022-09-28 10:15:14 - BotArena: botArenaId:mathArena initial status marketBeat:7 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:15:19 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:15:21 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:15:21 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:97,427.52
+2022-09-28 10:15:21 - BotWorld: -------------------------
+2022-09-28 10:15:21 - BotWorld: end
+2022-09-28 10:15:21 - Nano: Performance: ##########################
+2022-09-28 10:15:21 - Nano: Performance: Summary
+2022-09-28 10:15:21 - Nano: Performance: persistence.pdoQuery costSum:6.1616 count:42629
+2022-09-28 10:15:21 - Nano: Performance: botArena.run.A costSum:0.0002 count:1
+2022-09-28 10:15:21 - Nano: Performance: dsTrader.trade costSum:4.6422 count:3
+2022-09-28 10:15:21 - Nano: Performance: HMatrix.hydrate costSum:5.3786 count:123
+2022-09-28 10:15:21 - Nano: Performance: HMatrix.dehydrate costSum:1.1893 count:11
+2022-09-28 10:15:21 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:1.3494 count:5
+2022-09-28 10:15:21 - Nano: Performance: market.observeAll costSum:1.4927 count:1
+2022-09-28 10:15:21 - Nano: Performance: botArena.run.B costSum:6.1407 count:1
+2022-09-28 10:15:21 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0157 count:1
+2022-09-28 10:15:21 - Nano: Performance: botArena.run.C costSum:0.0208 count:1
+2022-09-28 10:15:21 - Nano: Performance: botArena.run costSum:6.1617 count:1
+2022-09-28 10:15:21 - Nano: Performance: ##########################
+2022-09-28 10:17:10 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:17:10 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:17:10 - BotArena: botArenaId:mathArena run
+2022-09-28 10:17:10 - BotArena: botArenaId:mathArena initial status marketBeat:8 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:17:19 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:17:22 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:17:22 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:97,374.29
+2022-09-28 10:17:22 - BotWorld: -------------------------
+2022-09-28 10:17:22 - BotWorld: end
+2022-09-28 10:17:22 - Nano: Performance: ##########################
+2022-09-28 10:17:22 - Nano: Performance: Summary
+2022-09-28 10:17:22 - Nano: Performance: persistence.pdoQuery costSum:11.4996 count:42629
+2022-09-28 10:17:22 - Nano: Performance: botArena.run.A costSum:0.0008 count:1
+2022-09-28 10:17:22 - Nano: Performance: dsTrader.trade costSum:9.0007 count:3
+2022-09-28 10:17:22 - Nano: Performance: HMatrix.hydrate costSum:10.3680 count:123
+2022-09-28 10:17:22 - Nano: Performance: HMatrix.dehydrate costSum:1.7656 count:11
+2022-09-28 10:17:22 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:2.1189 count:5
+2022-09-28 10:17:22 - Nano: Performance: market.observeAll costSum:2.4558 count:1
+2022-09-28 10:17:22 - Nano: Performance: botArena.run.B costSum:11.4725 count:1
+2022-09-28 10:17:22 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0202 count:1
+2022-09-28 10:17:22 - Nano: Performance: botArena.run.C costSum:0.0265 count:1
+2022-09-28 10:17:22 - Nano: Performance: botArena.run costSum:11.4997 count:1
+2022-09-28 10:17:22 - Nano: Performance: ##########################
+2022-09-28 10:19:48 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:19:48 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:19:48 - BotArena: botArenaId:mathArena run
+2022-09-28 10:19:48 - BotArena: botArenaId:mathArena initial status marketBeat:9 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:21:04 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:21:04 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:21:04 - BotArena: botArenaId:mathArena run
+2022-09-28 10:21:04 - BotArena: botArenaId:mathArena initial status marketBeat:9 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:21:08 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:21:09 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:21:09 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:97,316.32
+2022-09-28 10:21:09 - BotWorld: -------------------------
+2022-09-28 10:21:09 - BotWorld: end
+2022-09-28 10:21:09 - Nano: Performance: ##########################
+2022-09-28 10:21:09 - Nano: Performance: Summary
+2022-09-28 10:21:09 - Nano: Performance: persistence.pdoQuery costSum:5.1696 count:42629
+2022-09-28 10:21:09 - Nano: Performance: botArena.run.A costSum:0.0008 count:1
+2022-09-28 10:21:09 - Nano: Performance: dsTrader.trade costSum:4.1046 count:3
+2022-09-28 10:21:09 - Nano: Performance: HMatrix.hydrate costSum:4.7038 count:123
+2022-09-28 10:21:09 - Nano: Performance: HMatrix.dehydrate costSum:0.7192 count:11
+2022-09-28 10:21:09 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:0.8670 count:5
+2022-09-28 10:21:09 - Nano: Performance: market.observeAll costSum:1.0197 count:1
+2022-09-28 10:21:09 - Nano: Performance: botArena.run.B costSum:5.1395 count:1
+2022-09-28 10:21:09 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0233 count:1
+2022-09-28 10:21:09 - Nano: Performance: botArena.run.C costSum:0.0295 count:1
+2022-09-28 10:21:09 - Nano: Performance: botArena.run costSum:5.1697 count:1
+2022-09-28 10:21:09 - Nano: Performance: ##########################
+2022-09-28 10:25:02 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:25:02 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:25:02 - BotArena: botArenaId:mathArena run
+2022-09-28 10:25:02 - BotArena: botArenaId:mathArena initial status marketBeat:10 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:25:02 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:25:03 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:25:03 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:97,253.73
+2022-09-28 10:25:03 - BotWorld: -------------------------
+2022-09-28 10:25:03 - BotWorld: end
+2022-09-28 10:25:03 - Nano: Performance: ##########################
+2022-09-28 10:25:03 - Nano: Performance: Summary
+2022-09-28 10:25:03 - Nano: Performance: persistence.pdoQuery costSum:0.9760 count:8357
+2022-09-28 10:25:03 - Nano: Performance: botArena.run.A costSum:0.0005 count:1
+2022-09-28 10:25:03 - Nano: Performance: dsTrader.trade costSum:0.0309 count:3
+2022-09-28 10:25:03 - Nano: Performance: HMatrix.hydrate costSum:0.6279 count:11
+2022-09-28 10:25:03 - Nano: Performance: HMatrix.dehydrate costSum:0.6364 count:11
+2022-09-28 10:25:03 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:0.7830 count:5
+2022-09-28 10:25:03 - Nano: Performance: market.observeAll costSum:0.9154 count:1
+2022-09-28 10:25:03 - Nano: Performance: botArena.run.B costSum:0.9549 count:1
+2022-09-28 10:25:03 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0149 count:1
+2022-09-28 10:25:03 - Nano: Performance: botArena.run.C costSum:0.0208 count:1
+2022-09-28 10:25:03 - Nano: Performance: botArena.run costSum:0.9762 count:1
+2022-09-28 10:25:03 - Nano: Performance: ##########################
+2022-09-28 10:28:20 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:28:20 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:28:20 - BotArena: botArenaId:mathArena run
+2022-09-28 10:28:20 - BotArena: botArenaId:mathArena initial status marketBeat:11 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:28:20 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:28:22 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:28:22 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:97,186.70
+2022-09-28 10:28:22 - BotWorld: -------------------------
+2022-09-28 10:28:22 - BotWorld: end
+2022-09-28 10:28:22 - Nano: Performance: ##########################
+2022-09-28 10:28:22 - Nano: Performance: Summary
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery costSum:1.6642 count:8357
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT * FROM market WHERE marketId='mathArenaMarket' costSum:1.6629 count:227
+2022-09-28 10:28:22 - Nano: Performance: botArena.run.A costSum:0.0006 count:1
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT * 
+			FROM marketTrader t
+			INNER JOIN divideAndScaleMarketTrader ds 
+				ON t.botArenaId=ds.botArenaId AND t.traderId=ds.traderId
+			WHERE 
+				t.traderId='botMath1' AND
+				t.botArenaId='mathArena'
+		 costSum:0.0027 count:9
+2022-09-28 10:28:22 - Nano: Performance: dsTrader.trade costSum:0.0389 count:3
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT * FROM assetTradeOrder as o						
+							WHERE botArenaId='mathArena' 
+								AND traderId='botMath1' costSum:0.0035 count:3
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT * 
+			FROM marketTrader t
+			WHERE 
+				t.traderId='botMath1' AND
+				t.botArenaId='mathArena'
+		 costSum:0.0054 count:15
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT * 
+			FROM marketTrader t
+			INNER JOIN divideAndScaleMarketTrader ds 
+				ON t.botArenaId=ds.botArenaId AND t.traderId=ds.traderId
+			WHERE 
+				t.traderId='botMath2' AND
+				t.botArenaId='mathArena'
+		 costSum:0.0257 count:13
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT * FROM assetTradeOrder as o						
+							WHERE botArenaId='mathArena' 
+								AND traderId='botMath2' costSum:0.0321 count:17
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT DISTINCT(assetId) FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath2Portfolio'
+			 costSum:1.6343 count:9
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath2Portfolio' AND
+				 assetId='CC4'
+				 GROUP By
+				 	portfolioId,assetId
+			 costSum:1.6346 count:9
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath2Portfolio' AND
+				 assetId='CC5'
+				 GROUP By
+				 	portfolioId,assetId
+			 costSum:1.6346 count:11
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath2Portfolio' AND
+				 assetId='USD'
+				 GROUP By
+				 	portfolioId,assetId
+			 costSum:1.6351 count:13
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath2Portfolio'
+				GROUP BY
+					portfolioId,assetId
+			 costSum:1.6326 count:5
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT * 
+			FROM marketTrader t
+			WHERE 
+				t.traderId='botMath2' AND
+				t.botArenaId='mathArena'
+		 costSum:0.0197 count:51
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.UPDATE market SET beat=12 WHERE marketId='mathArenaMarket' costSum:0.0005 count:1
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathShort` (
+			`endBeat` BIGINT(20) NULL DEFAULT NULL,
+			`maxHistoryBeats` INT(11) NULL DEFAULT NULL,
+			`synchedBeat` BIGINT(20) NULL DEFAULT NULL,
+			`beatMultiplier` INT(11) NULL DEFAULT NULL			
+			)
+				COLLATE='utf8mb4_general_ci'
+				ENGINE=InnoDB
+			 costSum:0.0258 count:3
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathShortLog` (
+			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+			`statsDim` INT(11) NOT NULL,
+			`historyIndex` INT(11) NULL DEFAULT NULL,
+			`statsValue` DECIMAL(20,10) NULL DEFAULT NULL,
+			INDEX `StatsHistoryAllIdx` (`assetId`, `statsDim`) USING HASH,
+			INDEX `StatsScalarAndHistoryIdx` (`assetId`, `statsDim`, `historyIndex`) USING HASH
+		)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB costSum:0.0006 count:1
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathShort costSum:0.0149 count:1
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathShort(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0082 count:1
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathShort costSum:0.4928 count:2625
+2022-09-28 10:28:22 - Nano: Performance: HMatrix.hydrate costSum:1.0534 count:11
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathShort SET endBeat=12 costSum:0.0057 count:1
+2022-09-28 10:28:22 - Nano: Performance: HMatrix.dehydrate costSum:1.0615 count:11
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathShort SET synchedBeat=12 costSum:0.0078 count:1
+2022-09-28 10:28:22 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:1.3252 count:5
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathLong` (
+			`endBeat` BIGINT(20) NULL DEFAULT NULL,
+			`maxHistoryBeats` INT(11) NULL DEFAULT NULL,
+			`synchedBeat` BIGINT(20) NULL DEFAULT NULL,
+			`beatMultiplier` INT(11) NULL DEFAULT NULL			
+			)
+				COLLATE='utf8mb4_general_ci'
+				ENGINE=InnoDB
+			 costSum:0.0005 count:3
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathLongLog` (
+			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+			`statsDim` INT(11) NOT NULL,
+			`historyIndex` INT(11) NULL DEFAULT NULL,
+			`statsValue` DECIMAL(20,10) NULL DEFAULT NULL,
+			INDEX `StatsHistoryAllIdx` (`assetId`, `statsDim`) USING HASH,
+			INDEX `StatsScalarAndHistoryIdx` (`assetId`, `statsDim`, `historyIndex`) USING HASH
+		)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB costSum:0.0005 count:1
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathLong costSum:0.0069 count:1
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathLong(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0082 count:1
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathLong costSum:0.5259 count:2625
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathLong SET endBeat=12 costSum:0.0209 count:1
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathLong SET synchedBeat=12 costSum:0.0077 count:1
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathMedium` (
+			`endBeat` BIGINT(20) NULL DEFAULT NULL,
+			`maxHistoryBeats` INT(11) NULL DEFAULT NULL,
+			`synchedBeat` BIGINT(20) NULL DEFAULT NULL,
+			`beatMultiplier` INT(11) NULL DEFAULT NULL			
+			)
+				COLLATE='utf8mb4_general_ci'
+				ENGINE=InnoDB
+			 costSum:0.0004 count:3
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathMediumLog` (
+			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+			`statsDim` INT(11) NOT NULL,
+			`historyIndex` INT(11) NULL DEFAULT NULL,
+			`statsValue` DECIMAL(20,10) NULL DEFAULT NULL,
+			INDEX `StatsHistoryAllIdx` (`assetId`, `statsDim`) USING HASH,
+			INDEX `StatsScalarAndHistoryIdx` (`assetId`, `statsDim`, `historyIndex`) USING HASH
+		)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB costSum:0.0005 count:1
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathMedium costSum:0.0071 count:1
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathMedium(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0084 count:1
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathMedium costSum:0.4844 count:2625
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathMedium SET endBeat=12 costSum:0.0085 count:1
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathMedium SET synchedBeat=12 costSum:0.0077 count:1
+2022-09-28 10:28:22 - Nano: Performance: market.observeAll costSum:1.5868 count:1
+2022-09-28 10:28:22 - Nano: Performance: botArena.run.B costSum:1.6401 count:1
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT DISTINCT(assetId) FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath1Portfolio'
+			 costSum:0.0168 count:7
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath1Portfolio' AND
+				 assetId='USD'
+				 GROUP By
+				 	portfolioId,assetId
+			 costSum:0.0166 count:7
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT * 
+			FROM portfolio p
+			WHERE 
+				p.portfolioId='botMath1Portfolio'				
+		 costSum:0.0030 count:9
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT * 
+			FROM portfolio p
+			WHERE 
+				p.portfolioId='botMath2Portfolio'				
+		 costSum:0.0087 count:13
+2022-09-28 10:28:22 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0165 count:1
+2022-09-28 10:28:22 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath1Portfolio'
+				GROUP BY
+					portfolioId,assetId
+			 costSum:0.0004 count:1
+2022-09-28 10:28:22 - Nano: Performance: botArena.run.C costSum:0.0235 count:1
+2022-09-28 10:28:22 - Nano: Performance: botArena.run costSum:1.6643 count:1
+2022-09-28 10:28:22 - Nano: Performance: ##########################
+2022-09-28 10:36:23 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:36:23 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:36:23 - BotArena: botArenaId:mathArena run
+2022-09-28 10:36:23 - BotArena: botArenaId:mathArena initial status marketBeat:12 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:36:23 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:36:25 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:36:25 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:97,115.39
+2022-09-28 10:36:25 - BotWorld: -------------------------
+2022-09-28 10:36:25 - BotWorld: end
+2022-09-28 10:36:25 - Nano: Performance: ##########################
+2022-09-28 10:36:25 - Nano: Performance: Summary
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery costSum:1.6735 count:8357
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.marketRow costSum:1.6720 count:227
+2022-09-28 10:36:25 - Nano: Performance: botArena.run.A costSum:0.0004 count:1
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.dsTraderRow costSum:0.0386 count:23
+2022-09-28 10:36:25 - Nano: Performance: dsTrader.trade costSum:0.0404 count:3
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.traderOrderQueue costSum:0.0414 count:21
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.traderRow costSum:0.0474 count:67
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.SELECT DISTINCT(assetId) FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath2Portfolio'
+			 costSum:1.6415 count:9
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath2Portfolio' AND
+				 assetId='CC4'
+				 GROUP By
+				 	portfolioId,assetId
+			 costSum:1.6412 count:9
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath2Portfolio' AND
+				 assetId='CC5'
+				 GROUP By
+				 	portfolioId,assetId
+			 costSum:1.6422 count:11
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath2Portfolio' AND
+				 assetId='USD'
+				 GROUP By
+				 	portfolioId,assetId
+			 costSum:1.6428 count:13
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath2Portfolio'
+				GROUP BY
+					portfolioId,assetId
+			 costSum:1.6403 count:5
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.UPDATE market SET beat=13 WHERE marketId='mathArenaMarket' costSum:0.0002 count:1
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathShort` (
+			`endBeat` BIGINT(20) NULL DEFAULT NULL,
+			`maxHistoryBeats` INT(11) NULL DEFAULT NULL,
+			`synchedBeat` BIGINT(20) NULL DEFAULT NULL,
+			`beatMultiplier` INT(11) NULL DEFAULT NULL			
+			)
+				COLLATE='utf8mb4_general_ci'
+				ENGINE=InnoDB
+			 costSum:0.0024 count:3
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathShortLog` (
+			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+			`statsDim` INT(11) NOT NULL,
+			`historyIndex` INT(11) NULL DEFAULT NULL,
+			`statsValue` DECIMAL(20,10) NULL DEFAULT NULL,
+			INDEX `StatsHistoryAllIdx` (`assetId`, `statsDim`) USING HASH,
+			INDEX `StatsScalarAndHistoryIdx` (`assetId`, `statsDim`, `historyIndex`) USING HASH
+		)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB costSum:0.0004 count:1
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathShort costSum:0.0077 count:1
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathShort(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0082 count:1
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathShort costSum:0.5424 count:2625
+2022-09-28 10:36:25 - Nano: Performance: HMatrix.hydrate costSum:1.0696 count:11
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathShort SET endBeat=13 costSum:0.0251 count:1
+2022-09-28 10:36:25 - Nano: Performance: HMatrix.dehydrate costSum:1.0549 count:11
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathShort SET synchedBeat=13 costSum:0.0077 count:1
+2022-09-28 10:36:25 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:1.3477 count:5
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathLong` (
+			`endBeat` BIGINT(20) NULL DEFAULT NULL,
+			`maxHistoryBeats` INT(11) NULL DEFAULT NULL,
+			`synchedBeat` BIGINT(20) NULL DEFAULT NULL,
+			`beatMultiplier` INT(11) NULL DEFAULT NULL			
+			)
+				COLLATE='utf8mb4_general_ci'
+				ENGINE=InnoDB
+			 costSum:0.0007 count:3
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathLongLog` (
+			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+			`statsDim` INT(11) NOT NULL,
+			`historyIndex` INT(11) NULL DEFAULT NULL,
+			`statsValue` DECIMAL(20,10) NULL DEFAULT NULL,
+			INDEX `StatsHistoryAllIdx` (`assetId`, `statsDim`) USING HASH,
+			INDEX `StatsScalarAndHistoryIdx` (`assetId`, `statsDim`, `historyIndex`) USING HASH
+		)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB costSum:0.0004 count:1
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathLong costSum:0.0069 count:1
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathLong(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0082 count:1
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathLong costSum:0.4925 count:2625
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathLong SET endBeat=13 costSum:0.0057 count:1
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathLong SET synchedBeat=13 costSum:0.0078 count:1
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathMedium` (
+			`endBeat` BIGINT(20) NULL DEFAULT NULL,
+			`maxHistoryBeats` INT(11) NULL DEFAULT NULL,
+			`synchedBeat` BIGINT(20) NULL DEFAULT NULL,
+			`beatMultiplier` INT(11) NULL DEFAULT NULL			
+			)
+				COLLATE='utf8mb4_general_ci'
+				ENGINE=InnoDB
+			 costSum:0.0004 count:3
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathMediumLog` (
+			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+			`statsDim` INT(11) NOT NULL,
+			`historyIndex` INT(11) NULL DEFAULT NULL,
+			`statsValue` DECIMAL(20,10) NULL DEFAULT NULL,
+			INDEX `StatsHistoryAllIdx` (`assetId`, `statsDim`) USING HASH,
+			INDEX `StatsScalarAndHistoryIdx` (`assetId`, `statsDim`, `historyIndex`) USING HASH
+		)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB costSum:0.0005 count:1
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathMedium costSum:0.0073 count:1
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathMedium(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0082 count:1
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathMedium costSum:0.5012 count:2625
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathMedium SET endBeat=13 costSum:0.0040 count:1
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathMedium SET synchedBeat=13 costSum:0.0078 count:1
+2022-09-28 10:36:25 - Nano: Performance: market.observeAll costSum:1.5888 count:1
+2022-09-28 10:36:25 - Nano: Performance: botArena.run.B costSum:1.6433 count:1
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.SELECT DISTINCT(assetId) FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath1Portfolio'
+			 costSum:0.0228 count:7
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath1Portfolio' AND
+				 assetId='USD'
+				 GROUP By
+				 	portfolioId,assetId
+			 costSum:0.0228 count:7
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.SELECT * 
+			FROM portfolio p
+			WHERE 
+				p.portfolioId='botMath1Portfolio'				
+		 costSum:0.0042 count:9
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.SELECT * 
+			FROM portfolio p
+			WHERE 
+				p.portfolioId='botMath2Portfolio'				
+		 costSum:0.0124 count:13
+2022-09-28 10:36:25 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0224 count:1
+2022-09-28 10:36:25 - Nano: Performance: persistence.pdoQuery.SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+				WHERE
+				 portfolioId='botMath1Portfolio'
+				GROUP BY
+					portfolioId,assetId
+			 costSum:0.0005 count:1
+2022-09-28 10:36:25 - Nano: Performance: botArena.run.C costSum:0.0300 count:1
+2022-09-28 10:36:25 - Nano: Performance: botArena.run costSum:1.6737 count:1
+2022-09-28 10:36:25 - Nano: Performance: ##########################
+2022-09-28 10:39:23 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:39:23 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:39:23 - BotArena: botArenaId:mathArena run
+2022-09-28 10:39:23 - BotArena: botArenaId:mathArena initial status marketBeat:13 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:39:23 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:39:25 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:39:25 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:97,039.98
+2022-09-28 10:39:25 - BotWorld: -------------------------
+2022-09-28 10:39:25 - BotWorld: end
+2022-09-28 10:39:25 - Nano: Performance: ##########################
+2022-09-28 10:39:25 - Nano: Performance: Summary
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery costSum:1.4317 count:8357
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.marketRow costSum:1.4306 count:227
+2022-09-28 10:39:25 - Nano: Performance: botArena.run.A costSum:0.0005 count:1
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.dsTraderRow costSum:0.0302 count:23
+2022-09-28 10:39:25 - Nano: Performance: dsTrader.trade costSum:0.0310 count:3
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.traderOrderQueue costSum:0.0332 count:21
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.traderRow costSum:0.0377 count:67
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.portfolioAssetIds costSum:1.4073 count:17
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.portfolioAssetQuantity costSum:1.4087 count:43
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.portfolioAssetQuantities costSum:1.4049 count:7
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.UPDATE market SET beat=14 WHERE marketId='mathArenaMarket' costSum:0.0002 count:1
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathShort` (
+			`endBeat` BIGINT(20) NULL DEFAULT NULL,
+			`maxHistoryBeats` INT(11) NULL DEFAULT NULL,
+			`synchedBeat` BIGINT(20) NULL DEFAULT NULL,
+			`beatMultiplier` INT(11) NULL DEFAULT NULL			
+			)
+				COLLATE='utf8mb4_general_ci'
+				ENGINE=InnoDB
+			 costSum:0.0350 count:3
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathShortLog` (
+			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+			`statsDim` INT(11) NOT NULL,
+			`historyIndex` INT(11) NULL DEFAULT NULL,
+			`statsValue` DECIMAL(20,10) NULL DEFAULT NULL,
+			INDEX `StatsHistoryAllIdx` (`assetId`, `statsDim`) USING HASH,
+			INDEX `StatsScalarAndHistoryIdx` (`assetId`, `statsDim`, `historyIndex`) USING HASH
+		)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB costSum:0.0004 count:1
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathShort costSum:0.0145 count:1
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathShort(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0083 count:1
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathShort costSum:0.5423 count:2625
+2022-09-28 10:39:25 - Nano: Performance: HMatrix.hydrate costSum:0.9033 count:11
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathShort SET endBeat=14 costSum:0.1526 count:1
+2022-09-28 10:39:25 - Nano: Performance: HMatrix.dehydrate costSum:0.8161 count:11
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathShort SET synchedBeat=14 costSum:0.0076 count:1
+2022-09-28 10:39:25 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:1.1433 count:5
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathLong` (
+			`endBeat` BIGINT(20) NULL DEFAULT NULL,
+			`maxHistoryBeats` INT(11) NULL DEFAULT NULL,
+			`synchedBeat` BIGINT(20) NULL DEFAULT NULL,
+			`beatMultiplier` INT(11) NULL DEFAULT NULL			
+			)
+				COLLATE='utf8mb4_general_ci'
+				ENGINE=InnoDB
+			 costSum:0.0006 count:3
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathLongLog` (
+			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+			`statsDim` INT(11) NOT NULL,
+			`historyIndex` INT(11) NULL DEFAULT NULL,
+			`statsValue` DECIMAL(20,10) NULL DEFAULT NULL,
+			INDEX `StatsHistoryAllIdx` (`assetId`, `statsDim`) USING HASH,
+			INDEX `StatsScalarAndHistoryIdx` (`assetId`, `statsDim`, `historyIndex`) USING HASH
+		)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB costSum:0.0009 count:1
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathLong costSum:0.0062 count:1
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathLong(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0083 count:1
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathLong costSum:0.3257 count:2625
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathLong SET endBeat=14 costSum:0.0015 count:1
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathLong SET synchedBeat=14 costSum:0.0078 count:1
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathMedium` (
+			`endBeat` BIGINT(20) NULL DEFAULT NULL,
+			`maxHistoryBeats` INT(11) NULL DEFAULT NULL,
+			`synchedBeat` BIGINT(20) NULL DEFAULT NULL,
+			`beatMultiplier` INT(11) NULL DEFAULT NULL			
+			)
+				COLLATE='utf8mb4_general_ci'
+				ENGINE=InnoDB
+			 costSum:0.0003 count:3
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathMediumLog` (
+			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+			`statsDim` INT(11) NOT NULL,
+			`historyIndex` INT(11) NULL DEFAULT NULL,
+			`statsValue` DECIMAL(20,10) NULL DEFAULT NULL,
+			INDEX `StatsHistoryAllIdx` (`assetId`, `statsDim`) USING HASH,
+			INDEX `StatsScalarAndHistoryIdx` (`assetId`, `statsDim`, `historyIndex`) USING HASH
+		)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB costSum:0.0004 count:1
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathMedium costSum:0.0070 count:1
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathMedium(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0085 count:1
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathMedium costSum:0.4088 count:2625
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathMedium SET endBeat=14 costSum:0.0028 count:1
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathMedium SET synchedBeat=14 costSum:0.0081 count:1
+2022-09-28 10:39:25 - Nano: Performance: market.observeAll costSum:1.3683 count:1
+2022-09-28 10:39:25 - Nano: Performance: botArena.run.B costSum:1.4098 count:1
+2022-09-28 10:39:25 - Nano: Performance: persistence.pdoQuery.portfolioRow costSum:0.0138 count:23
+2022-09-28 10:39:25 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0156 count:1
+2022-09-28 10:39:25 - Nano: Performance: botArena.run.C costSum:0.0216 count:1
+2022-09-28 10:39:25 - Nano: Performance: botArena.run costSum:1.4319 count:1
+2022-09-28 10:39:25 - Nano: Performance: ##########################
+2022-09-28 10:41:26 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:41:26 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:41:26 - BotArena: botArenaId:mathArena run
+2022-09-28 10:41:26 - BotArena: botArenaId:mathArena initial status marketBeat:14 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:41:26 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:41:28 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:41:28 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:96,960.65
+2022-09-28 10:41:28 - BotWorld: -------------------------
+2022-09-28 10:41:28 - BotWorld: end
+2022-09-28 10:41:28 - Nano: Performance: ##########################
+2022-09-28 10:41:28 - Nano: Performance: Summary
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery costSum:2.1610 count:8357
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.marketRow costSum:2.1577 count:227
+2022-09-28 10:41:28 - Nano: Performance: botArena.run.A costSum:0.0005 count:1
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.dsTraderRow costSum:0.0287 count:23
+2022-09-28 10:41:28 - Nano: Performance: dsTrader.trade costSum:0.0301 count:3
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.traderOrderQueue costSum:0.0313 count:21
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.traderRow costSum:0.0415 count:67
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.portfolioAssetIds costSum:2.1335 count:17
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.portfolioAssetQuantity costSum:2.1367 count:43
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.portfolioAssetQuantities costSum:2.1372 count:7
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.UPDATE market SET beat=15 WHERE marketId='mathArenaMarket' costSum:0.0003 count:1
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.msStatsHeadCreate costSum:1.5119 count:11
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathShortLog` (
+			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+			`statsDim` INT(11) NOT NULL,
+			`historyIndex` INT(11) NULL DEFAULT NULL,
+			`statsValue` DECIMAL(20,10) NULL DEFAULT NULL,
+			INDEX `StatsHistoryAllIdx` (`assetId`, `statsDim`) USING HASH,
+			INDEX `StatsScalarAndHistoryIdx` (`assetId`, `statsDim`, `historyIndex`) USING HASH
+		)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB costSum:0.0008 count:1
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathShort costSum:0.0189 count:1
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathShort(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0084 count:1
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathShort costSum:0.8006 count:2625
+2022-09-28 10:41:28 - Nano: Performance: HMatrix.hydrate costSum:1.4713 count:11
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathShort SET endBeat=15 costSum:0.0107 count:1
+2022-09-28 10:41:28 - Nano: Performance: HMatrix.dehydrate costSum:1.6145 count:11
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathShort SET synchedBeat=15 costSum:0.0161 count:1
+2022-09-28 10:41:28 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:1.7872 count:5
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathLongLog` (
+			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+			`statsDim` INT(11) NOT NULL,
+			`historyIndex` INT(11) NULL DEFAULT NULL,
+			`statsValue` DECIMAL(20,10) NULL DEFAULT NULL,
+			INDEX `StatsHistoryAllIdx` (`assetId`, `statsDim`) USING HASH,
+			INDEX `StatsScalarAndHistoryIdx` (`assetId`, `statsDim`, `historyIndex`) USING HASH
+		)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB costSum:0.0008 count:1
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathLong costSum:0.0023 count:1
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathLong(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0082 count:1
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathLong costSum:0.6341 count:2625
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathLong SET endBeat=15 costSum:0.0077 count:1
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathLong SET synchedBeat=15 costSum:0.0078 count:1
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.CREATE TABLE IF NOT EXISTS `marketStatsMathMediumLog` (
+			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+			`statsDim` INT(11) NOT NULL,
+			`historyIndex` INT(11) NULL DEFAULT NULL,
+			`statsValue` DECIMAL(20,10) NULL DEFAULT NULL,
+			INDEX `StatsHistoryAllIdx` (`assetId`, `statsDim`) USING HASH,
+			INDEX `StatsScalarAndHistoryIdx` (`assetId`, `statsDim`, `historyIndex`) USING HASH
+		)
+			COLLATE='utf8mb4_general_ci'
+			ENGINE=InnoDB costSum:0.0010 count:1
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathMedium costSum:0.0050 count:1
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathMedium(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0086 count:1
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathMedium costSum:0.5507 count:2625
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathMedium SET endBeat=15 costSum:0.0024 count:1
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathMedium SET synchedBeat=15 costSum:0.0077 count:1
+2022-09-28 10:41:28 - Nano: Performance: market.observeAll costSum:2.0789 count:1
+2022-09-28 10:41:28 - Nano: Performance: botArena.run.B costSum:2.1253 count:1
+2022-09-28 10:41:28 - Nano: Performance: persistence.pdoQuery.portfolioRow costSum:0.0216 count:23
+2022-09-28 10:41:28 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0252 count:1
+2022-09-28 10:41:28 - Nano: Performance: botArena.run.C costSum:0.0359 count:1
+2022-09-28 10:41:28 - Nano: Performance: botArena.run costSum:2.1617 count:1
+2022-09-28 10:41:28 - Nano: Performance: ##########################
+2022-09-28 10:42:11 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:42:11 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:42:11 - BotArena: botArenaId:mathArena run
+2022-09-28 10:42:11 - BotArena: botArenaId:mathArena initial status marketBeat:15 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:42:11 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:42:14 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:42:14 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:96,877.60
+2022-09-28 10:42:14 - BotWorld: -------------------------
+2022-09-28 10:42:14 - BotWorld: end
+2022-09-28 10:42:14 - Nano: Performance: ##########################
+2022-09-28 10:42:14 - Nano: Performance: Summary
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery costSum:2.5227 count:8357
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.marketRow costSum:2.5206 count:227
+2022-09-28 10:42:14 - Nano: Performance: botArena.run.A costSum:0.0002 count:1
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.dsTraderRow costSum:0.0299 count:23
+2022-09-28 10:42:14 - Nano: Performance: dsTrader.trade costSum:0.0315 count:3
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.traderOrderQueue costSum:0.0320 count:21
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.traderRow costSum:0.0380 count:67
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.portfolioAssetIds costSum:2.4955 count:17
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.portfolioAssetQuantity costSum:2.4985 count:43
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.portfolioAssetQuantities costSum:2.4960 count:7
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.UPDATE market SET beat=16 WHERE marketId='mathArenaMarket' costSum:0.0002 count:1
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.msStatsHeadCreate costSum:1.5321 count:11
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.msStatsLogCreate costSum:1.5126 count:5
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathShort costSum:0.0073 count:1
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathShort(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0084 count:1
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathShort costSum:0.7421 count:2625
+2022-09-28 10:42:14 - Nano: Performance: HMatrix.hydrate costSum:1.5135 count:11
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathShort SET endBeat=16 costSum:0.0036 count:1
+2022-09-28 10:42:14 - Nano: Performance: HMatrix.dehydrate costSum:1.7318 count:11
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathShort SET synchedBeat=16 costSum:0.0078 count:1
+2022-09-28 10:42:14 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:2.1487 count:5
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathLong costSum:0.0057 count:1
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathLong(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0095 count:1
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathLong costSum:0.7341 count:2625
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathLong SET endBeat=16 costSum:0.1549 count:1
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathLong SET synchedBeat=16 costSum:0.0086 count:1
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathMedium costSum:0.0041 count:1
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathMedium(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0085 count:1
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathMedium costSum:0.9011 count:2625
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathMedium SET endBeat=16 costSum:0.0127 count:1
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathMedium SET synchedBeat=16 costSum:0.0078 count:1
+2022-09-28 10:42:14 - Nano: Performance: market.observeAll costSum:2.4475 count:1
+2022-09-28 10:42:14 - Nano: Performance: botArena.run.B costSum:2.4900 count:1
+2022-09-28 10:42:14 - Nano: Performance: persistence.pdoQuery.portfolioRow costSum:0.0214 count:23
+2022-09-28 10:42:14 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0247 count:1
+2022-09-28 10:42:14 - Nano: Performance: botArena.run.C costSum:0.0325 count:1
+2022-09-28 10:42:14 - Nano: Performance: botArena.run costSum:2.5228 count:1
+2022-09-28 10:42:14 - Nano: Performance: ##########################
+2022-09-28 10:43:23 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:43:23 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:43:23 - BotArena: botArenaId:mathArena run
+2022-09-28 10:43:23 - BotArena: botArenaId:mathArena initial status marketBeat:16 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:43:23 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:43:24 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:43:24 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:96,791.05
+2022-09-28 10:43:24 - BotWorld: -------------------------
+2022-09-28 10:43:24 - BotWorld: end
+2022-09-28 10:43:24 - Nano: Performance: ##########################
+2022-09-28 10:43:24 - Nano: Performance: Summary
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery costSum:1.4412 count:8357
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.marketRow costSum:1.4404 count:227
+2022-09-28 10:43:24 - Nano: Performance: botArena.run.A costSum:0.0005 count:1
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.dsTraderRow costSum:0.0297 count:23
+2022-09-28 10:43:24 - Nano: Performance: dsTrader.trade costSum:0.0305 count:3
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.traderOrderQueue costSum:0.0312 count:21
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.traderRow costSum:0.0345 count:67
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.portfolioAssetIds costSum:1.4164 count:17
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.portfolioAssetQuantity costSum:1.4180 count:43
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.portfolioAssetQuantities costSum:1.4157 count:7
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.marketFieldSetInt costSum:0.0002 count:1
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.msStatsHeadCreate costSum:0.9982 count:11
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.msStatsLogCreate costSum:0.9601 count:5
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathShort costSum:0.0281 count:1
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathShort(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0383 count:1
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathShort costSum:0.4235 count:2625
+2022-09-28 10:43:24 - Nano: Performance: HMatrix.hydrate costSum:0.9090 count:11
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathShort SET endBeat=17 costSum:0.0287 count:1
+2022-09-28 10:43:24 - Nano: Performance: HMatrix.dehydrate costSum:0.8775 count:11
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathShort SET synchedBeat=17 costSum:0.0078 count:1
+2022-09-28 10:43:24 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:1.0840 count:5
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathLong costSum:0.0069 count:1
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathLong(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0083 count:1
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathLong costSum:0.4523 count:2625
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathLong SET endBeat=17 costSum:0.1298 count:1
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathLong SET synchedBeat=17 costSum:0.0078 count:1
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.DELETE FROM marketStatsMathMedium costSum:0.0069 count:1
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.INSERT INTO marketStatsMathMedium(endBeat,
+						maxHistoryBeats,synchedBeat,beatMultiplier) 
+					VALUES (0,100,-1,1) costSum:0.0084 count:1
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathMedium costSum:0.3667 count:2625
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathMedium SET endBeat=17 costSum:0.0024 count:1
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathMedium SET synchedBeat=17 costSum:0.0078 count:1
+2022-09-28 10:43:24 - Nano: Performance: market.observeAll costSum:1.3815 count:1
+2022-09-28 10:43:24 - Nano: Performance: botArena.run.B costSum:1.4200 count:1
+2022-09-28 10:43:24 - Nano: Performance: persistence.pdoQuery.portfolioRow costSum:0.0147 count:23
+2022-09-28 10:43:24 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0162 count:1
+2022-09-28 10:43:24 - Nano: Performance: botArena.run.C costSum:0.0208 count:1
+2022-09-28 10:43:24 - Nano: Performance: botArena.run costSum:1.4413 count:1
+2022-09-28 10:43:24 - Nano: Performance: ##########################
+2022-09-28 10:45:07 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:45:07 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:45:07 - BotArena: botArenaId:mathArena run
+2022-09-28 10:45:07 - BotArena: botArenaId:mathArena initial status marketBeat:17 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:45:07 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:45:08 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:45:08 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:96,701.21
+2022-09-28 10:45:08 - BotWorld: -------------------------
+2022-09-28 10:45:08 - BotWorld: end
+2022-09-28 10:45:08 - Nano: Performance: ##########################
+2022-09-28 10:45:08 - Nano: Performance: Summary
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery costSum:1.1136 count:8357
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.marketRow costSum:1.1129 count:227
+2022-09-28 10:45:08 - Nano: Performance: botArena.run.A costSum:0.0004 count:1
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.dsTraderRow costSum:0.0387 count:23
+2022-09-28 10:45:08 - Nano: Performance: dsTrader.trade costSum:0.0410 count:3
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.traderOrderQueue costSum:0.0437 count:21
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.traderRow costSum:0.0486 count:67
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.portfolioAssetIds costSum:1.0880 count:17
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.portfolioAssetQuantity costSum:1.0891 count:43
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.portfolioAssetQuantities costSum:1.0826 count:7
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.marketFieldSetInt costSum:0.0003 count:1
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.msStatsHeadCreate costSum:0.7329 count:11
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.msStatsLogCreate costSum:0.7151 count:5
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.msSetupMarketStatsHead costSum:0.7300 count:11
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathShort costSum:0.3675 count:2625
+2022-09-28 10:45:08 - Nano: Performance: HMatrix.hydrate costSum:0.7031 count:11
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathShort SET endBeat=18 costSum:0.0041 count:1
+2022-09-28 10:45:08 - Nano: Performance: HMatrix.dehydrate costSum:0.6737 count:11
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathShort SET synchedBeat=18 costSum:0.0059 count:1
+2022-09-28 10:45:08 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:0.8403 count:5
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathLong costSum:0.3020 count:2625
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathLong SET endBeat=18 costSum:0.0013 count:1
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathLong SET synchedBeat=18 costSum:0.0075 count:1
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.SELECT * FROM marketStatsMathMedium costSum:0.2922 count:2625
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathMedium SET endBeat=18 costSum:0.0081 count:1
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.UPDATE marketStatsMathMedium SET synchedBeat=18 costSum:0.0081 count:1
+2022-09-28 10:45:08 - Nano: Performance: market.observeAll costSum:1.0420 count:1
+2022-09-28 10:45:08 - Nano: Performance: botArena.run.B costSum:1.0949 count:1
+2022-09-28 10:45:08 - Nano: Performance: persistence.pdoQuery.portfolioRow costSum:0.0121 count:23
+2022-09-28 10:45:08 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0139 count:1
+2022-09-28 10:45:08 - Nano: Performance: botArena.run.C costSum:0.0185 count:1
+2022-09-28 10:45:08 - Nano: Performance: botArena.run costSum:1.1137 count:1
+2022-09-28 10:45:08 - Nano: Performance: ##########################
+2022-09-28 10:50:24 - BotWorld: run beats:1 botArenaId:mathArena botArenaCount:3
+2022-09-28 10:50:24 - BotWorld: botArenaId: mathArena run
+2022-09-28 10:50:24 - BotArena: botArenaId:mathArena run
+2022-09-28 10:50:24 - BotArena: botArenaId:mathArena initial status marketBeat:18 marketClazz:xnan\Trurl\Horus\Market\MathMarket beats:1
+2022-09-28 10:50:24 - dsTrader: marketId:mathArenaMarket traderId:botMath2 assetId:CC5 msg: pickAssetIdByCicle assetId:CC5 cicle:0
+2022-09-28 10:50:26 - Trader:botMath1 Portfolio [USD:100,000.00] portfolioValuation:100,000.00
+2022-09-28 10:50:26 - Trader:botMath2 Portfolio [CC4:734.00 CC5:0.00 USD:82,996.00] portfolioValuation:96,608.30
+2022-09-28 10:50:26 - BotWorld: -------------------------
+2022-09-28 10:50:26 - BotWorld: end
+2022-09-28 10:50:26 - Nano: Performance: ##########################
+2022-09-28 10:50:26 - Nano: Performance: Summary
+2022-09-28 10:50:26 - Nano: Performance: persistence.pdoQuery costSum:1.6086 count:8357
+2022-09-28 10:50:26 - Nano: Performance: persistence.pdoQuery.marketRow costSum:1.6074 count:227
+2022-09-28 10:50:26 - Nano: Performance: botArena.run.A costSum:0.0005 count:1
+2022-09-28 10:50:26 - Nano: Performance: persistence.pdoQuery.dsTraderRow costSum:0.0340 count:23
+2022-09-28 10:50:26 - Nano: Performance: dsTrader.trade costSum:0.0362 count:3
+2022-09-28 10:50:26 - Nano: Performance: persistence.pdoQuery.traderOrderQueue costSum:0.0375 count:21
+2022-09-28 10:50:26 - Nano: Performance: persistence.pdoQuery.traderRow costSum:0.0431 count:67
+2022-09-28 10:50:26 - Nano: Performance: persistence.pdoQuery.portfolioAssetIds costSum:1.5819 count:17
+2022-09-28 10:50:26 - Nano: Performance: persistence.pdoQuery.portfolioAssetQuantity costSum:1.5840 count:43
+2022-09-28 10:50:26 - Nano: Performance: persistence.pdoQuery.portfolioAssetQuantities costSum:1.5810 count:7
+2022-09-28 10:50:26 - Nano: Performance: persistence.pdoQuery.marketFieldSetInt costSum:0.0003 count:1
+2022-09-28 10:50:26 - Nano: Performance: persistence.pdoQuery.msStatsHeadCreate costSum:1.0217 count:11
+2022-09-28 10:50:26 - Nano: Performance: persistence.pdoQuery.msStatsLogCreate costSum:1.0182 count:5
+2022-09-28 10:50:26 - Nano: Performance: persistence.pdoQuery.msSetupMarketStatsHead costSum:1.0329 count:11
+2022-09-28 10:50:26 - Nano: Performance: persistence.pdoQuery.msRowMarketStats costSum:1.5104 count:7877
+2022-09-28 10:50:26 - Nano: Performance: HMatrix.hydrate costSum:1.0189 count:11
+2022-09-28 10:50:26 - Nano: Performance: persistence.pdoQuery.msFieldMarketStatsSetInt costSum:1.3007 count:11
+2022-09-28 10:50:26 - Nano: Performance: HMatrix.dehydrate costSum:1.0394 count:11
+2022-09-28 10:50:26 - Nano: Performance: marketStats.onBeat.mathArenaMarket costSum:1.3013 count:5
+2022-09-28 10:50:26 - Nano: Performance: market.observeAll costSum:1.5312 count:1
+2022-09-28 10:50:26 - Nano: Performance: botArena.run.B costSum:1.5817 count:1
+2022-09-28 10:50:26 - Nano: Performance: persistence.pdoQuery.portfolioRow costSum:0.0174 count:23
+2022-09-28 10:50:26 - Nano: Performance: botArena.logTraderPortfolio costSum:0.0199 count:1
+2022-09-28 10:50:26 - Nano: Performance: botArena.run.C costSum:0.0265 count:1
+2022-09-28 10:50:26 - Nano: Performance: botArena.run costSum:1.6087 count:1
+2022-09-28 10:50:26 - Nano: Performance: ##########################

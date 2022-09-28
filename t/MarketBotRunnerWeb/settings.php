@@ -19,7 +19,7 @@ function testerRefreshMillis() {
 }
 
 function showPerformance() {
-  return false;
+  return true;
 }
 
 function cronEnabled() {

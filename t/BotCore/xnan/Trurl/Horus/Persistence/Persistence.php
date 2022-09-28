@@ -65,6 +65,18 @@ class Persistence {
 		return $this->marketField($marketId,"pollContentMaxAgeSeconds");
 	}
 
+	function marketMaxHistoryBeats($marketId) {
+		return $this->marketField($marketId,"maxHistoryBeats");
+	}
+
+	function marketStatsLongBeatMultiplier($marketId) {
+		return $this->marketField($marketId,"statsLongBeatMultiplier");
+	}
+	
+	function marketStatsMediumBeatMultiplier($marketId) {
+		return $this->marketField($marketId,"statsMediumBeatMultiplier");
+	}
+
 	function marketBeat($marketId,$beat=null) {		
 		if ($beat!=null) {			
 			$this->marketFieldSetInt($marketId,"beat",$beat);
@@ -99,13 +111,25 @@ class Persistence {
 		return $this->yfMarketFieldInt($marketId,"lastBeatRead",$lastBeatRead);		
 	}
 
+	function traderMaxHistoryBeats($marketId) {
+		return $this->marketFieldInt($marketId,"maxHistoryBeats");
+	}
+
+	function traderStatsLongBeatMultiplier($marketId) {
+		return $this->marketFieldInt($marketId,"statsLongBeatMultiplier");
+	}
+
+	function traderStatsMediumBeatMultiplier($marketId) {
+		return $this->marketFieldInt($marketId,"statsMediumBeatMultiplier");
+	}
+
 	function traderOrderQueue($botArenaId,$traderId) {		
 		$os=[];		
 		$query=sprintf("SELECT * FROM assetTradeOrder as o						
 							WHERE botArenaId='%s' 
 								AND traderId='%s'",$botArenaId,$traderId);
 
-		$r=$this->pdoQuery($query);
+		$r=$this->pdoQuery($query,"traderOrderQueue");
 
 		while  ($row=$r->fetch()) {
 
@@ -146,7 +170,7 @@ class Persistence {
 			"UPDATE market SET $field=$value WHERE marketId='%s'",
 				$marketId);		
 
-		$this->pdoQuery($query);
+		$this->pdoQuery($query,"marketFieldSetInt");
 	}
 
 	private function marketFieldSetString($marketId,$field,$value) {
@@ -154,7 +178,7 @@ class Persistence {
 			"UPDATE market SET $field='$value' WHERE marketId='%s'",
 				$marketId);		
 
-		$this->pdoQuery($query);
+		$this->pdoQuery($query,"marketFieldSetString");
 	}
 
 	private function yfMarketFieldInt($marketId,$field,$value=null) {
@@ -168,7 +192,7 @@ class Persistence {
 				",
 					$marketId);		
 
-			$this->pdoQuery($query);
+			$this->pdoQuery($query,"yfMarketFieldInt");
 
 			return null;
 		} else {
@@ -189,7 +213,7 @@ class Persistence {
 					$botArenaId,
 					$traderId);		
 
-			$this->pdoQuery($query);
+			$this->pdoQuery($query,"dsTraderFieldInt");
 
 			return null;
 		} else {
@@ -215,7 +239,7 @@ class Persistence {
 					$botArenaId,
 					$traderId);		
 
-			$this->pdoQuery($query);
+			$this->pdoQuery($query,"traderFieldInt");
 
 			return null;
 		} else {
@@ -237,7 +261,7 @@ class Persistence {
 					$botArenaId,
 					$traderId);		
 
-			$this->pdoQuery($query);
+			$this->pdoQuery($query,"traderFieldDouble");
 
 			return null;
 		} else {
@@ -255,7 +279,7 @@ class Persistence {
 				$marketId
 			);		
 
-		$r=$this->pdoQuery($query);
+		$r=$this->pdoQuery($query,"marketBotArenaId");
 
 		if ($row=$r->fetch()) {
 			return $row["botArenaId"];
@@ -279,7 +303,7 @@ class Persistence {
 					$botArenaId,
 					$traderId);		
 
-			$this->pdoQuery($query);
+			$this->pdoQuery($query,"dsTraderFieldDouble");
 
 			return null;
 		} else {
@@ -292,7 +316,7 @@ class Persistence {
 		"SELECT * FROM market WHERE marketId='%s'",
 			$marketId);		
 
-		$r=$this->pdoQuery($query);
+		$r=$this->pdoQuery($query,"marketRow");
 		
 		if ($row=$r->fetch()) {
 			return $row;
@@ -310,7 +334,7 @@ class Persistence {
 				yf.marketId='%s'",
 			$marketId);		
 
-		$r=$this->pdoQuery($query);
+		$r=$this->pdoQuery($query,"yfMarketRow");
 		
 		if ($row=$r->fetch()) {
 			return $row;
@@ -337,7 +361,7 @@ class Persistence {
 
 //		print $query;
 
-		$r=$this->pdoQuery($query);
+		$r=$this->pdoQuery($query,"dsTraderRow");
 		
 		if ($row=$r->fetch()) {
 			return $row;
@@ -357,7 +381,7 @@ class Persistence {
 		,$traderId
 		,$botArenaId);		
 
-		$r=$this->pdoQuery($query);
+		$r=$this->pdoQuery($query,"traderRow");
 		
 		if ($row=$r->fetch()) {
 			return $row;
@@ -404,7 +428,7 @@ class Persistence {
 	}
 
 	function worldBotArenas() {		
-		$r=$this->pdoQuery("SELECT * FROM botArena WHERE enabled=1");
+		$r=$this->pdoQuery("SELECT * FROM botArena WHERE enabled=1","worldBotArenas");
 		$as=[];
 		while ($row=$r->fetch()) {
 			$botArenaId=$row["botArenaId"];
@@ -421,7 +445,7 @@ class Persistence {
 				SELECT COALESCE(MAX(queueId)+1,0) as nextQueueId 
 					FROM assetTradeOrder
 					WHERE botArenaId='%s' AND traderId='%s'"
-					,$botArenaId,$traderId));
+					,$botArenaId,$traderId),"traderNextQueueId");
 
 		$row=$r->fetch();
 		return $row["nextQueueId"];	
@@ -493,7 +517,7 @@ class Persistence {
 				$portfolioId
 			);		
 
-		$r=$this->pdoQuery($query);
+		$r=$this->pdoQuery($query,"portfolioAssetIds");
 		
 		$assets=[];
 
@@ -517,7 +541,7 @@ class Persistence {
 				$assetId
 			);		
 
-		$r=$this->pdoQuery($query);		
+		$r=$this->pdoQuery($query,"portfolioAssetQuantity");		
 
 		if($row=$r->fetch()) {
 			return $row["assetQuantity"];
@@ -526,8 +550,14 @@ class Persistence {
 		return 0;
 	}
 	
-	private function pdoQuery($query) {
+	private function pdoQuery($query,$queryName=null) {
+		$infoQuery=$queryName!=null ? $queryName : $query;
+		Nano\nanoPerformance()->track("persistence.pdoQuery");
+		Nano\nanoPerformance()->track("persistence.pdoQuery.$infoQuery");
 		$r=$this->pdo()->query($query);		
+		Nano\nanoPerformance()->track("persistence.pdoQuery");
+		Nano\nanoPerformance()->track("persistence.pdoQuery.$infoQuery");
+
 		if ($r===false) Nano\nanoCheck()->checkFailed("pdoQuery: failed to execute query.\nquery:$query");
 		return $r;
 	}
@@ -543,7 +573,7 @@ class Persistence {
 				$portfolioId
 			);		
 
-		$r=$this->pdoQuery($query);				
+		$r=$this->pdoQuery($query,"portfolioAssetQuantities");				
 		$assets=[];
 
 		while ($row=$r->fetch()) {
@@ -568,7 +598,7 @@ class Persistence {
 				$portfolioId,$assetId,$quantity,time(),AssetTradeOperation\Buy
 			);				
 		
-		$r=$this->pdoQuery($query);				
+		$r=$this->pdoQuery($query,"portfolioAddAssetQuantity");				
 
 		if ($isDeposit) {
 			$this->portfolioLastDepositTime($portfolioId,time());
@@ -597,7 +627,7 @@ class Persistence {
 				$portfolioId,$assetId,-1*$quantity,time(),AssetTradeOperation\Sell
 			);		
 
-		$r=$this->pdoQuery($query);		
+		$r=$this->pdoQuery($query,"portfolioRemoveAssetQuantity");		
 	}
 
 	private function portfolioFieldInt($portfolioId,$field,$value=null) {
@@ -611,7 +641,7 @@ class Persistence {
 					$portfolioId
 				);		
 
-			$this->pdoQuery($query);
+			$this->pdoQuery($query,"portfolioFieldInt");
 
 			return null;
 		} else {
@@ -629,7 +659,7 @@ class Persistence {
 		,$portfolioId
 		);		
 
-		$r=$this->pdoQuery($query);
+		$r=$this->pdoQuery($query,"portfolioRow");
 		
 		if ($row=$r->fetch()) {
 			return $row;
@@ -682,7 +712,7 @@ class Persistence {
 		$this->nullableSql($order->doneTime()),$this->nullableValueSql($order->doneQuote())
 		);		
 
-		$r=$this->pdoQuery($query);
+		$r=$this->pdoQuery($query,"traderQueueOrder");
 	}		
 
 	function traderOrderUpdate($order) {
@@ -708,7 +738,7 @@ class Persistence {
 
 		);		
 
-		$r=$this->pdoQuery($query);
+		$r=$this->pdoQuery($query,"traderOrderUpdate");
 	}		
 
 
@@ -725,6 +755,8 @@ class Persistence {
 	}
 
 	function msStatsScalar($marketId,$marketStatsId,$statsDim,$assetId) {
+		Nano\nanoPerformance()->track("persistence.msStatsScalar");
+
 		$statsTableHead=$this->msStatsTableHead($marketId,$marketStatsId);
 		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
 
@@ -738,7 +770,9 @@ class Persistence {
 			$statsDim,
 			$assetId);		
 
-		$r=$this->pdoQuery($query);		
+		$r=$this->pdoQuery($query,"msStatsScalar");		
+
+		Nano\nanoPerformance()->track("persistence.msStatsScalar");
 
 		if ($row=$r->fetch()) {
 			return $row["statsValue"];
@@ -751,6 +785,8 @@ class Persistence {
 	function msStatsHistoryLastValue($marketId,$marketStatsId,$statsDim,$assetId) {
 		$statsTableHead=$this->msStatsTableHead($marketId,$marketStatsId);
 		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
+
+		Nano\nanoPerformance()->track("persistence.msStatsHistoryLastValue");
 
 		$query=sprintf(
 			"SELECT * 
@@ -765,7 +801,9 @@ class Persistence {
 			$statsDim,
 			$assetId);
 
-		$r=$this->pdoQuery($query);		
+		$r=$this->pdoQuery($query,"msStatsHistoryLastValue");		
+
+		Nano\nanoPerformance()->track("persistence.msStatsHistoryLastValue");
 		
 		if ($row=$r->fetch()) {
 			return $row["statsValue"];
@@ -794,7 +832,7 @@ class Persistence {
 			$assetId,
 			$this->infiniteNegative());		
 
-		$r=$this->pdoQuery($query);		
+		$r=$this->pdoQuery($query,"msStatsHistoryAll");		
 
 		$rows=[];
 		while ($row=$r->fetch()) {
@@ -830,7 +868,7 @@ class Persistence {
 				TABLE_NAME = '$tableName';
 		");
 
-		$r=$this->pdoQuery($query);
+		$r=$this->pdoQuery($query,"tableExists");
 		$row=$r->fetch();
 
 		return $row["count"]!=0;
@@ -856,12 +894,12 @@ class Persistence {
 		$query2=sprintf(
 				"SELECT COUNT(*) as count FROM $statsTableHead");				
 
-		$r=$this->pdoQuery($query1);
+		$r=$this->pdoQuery($query1,"msIsMarketStatsNew");
 		$row=$r->fetch();
 
 		if ($row["count"]==0) return true;
 
-		$r=$this->pdoQuery($query2);
+		$r=$this->pdoQuery($query2,"msIsMarketStatsNew");
 		
 		$row=$r->fetch();
 		return $row["count"]==0;
@@ -872,7 +910,7 @@ class Persistence {
 		$query=sprintf(
 				"SELECT COUNT(*) as count FROM $tableName");				
 
-		$r=$this->pdoQuery($query);
+		$r=$this->pdoQuery($query,"tableHasRows");
 		
 		$row=$r->fetch();
 		return $row["count"]!=0;
@@ -892,14 +930,13 @@ class Persistence {
 	function msMarketStatsLogReset($marketId,$marketStatsId) {
 		$delQuery1=sprintf("TRUNCATE %s",$this->msStatsTableLog($marketId,$marketStatsId));		
 
-		$r=$this->pdoQuery($delQuery1);
-		exit("ACAMMSS");
+		$r=$this->pdoQuery($delQuery1,"msMarketStatsLogReset");
 	}
 
 	function msMarketStatsHeadReset($marketId,$marketStatsId) {
 		$delQuery1=sprintf("TRUNCATE %s",$this->msStatsTableHead($marketId,$marketStatsId));		
 
-		$r=$this->pdoQuery($delQuery1);
+		$r=$this->pdoQuery($delQuery1,"msMarketStatsHeadReset");
 
 		$this->msSetupMarketStatsHead($marketId,$marketStatsId);
 	}
@@ -911,12 +948,12 @@ class Persistence {
 		$query=sprintf(
 		"SELECT * FROM $statsTableHead");		
 
-		$r=$this->pdoQuery($query);
+		$r=$this->pdoQuery($query,"msRowMarketStats");
 		
 		if ($row=$r->fetch()) {
 			return $row;
 		} else {
-			Nano\nanoCheck()->checkFailed("marketStats row not found");
+			Nano\nanoCheck()->checkFailed("marketStats: statsTableHead:$statsTableHead msg: row not found");
 		}		
 	}
 
@@ -929,9 +966,9 @@ class Persistence {
 		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
 
 		$query=sprintf(
-			"UPDATE $statsTableHead SET $field=$value");		
+			"UPDATE $statsTableHead SET $field=$value","msFieldMarketStatsSetInt");		
 
-		$this->pdoQuery($query);
+		$this->pdoQuery($query,"msFieldMarketStatsSetInt");
 	}
 
 	function msStatsScalarSet($marketId,$marketStatsId,$statsDim,$assetId,$statsValue) {
@@ -960,8 +997,8 @@ class Persistence {
 		
 		//print "$query\n";
 
-		$r=$this->pdoQuery($delQuery);		
-		$r=$this->pdoQuery($query);		
+		$r=$this->pdoQuery($delQuery,"msStatsScalarSet");		
+		$r=$this->pdoQuery($query,"msStatsScalarSet");		
 	}
 
 	function msStatsHistorySet($marketId,$marketStatsId,$statsDim,$assetId,$historyIndex,$statsValue) {	
@@ -990,13 +1027,15 @@ class Persistence {
 					$historyIndex,
 					$statsValue);		
 
-		$r=$this->pdoQuery($delQuery);
+		$r=$this->pdoQuery($delQuery,"msStatsHistorySet");
 
 		//print $query."\n";
-		$r=$this->pdoQuery($query);
+		$r=$this->pdoQuery($query,"msStatsHistorySet");
 	}
 
 	function msStatsHistory($marketId,$marketStatsId,$statsDim,$assetId,$historyIndex) {	
+		Nano\nanoPerformance()->track("persistence.msStatsHistory");
+
 		$statsTableHead=$this->msStatsTableHead($marketId,$marketStatsId);
 		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
 
@@ -1011,7 +1050,9 @@ class Persistence {
 					$statsDim,
 					$historyIndex);		
 
-		$r=$this->pdoQuery($query);
+		$r=$this->pdoQuery($query,"msStatsHistory");
+
+		Nano\nanoPerformance()->track("persistence.msStatsHistory");
 
 		if ($row=$r->fetch()) {			
 			return $row["statsValue"];
@@ -1034,9 +1075,9 @@ class Persistence {
 						maxHistoryBeats,synchedBeat,beatMultiplier) 
 					VALUES (%s,%s,%s,%s)",0,100,-1,1);		
 
-		$this->pdoQuery($delQuery);
+		$this->pdoQuery($delQuery,"msSetupMarketStatsHead");
 
-		$this->pdoQuery($query);
+		$this->pdoQuery($query,"msSetupMarketStatsHead");
 	}
 
 	function msSynchedBeat($marketId,$marketStatsId,$synchedBeat=null) {
@@ -1083,12 +1124,11 @@ class Persistence {
 				ENGINE=InnoDB
 			";
 
-		$this->pdoQuery($sql1);
+		$this->pdoQuery($sql1,"msStatsHeadCreate");
 	}
 
 	function msStatsLogCreate($marketId,$marketStatsId) {
-		print "msStatsLogCreate $marketId $marketStatsId\n";
-		
+
 		$tableHead=$this->msStatsTableHead($marketId,$marketStatsId);
 		$tableLog=$this->msStatsTableLog($marketId,$marketStatsId);
 	
@@ -1103,7 +1143,7 @@ class Persistence {
 			COLLATE='utf8mb4_general_ci'
 			ENGINE=InnoDB";
 
-		$this->pdoQuery($sql2);		
+		$this->pdoQuery($sql2,"msStatsLogCreate");		
 	}
 
 	function msStatsCreate($marketId,$marketStatsId) {

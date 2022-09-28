@@ -225,19 +225,16 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 
 	function marketStats(){
 		$s=$this->market()->marketStats();
-		$s->setupStatsIfReq(); //TODO mover a lugar apropiado
 		return $s;
 	}
 
 	function marketStatsMedium(){
 		$s=$this->market()->marketStatsMedium();
-		$s->setupStatsIfReq(); //TODO mover a lugar apropiado
 		return $s;
 	}
 
 	function marketStatsLong(){
 		$s=$this->market()->marketStatsLong();
-		$s->setupStatsIfReq(); //TODO mover a lugar apropiado
 		return $s;
 	}
 
