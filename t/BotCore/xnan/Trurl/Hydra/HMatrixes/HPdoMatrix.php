@@ -31,6 +31,7 @@ class HPdoMatrix implements  \Serializable {
 	var $dataValueSize;
 	var $data=null;
 	var $pdo=null;
+	var $isNew=true;
 
 	function __construct($pdo, $id,$name=null,$dimensions=[2,2]) {
 		if ($id===null) Nano\nanoCheck()->checkFailed("id cannot be null");
@@ -194,6 +195,11 @@ class HPdoMatrix implements  \Serializable {
 		return $r->fetch();
 	}
 
+	function isNew() {
+		$this->hydrateIfReq();
+		return $this->isNew;
+	}
+
 	function hydrate() {
 		Hydra\hydra()->performance()->track("HMatrix.hydrate");
 		
@@ -207,9 +213,11 @@ class HPdoMatrix implements  \Serializable {
 			$this->data=$row["data"];			
 			if ($this->data===null) $this->initData();
 			$this->changed=false;
+			$this->isNew=false;			
 		} else {
 			$this->initData();			
 			$this->changed=true;
+			$this->isNew=true;
 		}
 		
 		//(HMatrixes::instance())->notifyHMatrixHydrated($this);

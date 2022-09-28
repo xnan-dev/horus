@@ -742,106 +742,6 @@ class Persistence {
 	}		
 
 
-	function msStatsTableHead($marketId,$marketStatsId) {
-		return sprintf("marketStats%s%s",
-			ucfirst(str_replace("ArenaMarket","",$marketId)),
-			str_replace("marketStats","",$marketStatsId));
-	}
-
-	function msStatsTableLog($marketId,$marketStatsId) {
-		return sprintf("marketStats%s%sLog",
-			ucfirst(str_replace("ArenaMarket","",$marketId)),
-			str_replace("marketStats","",$marketStatsId));
-	}
-
-	function msStatsScalar($marketId,$marketStatsId,$statsDim,$assetId) {
-		Nano\nanoPerformance()->track("persistence.msStatsScalar");
-
-		$statsTableHead=$this->msStatsTableHead($marketId,$marketStatsId);
-		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
-
-		$query=sprintf(
-			"SELECT * 
-				FROM $statsTableLog
-				WHERE
-					statsDim=%s AND
-					assetId='%s' AND
-					historyIndex IS NULL",
-			$statsDim,
-			$assetId);		
-
-		$r=$this->pdoQuery($query,"msStatsScalar");		
-
-		Nano\nanoPerformance()->track("persistence.msStatsScalar");
-
-		if ($row=$r->fetch()) {
-			return $row["statsValue"];
-		}
-
-		Nano\nanoCheck()->checkFailed("msStatsScalar: marketId:'$marketId' marketStatsId:'$marketStatsId' statsDim:$statsDim assetId:$assetId msg: stats not found");
-	}
-
-
-	function msStatsHistoryLastValue($marketId,$marketStatsId,$statsDim,$assetId) {
-		$statsTableHead=$this->msStatsTableHead($marketId,$marketStatsId);
-		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
-
-		Nano\nanoPerformance()->track("persistence.msStatsHistoryLastValue");
-
-		$query=sprintf(
-			"SELECT * 
-				FROM $statsTableLog
-				WHERE
-					statsDim=%s AND
-					assetId='%s' AND
-					historyIndex IS NOT NULL
-				ORDER BY
-					historyIndex DESC 
-				LIMIT 1",
-			$statsDim,
-			$assetId);
-
-		$r=$this->pdoQuery($query,"msStatsHistoryLastValue");		
-
-		Nano\nanoPerformance()->track("persistence.msStatsHistoryLastValue");
-		
-		if ($row=$r->fetch()) {
-			return $row["statsValue"];
-		}		
-
-		Nano\nanoCheck()->checkFailed("msStatsHistoryLastValue: marketId: $marketId marketStatsId: $marketStatsId statsDim:$statsDim assetId:$assetId msg: stats not found");
-
-	}
-
-	function msStatsHistoryAll($marketId,$marketStatsId,$statsDim,$assetId) {
-		$statsTableHead=$this->msStatsTableHead($marketId,$marketStatsId);
-		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
-
-		$query=sprintf(
-			"SELECT statsValue 
-				FROM $statsTableLog
-				WHERE
-					statsDim=%s AND
-					assetId='%s' AND
-				 	historyIndex IS NOT NULL AND
-				 	statsValue<>%s
-				ORDER BY
-					historyIndex ASC
-				 	 ",
-			$statsDim,
-			$assetId,
-			$this->infiniteNegative());		
-
-		$r=$this->pdoQuery($query,"msStatsHistoryAll");		
-
-		$rows=[];
-		while ($row=$r->fetch()) {
-			$rows[]=$row;
-		}
-
-		return $rows;
-	}
-
 	function infinitePositive() {
 		return 1000000000;
 	}
@@ -874,38 +774,6 @@ class Persistence {
 		return $row["count"]!=0;
 	}
 
-	function msIsMarketStatsNew($marketId,$marketStatsId) {
-		$schema=$this->schema();
-
-		$statsTableHead=$this->msStatsTableHead($marketId,$marketStatsId);
-		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
-
-
-		$query1=sprintf("
-			SELECT COUNT(TABLE_NAME) as count
-			FROM 
-			   information_schema.TABLES 
-			WHERE 
-			   TABLE_SCHEMA LIKE '$schema' AND 
-				TABLE_TYPE LIKE 'BASE TABLE' AND
-				TABLE_NAME = '$statsTableHead';
-		");
-
-		$query2=sprintf(
-				"SELECT COUNT(*) as count FROM $statsTableHead");				
-
-		$r=$this->pdoQuery($query1,"msIsMarketStatsNew");
-		$row=$r->fetch();
-
-		if ($row["count"]==0) return true;
-
-		$r=$this->pdoQuery($query2,"msIsMarketStatsNew");
-		
-		$row=$r->fetch();
-		return $row["count"]==0;
-	}
-
-
 	private function tableHasRows($tableName) {
 		$query=sprintf(
 				"SELECT COUNT(*) as count FROM $tableName");				
@@ -916,37 +784,14 @@ class Persistence {
 		return $row["count"]!=0;
 	}
 
-	function msIsMarketStatsLogEmpty($marketId,$marketStatsId) {
-
-		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
-
-		$ret= 
-			!$this->tableExists($statsTableLog) ||
-				!$this->tableHasRows($statsTableLog);
-
-		return $ret;
-	}
-
-	function msMarketStatsLogReset($marketId,$marketStatsId) {
-		$delQuery1=sprintf("TRUNCATE %s",$this->msStatsTableLog($marketId,$marketStatsId));		
-
-		$r=$this->pdoQuery($delQuery1,"msMarketStatsLogReset");
-	}
-
-	function msMarketStatsHeadReset($marketId,$marketStatsId) {
-		$delQuery1=sprintf("TRUNCATE %s",$this->msStatsTableHead($marketId,$marketStatsId));		
-
-		$r=$this->pdoQuery($delQuery1,"msMarketStatsHeadReset");
-
-		$this->msSetupMarketStatsHead($marketId,$marketStatsId);
-	}
-
 	private function msRowMarketStats($marketId,$marketStatsId) {
-		$statsTableHead=$this->msStatsTableHead($marketId,$marketStatsId);
-		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
 
 		$query=sprintf(
-		"SELECT * FROM $statsTableHead");		
+		"SELECT * FROM marketStats
+			WHERE 
+				marketId='$marketId' AND 
+				marketStatsId='$marketStatsId' 
+			");		
 
 		$r=$this->pdoQuery($query,"msRowMarketStats");
 		
@@ -962,122 +807,16 @@ class Persistence {
 	}
 
 	private function msFieldMarketStatsSetInt($marketId,$marketStatsId,$field,$value) {		
-		$statsTableHead=$this->msStatsTableHead($marketId,$marketStatsId);
-		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
-
+	
 		$query=sprintf(
-			"UPDATE $statsTableHead SET $field=$value","msFieldMarketStatsSetInt");		
+			"UPDATE marketStats SET $field=$value
+  			 WHERE 
+				marketId='$marketId' AND 
+				marketStatsId='$marketStatsId' 
+
+			","msFieldMarketStatsSetInt");		
 
 		$this->pdoQuery($query,"msFieldMarketStatsSetInt");
-	}
-
-	function msStatsScalarSet($marketId,$marketStatsId,$statsDim,$assetId,$statsValue) {
-		$statsTableHead=$this->msStatsTableHead($marketId,$marketStatsId);
-		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
-
-		$statsValue=round($statsValue, 10);
-
-		//print "statsScalarSet $statsDim,$assetId,$statsValue $marketId $marketStatsId \n";
-		$delQuery=sprintf(
-				"DELETE FROM $statsTableLog WHERE 
-					 assetId='%s'
-					 AND statsDim='%s'
-					 AND historyIndex IS NULL
-					 ",
-					$assetId,
-					$statsDim);		
-		
-
-		$query=sprintf(
-				"INSERT INTO $statsTableLog(assetId,statsDim,statsValue) 
-				VALUES('%s',%s,%s)",
-					$assetId,
-					$statsDim,					
-					$statsValue);		
-		
-		//print "$query\n";
-
-		$r=$this->pdoQuery($delQuery,"msStatsScalarSet");		
-		$r=$this->pdoQuery($query,"msStatsScalarSet");		
-	}
-
-	function msStatsHistorySet($marketId,$marketStatsId,$statsDim,$assetId,$historyIndex,$statsValue) {	
-		$statsTableHead=$this->msStatsTableHead($marketId,$marketStatsId);
-		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
-
-		$statsValue=round($statsValue, 10);
-
-		//print "statsHistorySet $statsDim,$assetId,$historyIndex $statsValue $marketId $marketStatsId \n";
-
-		$delQuery=sprintf(
-				"DELETE FROM $statsTableLog WHERE 
-					 assetId='%s'
-					 AND statsDim='%s'
-					 AND historyIndex=%s
-					 ",
-					$assetId,
-					$statsDim,
-					$historyIndex);		
-
-		$query=sprintf(
-				"INSERT INTO $statsTableLog(assetId,statsDim,historyIndex,statsValue) 
-				VALUES('%s',%s,%s,%s)",
-					$assetId,
-					$statsDim,					
-					$historyIndex,
-					$statsValue);		
-
-		$r=$this->pdoQuery($delQuery,"msStatsHistorySet");
-
-		//print $query."\n";
-		$r=$this->pdoQuery($query,"msStatsHistorySet");
-	}
-
-	function msStatsHistory($marketId,$marketStatsId,$statsDim,$assetId,$historyIndex) {	
-		Nano\nanoPerformance()->track("persistence.msStatsHistory");
-
-		$statsTableHead=$this->msStatsTableHead($marketId,$marketStatsId);
-		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
-
-		$query=sprintf(
-				"SELECT statsValue FROM $statsTableLog 
-				WHERE 
-					 assetId='%s'
-					 AND statsDim='%s'
-					 AND historyIndex=%s
-					 ",
-					$assetId,
-					$statsDim,
-					$historyIndex);		
-
-		$r=$this->pdoQuery($query,"msStatsHistory");
-
-		Nano\nanoPerformance()->track("persistence.msStatsHistory");
-
-		if ($row=$r->fetch()) {			
-			return $row["statsValue"];
-		}
-		Nano\nanoCheck()->checkFailed("statsHistory row not found");
-	}
-
-	function msSetupMarketStatsHead($marketId,$marketStatsId) {		
-		$this->msStatsCreate($marketId,$marketStatsId);
-
-		$statsTableHead=$this->msStatsTableHead($marketId,$marketStatsId);
-		$statsTableLog=$this->msStatsTableLog($marketId,$marketStatsId);
-
-		$createQuery="";
-
-		$delQuery=sprintf("DELETE FROM $statsTableHead");		
-
-		$query=sprintf(
-				"INSERT INTO $statsTableHead(endBeat,
-						maxHistoryBeats,synchedBeat,beatMultiplier) 
-					VALUES (%s,%s,%s,%s)",0,100,-1,1);		
-
-		$this->pdoQuery($delQuery,"msSetupMarketStatsHead");
-
-		$this->pdoQuery($query,"msSetupMarketStatsHead");
 	}
 
 	function msSynchedBeat($marketId,$marketStatsId,$synchedBeat=null) {
@@ -1108,47 +847,6 @@ class Persistence {
 			$this->msFieldMarketStatsSetInt($marketId,$marketStatsId,"endBeat",$endBeat);
 		}
 		return $this->msFieldMarketStats($marketId,$marketStatsId,"endBeat");
-	}
-
-	function msStatsHeadCreate($marketId,$marketStatsId) {
-		$tableHead=$this->msStatsTableHead($marketId,$marketStatsId);
-		$tableLog=$this->msStatsTableLog($marketId,$marketStatsId);
-
-		$sql1="CREATE TABLE IF NOT EXISTS `$tableHead` (
-			`endBeat` BIGINT(20) NULL DEFAULT NULL,
-			`maxHistoryBeats` INT(11) NULL DEFAULT NULL,
-			`synchedBeat` BIGINT(20) NULL DEFAULT NULL,
-			`beatMultiplier` INT(11) NULL DEFAULT NULL			
-			)
-				COLLATE='utf8mb4_general_ci'
-				ENGINE=InnoDB
-			";
-
-		$this->pdoQuery($sql1,"msStatsHeadCreate");
-	}
-
-	function msStatsLogCreate($marketId,$marketStatsId) {
-
-		$tableHead=$this->msStatsTableHead($marketId,$marketStatsId);
-		$tableLog=$this->msStatsTableLog($marketId,$marketStatsId);
-	
-		$sql2="CREATE TABLE IF NOT EXISTS `$tableLog` (
-			`assetId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
-			`statsDim` INT(11) NOT NULL,
-			`historyIndex` INT(11) NULL DEFAULT NULL,
-			`statsValue` DECIMAL(20,10) NULL DEFAULT NULL,
-			INDEX `StatsHistoryAllIdx` (`assetId`, `statsDim`) USING HASH,
-			INDEX `StatsScalarAndHistoryIdx` (`assetId`, `statsDim`, `historyIndex`) USING HASH
-		)
-			COLLATE='utf8mb4_general_ci'
-			ENGINE=InnoDB";
-
-		$this->pdoQuery($sql2,"msStatsLogCreate");		
-	}
-
-	function msStatsCreate($marketId,$marketStatsId) {
-		$this->msStatsHeadCreate($marketId,$marketStatsId);
-		$this->msStatsLogCreate($marketId,$marketStatsId);
 	}
 }
 

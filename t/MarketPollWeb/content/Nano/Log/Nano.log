@@ -2046,3 +2046,63 @@
 2022-09-27 22:23:00 - YahooFinanceMarketPoll: pollerName:YFFOREXUSD poll-completed: quotes:122
 2022-09-27 22:23:00 - PollWorld: -------------------------
 2022-09-27 22:23:00 - PollWorld: end
+2022-09-28 12:28:27 - PollWorld: pollQuotes beats:1 pollerName: pollerCount:7
+2022-09-28 12:28:27 - BotWorld: pollerName: Cryptos run
+2022-09-28 12:28:28 - YahooFinanceMarketPoll: poll pollDate:2022-09-28 12:28:27 marketBeat:28953
+2022-09-28 12:28:30 - YahooFinanceMarketPoll: pollerName:Cryptos poll-completed: quotes:100
+2022-09-28 12:28:30 - PollWorld: -------------------------
+2022-09-28 12:28:30 - BotWorld: pollerName: MervalAccionesLideres run
+2022-09-28 12:28:31 - YahooFinanceMarketPoll: poll pollDate:2022-09-28 12:28:30 marketBeat:53
+2022-09-28 12:28:31 - YahooFinanceMarketPoll: pollerName:MervalAccionesLideres poll-completed: quotes:21
+2022-09-28 12:28:31 - PollWorld: -------------------------
+2022-09-28 12:28:31 - BotWorld: pollerName: SnP100 run
+2022-09-28 12:28:32 - YahooFinanceMarketPoll: poll pollDate:2022-09-28 12:28:31 marketBeat:53
+2022-09-28 12:28:37 - YahooFinanceMarketPoll: pollerName:SnP100 poll-completed: quotes:93
+2022-09-28 12:28:37 - PollWorld: -------------------------
+2022-09-28 12:28:37 - BotWorld: pollerName: MervalCedears run
+2022-09-28 12:28:38 - YahooFinanceMarketPoll: poll pollDate:2022-09-28 12:28:37 marketBeat:53
+2022-09-28 12:28:46 - YahooFinanceMarketPoll: pollerName:MervalCedears poll-completed: quotes:190
+2022-09-28 12:28:46 - PollWorld: -------------------------
+2022-09-28 12:28:46 - BotWorld: pollerName: Nasdaq100 run
+2022-09-28 12:28:47 - YahooFinanceMarketPoll: poll pollDate:2022-09-28 12:28:46 marketBeat:46
+2022-09-28 12:28:51 - YahooFinanceMarketPoll: pollerName:Nasdaq100 poll-completed: quotes:100
+2022-09-28 12:28:51 - PollWorld: -------------------------
+2022-09-28 12:28:51 - BotWorld: pollerName: MervalAccionesGeneral run
+2022-09-28 12:28:52 - YahooFinanceMarketPoll: poll pollDate:2022-09-28 12:28:51 marketBeat:50
+2022-09-28 12:28:53 - YahooFinanceMarketPoll: pollerName:MervalAccionesGeneral poll-completed: quotes:41
+2022-09-28 12:28:53 - PollWorld: -------------------------
+2022-09-28 12:28:53 - BotWorld: pollerName: YFFOREXUSD run
+2022-09-28 12:28:54 - YahooFinanceMarketPoll: poll pollDate:2022-09-28 12:28:53 marketBeat:50
+2022-09-28 12:28:58 - YahooFinanceMarketPoll: pollerName:YFFOREXUSD poll-completed: quotes:122
+2022-09-28 12:28:58 - PollWorld: -------------------------
+2022-09-28 12:28:58 - PollWorld: end
+2022-09-28 12:29:01 - PollWorld: pollQuotes beats:1 pollerName: pollerCount:7
+2022-09-28 12:29:01 - BotWorld: pollerName: Cryptos run
+2022-09-28 12:29:02 - YahooFinanceMarketPoll: poll pollDate:2022-09-28 12:29:01 marketBeat:28955
+2022-09-28 12:29:04 - YahooFinanceMarketPoll: pollerName:Cryptos poll-completed: quotes:100
+2022-09-28 12:29:04 - PollWorld: -------------------------
+2022-09-28 12:29:04 - BotWorld: pollerName: MervalAccionesLideres run
+2022-09-28 12:29:05 - YahooFinanceMarketPoll: poll pollDate:2022-09-28 12:29:04 marketBeat:55
+2022-09-28 12:29:05 - YahooFinanceMarketPoll: pollerName:MervalAccionesLideres poll-completed: quotes:21
+2022-09-28 12:29:05 - PollWorld: -------------------------
+2022-09-28 12:29:05 - BotWorld: pollerName: SnP100 run
+2022-09-28 12:29:06 - YahooFinanceMarketPoll: poll pollDate:2022-09-28 12:29:05 marketBeat:55
+2022-09-28 12:29:08 - YahooFinanceMarketPoll: pollerName:SnP100 poll-completed: quotes:93
+2022-09-28 12:29:08 - PollWorld: -------------------------
+2022-09-28 12:29:08 - BotWorld: pollerName: MervalCedears run
+2022-09-28 12:29:09 - YahooFinanceMarketPoll: poll pollDate:2022-09-28 12:29:08 marketBeat:55
+2022-09-28 12:29:13 - YahooFinanceMarketPoll: pollerName:MervalCedears poll-completed: quotes:190
+2022-09-28 12:29:13 - PollWorld: -------------------------
+2022-09-28 12:29:13 - BotWorld: pollerName: Nasdaq100 run
+2022-09-28 12:29:14 - YahooFinanceMarketPoll: poll pollDate:2022-09-28 12:29:13 marketBeat:48
+2022-09-28 12:29:16 - YahooFinanceMarketPoll: pollerName:Nasdaq100 poll-completed: quotes:100
+2022-09-28 12:29:16 - PollWorld: -------------------------
+2022-09-28 12:29:16 - BotWorld: pollerName: MervalAccionesGeneral run
+2022-09-28 12:29:17 - YahooFinanceMarketPoll: poll pollDate:2022-09-28 12:29:16 marketBeat:52
+2022-09-28 12:29:18 - YahooFinanceMarketPoll: pollerName:MervalAccionesGeneral poll-completed: quotes:40
+2022-09-28 12:29:18 - PollWorld: -------------------------
+2022-09-28 12:29:18 - BotWorld: pollerName: YFFOREXUSD run
+2022-09-28 12:29:19 - YahooFinanceMarketPoll: poll pollDate:2022-09-28 12:29:18 marketBeat:52
+2022-09-28 12:29:23 - YahooFinanceMarketPoll: pollerName:YFFOREXUSD poll-completed: quotes:122
+2022-09-28 12:29:23 - PollWorld: -------------------------
+2022-09-28 12:29:23 - PollWorld: end

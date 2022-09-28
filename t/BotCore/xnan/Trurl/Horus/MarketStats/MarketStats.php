@@ -97,10 +97,6 @@ class MarketStats {
 		$this->statsValue->reset();
 	}
 
-	function isMarketStatsNew() { // MIG-TODO
-		return true;
-	}
-
 	private function setupIdxAsset() { //MIG-NEW
 		$assetIds=$this->market()->assetIds();
 
@@ -152,42 +148,52 @@ class MarketStats {
 	}
 
 
-	private function setupStats() { //MIG
-		print "SETUPStatsCALLED ".$this->marketId()." ".$this->marketStatsId()."\n";
+	private function statsHistoryShift($dim,$assetId) {
+		$this->mtxHistory->shift([$dim,$this->idxAsset[$assetId]]);
+	}
 
-		Horus\persistence()->msStatsHeadCreate($this->marketId(),$this->marketStatsId());
-		Horus\persistence()->msSetupMarketStatsHead($this->marketId(),$this->marketStatsId());
+	private function setupStatsIfReq() { //MIG
 
 		$dim=[count($this->idxScalarDim),count($this->idxAsset)];
 		$this->mtxScalar=new HMatrixes\HPdoMatrix($this->pdo(),$this->mtxScalarId(),$this->mtxScalarId(),$dim);
 
 		$dim=[count($this->idxHistoryDim),count($this->idxAsset),$this->maxHistoryBeats()];
-		$this->mtxHistory=new HMatrixes\HPdoMatrix($this->pdo(),$this->mtxHistoryId(),$this->mtxHistoryId(),$dim);
-
+		$this->mtxHistory=new HMatrixes\HPdoMatrix($this->pdo(),$this->mtxHistoryId(),$this->mtxHistoryId(),$dim);		
 
 		$this->mtxScalar->hydrateIfReq();
 		$this->mtxHistory->hydrateIfReq();
 
-		foreach ($this->market()->assetIds() as $assetId) {
-			$this->statsScalarSet(self::SValue,$assetId,0);
-			$this->statsScalarSet(self::SMin,$assetId,$this->infinitePositive());
-			$this->statsScalarSet(self::SMax,$assetId,$this->infiniteNegative());
-			$this->statsScalarSet(self::SAvg,$assetId,0);
-			$this->statsScalarSet(self::SSum,$assetId,0);
-			$this->statsScalarSet(self::SMean,$assetId,0);
-			$this->statsScalarSet(self::SCicle,$assetId,0);
-			$this->statsScalarSet(self::SMinBeat,$assetId,$this->infiniteNegative());
-			$this->statsScalarSet(self::SMaxBeat,$assetId,$this->infiniteNegative());
-			$this->statsScalarSet(self::SCicleBeats,$assetId,$this->infiniteNegative());
-		}
+		if ($this->mtxScalar->isNew()) {
 
-		foreach ($this->market()->assetIds() as $assetId) {
-			for ($i=0;$i<$this->maxHistoryBeats();$i++) {				
-				$this->statsHistorySet(self::SHValue,$assetId,$i,$this->infiniteNegative());
-				$this->statsHistorySet(self::SHCicle,$assetId,$i,$this->infiniteNegative());				
+			foreach ($this->market()->assetIds() as $assetId) {
+				$this->statsScalarSet(self::SValue,$assetId,0);
+				$this->statsScalarSet(self::SMin,$assetId,$this->infinitePositive());
+				$this->statsScalarSet(self::SMax,$assetId,$this->infiniteNegative());
+				$this->statsScalarSet(self::SAvg,$assetId,0);
+				$this->statsScalarSet(self::SSum,$assetId,0);
+				$this->statsScalarSet(self::SMean,$assetId,0);
+				$this->statsScalarSet(self::SCicle,$assetId,0);
+				$this->statsScalarSet(self::SMinBeat,$assetId,$this->infiniteNegative());
+				$this->statsScalarSet(self::SMaxBeat,$assetId,$this->infiniteNegative());
+				$this->statsScalarSet(self::SCicleBeats,$assetId,$this->infiniteNegative());
 			}
-		}
+			$this->mtxScalar->dehydrate();
+			$this->mtxScalar->hydrateIfReq();
 
+		}
+		
+		if ($this->mtxHistory->isNew()) {
+
+			foreach ($this->market()->assetIds() as $assetId) {
+				for ($i=0;$i<$this->maxHistoryBeats();$i++) {				
+					$this->statsHistorySet(self::SHValue,$assetId,$i,$this->infiniteNegative());
+					$this->statsHistorySet(self::SHCicle,$assetId,$i,$this->infiniteNegative());				
+				}
+			}
+	
+			$this->mtxHistory->dehydrate();
+			$this->mtxHistory->hydrateIfReq();
+		}
 	}
 
 	function statsScalar($dim,$assetId) { //MIG		
@@ -337,14 +343,6 @@ class MarketStats {
 		)-1 : 0;				
 		return $cicle;
 	}
-
-	function setupStatsIfReq() {		
-		print "setupStatsIfReq ".$this->marketId()." ".$this->marketStatsId()."\n";
-
-		if ($this->isMarketStatsNew()) {
-			 $this->setupStats();
-		}
-	}
 	
 	function marketBuyQuoteAvg(&$market) {
 		$sum=0;
@@ -361,21 +359,8 @@ class MarketStats {
 		return $this->market()->assetIds(); // TODO agregar Mercado Promedio.
 	}
 
-	function onBeat($market) { // MIG
-		$this->setupStatsIfReq();
-		if (  $this->beatMultiplier()>1 && 
-			(($market->beat() % $this->beatMultiplier()) != 0) ) {
-		
-			//echo sprintf("marketStats: %s beatSkip: beatMultiplier:%s onBeat: %s\n",
-			//	$this->marketStatsId(),$this->beatMultiplier(),$market->beat());
-
-			return; // saltamos los beats que se deben ignorar de acuerdo al multiplicador.
-		}
-
-		//printf("beat %s synchedBeat %s stats:%s<br>",$market->beat(),$this->synchedBeat,$this->marketStatsId);
-		if ($market->beat()==$this->synchedBeat()) return;		
-
-		Nano\nanoPerformance()->track("marketStats.onBeat.".$market->marketId());
+	private function updateStats(&$market) {
+				Nano\nanoPerformance()->track("marketStats.updateStats.".$market->marketId());
 		$this->endBeat($market->beat());
 	
 		$assetIds=$this->assetIds();	
@@ -446,16 +431,33 @@ class MarketStats {
 				);
 		}
 
+		Nano\nanoPerformance()->track("marketStats.updateStats.".$market->marketId());
+	}
+
+	function onBeat($market) { // MIG
+
+		//printf("beat %s synchedBeat %s stats:%s<br>",$market->beat(),$this->synchedBeat,$this->marketStatsId);
+		//echo sprintf("marketStats: %s beatSkip: beatMultiplier:%s onBeat: %s\n",
+		//	$this->marketStatsId(),$this->beatMultiplier(),$market->beat());
+		//printf("marketStats: %s beatMultiplier: %s synchedBeat: %s\n",
+		//	$this->marketStatsId(),$this->beatMultiplier(),$this->synchedBeat());
+
+		$this->setupStatsIfReq();
+
+		if (  $this->beatMultiplier()>1 && 
+			(($market->beat() % $this->beatMultiplier()) != 0) ) {
+
+			// beat should be skipped.
+		
+		} else if ($market->beat()==$this->synchedBeat()) {
+			// market already synched.
+		} else {
+			$this->updateStats($market);
+			$this->synchedBeat($market->beat());
+		}
 
 		$this->mtxScalar->dehydrate();
 		$this->mtxHistory->dehydrate();
-
-		$this->synchedBeat($market->beat());
-
-		//printf("marketStats: %s beatMultiplier: %s synchedBeat: %s\n",
-//			$this->marketStatsId(),$this->beatMultiplier(),$this->synchedBeat());
-
-		Nano\nanoPerformance()->track("marketStats.onBeat.".$market->marketId());
 	}
 
 }

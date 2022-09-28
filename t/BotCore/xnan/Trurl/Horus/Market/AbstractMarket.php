@@ -50,8 +50,6 @@ abstract class AbstractMarket implements Market {
 	
 
 	function __construct($marketId,$useHistory=false) {
-		print "ConstuctMarketCALLED $marketId\n";
-
 		$this->textFormatter=Nano\newTextFormatter();
 		$this->marketId=$marketId;
 		$this->useHistory=$useHistory;
@@ -110,35 +108,15 @@ abstract class AbstractMarket implements Market {
 
 
 	private function setupMarketStats() {
-		print "setupMarketStatsCALLED\n";
 		$openHours=$this->marketSchedule()->marketOpenHoursCount();
 		$openFactor=$openHours/24;
-		
-		$this->marketStats=new MarketStats\MarketStats($this,"marketStatsShort");
-		
-		if ($this->marketStats->isMarketStatsNew()) {			
-			$this->marketStats->maxHistoryBeats($this->maxHistoryBeats());
-			$this->marketStats->setupStatsIfReq();
-		}
+		$finalBeatMult=floor($this->statsLongBeatMultiplier()*$openFactor);
 
+		$this->marketStats=new MarketStats\MarketStats($this,"marketStatsShort");
 		
 		$this->marketStatsLong=new MarketStats\MarketStats($this,"marketStatsLong");
 
-		if ($this->marketStatsLong->isMarketStatsNew())  {
-			$this->marketStatsLong->maxHistoryBeats($this->maxHistoryBeats());
-			$this->marketStatsLong->beatMultiplier(floor($this->statsLongBeatMultiplier()*$openFactor));
-			$this->marketStatsLong->setupStatsIfReq();
-		}
-
-
-
 		$this->marketStatsMedium=new MarketStats\MarketStats($this,"marketStatsMedium");
-
-		if ($this->marketStatsMedium->isMarketStatsNew()) {
-			$this->marketStatsMedium->maxHistoryBeats($this->maxHistoryBeats());
-			$this->marketStatsMedium->beatMultiplier(floor($this->statsMediumBeatMultiplier()*$openFactor));
-			$this->marketStatsMedium->setupStatsIfReq();
-		}
 	}	
 
 	function settingsAsCsv() {
