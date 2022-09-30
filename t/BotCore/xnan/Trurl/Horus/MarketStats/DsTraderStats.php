@@ -27,9 +27,9 @@ Nano\Functions::Load;
 
 
 class DsTraderStats {
-	const SElegibleByCycle=1000;	
-	const SElegibleByQuantity=1001;	
-	const SElegibleByEarn=1002;	
+	const SEligibleByCycle=1000;	
+	const SEligibleByQuantity=1001;	
+	const SEligibleByEarn=1002;	
 	const SEarn=1003;	
 
 	private $marketStats;
@@ -71,7 +71,7 @@ class DsTraderStats {
 
 	}
 
-	function statsElegibleByQuantity($assetId) {
+	function statsEligibleByQuantity($assetId) {
 		return $this->statsMaxBuyQuantity($assetId)>0;
 	}
 
@@ -88,33 +88,85 @@ class DsTraderStats {
 
 	}
 
-	function statsElegibleByEarn($assetId) { // SEGUIR ACA
+	function statsEligibleMarketByShortTrend() {
+		return 
+		$this->trader()->marketStats()->statsScalar(MarketStats\MarketStats::SLinearSlope,MarketStats\MarketStats::MarketIndexAsset) >=
+			$this->trader()->marketShortTrendLowCut();
+	}
+
+	function statsEligibleMarketByMediumTrend() {
+		return 
+		$this->trader()->marketStatsMedium()->statsScalar(MarketStats\MarketStats::SLinearSlope,MarketStats\MarketStats::MarketIndexAsset) >=
+			$this->trader()->marketMediumTrendLowCut();
+	}
+
+	function statsEligibleByShortTrend($assetId) {
+		return 
+		$this->trader()->marketStats()->statsScalar(MarketStats\MarketStats::SLinearSlope,$assetId) >=
+			$this->trader()->assetShortTrendLowCut();
+	}
+
+	function statsEligibleByMediumTrend($assetId) {
+		return 
+		$this->trader()->marketStatsMedium()->statsScalar(MarketStats\MarketStats::SLinearSlope,$assetId) >=
+			$this->trader()->assetMediumTrendLowCut();
+	}
+
+	function statsEligibleByEarn($assetId) { 
 		return $this->statsEarn($assetId)>=$this->trader()->minEarn();		
 	}
 
-	function statsElegibleByCycle($assetId) {
+	function statsEligiblesFinal() { 
+		$egs=[];
+		foreach($this->marketStats()->market()->nonCurrencyAssetIds() as $assetId) {		
+			if ($this->statsEligibleFinal($assetId)) {
+				$egs[]=$assetId;
+			}
+
+		}
+
+		return $this->statsSortAssetsByPreference($egs);
+	}
+
+	function statsSortAssetsByPreference(&$assetIds) {		
+		$fn=function($assetId1,$assetId2) {			
+			return $this->statsEarn($assetId1)<$this->statsEarn($assetId2);
+		};
+
+		usort($assetIds,$fn);		
+		
+		return $assetIds;
+	}
+
+	function statsEligibleByCycle($assetId) {
 		return $this->assetCycle($assetId)<$this->trader()->buyCicleCut();
 	}
 
-	function statsElegibleFinal($assetId) {
-		$egCycle=$this->statsElegibleByCycle($assetId);
-		$egEarn=$this->statsElegibleByEarn($assetId);
-		$egQuantity=$this->statsElegibleByQuantity($assetId);
-		return $egCycle && $egEarn && $egQuantity;
+	function statsEligibleFinal($assetId) {
+		$egMarketTrend1=$this->statsEligibleMarketByShortTrend();
+		$egMarketTrend2=$this->statsEligibleMarketByMediumTrend();
+		$egTrend1=$this->statsEligibleByShortTrend($assetId);
+		$egTrend2=$this->statsEligibleByMediumTrend($assetId);
+		$egCycle=$this->statsEligibleByCycle($assetId);
+		$egEarn=$this->statsEligibleByEarn($assetId);
+		$egQuantity=$this->statsEligibleByQuantity($assetId);
+		
+		return $egMarketTrend1 && $egMarketTrend2 && $egTrend1 
+			&& $egTrend2 && $egCycle && $egEarn && $egQuantity;
 	}
 
 	function statsScalar($statsDim,$assetId) { 
 
-		if ($statsDim==self::SElegibleByCycle) {
-			return $this->statsElegibleByCycle($assetId);
+		if ($statsDim==self::SEligibleByCycle) {
+			return $this->statsEligibleByCycle($assetId);
 		}
 
-		if ($statsDim==self::SElegibleByQuantity) {
-			return $this->statsElegibleByQuantity($assetId);
+		if ($statsDim==self::SEligibleByQuantity) {
+			return $this->statsEligibleByQuantity($assetId);
 		}
 
-		if ($statsDim==self::SElegibleByEarn) {
-			return $this->statsElegibleByEarn($assetId);
+		if ($statsDim==self::SEligibleByEarn) {
+			return $this->statsEligibleByEarn($assetId);
 		}
 
 		if ($statsDim==self::SEarn) {

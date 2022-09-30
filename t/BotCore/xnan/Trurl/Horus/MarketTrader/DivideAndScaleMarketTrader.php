@@ -68,11 +68,25 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 		return Horus\persistence()->dsTraderMaxAssetPercentage($this->botArenaId(),$this->traderId(),$maxAssetPercentage);	
 	}
 
-
 	function waitBeatsForAssetRepeat($waitBeatsForAssetRepeat=null) {
 		return Horus\persistence()->dsTraderWaitBeatsForAssetRepeat($this->botArenaId(),$this->traderId(),$waitBeatsForAssetRepeat);	
 	}
 
+	function assetShortTrendLowCut($assetShortTrendLowCut=null) {
+		return Horus\persistence()->dsTraderAssetShortTrendLowCut($this->botArenaId(),$this->traderId(),$assetShortTrendLowCut);	
+	}
+
+	function assetMediumTrendLowCut($assetMediumTrendLowCut=null) {
+		return Horus\persistence()->dsTraderAssetMediumTrendLowCut($this->botArenaId(),$this->traderId(),$assetMediumTrendLowCut);	
+	}
+
+	function marketShortTrendLowCut($marketShortTrendLowCut=null) {
+		return Horus\persistence()->dsTraderMarketShortTrendLowCut($this->botArenaId(),$this->traderId(),$marketShortTrendLowCut);	
+	}
+
+	function marketMediumTrendLowCut($marketMediumTrendLowCut=null) {
+		return Horus\persistence()->dsTraderMarketMediumTrendLowCut($this->botArenaId(),$this->traderId(),$dsTraderMarketMediumTrendLowCut);	
+	}
 
 	function buyCicleCut($buyCicleCut=null) {
 		return Horus\persistence()->dsTraderBuyCicleCut($this->botArenaId(),$this->traderId(),$buyCicleCut);	
@@ -211,13 +225,36 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 //			BotWorld\BotWorld::instance()->summaryWrite();
 	}
 
+
+	function statsFull() {
+		return 
+			$this->marketStats()->isFull() && 
+			$this->marketStatsMedium()->isFull() &&
+			$this->marketStatsLong()->isFull();
+	}
+
+
+	function wakeupWaitDone() {
+		return ($this->market()->beat()-$this->startBeat())>=$this->waitBeats();
+	}
+
 	function tradePhase1(&$market) {
 		if ($this->startBeat()==-1) $this->startBeat($market->beat());
 		//printf("(%s-%s)>=%s) ? %s \n",$market->get()->beat(),$this->startBeat,$this->waitBeats,
 		//(($market->get()->beat()-$this->startBeat)>=$this->waitBeats) ? "true" : "false");
 	
-		if (($market->beat()-$this->startBeat())>=$this->waitBeats()) {			
+
+		if ($this->wakeupWaitDone() && $this->statsFull() ) {			
 			$this->nextPhase();
+		} else {
+
+			Nano\msg(sprintf("dsTrader: %s tradePhase1: wakeUpWaitDone:%s shortFill:%s mediumFill:%s longFill:%s",$this->traderId() , 
+				$this->textFormatter()->formatBool($this->wakeupWaitDone()), 
+				$this->textFormatter()->formatDecimal($this->marketStats()->usage()),
+				$this->textFormatter()->formatDecimal($this->marketStatsMedium()->usage()),
+				$this->textFormatter()->formatDecimal($this->marketStatsLong()->usage())				
+					 ));
+
 		}
 	}
 
@@ -260,9 +297,9 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 	}
 
 	function customStatsAsCsv(&$marketStats) {		
-		$ds=new DataSet\DataSet(["synchedBeat","beat","beatMultiplier","assetId","value","mean","max","min","linearSlope","maxBuyByStrategy","cicle","elegibleByCycle","maxBuyQuantityByStrategy","elegibleByQuantity","earn","elegibleByEarn"]);
+		$ds=new DataSet\DataSet(["synchedBeat","beat","beatMultiplier","assetId","value","mean","max","min","linearSlope","maxBuyByStrategy","cicle","eligibleByCycle","maxBuyQuantityByStrategy","eligibleByQuantity","earn","eligibleByEarn"]);
 		
-		foreach($this->market()->assetIds() as $assetId) {			
+		foreach($this->marketStats()->assetIds() as $assetId) {			
 			$statsValue=$marketStats->statsScalar(MarketStats\MarketStats::SValue,$assetId);
 			$statsMean=$marketStats->statsScalar(MarketStats\MarketStats::SMean,$assetId);
 			$statsMax=$marketStats->statsScalar(MarketStats\MarketStats::SMax,$assetId);
@@ -271,11 +308,11 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 
 			$statsLinearSlope=$marketStats->statsScalar(MarketStats\MarketStats::SLinearSlope,$assetId);			
 			
-			$statsElegibleByCycle=$this->traderStats()->statsScalar(MarketStats\DsTraderStats::SElegibleByCycle,$assetId);
+			$statsEligibleByCycle=$this->traderStats()->statsScalar(MarketStats\DsTraderStats::SEligibleByCycle,$assetId);
 
-			$statsElegibleByQuantity=$this->traderStats()->statsScalar(MarketStats\DsTraderStats::SElegibleByQuantity,$assetId);
+			$statsEligibleByQuantity=$this->traderStats()->statsScalar(MarketStats\DsTraderStats::SEligibleByQuantity,$assetId);
 
-			$statsElegibleByEarn=$this->traderStats()->statsScalar(MarketStats\DsTraderStats::SElegibleByEarn,$assetId);
+			$statsEligibleByEarn=$this->traderStats()->statsScalar(MarketStats\DsTraderStats::SEligibleByEarn,$assetId);
 
 			$statsEarn=$this->traderStats()->statsScalar(MarketStats\DsTraderStats::SEarn,$assetId);
 
@@ -294,12 +331,12 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 				"maxBuyByStrategy"=>$this->market()->textFormater()->formatQuantity(
 					$this->maxBuyByStrategy($this->market(),$assetId),$this->market()->defaultExchangeAssetId() ),
 				"cicle"=>$this->market()->textFormater()->formatDecimal($statsCicle),
-				"elegibleByCycle"=>$this->market()->textFormater()->formatBool($statsElegibleByCycle),
+				"eligibleByCycle"=>$this->market()->textFormater()->formatBool($statsEligibleByCycle),
 				"maxBuyQuantityByStrategy"=>$this->market()->textFormater()->formatDecimal(
 					$this->maxBuyQuantityByStrategy($this->market(),$assetId) ),
-				"elegibleByQuantity"=>$this->market()->textFormater()->formatBool($statsElegibleByQuantity),
+				"eligibleByQuantity"=>$this->market()->textFormater()->formatBool($statsEligibleByQuantity),
 				"statsEarn"=>$this->market()->textFormater()->formatDecimal($statsEarn),
-				"statsElegibleByEarn"=>$this->market()->textFormater()->formatBool($statsElegibleByEarn)
+				"statsEligibleByEarn"=>$this->market()->textFormater()->formatBool($statsEligibleByEarn)
 
 			]
 			);			
@@ -415,44 +452,73 @@ class DivideAndScaleMarketTrader extends MarketTrader {
 		$this->queueOrUpdateOrder($newQueueId,$assetId,$negOp,$quantity,$sellQuote,$this->defaultStatus(),$newQueueId);
 	}
 
-	function tradePhase2(&$market) {		
-
+	function allowedByMaxPending() {
 		//print "FASE2 traderId: $this->traderId: ".($this->pendingBuySuggestionsCount())." maxBuySugg: ".($this->maxBuySuggestions() )."\n";
+		return $this->pendingBuySuggestionsCount()<$this->maxBuySuggestions();
+	}
 
-		if ($this->pendingBuySuggestionsCount()>=$this->maxBuySuggestions() ) return;
+	function tradePhase2(&$market) {		
+		if (!$this->statsFull()) {
 
-		$buyPick=$this->pickAssetIdByCicle($market,$this->sellCicleCut() );
-		$assetId=$buyPick[0];
+			Nano\msg(sprintf("dsTrader: msg: stats not full, back to phase 1."));			
+			$this->previousPhase();
 
-		if ($assetId==-1) {
-			Nano\msg(sprintf("dsTrader: marketId:%s traderId:%s assetId:$assetId msg: pickAssetIdByCicle found no asset",$this->market()->marketId(),$this->traderId() ));
-			 return;	
+		} else if (!$this->allowedByMaxPending()) {
+
+			Nano\msg(sprintf("dsTrader: %s tradePhase2: msg: too much pending orders",$this->traderId()));
+
+		} else {
+			Nano\msg(sprintf("dsTrader: %s tradePhase2: searching buy candidates",$this->traderId()));
+		 
+			$pickedIds=$this->traderStats()->statsEligiblesFinal();
+
+			if (count($pickedIds)==0) {
+
+				Nano\msg(sprintf("dsTrader: marketId:%s traderId:%s assetId:$assetId msg: no eligible asset found",$this->market()->marketId(),$this->traderId() ));
+				 return;	
+
+			}	else {
+
+				$assetId=$pickedIds[0];
+				$this->doBuySell($market,$assetId);
+
+			}
+
 		}
 
-		$buyQuote=$market->assetQuote($assetId)->buyQuote();
+	}
 
-		$egCycle=$this->traderStats()->statsElegibleByCycle($assetId);
-		$egEarn=$this->traderStats()->statsElegibleByEarn($assetId);
-		$egQuantity=$this->traderStats()->statsElegibleByQuantity($assetId);
-		$egFinal=$this->traderStats()->statsElegibleFinal($assetId);
+	function previousPhase() {
+		$this->phase($this->phase()-1);	
+	}
+	function nextPhase() {
+		$this->phase($this->phase()+1);	
+	}
 
-		Nano\msg(sprintf("dsTrader: %s pick: assetId:%s egCycle:%s egQuantity:%s egEarn:%s egFinal:%s",
+
+	function egInfo($assetId) {
+		$egMarketTrend1=$this->traderStats()->statsEligibleMarketByShortTrend();
+		$egMarketTrend2=$this->traderStats()->statsEligibleMarketByMediumTrend();
+		$egTrend1=$this->traderStats()->statsEligibleByShortTrend($assetId);
+		$egTrend2=$this->traderStats()->statsEligibleByMediumTrend($assetId);
+		$egCycle=$this->traderStats()->statsEligibleByCycle($assetId);
+		$egEarn=$this->traderStats()->statsEligibleByEarn($assetId);
+		$egQuantity=$this->traderStats()->statsEligibleByQuantity($assetId);
+		$egFinal=$this->traderStats()->statsEligibleFinal($assetId);
+
+		Nano\msg(sprintf("dsTrader: %s pick: assetId:%s egMarketTrend1:%s egMarketTrend2:%s egTrend1:%s egTrend2:%s egCycle:%s egQuantity:%s egEarn:%s egFinal:%s",
 			$this->traderId(),
 			$assetId,
+			$this->market()->textFormater()->formatBool($egMarketTrend1),
+			$this->market()->textFormater()->formatBool($egMarketTrend2),
+			$this->market()->textFormater()->formatBool($egTrend1),
+			$this->market()->textFormater()->formatBool($egTrend2),
 			$this->market()->textFormater()->formatBool($egCycle),
 			$this->market()->textFormater()->formatBool($egQuantity),
 			$this->market()->textFormater()->formatBool($egEarn),
 			$this->market()->textFormater()->formatBool($egFinal),
 		));
 
-		if ($egFinal) {
-			$this->doBuySell($market,$assetId);
-		}
-
-	}
-
-	function nextPhase() {
-		$this->phase($this->phase()+1);	
 	}
 
 }

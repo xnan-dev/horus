@@ -56,6 +56,16 @@ function traderStatsUrl($botArenaId,$traderId="") {
 	return $url;
 }
 
+function traderMediumStatsUrl($botArenaId,$traderId="") {
+	$url=sprintf('%s?q=traderStatsMediumAsCsv&botArenaId=%s&traderId=%s&textFormat=html',MarketBotRunnerWebUrl(),$botArenaId,$traderId);
+	return $url;
+}
+
+function traderLongStatsUrl($botArenaId,$traderId="") {
+	$url=sprintf('%s?q=traderStatsLongAsCsv&botArenaId=%s&traderId=%s&textFormat=html',MarketBotRunnerWebUrl(),$botArenaId,$traderId);
+	return $url;
+}
+
 function marketSettingsUrl($botArenaId,$textFormat="html") {
 	$url=sprintf('%s?q=marketSettingsAsCsv&botArenaId=%s&textFormat=%s',MarketBotRunnerWebUrl(),$botArenaId,$textFormat);
 	return $url;

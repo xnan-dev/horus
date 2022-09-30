@@ -98,7 +98,7 @@ class MarketStats {
 	}
 
 	private function setupIdxAsset() { //MIG-NEW
-		$assetIds=$this->market()->assetIds();
+		$assetIds=$this->assetIds();
 
 		$i=0;
 		foreach($assetIds as $assetId) {
@@ -176,7 +176,7 @@ class MarketStats {
 
 		if ($this->mtxScalar->isNew()) {
 
-			foreach ($this->market()->assetIds() as $assetId) {
+			foreach ($this->assetIds() as $assetId) {
 				$this->statsScalarSet(self::SValue,$assetId,0);
 				$this->statsScalarSet(self::SMin,$assetId,$this->infinitePositive());
 				$this->statsScalarSet(self::SMax,$assetId,$this->infiniteNegative());
@@ -194,7 +194,7 @@ class MarketStats {
 		
 		if ($this->mtxHistory->isNew()) {
 
-			foreach ($this->market()->assetIds() as $assetId) {
+			foreach ($this->assetIds() as $assetId) {
 				for ($i=0;$i<$this->maxHistoryBeats();$i++) {				
 					$this->statsHistorySet(self::SHValue,$assetId,$i,$this->infiniteNegative());
 					$this->statsHistorySet(self::SHCicle,$assetId,$i,$this->infiniteNegative());				
@@ -250,16 +250,52 @@ class MarketStats {
 		return $this->textFormatter;
 	}
 
-	function startBeat() { //MIG
-		return max(0,$this->endBeat()-$this->maxHistoryBeats()+1);
+	/*
+	 *  At which beat the window start (a full window start) given the current end beat.
+     *  - The window start keeps moving as beats are processed. 
+     *  - If there is a beat multiplier, the start beats gets multiplied for it, 
+     *    (eg. for beatMultiplier=10 and maxHistoryBeat=5 , the window positions at beat 50 		are: 0,10,20,30,40,50)
+	 */
+	function startBeat() { 
+		return max(0,
+			($this->endBeat()-$this->maxHistoryBeats()*$this->beatMultiplier())
+		);
 	}
 
 	function endBeat($endBeat=null) { //MIG
 		return Horus\persistence()->msEndBeat($this->marketId(),$this->marketStatsId(),$endBeat);
 	}
 
-	function beatCount() { //MIG
-		return $this->endBeat()-$this->startBeat()+1;
+	function isFull() {
+		return $this->usageCount() == $this->maxHistoryBeats();
+	}
+
+	function usage() {
+		return ($this->usageCount()/(double)$this->maxHistoryBeats())*100;
+	}
+
+	function firstAssetId() {
+		return $this->assetIds()[0];
+	}
+
+	function usageCount() {
+		$sum=0;
+		for($i=0;$i<$this->maxHistoryBeats();$i++) {
+		
+			$y=$this->statsHistory(self::SHValue,$this->firstAssetId(),$i);
+			if ($y==$this->infiniteNegative()) continue; // index not yet assigned.
+
+			$sum+=1;
+		}		
+
+		return $sum;
+	}
+
+	/*
+	 * How many beats are already stored in the window [0..maxHistoryBeats]
+	 */
+	function beatCount() {
+		return $this->usageCount();
 	}
 
 	function infinitePositive() { //MIG
@@ -275,7 +311,9 @@ class MarketStats {
 		$assetIdx=$this->idxAsset[$assetId];
 
 		for($i=0;$i<$this->mtxHistory->lastDimension();$i++) {
-			$sum+=$this->mtxHistory->get([$this->SHValue,$assetIdx,$i]);
+			$y=$this->mtxHistory->get([self::SHValue,$assetIdx,$i]);
+			if ($y==$this->infiniteNegative()) continue; // index not yet assigned.
+			$sum+=$y;
 		}		
 		return $sum;
 	}
@@ -289,12 +327,13 @@ class MarketStats {
 
 		//print "mtxHistory.dimensions:".print_r($this->mtxHistory->dimensions(),true)."\n";
 		//print "mtxHistory.lastDimension:".$this->mtxHistory->lastDimension()."\n";
+
 		for($i=0;$i<$this->mtxHistory->lastDimension();$i++) {			
 			$value=$this->mtxHistory->get([self::SHValue,$assetIdx,$i]);
 
 			//print "minHistory-find assetId:$assetId i:$i value:$value min:$min minBeat:$minBeat<br>\n";
 
-			if ($value==$this->infiniteNegative()) break;
+			if ($value==$this->infiniteNegative()) continue; // index not yet assigned.
 			if ($value<$min) $minBeat=$beat;
 			$min=min($min,$value);			
 			++$beat;
@@ -302,7 +341,7 @@ class MarketStats {
 		return [$min,$minBeat];
 	}
 
-	function maxHistory($assetId) { // MIG
+	function maxHistory($assetId) {  
 		$max=$this->infiniteNegative();
 		$beat=$this->startBeat();
 		$maxBeat=$beat;
@@ -310,7 +349,7 @@ class MarketStats {
 		$assetIdx=$this->idxAsset[$assetId];
 
 		for($i=0;$i<$this->mtxHistory->lastDimension();$i++) {			
-			if ($value==$this->infiniteNegative()) break;
+			if ($value==$this->infiniteNegative()) continue; // index not yet assigned.
 			$value=$this->mtxHistory->get([self::SHValue,$assetIdx,$i]);
 			if ($value>$max) $maxBeat=$beat;
 			$max=max($max,$value);
@@ -321,7 +360,7 @@ class MarketStats {
 	}
 
 
-	function calcLinearSlope($assetId) { // MIG	
+	function calcLinearSlope($assetId) {  	
 		$xsum=0;
 		$ysum=0;
 		$xysum=0;
@@ -332,6 +371,8 @@ class MarketStats {
 		for($i=0;$i<$this->maxHistoryBeats();$i++) {
 		
 			$y=$this->statsHistory(self::SHValue,$assetId,$i);
+			if ($y==$this->infiniteNegative()) continue; // index not yet assigned.
+
 			$ysum+=$y;
 			$xsum+=$x;
 			$x2sum+=($x*$x);
@@ -377,7 +418,10 @@ class MarketStats {
 
 
 	function assetIds() {
-		return $this->market()->assetIds(); // TODO agregar Mercado Promedio.
+		$assetIds=$this->market()->assetIds(); 
+		$assetIds[]=self::MarketIndexAsset;
+
+		return $assetIds;
 	}
 
 	private function updateStats(&$market) {
@@ -394,21 +438,18 @@ class MarketStats {
 			} else {
 				$buyQuote=$market->assetQuote($assetId)->buyQuote();
 			}			
-			
-			$i=($this->beatCount()-1) / $this->beatMultiplier();
 
 			$lastValue=$this->statsHistoryLastValue(self::SHValue,$assetId);
 
 	
-			if ($this->beatCount()==$this->maxHistoryBeats() && 
-					$lastValue!=
-					$this->infiniteNegative()) {				
-				$this->statsHistoryShift(self::SHValue,$assetId);
-				//$this->statsHistory->shift([self::SHCicle,$assetIdx]);
-			} 
+			//print "PROCESS ".($this->marketId()).".".($this->marketStatsId())." i:$i\n";
 
-			$this->statsHistorySet(self::SHValue,$assetId,$i,$buyQuote);
+			$this->statsHistoryShift(self::SHValue,$assetId);
+			//$this->statsHistory->shift([self::SHCicle,$assetIdx]);
+
+			$this->statsHistorySet(self::SHValue,$assetId,$this->maxHistoryBeats()-1,$buyQuote);
 			//$this->statsHistory->set([self::SHCicle,$assetIdx,$i],$this->statsCicle($assetId));
+
 			
 			$this->statsScalarSet(self::SValue,$assetId,$buyQuote);						
 
@@ -418,7 +459,7 @@ class MarketStats {
 			$this->statsScalarSet(self::SLinearSlope,$assetId,$this->calcLinearSlope($assetId));
 		
 
-			$avg=$this->statsScalar(self::SSum,$assetId)/$this->beatCount();			
+			$avg=$this->statsScalar(self::SSum,$assetId)/max(1,$this->usageCount());		
 			$this->statsScalarSet(self::SAvg,$assetId,$avg);
 			
 			$minHistory=$this->minHistory($assetId);
@@ -459,7 +500,7 @@ class MarketStats {
 		Nano\nanoPerformance()->track("marketStats.updateStats.".$market->marketId());
 	}
 
-	function onBeat($market) { // MIG
+	function onBeat($market) {  
 
 		//printf("beat %s synchedBeat %s stats:%s<br>",$market->beat(),$this->synchedBeat,$this->marketStatsId);
 		//echo sprintf("marketStats: %s beatSkip: beatMultiplier:%s onBeat: %s\n",
@@ -494,7 +535,7 @@ class MarketBeatObserver extends Observer\Observer { //MIG
 		$this->marketStats=$marketStats;
 	}
 
-	public function observe(&$onBeat,&$market) {		
+	public function observe(&$onBeat,&$market) {	
 		//$this->marketStats->markChanged();		
 		$this->marketStats->onBeat($market);		
 	}

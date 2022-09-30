@@ -53,6 +53,7 @@ class BotWorld {
 	function trade() {
 		foreach($this->traders as $trader) {
 			$trader->trade($this->market);
+			Horus\persistence()->afterTradeOne();
 		}
 	}
 

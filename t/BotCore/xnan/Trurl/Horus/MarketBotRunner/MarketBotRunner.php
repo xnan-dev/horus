@@ -255,6 +255,7 @@ class MarketBotRunner extends RestService\RestService {
 		} catch (\Exception $e) {
 			$this->pdo()->rollback();			
 			Nano\nanoLog()->msg("srvRun: failed: ".$e->getMessage());
+			print $e->getTraceAsString();
 		}
 	}
 

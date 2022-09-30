@@ -91,6 +91,9 @@ class HPdoMatrix implements  \Serializable {
 
 	function checkCoordinates($coordinates) {
 		for ($d=0;$d<count($coordinates)-1;$d++) {
+			if (!is_numeric($coordinates[$d]))
+				 Nano\nanoCheck()->checkFailed("coordinate $d: $coordinates[$d] msg: should be a number");
+
 			if ($this->dimensions[$d]<$coordinates[$d]) Nano\nanoCheck()->checkFailed("dimensions out of range");
 		}
 		return true;
@@ -111,7 +114,7 @@ class HPdoMatrix implements  \Serializable {
 		$this->set($coordNext,0);
 	}
 
-	function set($coordinates,$value) {				
+	function set($coordinates,$value) {						
 		$this->hydrateIfReq();
 		$this->checkCoordinates($coordinates);
 
@@ -129,7 +132,7 @@ class HPdoMatrix implements  \Serializable {
 		$maxOffset=$this->dataValueSize*$this->dimensionMul(count($this->dimensions));
 		$maxOffsetIndex=$maxOffset/$this->dataValueSize;
 		$offsetIndex=$offset/$this->dataValueSize;
-		if ( $offset>$maxOffset) Nano\nanoCheck()->checkFailed("checkOffset: offset: $offset maxOffset:$maxOffset offsetIndex:$offsetIndex maxOffsetIndex:$maxOffsetIndex msg: out of range");
+		if ( $offset<0 || $offset>$maxOffset) Nano\nanoCheck()->checkFailed("checkOffset: offset: $offset maxOffset:$maxOffset offsetIndex:$offsetIndex maxOffsetIndex:$maxOffsetIndex msg: out of range");
 	}
 
 	function getValueLinear($offset) {		

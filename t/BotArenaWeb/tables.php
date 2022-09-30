@@ -166,4 +166,25 @@ class TraderStats extends TraderTableView {
 
 }
 
+
+class TraderMediumStats extends TraderTableView {
+	function serviceUrlFn() { return "BotArenaWeb\\traderMediumStatsUrl"; }	
+	function viewClazz() { return "BotArenaWeb:TraderMediumStats"; }	
+	function tableId() { return "traderMediumStats"; }
+	//function head() { return ["assetId","value","mean","max","min","cicle","maxBuyByStrategy"]; }
+	function filterFn() { return ""; /*"BotArenaWeb\\marketQuotesRowFilter";*/ }
+	function emptyMsg() { return "No hay estadísticas disponibles"; }
+	function titleColumn() { return "assetId"; }
+}
+
+class TraderLongStats extends TraderTableView {
+	function serviceUrlFn() { return "BotArenaWeb\\traderLongStatsUrl"; }	
+	function viewClazz() { return "BotArenaWeb:TraderLongStats"; }	
+	function tableId() { return "traderLongStats"; }
+	//function head() { return ["assetId","value","mean","max","min","cicle","maxBuyByStrategy"]; }
+	function filterFn() { return ""; /*"BotArenaWeb\\marketQuotesRowFilter";*/ }
+	function emptyMsg() { return "No hay estadísticas disponibles"; }
+	function titleColumn() { return "assetId"; }
+}
+
 ?>

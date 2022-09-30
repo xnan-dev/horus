@@ -90,7 +90,7 @@ class TextFormatter {
 	}
 
 	function formatPercentText($value,$saveUrl) {
-		return sprintf("%s%s",number_format($value,2),"%");
+		return number_format($value,2)."%";
 	}
 
 	function formatPercentHtml($value,$saveUrl) {

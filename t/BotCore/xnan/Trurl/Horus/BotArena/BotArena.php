@@ -335,6 +335,8 @@ class BotArena {
 
 				$this->trade($traderId);
 
+				Horus\persistence()->afterTradeOne();
+				
 				$this->market()->nextBeat();				
 
 				if ($beats>1 && $beatSleep>0) { 
@@ -349,6 +351,7 @@ class BotArena {
 			} else {				
 				Nano\msg(sprintf("BotArena: botArenaId:%s beat: %s msg: market not ready",$this->botArenaId(),$this->market->beat() ));	
 			}
+			Horus\persistence()->afterRunBeat();
 		}
 		Nano\nanoPerformance()->track("botArena.run.B");
 		Nano\nanoPerformance()->track("botArena.run.C");

@@ -112,12 +112,6 @@ class BotWorld {
 		Nano\nanoCheck()->checkFailed("botArenaById botArenaId:$botArenaId msg:not found");
 	} 
 
-	function trade() {
-		foreach($this->traders() as $trader) {
-			$trader->trade($this->market());
-		}
-	}
-
 	function run($beats=1,$botArenaId="",$traderId="",$beatSleep=0,$live=true) {		
 		Nano\msg("BotWorld: run beats:$beats botArenaId:$botArenaId botArenaCount:".count($this->botArenas() ));
 		Nano\nanoCheck()->checkDiskAvailable();

@@ -43,7 +43,7 @@ function callServiceMarketPollerArray($query,$pollerName,$timeoutFn=null) {
 }
 
 function marketBotRunnerVersion() {
-  return "2.0.0/local";
+  return "2.1.0/local";
 }
 
 function persistence() {

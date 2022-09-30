@@ -68,6 +68,16 @@ abstract class AbstractMarket implements Market {
 		return $this->textFormatter;
 	}
 
+	function nonCurrencyAssetIds() {
+		$as=array();
+		foreach($this->assets() as $asset) {
+			if($asset->assetType()!=AssetType\Currency) {
+				$as[]=$asset->assetId();
+			}
+		}
+		return $as;
+	}
+
 	private function setupMarketSchedule() {
 
 		$query=sprintf("SELECT * FROM marketSchedule as s

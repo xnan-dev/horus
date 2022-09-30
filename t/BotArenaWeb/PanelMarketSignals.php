@@ -25,6 +25,7 @@ class MarketSignalTabs extends View\cAccordion {
 		if ($index==4) (new TraderQueueCancelled())->render();
 		if ($index==5) (new TraderQueueDone())->render();
 		if ($index==6) (new TraderStats())->render();
+		if ($index==6) (new TraderMediumStats())->render();
 		if ($index==7) (new TraderSettings())->render();		
 		if ($index==8) {
 			(new MarketSettings())->render();

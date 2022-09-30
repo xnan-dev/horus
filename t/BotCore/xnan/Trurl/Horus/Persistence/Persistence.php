@@ -26,7 +26,7 @@ Asset\Functions::Load;
 
 class Persistence {
 	static $instance;
-
+	private $cache=[];
 
 	static function instance() {
 		if (self::$instance==null) {
@@ -80,6 +80,7 @@ class Persistence {
 	function marketBeat($marketId,$beat=null) {		
 		if ($beat!=null) {			
 			$this->marketFieldSetInt($marketId,"beat",$beat);
+
 		}
 		return $this->marketField($marketId,"beat");
 	}
@@ -123,38 +124,53 @@ class Persistence {
 		return $this->marketFieldInt($marketId,"statsMediumBeatMultiplier");
 	}
 
+
+	function traderOrderQueueCacheKey($botArenaId,$traderId) {		
+		return sprintf("traderOrderQueue_%s_%s",$botArenaId,$traderId);
+	}
+
 	function traderOrderQueue($botArenaId,$traderId) {		
-		$os=[];		
-		$query=sprintf("SELECT * FROM assetTradeOrder as o						
-							WHERE botArenaId='%s' 
-								AND traderId='%s'",$botArenaId,$traderId);
 
-		$r=$this->pdoQuery($query,"traderOrderQueue");
+		$key=$this->traderOrderQueueCacheKey($botArenaId,$traderId);
 
-		while  ($row=$r->fetch()) {
+		if ($this->cacheHit($key)) {
+			return $this->cached($key);
+		} else {
 
-			$o=new AssetTradeOrder\AssetTradeOrder();
+			$os=[];		
+			$query=sprintf("SELECT * FROM assetTradeOrder as o						
+								WHERE botArenaId='%s' 
+									AND traderId='%s'",$botArenaId,$traderId);
 
-			$o->botArenaId($row["botArenaId"]);
-			$o->traderId($row["traderId"]);
-			$o->queueId($row["queueId"]);
-			$o->parentQueueId($row["parentQueueId"]);
-			$o->assetId($row["assetId"]);
-			$o->statusChangeBeat($row["statusChangeBeat"]);
-			$o->statusChangeTime($row["statusChangeTime"]);
-			$o->doneBeat($row["doneBeat"]);
-			$o->doneTime($row["doneTime"]);
-			$o->tradeOp($row["tradeOp"]);
-			$o->quantity($row["quantity"]);
-			$o->targetQuote($row["targetQuote"]);
-			$o->doneQuote($row["doneQuote"]);
-			$o->status($row["status"]);
-			$o->done( $row["done"]==1 );
-			$o->notified($row["notified"]);
-			$o->queueBeat($row["queueBeat"]);
-			$os[]=$o;
-		}		
-		return $os;
+			$r=$this->pdoQuery($query,"traderOrderQueue");
+
+			while  ($row=$r->fetch()) {
+
+				$o=new AssetTradeOrder\AssetTradeOrder();
+
+				$o->botArenaId($row["botArenaId"]);
+				$o->traderId($row["traderId"]);
+				$o->queueId($row["queueId"]);
+				$o->parentQueueId($row["parentQueueId"]);
+				$o->assetId($row["assetId"]);
+				$o->statusChangeBeat($row["statusChangeBeat"]);
+				$o->statusChangeTime($row["statusChangeTime"]);
+				$o->doneBeat($row["doneBeat"]);
+				$o->doneTime($row["doneTime"]);
+				$o->tradeOp($row["tradeOp"]);
+				$o->quantity($row["quantity"]);
+				$o->targetQuote($row["targetQuote"]);
+				$o->doneQuote($row["doneQuote"]);
+				$o->status($row["status"]);
+				$o->done( $row["done"]==1 );
+				$o->notified($row["notified"]);
+				$o->queueBeat($row["queueBeat"]);
+				$os[]=$o;
+			}		
+
+			$this->cacheStore($key,$os);
+			return $os;
+		}
 	}
 
 	private function marketField($marketId,$field) {
@@ -171,6 +187,8 @@ class Persistence {
 				$marketId);		
 
 		$this->pdoQuery($query,"marketFieldSetInt");
+		$this->cacheCleanKey($this->marketRowCacheKey($marketId));
+
 	}
 
 	private function marketFieldSetString($marketId,$field,$value) {
@@ -179,6 +197,7 @@ class Persistence {
 				$marketId);		
 
 		$this->pdoQuery($query,"marketFieldSetString");
+		$this->cacheCleanKey($this->marketRowCacheKey($marketId));
 	}
 
 	private function yfMarketFieldInt($marketId,$field,$value=null) {
@@ -214,7 +233,7 @@ class Persistence {
 					$traderId);		
 
 			$this->pdoQuery($query,"dsTraderFieldInt");
-
+			$this->cacheCleanKey($this->dsTraderRowCacheKey());
 			return null;
 		} else {
 			return $this->dsTraderRow($botArenaId,$traderId)[$field];
@@ -240,6 +259,7 @@ class Persistence {
 					$traderId);		
 
 			$this->pdoQuery($query,"traderFieldInt");
+			$this->cacheCleanKey($this->traderRowCacheKey($botArenaId,$traderId));
 
 			return null;
 		} else {
@@ -262,6 +282,7 @@ class Persistence {
 					$traderId);		
 
 			$this->pdoQuery($query,"traderFieldDouble");
+			$this->cacheCleanKey($this->traderRowCacheKey($botArenaId,$traderId));
 
 			return null;
 		} else {
@@ -311,18 +332,51 @@ class Persistence {
 		}
 	}
 
-	private function marketRow($marketId) {
-		$query=sprintf(
-		"SELECT * FROM market WHERE marketId='%s'",
-			$marketId);		
+	private function cacheHit($key) {
+		return array_key_exists($key,$this->cache);
+	}
 
-		$r=$this->pdoQuery($query,"marketRow");
-		
-		if ($row=$r->fetch()) {
-			return $row;
+	private function cacheStore($key,&$value) {
+		$this->cache[$key]=$value;
+	}
+
+	private function cached($key) {
+		if (array_key_exists($key,$this->cache)) {
+			Nano\nanoPerformance()->track("persistence.cached");
+			//Nano\nanoPerformance()->track("persistence.cached_$key");
+			$v=$this->cache[$key];
+			//Nano\nanoPerformance()->track("persistence.cached_$key");
+			Nano\nanoPerformance()->track("persistence.cached");
+			return $v;
+		}
+		return false;
+	}
+
+
+	private function marketRowCacheKey($marketId) {
+		return "marketRow_$marketId";
+	}
+
+	private function marketRow($marketId) {
+		$key=$this->marketRowCacheKey($marketId);
+
+		if ($this->cacheHit($key)) {
+			return $this->cached($key);
 		} else {
-			Nano\nanoCheck()->checkFailed("marketStats row not found");
-		}		
+			$query=sprintf(
+			"SELECT * FROM market WHERE marketId='%s'",
+				$marketId);		
+
+			$r=$this->pdoQuery($query,"marketRow");
+			
+			if ($row=$r->fetch()) {
+				$this->cacheStore($key,$row);
+				return $row;
+			} else {
+				Nano\nanoCheck()->checkFailed("marketStats row not found");
+			}		
+
+		}
 	}
 
 	private function yfMarketRow($marketId) {
@@ -346,85 +400,127 @@ class Persistence {
 
 
 
+	private function dsTraderRowCacheKey($botArenaId,$traderId) {
+		return sprintf("dsTraderRowCacheKey_%s_%s",$botArenaId,$traderId);
+	}
+
 	private function dsTraderRow($botArenaId,$traderId) {
-		$query=sprintf(
-		"SELECT * 
-			FROM marketTrader t
-			INNER JOIN divideAndScaleMarketTrader ds 
-				ON t.botArenaId=ds.botArenaId AND t.traderId=ds.traderId
-			WHERE 
-				t.traderId='%s' AND
-				t.botArenaId='%s'
-		"
-		,$traderId
-		,$botArenaId);		
-
-//		print $query;
-
-		$r=$this->pdoQuery($query,"dsTraderRow");
-		
-		if ($row=$r->fetch()) {
-			return $row;
+		$key=$this->dsTraderRowCacheKey($botArenaId,$traderId);
+		if ($this->cacheHit($key)) {
+			return $this->cached($key);
 		} else {
-			Nano\nanoCheck()->checkFailed("dsTrader row not found");
-		}		
+
+			$query=sprintf(
+			"SELECT * 
+				FROM marketTrader t
+				INNER JOIN divideAndScaleMarketTrader ds 
+					ON t.botArenaId=ds.botArenaId AND t.traderId=ds.traderId
+				WHERE 
+					t.traderId='%s' AND
+					t.botArenaId='%s'
+			"
+			,$traderId
+			,$botArenaId);		
+
+	//		print $query;
+
+			$r=$this->pdoQuery($query,"dsTraderRow");
+			
+			if ($row=$r->fetch()) {
+				$this->cacheStore($key,$row);
+				return $row;
+			} else {
+				Nano\nanoCheck()->checkFailed("dsTrader row not found");
+			}		
+		}
+	}
+
+	private function traderRowCacheKey($botArenaId,$traderId) {
+		return sprintf("traderRow_%s_%s",$botArenaId,$traderId);
 	}
 
 	private function traderRow($botArenaId,$traderId) {
-		$query=sprintf(
-		"SELECT * 
-			FROM marketTrader t
-			WHERE 
-				t.traderId='%s' AND
-				t.botArenaId='%s'
-		"
-		,$traderId
-		,$botArenaId);		
 
-		$r=$this->pdoQuery($query,"traderRow");
-		
-		if ($row=$r->fetch()) {
-			return $row;
+		$key=$this->traderRowCacheKey($botArenaId,$traderId);
+
+		if ($this->cacheHit($key)) {
+			return $this->cached($key);
 		} else {
-			Nano\nanoCheck()->checkFailed("trader row not found for botArenaId:'$botArena' traderId:'$traderId'");
-		}		
+		
+			$query=sprintf(
+			"SELECT * 
+				FROM marketTrader t
+				WHERE 
+					t.traderId='%s' AND
+					t.botArenaId='%s'
+			"
+			,$traderId
+			,$botArenaId);		
+
+			$r=$this->pdoQuery($query,"traderRow");
+			
+			if ($row=$r->fetch()) {
+				$this->cacheStore($key,$row);
+				return $row;
+			} else {
+				Nano\nanoCheck()->checkFailed("trader row not found for botArenaId:'$botArena' traderId:'$traderId'");
+			}		
+
+		}
 	}
 
 
-	function dsTraderWaitBeats($botArenaId,$marketId,$waitBeats=null) {
-		return $this->dsTraderFieldInt($botArenaId,$marketId,"waitBeats",$waitBeats);
+	function dsTraderWaitBeats($botArenaId,$traderId,$waitBeats=null) {
+		return $this->dsTraderFieldInt($botArenaId,$traderId,"waitBeats",$waitBeats);
 	}
 
-	function dsTraderPhase($botArenaId,$marketId,$phase=null) {
-		return $this->dsTraderFieldInt($botArenaId,$marketId,"phase",$phase);
+	function dsTraderPhase($botArenaId,$traderId,$phase=null) {
+		return $this->dsTraderFieldInt($botArenaId,$traderId,"phase",$phase);
 	}
 
-	function dsTraderStartBeat($botArenaId,$marketId,$startBeat=null) {
-		return $this->dsTraderFieldInt($botArenaId,$marketId,"startBeat",$startBeat);	
+	function dsTraderStartBeat($botArenaId,$traderId,$startBeat=null) {
+		return $this->dsTraderFieldInt($botArenaId,$traderId,"startBeat",$startBeat);	
 	}
 
-	function dsTraderMaxAssetPercentage($botArenaId,$marketId,$maxAssetPercentage=null) {
-		return $this->dsTraderFieldDouble($botArenaId,$marketId,"maxAssetPercentage",$maxAssetPercentage);	
+	function dsTraderMaxAssetPercentage($botArenaId,$traderId,$maxAssetPercentage=null) {
+		return $this->dsTraderFieldDouble($botArenaId,$traderId,"maxAssetPercentage",$maxAssetPercentage);	
 	}
 
-	function dsTraderWaitBeatsForAssetRepeat($botArenaId,$marketId,$waitBeatsForAssetRepeat=null) {
-		return $this->dsTraderFieldInt($botArenaId,$marketId,"waitBeatsForAssetRepeat",$waitBeatsForAssetRepeat);	
+	function dsTraderWaitBeatsForAssetRepeat($botArenaId,$traderId,$waitBeatsForAssetRepeat=null) {
+		return $this->dsTraderFieldInt($botArenaId,$traderId,"waitBeatsForAssetRepeat",$waitBeatsForAssetRepeat);	
 	}
 
-	function dsTraderBuyCicleCut($botArenaId,$marketId,$buyCicleCut=null) {
-		return $this->dsTraderFieldDouble($botArenaId,$marketId,"buyCicleCut",$buyCicleCut);	
+
+	function dsTraderAssetShortTrendLowCut($botArenaId,$traderId,$assetShortTrendLowCut=null) {
+		return $this->dsTraderFieldDouble($botArenaId,$traderId,"assetShortTrendLowCut",$assetShortTrendLowCut);	
 	}
 
-	function dsTraderSellCicleCut($botArenaId,$marketId,$sellCicleCut=null) {
-		return $this->dsTraderFieldDouble($botArenaId,$marketId,"sellCicleCut",$sellCicleCut);	
+	function dsTraderAssetMediumTrendLowCut($botArenaId,$traderId,$assetMediumTrendLowCut=null) {
+		return $this->dsTraderFieldDouble($botArenaId,$traderId,"assetMediumTrendLowCut",$assetMediumTrendLowCut);	
 	}
 
-	function dsTraderMaxBuySuggestions($botArenaId,$marketId,$maxBuySuggestions=null) {
-		return $this->dsTraderFieldInt($botArenaId,$marketId,"maxBuySuggestions",$maxBuySuggestions);	
+	function dsTraderMarketShortTrendLowCut($botArenaId,$traderId,$marketShortTrendLowCut=null) {
+		return $this->dsTraderFieldDouble($botArenaId,$traderId,"marketShortTrendLowCut",$marketShortTrendLowCut);	
 	}
 
-	function dsTraderBuyLimitFactor($botArenaId,$marketId,$buyLimitFactor=null) {
-		return $this->dsTraderFieldDouble($botArenaId,$marketId,"buyLimitFactor",$buyLimitFactor);	
+	function dsTraderMarketMediumTrendLowCut($botArenaId,$traderId,$marketMediumTrendLowCut=null) {
+		return $this->dsTraderFieldDouble($botArenaId,$traderId,"marketMediumTrendLowCut",$marketMediumTrendLowCut);	
+	}
+
+	function dsTraderBuyCicleCut($botArenaId,$traderId,$buyCicleCut=null) {
+		return $this->dsTraderFieldDouble($botArenaId,$traderId,"buyCicleCut",$buyCicleCut);	
+	}
+
+	function dsTraderSellCicleCut($botArenaId,$traderId,$sellCicleCut=null) {
+		return $this->dsTraderFieldDouble($botArenaId,$traderId,"sellCicleCut",$sellCicleCut);	
+	}
+
+	function dsTraderMaxBuySuggestions($botArenaId,$traderId,$maxBuySuggestions=null) {
+		return $this->dsTraderFieldInt($botArenaId,$traderId,"maxBuySuggestions",$maxBuySuggestions);	
+	}
+
+	function dsTraderBuyLimitFactor($botArenaId,$traderId,$buyLimitFactor=null) {
+		return $this->dsTraderFieldDouble($botArenaId,$traderId,"buyLimitFactor",$buyLimitFactor);	
 	}
 
 	function worldBotArenas() {		
@@ -507,49 +603,72 @@ class Persistence {
 		return $this->portfolioFieldInt($portfolioId,"lastDepositQuantity",$lastDepositQuantity);	
 	}
 	
-	function portfolioAssetIds($portfolioId=null) {		
-
-		$query=sprintf(
-			"SELECT DISTINCT(assetId) FROM portfolioAsset
-				WHERE
-				 portfolioId='%s'
-			",
-				$portfolioId
-			);		
-
-		$r=$this->pdoQuery($query,"portfolioAssetIds");
-		
-		$assets=[];
-
-		while ($row=$r->fetch()) {
-			$assets[]=$row["assetId"];
-		}
-
-		return $assets;
+	function portfolioAssetIdsCacheKey($portfolioId) {
+		return "portfolioAssetIds_$portfolioId";
 	}
 
-	function portfolioAssetQuantity($portfolioId,$assetId) {
-		$query=sprintf(
-			"SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
-				WHERE
-				 portfolioId='%s' AND
-				 assetId='%s'
-				 GROUP By
-				 	portfolioId,assetId
-			",
-				$portfolioId,
-				$assetId
-			);		
+	function portfolioAssetIds($portfolioId=null) {		
+		
+		$key=$this->portfolioAssetIdsCacheKey($portfolioId);
 
-		$r=$this->pdoQuery($query,"portfolioAssetQuantity");		
+		if ($this->cacheHit($key)) {
+			return $this->cached($key);
+		} else {
+			$query=sprintf(
+				"SELECT DISTINCT(assetId) FROM portfolioAsset
+					WHERE
+					 portfolioId='%s'
+				",
+					$portfolioId
+				);		
 
-		if($row=$r->fetch()) {
-			return $row["assetQuantity"];
+			$r=$this->pdoQuery($query,"portfolioAssetIds");
+			
+			$assets=[];
+
+			while ($row=$r->fetch()) {
+				$assets[]=$row["assetId"];
+			}
+			$this->cacheStore($key,$assets);
+			return $assets;
+		}
+	}
+
+
+	function portfolioAssetQuantityCacheKey($portfolioId,$assetId) {
+		return sprintf("portfolioAssetQuantity_%s_%s",$portfolioId,$assetId);
+	}
+
+	function portfolioAssetQuantity($portfolioId,$assetId) {		
+		$key=$this->portfolioAssetQuantityCacheKey($portfolioId,$assetId);
+
+		if ($this->cacheHit($key)) {
+			return $this->cached($key);
+		} else {
+			$query=sprintf(
+				"SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+					WHERE
+					 portfolioId='%s' AND
+					 assetId='%s'
+					 GROUP By
+					 	portfolioId,assetId
+				",
+					$portfolioId,
+					$assetId
+				);		
+
+			$r=$this->pdoQuery($query,"portfolioAssetQuantity");		
+
+			if($row=$r->fetch()) {
+				$v=$row["assetQuantity"];
+				$this->cacheStore($key,$v);
+				return $v;
+			}
 		}
 
 		return 0;
 	}
-	
+
 	private function pdoQuery($query,$queryName=null) {
 		$infoQuery=$queryName!=null ? $queryName : $query;
 		Nano\nanoPerformance()->track("persistence.pdoQuery");
@@ -562,27 +681,39 @@ class Persistence {
 		return $r;
 	}
 
+	function portfolioAssetQuantitiesCacheKey($portfolioId) {
+		return "portfolioAssetQuantities_$portfolioId";
+	}
+
 	function portfolioAssetQuantities($portfolioId) {
-		$query=sprintf(
-			"SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
-				WHERE
-				 portfolioId='%s'
-				GROUP BY
-					portfolioId,assetId
-			",
-				$portfolioId
-			);		
+		$key=$this->portfolioAssetQuantitiesCacheKey($portfolioId);
 
-		$r=$this->pdoQuery($query,"portfolioAssetQuantities");				
-		$assets=[];
+		if ($this->cacheHit($key)) {
+			return $this->cached($key);
+		} else {
 
-		while ($row=$r->fetch()) {
-			$assetId=$row["assetId"];
-			$assetQuantity=$row["assetQuantity"];
-			$assets[$assetId]=$assetQuantity;
+			$query=sprintf(
+				"SELECT portfolioId,assetId,SUM(assetQuantity) as assetQuantity FROM portfolioAsset
+					WHERE
+					 portfolioId='%s'
+					GROUP BY
+						portfolioId,assetId
+				",
+					$portfolioId
+				);		
+
+			$r=$this->pdoQuery($query,"portfolioAssetQuantities");				
+			$assets=[];
+
+			while ($row=$r->fetch()) {
+				$assetId=$row["assetId"];
+				$assetQuantity=$row["assetQuantity"];
+				$assets[$assetId]=$assetQuantity;
+			}
+
+			$this->cacheStore($key,$assets);
+			return $assets;
 		}
-
-		return $assets;
 	}
 
 
@@ -684,6 +815,12 @@ class Persistence {
 		return $v===null ? "NULL" : $this->valueSql($v);
 	}
 
+	function cacheCleanKey($key) {
+		if (array_key_exists($key,$this->cache)) {
+			unset($this->cache[$key]);
+		}		
+	}
+
 	function traderQueueOrder($order) {
 		$nextQueueId=$this->traderNextQueueId($order->botArenaId(),$order->traderId());
 		$query=sprintf(
@@ -713,6 +850,9 @@ class Persistence {
 		);		
 
 		$r=$this->pdoQuery($query,"traderQueueOrder");
+
+		$this->cacheCleanKey($this->traderOrderQueueCacheKey($order->botArenaId(),$order->traderId()));
+
 	}		
 
 	function traderOrderUpdate($order) {
@@ -739,6 +879,9 @@ class Persistence {
 		);		
 
 		$r=$this->pdoQuery($query,"traderOrderUpdate");
+
+		$this->cacheCleanKey($this->traderOrderQueueCacheKey($order->botArenaId(),$order->traderId()));
+
 	}		
 
 
@@ -784,22 +927,34 @@ class Persistence {
 		return $row["count"]!=0;
 	}
 
+	private function msRowMarketStatsCacheKey($marketId,$marketStatsId) {
+		return "msRowMarketStats_$marketId"."_$marketStatsId";
+	}
+
 	private function msRowMarketStats($marketId,$marketStatsId) {
 
-		$query=sprintf(
-		"SELECT * FROM marketStats
-			WHERE 
-				marketId='$marketId' AND 
-				marketStatsId='$marketStatsId' 
-			");		
+		$key=$this->msRowMarketStatsCacheKey($marketId,$marketStatsId);
 
-		$r=$this->pdoQuery($query,"msRowMarketStats");
-		
-		if ($row=$r->fetch()) {
-			return $row;
+		if ($this->cacheHit($key)) {
+			return $this->cached($key);
 		} else {
-			Nano\nanoCheck()->checkFailed("marketStats: statsTableHead:$statsTableHead msg: row not found");
-		}		
+
+			$query=sprintf(
+			"SELECT * FROM marketStats
+				WHERE 
+					marketId='$marketId' AND 
+					marketStatsId='$marketStatsId' 
+				");		
+
+			$r=$this->pdoQuery($query,"msRowMarketStats");
+			
+			if ($row=$r->fetch()) {
+				$this->cacheStore($key,$row);
+				return $row;
+			} else {
+				Nano\nanoCheck()->checkFailed("marketStats: statsTableHead:$statsTableHead msg: row not found");
+			}		
+		}
 	}
 
 	private function msFieldMarketStats($marketId,$marketStatsId,$field) {
@@ -817,6 +972,8 @@ class Persistence {
 			","msFieldMarketStatsSetInt");		
 
 		$this->pdoQuery($query,"msFieldMarketStatsSetInt");
+
+		$this->cacheCleanKey($this->msRowMarketStatsCacheKey($marketId,$marketStatsId));
 	}
 
 	function msSynchedBeat($marketId,$marketStatsId,$synchedBeat=null) {
@@ -829,7 +986,6 @@ class Persistence {
 	function msMaxHistoryBeats($marketId,$marketStatsId,$maxHistoryBeats=null) {
 		if ($maxHistoryBeats!=null) {
 			$this->msFieldMarketStatsSetInt($marketId,$marketStatsId,"maxHistoryBeats",$maxHistoryBeats);
-			$this->msMarketStatsLogReset($marketId,$marketStatsId);
 		}
 		return $this->msFieldMarketStats($marketId,$marketStatsId,"maxHistoryBeats");
 	}
@@ -837,7 +993,6 @@ class Persistence {
 	function msBeatMultiplier($marketId,$marketStatsId,$beatMultiplier=null) {
 		if ($beatMultiplier!=null) {
 			$this->msFieldMarketStatsSetInt($marketId,$marketStatsId,"beatMultiplier",$beatMultiplier);
-			$this->msMarketStatsLogReset($marketId,$marketStatsId);
 		}
 		return $this->msFieldMarketStats($marketId,$marketStatsId,"beatMultiplier");
 	}
@@ -847,6 +1002,19 @@ class Persistence {
 			$this->msFieldMarketStatsSetInt($marketId,$marketStatsId,"endBeat",$endBeat);
 		}
 		return $this->msFieldMarketStats($marketId,$marketStatsId,"endBeat");
+	}
+
+
+	function cacheClean() {
+		$this->cache=[];
+	}
+
+	function afterRunBeat() {
+		$this->cacheClean();
+	}
+
+	function afterTradeOne() {
+		$this->cacheClean();	
 	}
 }
 
